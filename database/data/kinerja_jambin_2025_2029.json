@@ -1,0 +1,3433 @@
+{
+  "strategics": [
+    {
+      "ss_code": "SS 2",
+      "ss_name": "Terwujudnya efektivitas penegakan hukum dan keadilan melalui transformasi sistem penuntutan",
+      "indicator_code": "IKSS 2.1",
+      "indicator_name": "Persentase peningkatan pengendalian perkara",
+      "targets_kepja": [
+        "61",
+        "63",
+        "65",
+        "67",
+        "69"
+      ],
+      "unit": "Persentase (%)",
+      "formula": "Rumus pada gambar sumber tidak tercetak lengkap. Berdasarkan 4 variabel yang dicantumkan: P = (jumlah perkara yang dituntut dengan alternatif pemidanaan / jumlah seluruh perkara yang dituntut) × 100%. Komponen alternatif mencakup pidana pengawasan, pidana denda, dan pidana kerja sosial.",
+      "formula_status": "Rekonstruksi operasional dari variabel Kepja; perlu penetapan/konfirmasi formal karena tampilan rumus sumber tidak lengkap.",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan; Jaksa Agung Muda Bidang Tindak Pidana Umum; Jaksa Agung Muda Bidang Tindak Pidana Khusus; Jaksa Agung Muda Bidang Perdata dan Tata Usaha Negara; Jaksa Agung Muda Bidang Pidana Militer; Kejaksaan Tinggi; Kejaksaan Negeri; Cabang Kejaksaan Negeri",
+      "page": 9,
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "61",
+        "63",
+        "65",
+        "67",
+        "69"
+      ],
+      "target_status": "Sama"
+    },
+    {
+      "ss_code": "SS 4",
+      "ss_name": "Terwujudnya tata kelola organisasi yang optimal, transparan dan akuntabel",
+      "indicator_code": "IKSS 4.1",
+      "indicator_name": "Indeks Reformasi Birokrasi",
+      "targets_kepja": [
+        "84",
+        "85",
+        "86",
+        "87",
+        "88"
+      ],
+      "unit": "Indeks",
+      "formula": "RB = Σ(i=1..2) Wi × Ki; Wi = bobot komponen penilaian dimensi RB General dan RB Tematik; Ki = nilai setiap komponen pada dimensi RB General dan RB Tematik.",
+      "formula_status": "Transkripsi formula Kepja.",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan; Jaksa Agung Muda Bidang Pengawasan",
+      "page": 13,
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "84",
+        "85",
+        "86",
+        "87",
+        "88"
+      ],
+      "target_status": "Sama"
+    }
+  ],
+  "strategic": {
+    "ss_code": "SS 4",
+    "ss_name": "Terwujudnya tata kelola organisasi yang optimal, transparan dan akuntabel",
+    "indicator_code": "IKSS 4.1",
+    "indicator_name": "Indeks Reformasi Birokrasi",
+    "targets_kepja": [
+      "84",
+      "85",
+      "86",
+      "87",
+      "88"
+    ],
+    "unit": "Indeks",
+    "formula": "RB = Σ(i=1..2) Wi × Ki; Wi = bobot komponen penilaian dimensi RB General dan RB Tematik; Ki = nilai setiap komponen pada dimensi RB General dan RB Tematik.",
+    "responsible": "Jaksa Agung Muda Bidang Pembinaan; Jaksa Agung Muda Bidang Pengawasan",
+    "page": 13,
+    "source": "Kepja Nomor 1184 Tahun 2025",
+    "targets_renstra": [
+      "84",
+      "85",
+      "86",
+      "87",
+      "88"
+    ],
+    "target_status": "Sama"
+  },
+  "programs": [
+    {
+      "level": "IKP",
+      "page": 15,
+      "parent_code": "1",
+      "parent_name": "Meningkatnya akuntabilitas kinerja Kejaksaan RI",
+      "indicator_code": "1.1",
+      "source_indicator_code": "1.1",
+      "indicator_name": "Nilai SAKIP Kejaksaan RI",
+      "targets_kepja": [
+        "72",
+        "73",
+        "75",
+        "77",
+        "80"
+      ],
+      "unit": "Nilai",
+      "formula": "S = X1 + X2 + X3 + X4; X(i=1..4) = (NX(i) / Tk(i)) × Bobot. X1 Perencanaan Kinerja (30%); X2 Pengukuran Kinerja (30%); X3 Pelaporan Kinerja (15%); X4 Evaluasi Akuntabilitas Kinerja Internal (25%).",
+      "responsible": ", 3 <\nIndikator Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Perencanaan)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "72",
+        "73",
+        "75",
+        "77",
+        "80"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKP",
+      "page": 18,
+      "parent_code": "4",
+      "parent_name": "Meningkatnya efisiensi dan efektivitas penggunaan anggaran Kejaksaan RI",
+      "indicator_code": "4.1",
+      "source_indicator_code": "4.1",
+      "indicator_name": "Nilai Kinerja Anggaran Kejaksaan RI",
+      "targets_kepja": [
+        "90",
+        "90,25",
+        "90,5",
+        "90,75",
+        "91"
+      ],
+      "unit": "Nilai",
+      "formula": "Jika pengukuran indikator dilakukan secara mandiri, maka Nilai Kinerja Anggaran Kejaksaan RI\nsebagai berikut.\nNKA = X1 + X2\nX 1−2 =\nNX1−2\nTk1−2\nx Bobot\nNKA : Nilai Kinerja Anggaran\nNX1-2 : Nilai Realisasi pada komponen 1 sampai dengan 2\nTk1-2 : Total komponen penilaian pada komponen 1 sampai dengan 2",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Keuangan)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "90",
+        "90,25",
+        "90,5",
+        "90,75",
+        "91"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKP",
+      "page": 19,
+      "parent_code": "5",
+      "parent_name": "Meningkatnya kualitas tata kelola aset dan pengadaan Kejaksaan RI",
+      "indicator_code": "5.1",
+      "source_indicator_code": "5.1",
+      "indicator_name": "Indeks Pengelolaan Aset Kejaksaan RI",
+      "targets_kepja": [
+        "3,5",
+        "3,6",
+        "3,7",
+        "3,75",
+        "3,8"
+      ],
+      "unit": "Indeks",
+      "formula": "Jika pengukuran indikator dilakukan secara mandiri, maka perhitungan nilai indeks Pengelolaan\nAset Kejaksaan RI sebagai berikut.\nIPA = X1 + X2 + X3 + X4 + X5 + X6 + X7 + X8\nX 1−8 =\nNX1−8\nTk1−8\nx Bobot Parameter\nIPA : Indeks Pengelolaan Aset (IPA) Kejaksaan RI\nNX1-8 : Nilai indeks pada parameter 1 sampai dengan 8\nTk1-8 : Total komponen penilaian pada parameter X1 sampai dengan X8",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Perlengkapan)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "3,5",
+        "3,6",
+        "3,7",
+        "3,75",
+        "3,8"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKP",
+      "page": 20,
+      "parent_code": "5",
+      "parent_name": "Meningkatnya kualitas tata kelola aset dan pengadaan Kejaksaan RI",
+      "indicator_code": "5.2",
+      "source_indicator_code": "5.2",
+      "indicator_name": "Indeks tata kelola pengadaan Kejaksaan RI",
+      "targets_kepja": [
+        "89",
+        "90,5",
+        "92",
+        "93,5",
+        "95"
+      ],
+      "unit": "Indeks",
+      "formula": "Jika pengukuran indikator dilakukan secara mandiri, maka perhitungan nilai Indeks tata kelola\npengadaan Kejaksaan RI sebagai berikut.\nITKP = SP + KSDM + TK\nITKP : Indeks tata kelola pengadaan Kejaksaan RI\nSP : Nilai Pemanfaatan Sistem Pengadaan (SiRUP, e-Tendering, e-Purchasing, e-Kontrak,\nNon e-Tendering, dan Non e-Purchasing)\nKSDM : Nilai kualifikasi dan kompetensi SDM PBJ\nTK : Nilai Tingkat Kematangan UKPBJ",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Perlengkapan)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "89",
+        "90,5",
+        "92",
+        "93,5",
+        "95"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKP",
+      "page": 22,
+      "parent_code": "6",
+      "parent_name": "Meningkatnya kapasitas kelembagaan dan ketatalaksanaan Kejaksaan RI",
+      "indicator_code": "6.1",
+      "source_indicator_code": "6.1",
+      "indicator_name": "Nilai Evaluasi Kelembagaan Kejaksaan RI",
+      "targets_kepja": [
+        "80",
+        "81",
+        "82",
+        "83",
+        "84"
+      ],
+      "unit": "Nilai",
+      "formula": "Dokumen menuliskan NKA = X1 + X2; X(i=1..2) = (NX(i)/Tk(i)) × Bobot. Keterangan indikator menggunakan NEK (Nilai Evaluasi Kelembagaan).",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Perencanaan)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "80",
+        "81",
+        "82",
+        "83",
+        "84"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKP",
+      "page": 23,
+      "parent_code": "6",
+      "parent_name": "Meningkatnya kapasitas kelembagaan dan ketatalaksanaan Kejaksaan RI",
+      "indicator_code": "6.2",
+      "source_indicator_code": "6.2",
+      "indicator_name": "Tingkat kepatuhan satuan kerja terhadap standar operasional prosedur",
+      "targets_kepja": [
+        "80%",
+        "85%",
+        "90%",
+        "95%",
+        "100%"
+      ],
+      "unit": "Persentase",
+      "formula": "Jika pengukuran indikator dilakukan secara mandiri, maka perhitungan nila tingkat kepatuhan\nsatuan kerja terhadap standar operasional prosedur sebagai berikut.\nTK =\nS\nT\nTK : Tingkat kepatuhan satuan kerja terhadap standar operasional prosedur (SOP)\nS : Jumlah Satker yang dinyatakan patuh\nT : Total Satker yang menjadi obyek evaluasi",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Perencanaan)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "80%",
+        "85%",
+        "90%",
+        "95%",
+        "100%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKP",
+      "page": 24,
+      "parent_code": "7",
+      "parent_name": "Meningkatnya kualitas kebijakan penegakan hukum",
+      "indicator_code": "7.1",
+      "source_indicator_code": "7.1",
+      "indicator_name": "Indeks Kualitas Kebijakan Kejaksaan RI",
+      "targets_kepja": [
+        "70",
+        "70",
+        "75",
+        "75",
+        "80"
+      ],
+      "unit": "Indeks",
+      "formula": "Jika pengukuran indikator dilakukan secara mandiri, maka perhitungan nilai Indeks kualitas\nkebijakan Kejaksaan RI sebagai berikut.\nIKK = X1 + X2 + X3 + X4 + X5\nX 1−5 =\nNX1−5\nTk1−5\nx Bobot\nNKA : Indeks kualitas kebijakan Kejaksaan RI\nNX1-5 : Nilai Realisasi pada komponen 1 sampai dengan 5\nTk1-5 : Total komponen penilaian pada komponen 1 sampai dengan 5",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Hukum dan\nHubungan Luar Negeri)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "70",
+        "70",
+        "75",
+        "75",
+        "80"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKP",
+      "page": 25,
+      "parent_code": "7",
+      "parent_name": "Meningkatnya kualitas kebijakan penegakan hukum",
+      "indicator_code": "7.2",
+      "source_indicator_code": "7.2",
+      "indicator_name": "Indeks reformasi hukum Kejaksaan RI",
+      "targets_kepja": [
+        "98,1",
+        "98,2",
+        "98,3",
+        "98,4",
+        "98,5"
+      ],
+      "unit": "Persentase",
+      "formula": "Jika pengukuran indikator dilakukan secara mandiri, maka perhitungan nilai indeks reformasi\nhukum Kejaksaan RI sebagai berikut.\nIRH = X1 + X2 + X3 + X4\nX 1−4 =\nNX1−4\nTk1−4\nx Bobot\nIRH : Indeks Reformasi Hukum Kejaksaan RI\nNX1-4 : Nilai Realisasi pada komponen 1 sampai dengan 4\nTk1-4 : Total komponen penilaian pada komponen 1 sampai dengan 4",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Hukum dan Hubungan\nLuar Negeri)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "98,1",
+        "98,2",
+        "98,3",
+        "98,4",
+        "98,5"
+      ],
+      "renstra_match": "manual-verified",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKP",
+      "page": 26,
+      "parent_code": "8",
+      "parent_name": "Meningkatnya kuantitas dan kualitas SDM aparatur Kejaksaan RI",
+      "indicator_code": "8.1",
+      "source_indicator_code": "8.1",
+      "indicator_name": "Indeks Sistem Merit Kejaksaan RI",
+      "targets_kepja": [
+        "0,8",
+        "0,81",
+        "0,82",
+        "0,83",
+        "0,84"
+      ],
+      "unit": "Indeks",
+      "formula": "Jika pengukuran indikator dilakukan secara mandiri, maka perhitungan nilai Indeks Sistem Merit\nKejaksaan RI sebagai berikut.\nISM = X1 + X2 + X3 + X4 + X5 + X6 + X7 + X8\nX 1−8 =\nNX1−8\nTk1−8\nx Bobot\nISM : Indeks Sistem Merit Kejaksaan RI\nNX1-8 : Nilai Realisasi pada aspek 1 sampai dengan 8\nTk1-8 : Total komponen penilaian pada aspek 1 sampai dengan 8",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Kepegawaian)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "0,8",
+        "0,81",
+        "0,82",
+        "0,83",
+        "0,84"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKP",
+      "page": 27,
+      "parent_code": "8",
+      "parent_name": "Meningkatnya kuantitas dan kualitas SDM aparatur Kejaksaan RI",
+      "indicator_code": "8.2",
+      "source_indicator_code": "8.2",
+      "indicator_name": "Persentase kecukupan, kesesuaian, dan pengembangan SDM Kejaksaan RI",
+      "targets_kepja": [
+        "60%",
+        "65%",
+        "70%",
+        "75%",
+        "80%"
+      ],
+      "unit": "Persentase",
+      "formula": "KKP = rata − rata (Tingkat Kecukupan Personil, Tingkat Pengembangan Kapasitas SDM Kejaksaan,\ndan Tingkat Pengelolaan SDM\nKKP : Persentase kecukupan, kesesuaian, dan pengembangan SDM Kejaksaan RI",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Kepegawaian, Biro\nPerencanaan), Badan Pendidikan dan Pelatihan",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "60%",
+        "65%",
+        "70%",
+        "75%",
+        "80%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKP",
+      "page": 28,
+      "parent_code": "8",
+      "parent_name": "Meningkatnya kuantitas dan kualitas SDM aparatur Kejaksaan RI",
+      "indicator_code": "8.3",
+      "source_indicator_code": "8.3",
+      "indicator_name": "Indeks Profesionalitas SDM Kejaksaan RI",
+      "targets_kepja": [
+        "3,6",
+        "3,7",
+        "3,8",
+        "3,9",
+        "4,0"
+      ],
+      "unit": "Indeks",
+      "formula": "Perhitungan nilai Indeks Profesionalitas SDM Kejaksaan RI sebagai berikut.\nIP = X1 + X2 + X3 + X4\nX 1−4 =\nNX1−4\nTk1−4\nx Bobot\nIP : Indeks Profesionalitas SDM Kejaksaan RI\nNX1-4 : Nilai Realisasi pada dimensi 1 sampai dengan 4\nTk1-4 : Total komponen penilaian pada dimensi 1 sampai dengan 4",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Kepegawaian)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "3,6",
+        "3,7",
+        "3,8",
+        "3,9",
+        "4,0"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKP",
+      "page": 30,
+      "parent_code": "10",
+      "parent_name": "Meningkatnya kualitas layanan internal dukungan manajemen dan Kesehatan yustisial",
+      "indicator_code": "10.1",
+      "source_indicator_code": "10.1",
+      "indicator_name": "Indeks kepuasan layanan dukungan internal manajemen Kejaksaan RI",
+      "targets_kepja": [
+        "3,6",
+        "3,7",
+        "3,8",
+        "3,9",
+        "4,0"
+      ],
+      "unit": "Indeks",
+      "formula": "Perhitungan nilai Indeks kepuasan layanan dukungan internal manajemen Kejaksaan RI sebagai\nberikut.\nIK DIM = (\nIKL1 + IKL2 + IKLn\nN\n)\nIKL1−n = (\nTS\nR 𝑥 P 𝑥 M\n) 𝑥 100%\nIK DIM : Indeks kepuasan layanan dukungan internal manajemen Kejaksaan RI\nIKL1-n : Nilai indeks kepuasan layanan dukungan manajemen 1 sampai ke n\nTS : Jumlah total nilai dari setiap pertanyaan/pernyataan pada layanan 1\nsampai ke n\nR : Jumlah Responden\nP : Jumlah Pertanyaan/Pernyataan\nM : Nilai Maksimal dari skala penilaian\nN : Jumlah layanan",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Perencanaan)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "3,6",
+        "3,7",
+        "3,8",
+        "3,9",
+        "4,0"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKP",
+      "page": 31,
+      "parent_code": "10",
+      "parent_name": "Meningkatnya kualitas layanan internal dukungan manajemen dan Kesehatan yustisial",
+      "indicator_code": "10.2",
+      "source_indicator_code": "10.2",
+      "indicator_name": "Tingkat kepuasan Stakeholder terhadap Rumah Sakit Adhyaksa, Klinik Adhyaksa, dan Fasilitas Kesehatan Yustisial lainnya",
+      "targets_kepja": [
+        "75%",
+        "85%",
+        "95%",
+        "100%",
+        "100%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai tingkat kepuasan Stakeholder terhadap Rumah Sakit Adhyaksa, Klinik Adhyaksa,\ndan Fasilitas Kesehatan Yustisial lainnya sebagai berikut.\nTKSRS = (\n∑ Ri × Pi\n5\ni=1\n5 x ∑ Pi\n5\ni=1\n) x 100%\nTKSRS : Tingkat kepuasan Stakeholder terhadap Rumah Sakit Adhyaksa, Klinik Adhyaksa,\ndan Fasilitas Kesehatan Yustisial lainnya\nRi : rating i yang diberikan pada suatu pernyataan kuesioner yang menggunakan\nskala Likert 1-5;\nPi : jumlah pernyataan kuesioner yang memperoleh rating I;\n∑ 𝑅𝑖 × 𝑃𝑖\n5\ni=1\n: total penjumlahan dari perkalian rating i dengan jumlah pernyataan yang\nmemberikan rating i;\n∑ 𝑃𝑖\n5\ni=1\n: total penjumlahan pernyataan kuesioner yang memperoleh rating i.",
+      "responsible": "Pusat Kesehatan Yustisial",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "75%",
+        "85%",
+        "95%",
+        "100%",
+        "100%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKP",
+      "page": 32,
+      "parent_code": "11",
+      "parent_name": "Meningkatnya kompetensi aparatur Kejaksaan RI",
+      "indicator_code": "11.1",
+      "source_indicator_code": "11.1",
+      "indicator_name": "Indeks kesesuaian kompetensi (competency fit index) aparatur Kejaksaan RI",
+      "targets_kepja": [
+        "70",
+        "75",
+        "80",
+        "85",
+        "90"
+      ],
+      "unit": "Indeks",
+      "formula": "Perhitungan nilai Indeks kesesuaian kompetensi (competency fit index) aparatur Kejaksaan RI\nsebagai berikut.\n𝐶𝐹𝐼𝑗 =\n∑ 𝑆𝐾𝑎\n∑ 𝑆𝐾𝑖\n𝑥 100\nCFIj : Indeks kesesuaian kompetensi (competency fit index) aparatur Kejaksaan RI\n∑ 𝑆𝐾𝑎 : Total penjumlahan skor kompetensi aparatur Kejaksaan RI\n∑ 𝑆𝐾𝑖 :\nTotal penjumlahan skor kompetensi aparatur berdasarkan standar\nkompetensi (ideal)\nSKa : Skor kompetensi aparatur Kejaksaan RI\nSKi : Skor kompetensi apartur berdasarkan standar kompetensi (ideal)",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Kepegawaian)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "70",
+        "75",
+        "80",
+        "85",
+        "90"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKP",
+      "page": 33,
+      "parent_code": "11",
+      "parent_name": "Meningkatnya kompetensi aparatur Kejaksaan RI",
+      "indicator_code": "11.2",
+      "source_indicator_code": "11.2",
+      "indicator_name": "Persentase aparatur yang memiliki sertifikasi kompetensi sesuai jabatan",
+      "targets_kepja": [
+        "50%",
+        "65%",
+        "75%",
+        "85%",
+        "95%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Persentase aparatur yang memiliki sertifikasi kompetensi sesuai jabatan sebagai\nberikut.\nASK =\nN1 + N2\n2\nN1 =\nJT\nJS\nx 100% N2 =\nASN−T\nJ−ASN\nx 100%\nASK : Persentase aparatur yang memiliki sertifikasi kompetensi sesuai jabatan\nJT : Jumlah Jaksa yang memiliki sertifikat kompetensi\nJS : Jumlah total Jaksa Kejaksaan RI\nASN-T : Jumlah ASN yang memiliki sertifikat kompetensi sesuai jabatan\nJ-ASN : Jumlah total ASN Kejaksaan RI (tidak termasuk Jaksa)",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Kepegawaian)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "50%",
+        "65%",
+        "75%",
+        "85%",
+        "95%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKP",
+      "page": 35,
+      "parent_code": "13",
+      "parent_name": "Meningkatnya kualitas layanan hukum dan hubungan luar negeri",
+      "indicator_code": "13.1",
+      "source_indicator_code": "13.1",
+      "indicator_name": "Indeks kepuasan satker Kejaksaan atas layanan hukum",
+      "targets_kepja": [
+        "3,6",
+        "3,7",
+        "3,8",
+        "3,9",
+        "4,0"
+      ],
+      "unit": "Indeks",
+      "formula": "Perhitungan nilai Indeks kepuasan satker Kejaksaan atas layanan hukum sebagai berikut.\nIKLH = (\nTS\nR 𝑥 P 𝑥 M\n) 𝑥 100%\nIKLH : Indeks kepuasan satker Kejaksaan atas layanan hukum\nTS : Jumlah total nilai dari setiap pertanyaan/pernyataan\nR : Jumlah Responden\nP : Jumlah Pertanyaan/Pernyataan\nM : Nilai Maksimal dari skala penilaian",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Hukum dan Hubungan\nLuar Negeri)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "3,6",
+        "3.7",
+        "3,8",
+        "3,9",
+        "4,0"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKP",
+      "page": 36,
+      "parent_code": "13",
+      "parent_name": "Meningkatnya kualitas layanan hukum dan hubungan luar negeri",
+      "indicator_code": "13.2",
+      "source_indicator_code": "13.2",
+      "indicator_name": "Indeks kepuasan institusi mitra luar negeri terhadap kualitas kerja sama kelembagaan Kejaksaan RI",
+      "targets_kepja": [
+        "3,6",
+        "3,7",
+        "3,8",
+        "3,9",
+        "4,0"
+      ],
+      "unit": "Indeks",
+      "formula": "Perhitungan nilai Indeks kepuasan institusi mitra luar negeri terhadap kualitas kerja sama\nkelembagaan Kejaksaan RI sebagai berikut.\nIKKS = (\nTS\nR 𝑥 P 𝑥 M\n) 𝑥 100%\nIKKS : Indeks kepuasan institusi mitra luar negeri terhadap\nkualitas kerja sama kelembagaan Kejaksaan RI\nTS : Jumlah total nilai dari setiap pertanyaan/pernyataan\nR : Jumlah Responden\nP : Jumlah Pertanyaan/Pernyataan\nM : Nilai Maksimal dari skala penilaian",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Hukum dan Hubungan\nLuar Negeri)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "3,6",
+        "3.7",
+        "3,8",
+        "3,9",
+        "4,0"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKP",
+      "page": 38,
+      "parent_code": "15",
+      "parent_name": "Meningkatnya efektivitas pelaksanaan tugas dan fungsi Kejaksaan berbasis TI",
+      "indicator_code": "15.1",
+      "source_indicator_code": "15.1",
+      "indicator_name": "Persentase digitalisasi proses bisnis inti Kejaksaan RI",
+      "targets_kepja": [
+        "80%",
+        "85%",
+        "90%",
+        "95%",
+        "100%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Persentase digitalisasi proses bisnis inti Kejaksaan RI sebagai berikut.\nDPB =\nPBT\nPBI\nx 100%\nDPB : Persentase digitalisasi proses bisnis inti\nKejaksaan RI\nPBT : Proses bisnis inti Kejaksaan yang telah di\ndigitalisasi\nPBI : Total seluruh proses bisnis Inti",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Pusdaskrimti)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "80%",
+        "85%",
+        "90%",
+        "95%",
+        "100%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKP",
+      "page": 39,
+      "parent_code": "16",
+      "parent_name": "Meningkatnya kuantitas dan kualitas sarana dan prasarana yang mendukung Kinerja Kejaksaan RI",
+      "indicator_code": "16.1",
+      "source_indicator_code": "16.1",
+      "indicator_name": "Tingkat utilisasi sarana dan prasarana Kejaksaan RI",
+      "targets_kepja": [
+        "80%",
+        "82%",
+        "84%",
+        "86%",
+        "90%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Tingkat utilisasi sarana dan prasarana Kejaksaan RI sebagai berikut.\nUSP =\nSPu\nTSP\nx 100%\nUSP : Tingkat utilisasi sarana dan prasarana Kejaksaan RI\nSPu : Jumlah sarana dan prasarana Kejaksaan yang digunakan/dimanfaatkan (utilisasi)\nTSP : Total seluruh sarana dan prasarana Kejaksaan RI",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (C.q Biro Perlengkapan)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "80%",
+        "82%",
+        "84%",
+        "86%",
+        "90%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKP",
+      "page": 80,
+      "parent_code": "18",
+      "parent_name": "Meningkatnya efektivitas pemanfaatan sarana prasarana dalam mendukung penegakan dan pelayanan hukum di Kejaksaan RI",
+      "indicator_code": "18.1",
+      "source_indicator_code": "18.1",
+      "indicator_name": "Tingkat utilisasi sarana dan prasarana dalam mendukung penegakan dan pelayanan hukum di Kejaksaan RI",
+      "targets_kepja": [
+        "80",
+        "82",
+        "84",
+        "86",
+        "90"
+      ],
+      "unit": "Persentase (%)",
+      "formula": "U = (S / T) × 100%; S = jumlah sarana dan prasarana yang dimanfaatkan aktif sesuai fungsi; T = jumlah total sarana dan prasarana yang tersedia dan dapat digunakan dengan baik.",
+      "responsible": "Kejaksaan Agung (Badan Pemulihan Aset, Jaksa Agung Muda Bidang\nIndikator Pidana Khusus, Jaksa Agung Muda Bidang Pidana Umum, Jaksa Agung\nMuda Bidang Perdata dan Tata Usaha Negara, Jaksa Agung Muda\nBidang Intelijen, Jaksa Agung Muda Bidang Pembinaan.\nJAKSA AGUNG REPUBLIK INDONESIA,\ni\nBURHANUDDIN",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "80%",
+        "82%",
+        "84%",
+        "86%",
+        "90%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    }
+  ],
+  "activities": [
+    {
+      "level": "IKK",
+      "page": 81,
+      "parent_code": "1.1",
+      "parent_name": "Meningkatnya Akuntabilitas Kinerja Satker Kejaksaan RI",
+      "indicator_code": "1.1.1",
+      "source_indicator_code": "1.1.1",
+      "indicator_name": "Nilai SAKIP UKE I Kejaksaan RI",
+      "targets_kepja": [
+        "72",
+        "73",
+        "75",
+        "77",
+        "80"
+      ],
+      "unit": "Nilai",
+      "formula": "S = X1 + X2 + X3 + X4; X(i=1..4) = (NX(i) / Tk(i)) × Bobot. X1 Perencanaan Kinerja (30%); X2 Pengukuran Kinerja (30%); X3 Pelaporan Kinerja (15%); X4 Evaluasi Akuntabilitas Kinerja Internal (25%).",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan; Jaksa Agung Muda Bidang Intelijen; Jaksa Agung Muda Bidang Tindak Pidana Umum; Jaksa Agung Muda Bidang Tindak Pidana Khusus; Jaksa Agung Muda Bidang Perdata dan Tata Usaha Negara; Jaksa Agung Muda Bidang Pidana Militer; Jaksa Agung Muda Bidang Pengawasan; Badan Pendidikan dan Pelatihan; Badan Pemulihan Aset",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "72",
+        "73",
+        "75",
+        "77",
+        "80"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 83,
+      "parent_code": "1.2",
+      "parent_name": "Meningkatnya Kualitas perencanaan Kejaksaan RI",
+      "indicator_code": "1.2.1",
+      "source_indicator_code": "1.2.1",
+      "indicator_name": "Indeks Perencanaan Pembangunan Nasional (IPPN)",
+      "targets_kepja": [
+        "93",
+        "93,5",
+        "94",
+        "94,5",
+        "95"
+      ],
+      "unit": "Indeks",
+      "formula": "Jika pengukuran indikator dilakukan secara mandiri, maka perhitungan nilai Indeks Perencanaan\nPembangunan Nasional (IPPN) sebagai berikut.\nIPPN = X1 + X2 + X3\nX 1−3 =\nNX1−3\nTk1−3\nx Bobot\nIPPN : Nilai Indeks Perencanaan Pembangunan Nasional\nNX1-3 : Nilai Realisasi pada komponen 1 sampai dengan 3\nTk1-3 : Total komponen penilaian pada komponen 1 sampai dengan 3",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Perencanaan)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "93",
+        "93,5",
+        "94",
+        "94,5",
+        "95"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 84,
+      "parent_code": "1.3",
+      "parent_name": "Meningkatnya kegiatan perencanaan yang meliputi pengelolaan data, penyusunan rencana anggaran dan program kerja, pemantauan dan evaluasi, pengembangan organisasi dan tata laksana serta fasilitasi pelaksanaan program reformasi birokrasi Kejaksaan RI",
+      "indicator_code": "1.3.1",
+      "source_indicator_code": "1.3.1",
+      "indicator_name": "Persentase layanan pengelolaan data sesuai SLA (Service Level Agreement)",
+      "targets_kepja": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Persentase layanan pengelolaan data sesuai SLA (Service Level Agreement) sebagai\nberikut.\nLPD =\nS\nT\n𝑥 100%\nLPD : Presentase layanan pengelolaan data sesuai SLA (Service Level\nAgreement)\nS : Jumlah layanan pengelolaan data yang diselesaikan sesuai SLA\n(Service Level Agreement)\nT : Total layanan pengelolaan data dalam 1 tahun",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Perencanaan)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 85,
+      "parent_code": "1.3",
+      "parent_name": "Meningkatnya kegiatan perencanaan yang meliputi pengelolaan data, penyusunan rencana anggaran dan program kerja, pemantauan dan evaluasi, pengembangan organisasi dan tata laksana serta fasilitasi pelaksanaan program reformasi birokrasi Kejaksaan RI",
+      "indicator_code": "1.3.2",
+      "source_indicator_code": "1.3.2",
+      "indicator_name": "Persentase layanan penyusunan rencana anggaran dan program kerja sesuai SLA (Service Level Agreement)",
+      "targets_kepja": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Persentase layanan penyusunan rencana anggaran dan program kerja sesuai SLA\n(Service Level Agreement) sebagai berikut.\nRAP =\nS\nT\n𝑥 100%\nRAP : Presentase layanan penyusunan rencana anggaran dan program kerja\nsesuai SLA (Service Level Agreement)\nS : Jumlah dokumen rencana anggaran & program kerja yang disusun sesuai\nSLA (Service Level Agreement)\nT : Jumlah total dokumen yang harus disusun dalam 1 tahun",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Perencanaan)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 86,
+      "parent_code": "1.3",
+      "parent_name": "Meningkatnya kegiatan perencanaan yang meliputi pengelolaan data, penyusunan rencana anggaran dan program kerja, pemantauan dan evaluasi, pengembangan organisasi dan tata laksana serta fasilitasi pelaksanaan program reformasi birokrasi Kejaksaan RI",
+      "indicator_code": "1.3.3",
+      "source_indicator_code": "1.3.3",
+      "indicator_name": "Persentase layanan pemantauan dan evaluasi sesuai SLA (Service Level Agreement)",
+      "targets_kepja": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Persentase layanan pemantauan dan evaluasi sesuai SLA (Service Level\nAgreement) sebagai berikut.\nPE =\nS\nT\n𝑥 100%\nPE : Presentase layanan pemantauan dan evaluasi sesuai SLA\n(Service Level Agreement)\nS : Jumlah layanan monev yang dilaksanakan sesuai SLA\n(Service Level Agreement)\nT : jumlah total layanan monev dalam 1 tahun",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Perencanaan)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 87,
+      "parent_code": "1.3",
+      "parent_name": "Meningkatnya kegiatan perencanaan yang meliputi pengelolaan data, penyusunan rencana anggaran dan program kerja, pemantauan dan evaluasi, pengembangan organisasi dan tata laksana serta fasilitasi pelaksanaan program reformasi birokrasi Kejaksaan RI",
+      "indicator_code": "1.3.4",
+      "source_indicator_code": "1.3.4",
+      "indicator_name": "Persentase layanan organisasi dan tata laksana sesuai SLA (Service Level Agreement)",
+      "targets_kepja": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Persentase layanan organisasi dan tata laksana sesuai SLA (Service Level\nAgreement) sebagai berikut.\nOTL =\nS\nT\n𝑥 100%\nOTL : Presentase layanan organisasi dan tata laksana sesuai SLA (Service\nLevel Agreement)\nS : Jumlah layanan organisasi dan tata laksana yang dilaksanakan\nsesuai SLA (Service Level Agreement)\nT : jumlah total layanan organisasi dan tata laksana dalam 1 tahun",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Perencanaan)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 88,
+      "parent_code": "1.3",
+      "parent_name": "Meningkatnya kegiatan perencanaan yang meliputi pengelolaan data, penyusunan rencana anggaran dan program kerja, pemantauan dan evaluasi, pengembangan organisasi dan tata laksana serta fasilitasi pelaksanaan program reformasi birokrasi Kejaksaan RI",
+      "indicator_code": "1.3.5",
+      "source_indicator_code": "1.3.5",
+      "indicator_name": "Persentase layanan reformasi birokrasi sesuai SLA (Service Level Agreement)",
+      "targets_kepja": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Persentase layanan reformasi birokrasi sesuai SLA (Service Level Agreement)\nsebagai berikut.\nRB =\nS\nT\n𝑥 100%\nRB : Presentase layanan reformasi birokrasi sesuai SLA (Service Level\nAgreement)\nS : Jumlah layanan reformasi birokrasi yang diselesaikan sesuai SLA\n(Service Level Agreement)\nT : jumlah total layanan reformasi birokrasi dalam 1 tahun",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Perencanaan)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 89,
+      "parent_code": "1.3",
+      "parent_name": "Meningkatnya kegiatan perencanaan yang meliputi pengelolaan data, penyusunan rencana anggaran dan program kerja, pemantauan dan evaluasi, pengembangan organisasi dan tata laksana serta fasilitasi pelaksanaan program reformasi birokrasi Kejaksaan RI",
+      "indicator_code": "1.3.6",
+      "source_indicator_code": "1.3.6",
+      "indicator_name": "Persentase satker Kejaksaan RI yang mendapat pendampingan pembangunan zona integritas menuju WBK/WBBM",
+      "targets_kepja": [
+        "35%",
+        "40%",
+        "50%",
+        "70%",
+        "80%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Persentase satker Kejaksaan RI yang mendapat pendampingan pembangunan\nzona integritas menuju WBK/WBBM sebagai berikut.\nZI =\nS\nT\n𝑥 100%\nZI : Presentase satker Kejaksaan RI yang mendapat pendampingan pembangunan zona\nintegritas menuju WBK/WBBM\nS : Jumlah satker yang mendapat pendampingan\nT : Jumlah total satker yang membangun ZI",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (cq. Biro Perencanaan)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "35%",
+        "40%",
+        "50%",
+        "70%",
+        "80%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 96,
+      "parent_code": "4.1",
+      "parent_name": "Meningkatnya kualitas laporan keuangan Kejaksaan RI",
+      "indicator_code": "4.1.1",
+      "source_indicator_code": "4.1.1",
+      "indicator_name": "Nilai Kualitas Pelaporan Keuangan Unit Akuntansi Pengguna Anggaran (UAPA) Kejaksaan RI",
+      "targets_kepja": [
+        "75",
+        "80",
+        "85",
+        "90",
+        "95"
+      ],
+      "unit": "Nilai",
+      "formula": "Jika pengukuran indikator dilakukan secara mandiri, maka perhitungan Nilai Kualitas Pelaporan\nKeuangan Unit Akuntansi Pengguna Anggaran (UAPA) Kejaksaan RI sebagai berikut.\nUAPA = X1 + X2\nX1 = (100 − n) x Bobot, X2 = (\nNX2\nTk\nx Bobot) − n\nUAPA : Nilai Kualitas Pelaporan Keuangan Unit Akuntansi Pengguna Anggaran (UAPA)\nKejaksaan RI\nX1 : Nilai Realisasi atas jumlah temuan yang mempengaruhi opini BPK\nX2 : Nilai Realisasi atas Rata-rata nilai kualitas pelaporan keuangan Lembaga\nNX2 : Jumlah nilai total atas Realisasi pada komponen 2\nTk : Jumlah Satker Eselon I\nn : Nilai Pengurang",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Keuangan)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "75",
+        "80",
+        "85",
+        "90",
+        "95"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 97,
+      "parent_code": "4.2",
+      "parent_name": "Meningkatnya efisiensi dan efektivitas Perencanaan dan penggunaan anggaran Kejaksaan UKE I Kejaksaan RI",
+      "indicator_code": "4.2.1",
+      "source_indicator_code": "4.2.1",
+      "indicator_name": "Nilai Kinerja Anggaran UKE I Kejaksaan RI",
+      "targets_kepja": [
+        "90",
+        "90,25",
+        "90,5",
+        "90,75",
+        "91"
+      ],
+      "unit": "Nilai",
+      "formula": "Jika pengukuran indikator dilakukan secara mandiri, maka perhitungan Nilai Kinerja Anggaran\nUKE I Kejaksaan RI adalah sebagai berikut.\nNKA = X1 + X2\nX 1−2 =\nNX1−2\nTk1−2\nx Bobot\nNKA : Nilai Kinerja Anggaran UKE I\nNX1-2 : Nilai Realisasi pada komponen 1 sampai dengan 2\nTk1-2 : Total komponen penilaian pada komponen 1 sampai dengan 2",
+      "responsible": "• Jaksa Agung Muda Bidang Pembinaan\n• Jaksa Agung Muda Bidang Intelijen\n• Jaksa Agung Muda Bidang Tindak Pidana Umum\n• Jaksa Agung Muda Bidang Tindak Pidana Khusus\n• Jaksa Agung Muda Bidang Perdata dan Tata Usaha Negara\n• Jaksa Agung Muda Bidang Pidana Militer\n• Jaksa Agung Muda Bidang Pengawasan\n• Badan Pendidikan dan Pelatihan, dan\n• Badan Pemulihan Aset",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "90",
+        "90,25",
+        "90,5",
+        "90,75",
+        "91"
+      ],
+      "renstra_match": "manual-verified",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 99,
+      "parent_code": "4.3",
+      "parent_name": "Meningkatnya kegiatan pembinaan pengelolaan keuangan Kejaksaan RI",
+      "indicator_code": "4.3.1",
+      "source_indicator_code": "4.3.1",
+      "indicator_name": "Persentase layanan perbendaharaan sesuai SLA (Service Level Agreement)",
+      "targets_kepja": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai persentase layanan perbendaharaan sesuai SLA (Service Level\nAgreement) sebagai berikut.\nLP =\nS\nT\n𝑥 100%\nLP : Presentase layanan perbendaharaan sesuai SLA (Service Level\nAgreement)\nS : Jumlah layanan pembinaan pengelolaan keuangan yang\ndilaksanakan sesuai SLA (Service Level Agreement)\nT : jumlah total layanan pembinaan pengelolaan keuangan dalam 1\ntahun",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Keuangan)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [],
+      "renstra_match": "not-in-renstra-matrix",
+      "target_status": "Tidak tercantum eksplisit di matriks Renstra"
+    },
+    {
+      "level": "IKK",
+      "page": 100,
+      "parent_code": "4.3",
+      "parent_name": "Meningkatnya kegiatan pembinaan pengelolaan keuangan Kejaksaan RI",
+      "indicator_code": "4.3.2",
+      "source_indicator_code": "4.3.2",
+      "indicator_name": "Persentase layanan pendapatan dan piutang negara sesuai SLA (Service Level Agreement)",
+      "targets_kepja": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai persentase layanan pendapatan dan piutang negara sesuai SLA (Service Level\nAgreement) sebagai berikut.\nPPN =\nS\nT\n𝑥 100%\nPPN : Presentase layanan pendapatan dan piutang negara sesuai SLA\nS : Jumlah layanan pendapatan dan piutang negara yang dilaksanakan sesuai\nSLA\nT : jumlah total layanan pendapatan dan piutang negara dalam 1 tahun",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Keuangan)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [],
+      "renstra_match": "not-in-renstra-matrix",
+      "target_status": "Tidak tercantum eksplisit di matriks Renstra"
+    },
+    {
+      "level": "IKK",
+      "page": 101,
+      "parent_code": "4.3",
+      "parent_name": "Meningkatnya kegiatan pembinaan pengelolaan keuangan Kejaksaan RI",
+      "indicator_code": "4.3.3",
+      "source_indicator_code": "4.3.3",
+      "indicator_name": "Jumlah laporan pelaksanaan kegiatan penggunaan anggaran PNBP sesuai SLA (Service Level Agreement)",
+      "targets_kepja": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Jumlah laporan pelaksanaan kegiatan penggunaan anggaran PNBP sesuai SLA\n(Service Level Agreement) sebagai berikut.\nPNBP =\nS\nT\n𝑥 100%\nPNBP : Jumlah laporan pelaksanaan kegiatan penggunaan anggaran PNBP\nsesuai SLA\nS : Jumlah laporan pelaksanaan kegiatan penggunaan anggaran PNBP\nyang disampaikan sesuai SLA\nT : jumlah total laporan yang wajib disampaikan dalam 1 tahun",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Keuangan)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [],
+      "renstra_match": "not-in-renstra-matrix",
+      "target_status": "Tidak tercantum eksplisit di matriks Renstra"
+    },
+    {
+      "level": "IKK",
+      "page": 102,
+      "parent_code": "4.3",
+      "parent_name": "Meningkatnya kegiatan pembinaan pengelolaan keuangan Kejaksaan RI",
+      "indicator_code": "4.3.4",
+      "source_indicator_code": "4.3.4",
+      "indicator_name": "Persentase layanan akuntansi dan pelaporan keuangan sesuai SLA (Service Level Agreement)",
+      "targets_kepja": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai persentase layanan akuntansi dan pelaporan keuangan sesuai SLA (Service Level\nAgreement) sebagai berikut.\nAPK =\nS\nT\n𝑥 100%\nAPK : Presentase layanan akuntansi dan pelaporan keuangan sesuai SLA (Service\nLevel Agreement)\nS : Jumlah layanan akuntansi dan pelaporan keuangan yang diselesaikan sesuai\nSLA (Service Level Agreement)\nT : jumlah total layanan akuntansi dan pelaporan keuangan dalam 1 tahun",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Keuangan)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [],
+      "renstra_match": "not-in-renstra-matrix",
+      "target_status": "Tidak tercantum eksplisit di matriks Renstra"
+    },
+    {
+      "level": "IKK",
+      "page": 103,
+      "parent_code": "4.3",
+      "parent_name": "Meningkatnya kegiatan pembinaan pengelolaan keuangan Kejaksaan RI",
+      "indicator_code": "4.3.5",
+      "source_indicator_code": "4.3.5",
+      "indicator_name": "Persentase layanan umum keuangan sesuai SLA (Service Level Agreement)",
+      "targets_kepja": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai persentase layanan umum keuangan sesuai SLA (Service Level Agreement) sebagai\nberikut.\nLUK =\nS\nT\n𝑥 100%\nLUK : Presentase layanan umum keuangan sesuai SLA\nS : Jumlah layanan umum keuangan yang diselesaikan sesuai SLA\nT : jumlah total layanan umum keuangan dalam 1 tahun",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Keuangan)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [],
+      "renstra_match": "not-in-renstra-matrix",
+      "target_status": "Tidak tercantum eksplisit di matriks Renstra"
+    },
+    {
+      "level": "IKK",
+      "page": 104,
+      "parent_code": "4.3",
+      "parent_name": "Meningkatnya kegiatan pembinaan pengelolaan keuangan Kejaksaan RI",
+      "indicator_code": "4.3.6",
+      "source_indicator_code": "4.3.6",
+      "indicator_name": "Persentase layanan perkantoran sesuai SLA (Service Level Agreement)",
+      "targets_kepja": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Persentase layanan perkantoran sesuai SLA (Service Level Agreement) sebagai\nberikut.\nP =\nS\nT\n𝑥 100%\nP : Presentase layanan perkantoran sesuai SLA (Service Level\nAgreement)\nS : Jumlah layanan perkantoran yang diselesaikan sesuai SLA\n(Service Level Agreement)\nT : Total layanan perkantoran dalam selama 1 tahun",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Keuangan)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 105,
+      "parent_code": "5.1",
+      "parent_name": "Meningkatnya kegiatan analisis kebutuhan dan penatausahaan barang milik negara, pengadaan barang/jasa, dan pengelolaan barang milik negara di lingkungan Kejaksaan RI",
+      "indicator_code": "5.1.1",
+      "source_indicator_code": "5.1.1",
+      "indicator_name": "Persentase jumlah satuan kerja yang telah melaksanakan inventarisasi barang milik negara",
+      "targets_kepja": [
+        "20%",
+        "40%",
+        "60%",
+        "80%",
+        "(90%)"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Persentase jumlah satuan kerja yang telah melaksanakan inventarisasi barang\nmilik negara sebagai berikut.\nIBMN =\nS\nT\n𝑥 100%\nIBMN : Persentase jumlah satuan kerja yang telah melaksanakan inventarisasi barang\nmilik negara\nS : Jumlah satker yang telah melaksanakan inventarisasi BMN\nT : Total Satker Kejaksaan RI",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Perlengkapan)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "20%",
+        "40%",
+        "60%",
+        "80%",
+        "90%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 106,
+      "parent_code": "5.1",
+      "parent_name": "Meningkatnya kegiatan analisis kebutuhan dan penatausahaan barang milik negara, pengadaan barang/jasa, dan pengelolaan barang milik negara di lingkungan Kejaksaan RI",
+      "indicator_code": "5.1.2",
+      "source_indicator_code": "5.1.2",
+      "indicator_name": "Persentase layanan analisis kebutuhan dan penatausahaan barang milik negara sesuai SLA (Service Level Agreement)",
+      "targets_kepja": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Persentase layanan analisis kebutuhan dan penatausahaan barang milik negara\nsesuai SLA (Service Level Agreement) sebagai berikut.\nAKP =\nLAK + PBMN\n2\nLAK =\nAk\nTak\n𝑥 100% PBMN =\nP\nTp\n𝑥 100%\nAKP : Persentase layanan analisis kebutuhan dan penatausahaan barang milik negara\nsesuai SLA\nLAK : Persentase layanan analisis kebutuhan barang milik negara sesuai SLA\nPBMN : Persentase layanan penatausahaan barang milik negara sesuai SLA\nAk : Jumlah usulan kebutuhan dari unit kerja yang dievaluasi sesuai SLA\nP : Jumlah layanan penatausahaan BMN yang diselesaikan sesuai SLA\nTak : Total usulan kebutuhan dari unit kerja dalam 1 tahun\nTp : Total layanan penatausahaan BMN dalam 1 tahun",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Perlengkapan)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 107,
+      "parent_code": "5.1",
+      "parent_name": "Meningkatnya kegiatan analisis kebutuhan dan penatausahaan barang milik negara, pengadaan barang/jasa, dan pengelolaan barang milik negara di lingkungan Kejaksaan RI",
+      "indicator_code": "5.1.3",
+      "source_indicator_code": "5.1.3",
+      "indicator_name": "Persentase layanan pengadaan sesuai SLA (Service Level Agreement)",
+      "targets_kepja": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Persentase layanan pengadaan sesuai SLA (Service Level Agreement) sebagai\nberikut.\nPA =\nS\nT\n𝑥 100%\nPA : Presentase layanan pengadaan sesuai SLA (Service Level\nAgreement)\nS : Jumlah layanan pengadaan yang diselesaikan sesuai SLA\n(Service Level Agreement)\nT : Total layanan pengadaan dalam 1 tahun",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Perlengkapan)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 108,
+      "parent_code": "5.1",
+      "parent_name": "Meningkatnya kegiatan analisis kebutuhan dan penatausahaan barang milik negara, pengadaan barang/jasa, dan pengelolaan barang milik negara di lingkungan Kejaksaan RI",
+      "indicator_code": "5.1.4",
+      "source_indicator_code": "5.1.4",
+      "indicator_name": "Persentase layanan pengelolaan barang milik negara sesuai SLA (Service Level Agreement)",
+      "targets_kepja": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Persentase layanan pengelolaan barang milik negara sesuai SLA (Service Level\nAgreement) sebagai berikut.\nPBMN =\nS\nT\n𝑥 100%\nPBMN : Presentase layanan pengelolaan barang milik negara sesuai SLA (Service Level\nAgreement)\nS : Jumlah layanan pengelolaan BMN yang diselesaikan sesuai SLA (Service Level\nAgreement)\nT : Total layanan pengelolaan BMN dalam 1 tahun",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Perlengkapan)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 109,
+      "parent_code": "5.1",
+      "parent_name": "Meningkatnya kegiatan analisis kebutuhan dan penatausahaan barang milik negara, pengadaan barang/jasa, dan pengelolaan barang milik negara di lingkungan Kejaksaan RI",
+      "indicator_code": "5.1.5",
+      "source_indicator_code": "5.1.5",
+      "indicator_name": "Persentase layanan perkantoran sesuai SLA (Service Level Agreement)",
+      "targets_kepja": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Persentase layanan perkantoran sesuai SLA (Service Level Agreement) sebagai\nberikut.\nLPK =\nS\nT\n𝑥 100%\nLPK : Presentase layanan perkantoran sesuai SLA (Service Level Agreement)(Service\nLevel Agreement)\nS : Jumlah layanan perkantoran yang diselesaikan sesuai SLA (Service Level\nAgreement)\nT : Total layanan perkantoran dalam 1 tahun",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Perlengkapan)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 110,
+      "parent_code": "5.2",
+      "parent_name": "Meningkatnya keberhasilan pengelolaan aset UKE I Kejaksaan RI",
+      "indicator_code": "5.2.1",
+      "source_indicator_code": "5.2.1",
+      "indicator_name": "Presentase jumlah Barang Milik Negara (BMN) dalam kondisi siap pakai",
+      "targets_kepja": [
+        "70%",
+        "75%",
+        "80%",
+        "85%",
+        "90%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Presentase jumlah Barang Milik Negara (BMN) dalam kondisi siap pakai sebagai\nberikut.\nBMN =\nS\nT\n𝑥 100%\nBMN : Presentase jumlah BMN dalam kondisi siap pakai\nS : Jumlah BMN dalam kondisi baik dan rusak ringan masih operasional\nT : Total BMN yang tersedia/terdaftar",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Perlengkapan)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "70%",
+        "75%",
+        "80%",
+        "85%",
+        "90%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 111,
+      "parent_code": "6.1",
+      "parent_name": "Meningkatnya kualitas Tata Kelola Organisasi Kejaksaan yang tepat fungsi",
+      "indicator_code": "6.1.1",
+      "source_indicator_code": "6.1.1",
+      "indicator_name": "Persentase Penyelesaian Restrukturisasi Organisasi",
+      "targets_kepja": [
+        "80%",
+        "85%",
+        "90%",
+        "95%",
+        "100%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai persentase penyelesaian restrukturisasi organisasi sebagai berikut.\nRO =\nS\nT\n𝑥 100%\nRO : Presentase penyelesaian restrukturisasi organisasi\nS : jumlah dokumen Restrukturisasi yang telah selesai disusun\nT : jumlah total rencana atau target restrukturisasi yang telah ditetapkan dalam 1 tahun",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Perencanaan)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "80%",
+        "85%",
+        "90%",
+        "95%",
+        "100%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 112,
+      "parent_code": "6.1",
+      "parent_name": "Meningkatnya kualitas Tata Kelola Organisasi Kejaksaan yang tepat fungsi",
+      "indicator_code": "6.1.2",
+      "source_indicator_code": "6.1.2",
+      "indicator_name": "Tingkat Realisasi Rencana Aksi RB General Kejaksaan RI",
+      "targets_kepja": [
+        "80%",
+        "85%",
+        "90%",
+        "95%",
+        "100%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Tingkat Realisasi Rencana Aksi RB General Kejaksaan RI adalah sebagai berikut.\nRARB =\nS\nT\n𝑥 100%\nRARB : Tingkat Realisasi Rencana Aksi RB General Kejaksaan RI\nS : jumlah aksi RB yang telah dilaksanakan\nT : jumlah total aksi RB yang direncanakan dalam 1 tahun",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Perencanaan)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "80%",
+        "85%",
+        "90%",
+        "95%",
+        "100%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 113,
+      "parent_code": "6.2",
+      "parent_name": "Meningkatnya kualitas Tata Kelola Organisasi UKE I Kejaksaan yang tepat fungsi",
+      "indicator_code": "6.2.1",
+      "source_indicator_code": "6.2.1",
+      "indicator_name": "Persentase implementasi RB UKE I berdasarkan Rencana Aksi RB Tematik",
+      "targets_kepja": [
+        "80%",
+        "85%",
+        "90%",
+        "95%",
+        "100%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Persentase implementasi RB UKE I berdasarkan Rencana Aksi RB Tematik\nsebagai berikut.\nRBT =\nS\nT\n𝑥 100%\nRBT : Persentase implementasi RB UKE I berdasarkan Rencana Aksi RB Tematik\nS : jumlah aksi RB tematik yang telah dilaksanakan\nT : jumlah total aksi RB tematik yang direncanakan dalam 1 tahun",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Perencanaan)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "84%",
+        "85%",
+        "86%",
+        "87%",
+        "88%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Berbeda substansi"
+    },
+    {
+      "level": "IKK",
+      "page": 114,
+      "parent_code": "7.1",
+      "parent_name": "Meningkatnya pelaksanaan kegiatan pelayanan penyusunan rancangan peraturan perundang-undangan, pertimbangan hukum, kerja sama dan hubungan luar negeri serta perpustakaan dan dokumentasi hukum dan kerja sama hukum",
+      "indicator_code": "7.1.1",
+      "source_indicator_code": "7.1.1",
+      "indicator_name": "Persentase layanan penelaahan, perancangan perundang- undangan dan pertimbangan hukum sesuai SLA (Service Level Agreement)",
+      "targets_kepja": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai persentase layanan penelaahan, perancangan perundang-undangan dan\npertimbangan hukum sesuai SLA (Service Level Agreement) sebagai berikut.\nLHK =\nS\nT\n𝑥 100%\nLHK : Presentase layanan penelaahan, perancangan perundang-undangan dan\npertimbangan hukum sesuai SLA (Service Level Agreement)\nS : Jumlah layanan penelaahan, perancangan perundang-undangan dan\npertimbangan hukum yang dilaksanakan sesuai SLA (Service Level Agreement)\nT : jumlah total permintaan layanan hukum dalam 1 tahun",
+      "responsible": "• Biro Hukum dan Hubungan Luar Negeri; dan\n• Perwakilan Kejaksaan RI di luar negeri",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 115,
+      "parent_code": "7.1",
+      "parent_name": "Meningkatnya pelaksanaan kegiatan pelayanan penyusunan rancangan peraturan perundang-undangan, pertimbangan hukum, kerja sama dan hubungan luar negeri serta perpustakaan dan dokumentasi hukum dan kerja sama hukum",
+      "indicator_code": "7.1.2",
+      "source_indicator_code": "7.1.2",
+      "indicator_name": "Persentase layanan kerja sama hukum dan hubungan luar negeri sesuai SLA (Service Level Agreement)",
+      "targets_kepja": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai persentase layanan kerja sama hukum dan hubungan luar negeri sesuai SLA\n(Service Level Agreement) sebagai berikut.\nLKHLN =\nS\nT\n𝑥 100%\nLKHLN : Presentase layanan kerja sama hukum dan hubungan luar negeri sesuai SLA\nS : jumlah layanan kerja sama hukum dan hubungan luar negeri yang dilaksanakan\nsesuai SLA\nT : jumlah total permintaan layanan kerja sama hukum dan hubungan luar negeri\ndalam 1 tahun",
+      "responsible": "• Biro Hukum dan Hubungan Luar Negeri; dan\n• Perwakilan Kejaksaan RI di luar negeri",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 116,
+      "parent_code": "7.1",
+      "parent_name": "Meningkatnya pelaksanaan kegiatan pelayanan penyusunan rancangan peraturan perundang-undangan, pertimbangan hukum, kerja sama dan hubungan luar negeri serta perpustakaan dan dokumentasi hukum dan kerja sama hukum",
+      "indicator_code": "7.1.3",
+      "source_indicator_code": "7.1.3",
+      "indicator_name": "Persentase layanan perpustakaan dan dokumentasi hukum sesuai SLA (Service Level Agreement)",
+      "targets_kepja": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai persentase layanan perpustakaan dan dokumentasi hukum sesuai SLA (Service\nLevel Agreement) sebagai berikut.\nPDH =\nS\nT\n𝑥 100%\nPDH : Presentase layanan perpustakaan dan dokumentasi hukum sesuai SLA (Service Level\nAgreement)\nS : jumlah layanan perpustakaan dan dokumentasi hukum yang diselesaikan sesuai SLA\n(Service Level Agreement)\nT : jumlah total permintaan layanan perpustakaan dan dokumentasi hukum dalam 1\ntahun",
+      "responsible": "• Biro Hukum dan Hubungan Luar Negeri; dan\n• Perwakilan Kejaksaan RI di luar negeri",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 117,
+      "parent_code": "7.1",
+      "parent_name": "Meningkatnya pelaksanaan kegiatan pelayanan penyusunan rancangan peraturan perundang-undangan, pertimbangan hukum, kerja sama dan hubungan luar negeri serta perpustakaan dan dokumentasi hukum dan kerja sama hukum",
+      "indicator_code": "7.1.4",
+      "source_indicator_code": "7.1.4",
+      "indicator_name": "Persentase layanan hukum pada perwakilan Kejaksaan RI di luar negeri sesuai SLA (Service Level Agreement)",
+      "targets_kepja": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai persentase layanan hukum pada perwakilan Kejaksaan RI di luar negeri sesuai\nSLA (Service Level Agreement) adalah sebagai berikut.\nHLU =\nS\nT\n𝑥 100%\nHLU : Presentase layanan hukum pada perwakilan Kejaksaan RI di luar negeri sesuai SLA\n(Service Level Agreement)\nS : jumlah layanan hukum pada perwakilan Kejaksaan RI di luar negeri yang dilaksanakan\nsesuai SLA (Service Level Agreement)\nT : jumlah total permintaan layanan hukum pada perwakilan Kejaksaan RI di luar negeri\ndalam 1 tahun",
+      "responsible": "• Biro Hukum dan Hubungan Luar Negeri; dan\n• Perwakilan Kejaksaan RI di luar negeri",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 118,
+      "parent_code": "7.1",
+      "parent_name": "Meningkatnya pelaksanaan kegiatan pelayanan penyusunan rancangan peraturan perundang-undangan, pertimbangan hukum, kerja sama dan hubungan luar negeri serta perpustakaan dan dokumentasi hukum dan kerja sama hukum",
+      "indicator_code": "7.1.5",
+      "source_indicator_code": "7.1.5",
+      "indicator_name": "Persentase layanan perkantoran perwakilan Kejaksaan RI di luar negeri sesuai SLA (Service Level Agreement)",
+      "targets_kepja": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Persentase layanan perkantoran perwakilan Kejaksaan RI di luar negeri\nsesuai SLA (Service Level Agreement) sebagai berikut.\nPKLU =\nS\nT\n𝑥 100%\nPKLU : Presentase layanan perkantoran perwakilan Kejaksaan RI di luar negeri sesuai\nSLA (Service Level Agreement)\nS : Jumlah layanan perkantoran perwakilan Kejaksaan RI di luar negeri yang\ndiselesaikan sesuai SLA (Service Level Agreement)\nT : Total layanan perkantoran perwakilan Kejaksaan RI di luar negeri dalam 1\ntahun",
+      "responsible": "• Biro Hukum dan Hubungan Luar Negeri; dan\n• Perwakilan Kejaksaan RI di luar negeri",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 119,
+      "parent_code": "7.2",
+      "parent_name": "Meningkatnya kegiatan strategi kebijakan penegakan hukum",
+      "indicator_code": "7.2.1",
+      "source_indicator_code": "7.2.1",
+      "indicator_name": "Persentase layanan program dan evaluasi sesuai SLA (Service Level Agreement)",
+      "targets_kepja": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Persentase layanan program dan evaluasi sesuai SLA (Service Level Agreement)\nsebagai berikut.\nLPE =\nS\nT\n𝑥 100%\nLPE : Persentase layanan program dan evaluasi sesuai SLA (Service Level\nAgreement)\nS : Jumlah layanan program dan evaluasi yang dilaksanakan sesuai\nSLA (Service Level Agreement)\nT : jumlah total layanan program dan evaluasi dalam 1 tahun",
+      "responsible": "Pusat Strategi Kebijakan Penegakan Hukum",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 120,
+      "parent_code": "7.2",
+      "parent_name": "Meningkatnya kegiatan strategi kebijakan penegakan hukum",
+      "indicator_code": "7.2.2",
+      "source_indicator_code": "7.2.2",
+      "indicator_name": "Tingkat ketepatan waktu penyampaian laporan penyusunan dan pemberian rekomendasi kebijakan terkait strategi kebijakan penegakan hukum, intelijen pidana, perdata, tata usaha negara, serta politik hukum, pemerintahan dan pembangunan SDM dalam bentuk policy brief atau policy paper",
+      "targets_kepja": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Tingkat ketepatan waktu penyampaian laporan penyusunan dan pemberian\nrekomendasi kebijakan terkait strategi kebijakan penegakan hukum, intelijen pidana, perdata, tata\nusaha negara, serta politik hukum, pemerintahan dan pembangunan SDM dalam bentuk policy\nbrief atau policy paper sebagai berikut.\nPP =\nS\nT\n𝑥 100%\nPP : Tingkat ketepatan waktu penyampaian laporan penyusunan dan pemberian\nrekomendasi kebijakan terkait strategi kebijakan penegakan hukum, intelijen\npidana, perdata, tata usaha negara, serta politik hukum, pemerintahan dan\npembangunan SDM dalam bentuk policy brief atau policy paper\nS : Jumlah laporan rekomendasi kebijakan yang disusun dan disampaikan tepat\nwaktu.\nT : jumlah total permintaan rekomendasi kebijakan dalam 1 tahun",
+      "responsible": "Pusat Strategi Kebijakan Penegakan Hukum",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 121,
+      "parent_code": "7.2",
+      "parent_name": "Meningkatnya kegiatan strategi kebijakan penegakan hukum",
+      "indicator_code": "7.2.3",
+      "source_indicator_code": "7.2.3",
+      "indicator_name": "Persentase layanan pengelolaan jurnal ilmiah Kejaksaan (The Prosecutor Law Review) sesuai SLA (Service Level Agreement)",
+      "targets_kepja": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Persentase layanan pengelolaan jurnal ilmiah Kejaksaan (The Prosecutor\nLaw Review) sesuai SLA (Service Level Agreement) sebagai berikut.\nJIK =\nS\nT\n𝑥 100%\nJIK : Persentase layanan pengelolaan jurnal ilmiah Kejaksaan (The Prosecutor Law\nReview) sesuai SLA (Service Level Agreement)\nS : Jumlah layanan pengelolaan jurnal ilmiah Kejaksaan yang terbit tepat waktu\nT : Jumlah total layanan pengelolaan jurnal ilmiah Kejaksaan dalam 1 tahun",
+      "responsible": "Pusat Strategi Kebijakan Penegakan Hukum",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 122,
+      "parent_code": "7.2",
+      "parent_name": "Meningkatnya kegiatan strategi kebijakan penegakan hukum",
+      "indicator_code": "7.2.4",
+      "source_indicator_code": "7.2.4",
+      "indicator_name": "Persentase layanan pembinaan karya tulis ilmiah (makalah) di lingkungan Kejaksaan Agung sesuai SLA (Service Level Agreement)",
+      "targets_kepja": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Persentase layanan pembinaan karya tulis ilmiah (makalah) di\nlingkungan Kejaksaan Agung sesuai SLA (Service Level Agreement) sebagai berikut.\nKTI =\nS\nT\n𝑥 100%\nKTI : Persentase layanan pembinaan karya tulis ilmiah (makalah) di lingkungan\nKejaksaan Agung sesuai SLA (Service Level Agreement)\nS : Jumlah layanan pembinaan karya tulis ilmiah yang dilaksanakan sesuai SLA\n(Service Level Agreement)\nT : jumlah total layanan pembinaan karya tulis ilmiah dalam 1 tahun",
+      "responsible": "Pusat Strategi Kebijakan Penegakan Hukum",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 123,
+      "parent_code": "7.2",
+      "parent_name": "Meningkatnya kegiatan strategi kebijakan penegakan hukum",
+      "indicator_code": "7.2.5",
+      "source_indicator_code": "7.2.5",
+      "indicator_name": "Persentase layanan penilaian karya tulis ilmiah (makalah) di lingkungan Kejaksaan Agung sesuai SLA (Service Level Agreement)",
+      "targets_kepja": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Persentase layanan penilaian karya tulis ilmiah (makalah) di lingkungan\nKejaksaan Agung sesuai SLA (Service Level Agreement) sebagai berikut.\nPKTI =\nS\nT\n𝑥 100%\nPKTI : Persentase layanan penilaian karya tulis ilmiah (makalah) di lingkungan Kejaksaan\nAgung sesuai SLA (Service Level Agreement)\nS : Jumlah penilaian karya tulis ilmiah yang diselesaikan sesuai SLA (Service Level\nAgreement)\nT : jumlah total layanan penilaian karya tulis ilmiah dalam 1 tahun",
+      "responsible": "Pusat Strategi Kebijakan Penegakan Hukum",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 124,
+      "parent_code": "7.2",
+      "parent_name": "Meningkatnya kegiatan strategi kebijakan penegakan hukum",
+      "indicator_code": "7.2.6",
+      "source_indicator_code": "7.2.6",
+      "indicator_name": "Persentase layanan pemantauan dan evaluasi kebijakan strategis di bidang penegakan hukum dalam bentuk perjalanan dinas sesuai SLA (Service Level Agreement)",
+      "targets_kepja": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Persentase layanan pemantauan dan evaluasi kebijakan strategis di bidang\npenegakan hukum dalam bentuk perjalanan dinas sesuai SLA (Service Level Agreement) sebagai\nberikut.\nLPRA =\nS\nT\n𝑥 100%\nLPRA : Persentase layanan pemantauan dan evaluasi kebijakan strategis di bidang\npenegakan hukum dalam bentuk perjalanan dinas sesuai SLA (Service Level\nAgreement)\nS : Jumlah layanan monev yang dilaksanakan sesuai SLA (Service Level Agreement)\nT : jumlah total layanan monev dalam 1 tahun",
+      "responsible": "Pusat Strategi Kebijakan Penegakan Hukum",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 125,
+      "parent_code": "7.2",
+      "parent_name": "Meningkatnya kegiatan strategi kebijakan penegakan hukum",
+      "indicator_code": "7.2.7",
+      "source_indicator_code": "7.2.7",
+      "indicator_name": "Persentase layanan survei kepuasan masyarakat terhadap pelayanan publik Kejaksaan RI sesuai SLA (Service Level Agreement)",
+      "targets_kepja": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Persentase layanan survei kepuasan masyarakat terhadap pelayanan publik\nKejaksaan RI sesuai SLA (Service Level Agreement) sebagai berikut.\nSKM =\nS\nT\n𝑥 100%\nSKM : Persentase layanan survei kepuasan masyarakat terhadap pelayanan publik\nKejaksaan RI sesuai SLA (Service Level Agreement)\nS : Jumlah pelaksanaan survei yang diselesaikan sesuai SLA (Service Level Agreement)\nT : jumlah total pelaksanaan survei dalam 1 tahun",
+      "responsible": "Pusat Strategi Kebijakan Penegakan Hukum",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "renstra_match": "partial-4",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 126,
+      "parent_code": "7.3",
+      "parent_name": "Meningkatnya keberhasilan pernyusunan strategi kebijakan penegakan hukum",
+      "indicator_code": "7.3.1",
+      "source_indicator_code": "7.3.1",
+      "indicator_name": "Persentase Capaian Implementasi Policy Brief untuk Harmonisasi Kebijakan",
+      "targets_kepja": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Persentase Capaian Implementasi Policy Brief untuk Harmonisasi Kebijakan\nsebagai berikut.\nPB =\nS\nT\n𝑥 100%\nPB : Persentase Capaian Implementasi Policy Brief untuk Harmonisasi Kebijakan\nS : Jumlah policy brief yang telah ditindaklanjuti melalui regulasi, pedoman, atau\nkeputusan strategis\nT : jumlah total policy brief yang diterbitkan",
+      "responsible": "Pusat Strategi Kebijakan Penegakan Hukum",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 127,
+      "parent_code": "8.1",
+      "parent_name": "Meningkatnya Kegiatan Pembinaan dan Pengelolaan Kepegawaian di Kejaksaan RI",
+      "indicator_code": "8.1.1",
+      "source_indicator_code": "8.1.1",
+      "indicator_name": "Persentase layanan umum kepegawaian sesuai SLA (Service Level Agreement)",
+      "targets_kepja": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Persentase layanan umum kepegawaian sesuai SLA (Service Level Agreement)\nsebagai berikut.\nLUK =\nS\nT\n𝑥 100%\nLUK : Presentase layanan umum kepegawaian sesuai SLA\nS : Jumlah layanan umum kepegawaian yang diselesaikan sesuai SLA\nT : Total layanan umum kepegawaian dalam 1 tahun",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Kepegawaian)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 128,
+      "parent_code": "8.1",
+      "parent_name": "Meningkatnya Kegiatan Pembinaan dan Pengelolaan Kepegawaian di Kejaksaan RI",
+      "indicator_code": "8.1.2",
+      "source_indicator_code": "8.1.2",
+      "indicator_name": "Persentase layanan pengembangan kepegawaian sesuai SLA (Service Level Agreement)",
+      "targets_kepja": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Persentase layanan pengembangan kepegawaian sesuai SLA (Service\nLevel Agreement) sebagai berikut.\nLPK =\nS\nT\n𝑥 100%\nLPK : Presentase layanan pengembangan kepegawaian sesuai SLA (Service Level\nAgreement)\nS : Jumlah layanan pengembangan kepegawaian yang diselesaikan sesuai SLA\n(Service Level Agreement)\nT : Total layanan pengembangan kepegawaian dalam 1 tahun",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Kepegawaian)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 129,
+      "parent_code": "8.1",
+      "parent_name": "Meningkatnya Kegiatan Pembinaan dan Pengelolaan Kepegawaian di Kejaksaan RI",
+      "indicator_code": "8.1.3",
+      "source_indicator_code": "8.1.3",
+      "indicator_name": "Persentase layanan kepangkatan dan mutasi kepegawaian sesuai SLA (Service Level Agreement)",
+      "targets_kepja": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Persentase layanan kepangkatan dan mutasi kepegawaian sesuai SLA\n(Service Level Agreement) sebagai berikut.\nKMK =\nS\nT\n𝑥 100%\nKMK : Presentase layanan kepangkatan dan mutasi kepegawaian sesuai SLA (Service\nLevel Agreement)\nS : Jumlah layanan kepangkatan dan mutasi kepegawaian yang diselesaikan\nsesuai SLA (Service Level Agreement)\nT : Total layanan kepangkatan dan mutasi kepegawaian dalam 1 tahun",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Kepegawaian)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 130,
+      "parent_code": "8.1",
+      "parent_name": "Meningkatnya Kegiatan Pembinaan dan Pengelolaan Kepegawaian di Kejaksaan RI",
+      "indicator_code": "8.1.4",
+      "source_indicator_code": "8.1.4",
+      "indicator_name": "Persentase layanan pemberhentian dan pensiun sesuai SLA (Service Level Agreement)",
+      "targets_kepja": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Persentase layanan pemberhentian dan pensiun sesuai SLA (Service Level\nAgreement) sebagai berikut.\nLPP =\nS\nT\n𝑥 100%\nLPP : Presentase layanan pemberhentian dan pensiun sesuai SLA (Service Level\nAgreement)\nS : Jumlah layanan pemberhentian dan pensiun yang diselesaikan sesuai SLA (Service\nLevel Agreement)\nT : Total layanan pemberhentian dan pensiun dalam 1 tahun",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Kepegawaian)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 131,
+      "parent_code": "8.2",
+      "parent_name": "Meningkatnya kecukupan dan kesesuaian SDM Kejaksaan RI",
+      "indicator_code": "8.2.1",
+      "source_indicator_code": "8.2.1",
+      "indicator_name": "Tingkat Kecukupan Personel Jaksa",
+      "targets_kepja": [
+        "80%",
+        "85%",
+        "90%",
+        "95%",
+        "100%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai tingkat kecukupan personel Jaksa sebagai berikut.\nKJ =\n∑ P\n∑ S + ∑ KPT\n𝑥 100%\n∑ KPT =\n∑ PM − PS\nRasio Ideal\nKJ : Tingkat kecukupan personel Jaksa\nP : Jumlah Personil Jaksa\nS : Jumlah Personil Jaksa\nKPT : Kebutuhan Personil Tambahan\nPM : Perkara Masuk\nPS : Perkara Selesai\nRasio Ideal : 13 (Berdasarkan Variabel IPH)",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Kepegawaian), Jaksa\nAgung Muda Bidang Tindak Pidana Umum, Jaksa Agung Muda Bidang\nTindak Pidana Khusus",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "98,2%",
+        "98,5%",
+        "98,7%",
+        "99%",
+        "99,2%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Berbeda substansi"
+    },
+    {
+      "level": "IKK",
+      "page": 132,
+      "parent_code": "8.2",
+      "parent_name": "Meningkatnya kecukupan dan kesesuaian SDM Kejaksaan RI",
+      "indicator_code": "8.2.2",
+      "source_indicator_code": "8.2.2",
+      "indicator_name": "Tingkat kesesuaian pengelolaan SDM Jaksa",
+      "targets_kepja": [
+        "80%",
+        "85%",
+        "90%",
+        "95%",
+        "100%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai tingkat kesesuaian pengelolaan SDM Jaksa sebagai berikut.\nKPSDM = %rata − rata skor indeks sistem merit + skor indeks profesionalitas + skor ketersediaan SOP\nKPSDM : Tingkat kesesuaian pengelolaan SDM Jaksa",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Kepegawaian, Biro\nPerencanaan)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "80%",
+        "82%",
+        "85%",
+        "87%",
+        "90%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Berbeda substansi"
+    },
+    {
+      "level": "IKK",
+      "page": 133,
+      "parent_code": "8.2",
+      "parent_name": "Meningkatnya kecukupan dan kesesuaian SDM Kejaksaan RI",
+      "indicator_code": "8.2.3",
+      "source_indicator_code": "8.2.3",
+      "indicator_name": "Tingkat kesesuaian kompetensi pegawai terhadap persyaratan kompetensi jabatan",
+      "targets_kepja": [
+        "80%",
+        "85%",
+        "90%",
+        "95%",
+        "100%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai tingkat kesesuaian kompetensi pegawai terhadap persyaratan kompetensi jabatan\nsebagai berikut.\nTKKP =\nS\nT\n𝑥 100%\nTKKP : Tingkat kesesuaian kompetensi pegawai terhadap persyaratan kompetensi jabatan\nS : Jumlah pegawai yang kompetensinya sesuai jabatan\nT : Jumlah total pegawai Kejaksaan RI",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Kepegawaian)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "80%",
+        "85%",
+        "90%",
+        "95%",
+        "100%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 134,
+      "parent_code": "8.3",
+      "parent_name": "Berkurangnya pengaduan Masyarakat terhadap SDM Kejaksaan RI",
+      "indicator_code": "8.3.1",
+      "source_indicator_code": "8.3.1",
+      "indicator_name": "Persentase SDM Kejaksaan yang dijatuhi hukuman disiplin",
+      "targets_kepja": [
+        "5%",
+        "4%",
+        "3%",
+        "2%",
+        "1%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Persentase SDM Kejaksaan yang dijatuhi hukuman disiplin adalah sebagai\nberikut.\nHD =\nS\nT\n𝑥 100%\nHD : Presentase SDM Kejaksaan yang dijatuhi hukuman\nS : Jumlah aparatur Kejaksaan RI diberikan SK hukuman disiplin dalam 1 tahun\nT : Jumlah total aparatur Kejaksaan RI",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Kepegawaian)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [],
+      "renstra_match": "not-in-renstra-matrix",
+      "target_status": "Tidak tercantum eksplisit di matriks Renstra"
+    },
+    {
+      "level": "IKK",
+      "page": 138,
+      "parent_code": "10.1",
+      "parent_name": "Meningkatnya kualitas ASN Kejaksaan yang berakhlak",
+      "indicator_code": "10.1.1",
+      "source_indicator_code": "10.1.1",
+      "indicator_name": "Indeks Kepuasan Pegawai terhadap Layanan Manajemen ASN",
+      "targets_kepja": [
+        "3,6",
+        "3,7",
+        "3,8",
+        "3,9",
+        "4,0"
+      ],
+      "unit": "Indeks",
+      "formula": "Perhitungan nilai Indeks kepuasan Pegawai terhadap Layanan Manajemen ASN sebagai berikut.\nIKASN = (\nTS\nR 𝑥 P 𝑥 M\n) 𝑥 100%\nIKASN : Indeks kepuasan Pegawai terhadap Layanan Manajemen ASN\nTS : Jumlah total nilai dari setiap pertanyaan/pernyataan\nR : Jumlah Responden\nP : Jumlah Pertanyaan/Pernyataan\nM : Nilai Maksimal dari skala penilaian",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Kepegawaian)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "3,6",
+        "3,7",
+        "3,8",
+        "3,9",
+        "4,0"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 139,
+      "parent_code": "10.2",
+      "parent_name": "Meningkatnya kualitas layanan keuangan di lingkungan Kejaksaan RI",
+      "indicator_code": "10.2.1",
+      "source_indicator_code": "10.2.1",
+      "indicator_name": "Indeks Kepuasan Pegawai terhadap Layanan keuangan",
+      "targets_kepja": [
+        "3,6",
+        "3,7",
+        "3,8",
+        "3,9",
+        "4,0"
+      ],
+      "unit": "Indeks",
+      "formula": "Perhitungan nilai Indeks kepuasan Pegawai terhadap Layanan keuangan sebagai berikut.\nIKK = (\nTS\nR 𝑥 P 𝑥 M\n) 𝑥 100%\nIKK : Indeks kepuasan Pegawai terhadap Layanan keuangan\nTS : Jumlah total nilai dari setiap pertanyaan/pernyataan\nR : Jumlah Responden\nP : Jumlah Pertanyaan/Pernyataan\nM : Nilai Maksimal dari skala penilaian",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Keuangan)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "3,6",
+        "3,7",
+        "3,8",
+        "3,9",
+        "4,0"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 140,
+      "parent_code": "10.3",
+      "parent_name": "Meningkatnya kualitas layanan umum di lingkungan Kejaksaan RI",
+      "indicator_code": "10.3.1",
+      "source_indicator_code": "10.3.1",
+      "indicator_name": "Indeks Kepuasan Pegawai terhadap Layanan Biro umum",
+      "targets_kepja": [
+        "3,6",
+        "3,7",
+        "3,8",
+        "3,9",
+        "4,0"
+      ],
+      "unit": "Indeks",
+      "formula": "Perhitungan nilai Indeks kepuasan Pegawai terhadap Layanan biro umum sebagai berikut.\nIKBU = (\nTS\nR 𝑥 P 𝑥 M\n) 𝑥 100%\nIKBU : Indeks kepuasan Pegawai terhadap Layanan Biro Umum\nTS : Jumlah total nilai dari setiap pertanyaan/pernyataan\nR : Jumlah Responden\nP : Jumlah Pertanyaan/Pernyataan\nM : Nilai Maksimal dari skala penilaian",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Umum)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "3,6",
+        "3,7",
+        "3,8",
+        "3,9",
+        "4,0"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 141,
+      "parent_code": "10.4",
+      "parent_name": "Meningkatnya kualitas layanan manajemen Barang Milik Negara dan pengadaan di Lingkungan Kejaksaan RI",
+      "indicator_code": "10.4.1",
+      "source_indicator_code": "10.4.1",
+      "indicator_name": "Indeks Kepuasan Pegawai terhadap layanan manajemen Barang Milik Negara dan Pengadaan",
+      "targets_kepja": [
+        "3,6",
+        "3,7",
+        "3,8",
+        "3,9",
+        "4,0"
+      ],
+      "unit": "Indeks",
+      "formula": "Perhitungan nilai Indeks kepuasan Pegawai terhadap Layanan manajemen Barang Milik Negara dan\nPengadaan sebagai berikut.\nIKBMN = (\nTS\nR 𝑥 P 𝑥 M\n) 𝑥 100%\nIKBMN : Indeks kepuasan Pegawai terhadap Layanan manajemen BMN dan Pengadaan\nTS : Jumlah total nilai dari setiap pertanyaan/pernyataan\nR : Jumlah Responden\nP : Jumlah Pertanyaan/Pernyataan\nM : Nilai Maksimal dari skala penilaian",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Perlengkapan)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "3,6",
+        "3,7",
+        "3,8",
+        "3,9",
+        "4,0"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 142,
+      "parent_code": "10.5",
+      "parent_name": "Meningkatnya kualitas layanan dukungan manajemen di lingkungan Kejaksaan RI",
+      "indicator_code": "10.5.1",
+      "source_indicator_code": "10.5.1",
+      "indicator_name": "Indeks Kepuasan Pegawai terhadap Layanan dukungan manajemen Satker UKE I",
+      "targets_kepja": [
+        "3,6",
+        "3,7",
+        "3,8",
+        "3,9",
+        "4,0"
+      ],
+      "unit": "Indeks",
+      "formula": "Perhitungan nilai Indeks Kepuasan Pegawai terhadap Layanan dukungan manajemen Satker UKE\nI sebagai berikut.\nIK UKE I = (\nIKL1 + IKL2 + IKLn\nN\n)\nIKL1−n = (\nTS\nR 𝑥 P 𝑥 M\n) 𝑥 100%\nIK UKE I : Indeks kepuasan Pegawai terhadap Layanan dukungan manajemen Satker UKE I\nIKL1-n : Nilai indeks kepuasan layanan dukungan manajemen UKE I pada layanan 1\nsampai ke n\nTS : Jumlah total nilai dari setiap pertanyaan/pernyataan pada layanan 1 sampai ke n\nR : Jumlah Responden\nP : Jumlah Pertanyaan/Pernyataan\nM : Nilai Maksimal dari skala penilaian\nN : Jumlah layanan",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan, Jaksa Agung Muda Bidang\nIntelijen, Jaksa Agung Muda Bidang Tindak Pidana Umum, Jaksa\nAgung Muda Bidang Tindak Pidana Khusus, Jaksa Agung Muda Bidang\nPerdata Tata Usaha Negara, Jaksa Agung Muda Bidang Pidana Militer,\nJaksa Agung Muda Bidang Pengawasan, dan Badan Pendidikan dan\nPelatihan",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "3,6",
+        "3,7",
+        "3,8",
+        "3,9",
+        "4,0"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 143,
+      "parent_code": "10.6",
+      "parent_name": "Meningkatnya kegiatan pelayanan ketatausahaan Jaksa Agung, Wakil Jaksa Agung, Staf Ahli, tata usaha pimpinan, Protokol dan Keamanan Pimpinan, Keamanan, tata usaha dan kearsipan, sarana prasarana dan Rumah Tangga",
+      "indicator_code": "10.6.1",
+      "source_indicator_code": "10.6.1",
+      "indicator_name": "Persentase layanan tata usaha pimpinan sesuai SLA (Service Level Agreement)",
+      "targets_kepja": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Persentase layanan tata usaha pimpinan sesuai SLA sebagai berikut.\nLTUP =\nS\nT\nx 100%\nLTUP : Presentase layanan tata usaha pimpinan sesuai SLA (Service Level Agreement)\nS : Jumlah layanan tata usaha pimpinan yang diselesaikan sesuai SLA (Service\nLevel Agreement)\nT : Total layanan tata usaha pimpinan dalam 1 tahun",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Umum)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 144,
+      "parent_code": "10.6",
+      "parent_name": "Meningkatnya kegiatan pelayanan ketatausahaan Jaksa Agung, Wakil Jaksa Agung, Staf Ahli, tata usaha pimpinan, Protokol dan Keamanan Pimpinan, Keamanan, tata usaha dan kearsipan, sarana prasarana dan Rumah Tangga",
+      "indicator_code": "10.6.2",
+      "source_indicator_code": "10.6.2",
+      "indicator_name": "Persentase layanan protokol dan pengamanan pimpinan sesuai SLA (Service Level Agreement)",
+      "targets_kepja": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Persentase layanan protokol dan pengamanan pimpinan sesuai SLA\nsebagai berikut.\nLPP =\nS\nT\nx 100%\nLPP : Persentase layanan protokol dan pengamanan pimpinan sesuai SLA (Service\nLevel Agreement)\nS : Jumlah layanan protokol dan pengamanan pimpinan yang diselesaikan\nsesuai SLA (Service Level Agreement)\nT : Total layanan protokol dan pengamanan pimpinan dalam 1 tahun",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Umum)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 145,
+      "parent_code": "10.6",
+      "parent_name": "Meningkatnya kegiatan pelayanan ketatausahaan Jaksa Agung, Wakil Jaksa Agung, Staf Ahli, tata usaha pimpinan, Protokol dan Keamanan Pimpinan, Keamanan, tata usaha dan kearsipan, sarana prasarana dan Rumah Tangga",
+      "indicator_code": "10.6.3",
+      "source_indicator_code": "10.6.3",
+      "indicator_name": "Persentase layanan keamanan dalam sesuai SLA (Service Level Agreement)",
+      "targets_kepja": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Persentase layanan keamanan dalam sesuai SLA sebagai berikut.\n𝐿𝐾𝐷 =\nS\n𝑇\n𝑥 100%\nLKD : Persentase layanan keamanan dalam sesuai SLA\nS : Jumlah layanan keamanan dalam yang diselesaikan sesuai SLA\nT : Total layanan keamanan dalam selama 1 tahun",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Umum)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 146,
+      "parent_code": "10.6",
+      "parent_name": "Meningkatnya kegiatan pelayanan ketatausahaan Jaksa Agung, Wakil Jaksa Agung, Staf Ahli, tata usaha pimpinan, Protokol dan Keamanan Pimpinan, Keamanan, tata usaha dan kearsipan, sarana prasarana dan Rumah Tangga",
+      "indicator_code": "10.6.4",
+      "source_indicator_code": "10.6.4",
+      "indicator_name": "Persentase layanan tata usaha dan kearsipan sesuai SLA (Service Level Agreement)",
+      "targets_kepja": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Persentase layanan tata usaha dan kearsipan sesuai SLA sebagai\nberikut.\nLTUA =\nS\nT\nx 100%\nLTUA : Persentase layanan tata usaha dan kearsipan sesuai SLA (Service Level\nAgreement)\nS : Jumlah layanan tata usaha dan kearsipan yang diselesaikan sesuai SLA\n(Service Level Agreement)\nT : Total layanan tata usaha dan kearsipan dalam 1 tahun",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Umum)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 147,
+      "parent_code": "10.6",
+      "parent_name": "Meningkatnya kegiatan pelayanan ketatausahaan Jaksa Agung, Wakil Jaksa Agung, Staf Ahli, tata usaha pimpinan, Protokol dan Keamanan Pimpinan, Keamanan, tata usaha dan kearsipan, sarana prasarana dan Rumah Tangga",
+      "indicator_code": "10.6.5",
+      "source_indicator_code": "10.6.5",
+      "indicator_name": "Persentase layanan prasarana sarana dan rumah tangga sesuai SLA (Service Level Agreement)",
+      "targets_kepja": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Persentase layanan prasarana sarana dan rumah tangga sesuai SLA (Service Level\nAgreement) sebagai berikut.\nLSPRT =\nS\nT\nx 100%\nLSPRT : Persentase layanan prasarana sarana dan rumah tangga sesuai SLA (Service Level\nAgreement)\nS : Jumlah layanan prasarana sarana dan rumah tangga yang diselesaikan sesuai SLA\n(Service Level Agreement)\nT : Total layanan prasarana sarana dan rumah tangga dalam 1 tahun",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Umum)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "renstra_match": "partial-4",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 148,
+      "parent_code": "10.6",
+      "parent_name": "Meningkatnya kegiatan pelayanan ketatausahaan Jaksa Agung, Wakil Jaksa Agung, Staf Ahli, tata usaha pimpinan, Protokol dan Keamanan Pimpinan, Keamanan, tata usaha dan kearsipan, sarana prasarana dan Rumah Tangga",
+      "indicator_code": "10.6.6",
+      "source_indicator_code": "10.6.6",
+      "indicator_name": "Persentase layanan perkantoran sesuai SLA (Service Level Agreement)",
+      "targets_kepja": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Persentase layanan perkantoran sesuai SLA sebagai berikut.\nLPK =\nS\nT\nx 100%\nLPK : Persentase layanan perkantoran sesuai SLA (Service Level Agreement)\nS : Jumlah layanan perkantoran yang diselesaikan sesuai SLA (Service Level\nAgreement)\nT : Total layanan perkantoran dalam 1 tahun",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Umum)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 149,
+      "parent_code": "10.7",
+      "parent_name": "Meningkatnya Meningkatnya kegiatan dukungan manajemen dan pelaksanaan tugas teknis lainnya Jaksa Agung Muda Bidang Pembinaan di Kejaksaan Agung, Kejaksaan Tinggi, Kejaksaan Negeri, dan Cabang Kejaksaan Negeri",
+      "indicator_code": "10.7.1",
+      "source_indicator_code": "10.7.1",
+      "indicator_name": "Persentase layanan dukungan manajemen Eselon I sesuai SLA (Service Level Agreement)",
+      "targets_kepja": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Persentase layanan dukungan manajemen Eselon I sesuai SLA (Service Level\nAgreement) sebagai berikut.\nLDME = (\nL1 + L2 + Ln\nN\n)\nX 1−n =\nS1−n\nT1−n\nx 100%\nLDME : Persentase layanan dukungan manajemen Eselon I sesuai SLA\nL1-n : Jumlah layanan yang diselesaikan sesuai SLA pada setiap layanan\nN : Jumlah total layanan dukungan manajemen Eselon I\nS1-n : Jumlah layanan yang dilaksanakan sesuai SLA\nT1-n : Total layanan dukungan manajemen Eselon I dalam 1 tahun",
+      "responsible": "Jaksa Agung Muda Pembinaan, Kejaksaan Tinggi, Kejaksaan Negeri,\ndan Cabang Kejaksaan Negeri",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 150,
+      "parent_code": "10.7",
+      "parent_name": "Meningkatnya Meningkatnya kegiatan dukungan manajemen dan pelaksanaan tugas teknis lainnya Jaksa Agung Muda Bidang Pembinaan di Kejaksaan Agung, Kejaksaan Tinggi, Kejaksaan Negeri, dan Cabang Kejaksaan Negeri",
+      "indicator_code": "10.7.2",
+      "source_indicator_code": "10.7.2",
+      "indicator_name": "Persentase layanan dukungan satker",
+      "targets_kepja": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Persentase layanan dukungan satker sebagai berikut.\nLDS =\nS\nT\nx 100%\nLDS : Persentase layanan dukungan satker\nS : Jumlah layanan dukungan satker yang diselesaikan sesuai SLA (Service\nLevel Agreement)\nT : Total layanan dukungan satker dalam 1 tahun",
+      "responsible": "Jaksa Agung Muda Pembinaan, Kejaksaan Tinggi, Kejaksaan Negeri,\ndan Cabang Kejaksaan Negeri",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 151,
+      "parent_code": "10.7",
+      "parent_name": "Meningkatnya Meningkatnya kegiatan dukungan manajemen dan pelaksanaan tugas teknis lainnya Jaksa Agung Muda Bidang Pembinaan di Kejaksaan Agung, Kejaksaan Tinggi, Kejaksaan Negeri, dan Cabang Kejaksaan Negeri",
+      "indicator_code": "10.7.3",
+      "source_indicator_code": "10.7.3",
+      "indicator_name": "Persentase layanan pemeliharaan dan implementasi sistem informasi pada seluruh satker Kejaksaan RI sesuai SLA (Service Level Agreement)",
+      "targets_kepja": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Persentase layanan pemeliharaan dan implementasi sistem informasi\npada seluruh satker Kejaksaan RI sesuai SLA (Service Level Agreement) sebagai berikut.\nPISI =\nS\nT\nx 100%\nPISI : Persentase layanan pemeliharaan dan implementasi sistem informasi pada\nseluruh satker Kejaksaan RI sesuai SLA (Service Level Agreement)\nS : Jumlah layanan pemeliharaan dan implementasi sistem informasi pada\nseluruh satker Kejaksaan RI yang diselesaikan sesuai SLA (Service Level\nAgreement)\nT : Total layanan pemeliharaan dan implementasi sistem informasi pada seluruh\nsatker Kejaksaan RI dalam 1 tahun",
+      "responsible": "Jaksa Agung Muda Pembinaan, Kejaksaan Tinggi, Kejaksaan Negeri,\ndan Cabang Kejaksaan Negeri",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 152,
+      "parent_code": "10.7",
+      "parent_name": "Meningkatnya Meningkatnya kegiatan dukungan manajemen dan pelaksanaan tugas teknis lainnya Jaksa Agung Muda Bidang Pembinaan di Kejaksaan Agung, Kejaksaan Tinggi, Kejaksaan Negeri, dan Cabang Kejaksaan Negeri",
+      "indicator_code": "10.7.4",
+      "source_indicator_code": "10.7.4",
+      "indicator_name": "Persentase layanan perkantoran sesuai SLA (Service Level Agreement)",
+      "targets_kepja": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Persentase layanan perkantoran sesuai SLA sebagai berikut.\nLPKkjt =\nS\nT\nx 100%\nLPKkjt : Persentase layanan perkantoran sesuai SLA (Service Level Agreement) di\nlingkungan Jaksa Agung Muda Pembinaan, Kejaksaan Tinggi, Kejaksaan Negeri,\ndan Cabang Kejaksaan Negeri\nS : Jumlah layanan perkantoran yang diselesaikan sesuai SLA (Service Level\nAgreement)\nT : Total layanan perkantoran dalam 1 tahun",
+      "responsible": "Jaksa Agung Muda Pembinaan, Kejaksaan Tinggi, Kejaksaan Negeri,\ndan Cabang Kejaksaan Negeri",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 153,
+      "parent_code": "10.8",
+      "parent_name": "Meningkatnya kualitas layanan publik Kejaksaan RI",
+      "indicator_code": "10.8.1",
+      "source_indicator_code": "10.8.1",
+      "indicator_name": "Persentase Satker yang melaksanakan Survey kepuasan layanan",
+      "targets_kepja": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Persentase Satker yang melaksanakan Survey kepuasan layanan adalah sebagai\nberikut.\nLPK =\nS\nT\n𝑥 100%\nLPK : Presentase Satker yang melaksanakan Survey kepuasan layanan\nS : Jumlah satker yang melaksanakan survey kepuasan layanan publik\nT : Total satker yang menyelenggarakan layanan publik pada Kejaksaan RI",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Perencanaan)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 154,
+      "parent_code": "10.8",
+      "parent_name": "Meningkatnya kualitas layanan publik Kejaksaan RI",
+      "indicator_code": "10.8.2",
+      "source_indicator_code": "10.8.2",
+      "indicator_name": "Indeks kepuasan layanan publik Kejaksaan RI",
+      "targets_kepja": [
+        "3,6",
+        "3,7",
+        "3,8",
+        "3,9",
+        "4,0"
+      ],
+      "unit": "Indeks",
+      "formula": "Perhitungan nilai Indeks kepuasan layanan publik Kejaksaan RI adalah sebagai berikut.\nIKLP = (\n∑ 𝑅𝑖 × 𝑁𝑖\n5\ni=1\n∑ 𝑁𝑖\n5\ni=1\n)\nIKLP : Indeks kepuasan layanan publik Kejaksaan RI\nRi : rating i yang diberikan pada suatu pernyataan kuesioner yang menggunakan\nskala Likert 1-5;\nNi : jumlah pernyataan kuesioner yang memperoleh rating I;\n∑ 𝑅𝑖 × 𝑁𝑖\n5\ni=1\n:\ntotal penjumlahan dari perkalian rating i dengan jumlah pernyataan yang\nmemberikan rating i;\n∑ 𝑁𝑖\n5\ni=1\n: total penjumlahan pernyataan kuesioner yang memperoleh rating i.",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Perencanaan)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "3,6",
+        "3,7",
+        "3,8",
+        "3,9",
+        "4,0"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 155,
+      "parent_code": "10.9",
+      "parent_name": "Meningkatnya kualitas penyelenggaraan kegiatan kesehatan yustisial.",
+      "indicator_code": "10.9.1",
+      "source_indicator_code": "10.9.1",
+      "indicator_name": "Jumlah Rumah Sakit Adhyaksa yang selesai pembangunan baru atau pengembangan sarana prasarana Rumah Sakit Adhyaksa eksisting",
+      "targets_kepja": [
+        "2",
+        "2",
+        "2",
+        "2",
+        "2"
+      ],
+      "unit": "Unit",
+      "formula": "Perhitungan nilai jumlah Rumah Sakit Adhyaksa yang selesai pembangunan baru atau\npengembangan sarana prasarana Rumah Sakit Adhyaksa eksisting sebagai berikut.\nRSA = RSAt\nRSA : Jumlah Rumah Sakit Adhyaksa yang selesai pembangunan baru atau\npengembangan sarana prasarana Rumah Sakit Adhyaksa eksisting\nRSAt : Jumlah Rumah Sakit Adhyaksa yang selesai pembangunan baru atau\npengembangan sarana dan prasarana pada tahun berjalan",
+      "responsible": "Pusat Kesehatan Yustisial",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "2",
+        "2",
+        "2",
+        "2",
+        "2"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 156,
+      "parent_code": "10.9",
+      "parent_name": "Meningkatnya kualitas penyelenggaraan kegiatan kesehatan yustisial.",
+      "indicator_code": "10.9.2",
+      "source_indicator_code": "10.9.2",
+      "indicator_name": "Persentase pemenuhan target Indikator Nasional Mutu Pelayanan Kesehatan di Rumah Sakit Adhyaksa",
+      "targets_kepja": [
+        "70%",
+        "80%",
+        "90%",
+        "100%",
+        "100%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Persentase pemenuhan target Indikator Nasional Mutu Pelayanan Kesehatan di\nRumah Sakit Adhyaksa sebagai berikut.\nMPK =\nR\nKI\nx 100%\nMPK : Persentase pemenuhan target Indikator Nasional Mutu Pelayanan Kesehatan di\nRumah Sakit Adhyaksa\nR : Indikator nasional mutu pelayanan kesehatan yang ter-realisasi di Rumah Sakit\nAdhyaksa\nKI : Total indikator nasional mutu pelayanan kesehatan",
+      "responsible": "Pusat Kesehatan Yustisial",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "70%",
+        "80%",
+        "90%",
+        "100%",
+        "100%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 157,
+      "parent_code": "10.9",
+      "parent_name": "Meningkatnya kualitas penyelenggaraan kegiatan kesehatan yustisial.",
+      "indicator_code": "10.9.3",
+      "source_indicator_code": "10.9.3",
+      "indicator_name": "Tingkat pemahaman para stakeholder terhadap tugas dan fungsi Pusat Kesehatan Yustisial",
+      "targets_kepja": [
+        "70%",
+        "80%",
+        "90%",
+        "95%",
+        "100%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Tingkat pemahaman para stakeholder terhadap tugas dan fungsi Pusat Kesehatan\nYustisial sebagai berikut.\nTPS = (\n∑ 𝑅𝑖 × 𝑃𝑖\n5\ni=1\n5 𝑥 ∑ 𝑃𝑖\n5\ni=1\n) 𝑥 100%\nTPS : Tingkat pemahaman para stakeholder terhadap tugas dan fungsi Pusat\nKesehatan Yustisial\nRi : rating i yang diberikan pada suatu pernyataan kuesioner yang menggunakan\nskala Likert 1-5;\nPi : jumlah pernyataan kuesioner yang memperoleh rating I;\n∑ 𝑅𝑖 × 𝑃𝑖\n5\ni=1\n: total penjumlahan dari perkalian rating i dengan jumlah pernyataan yang\nmemberikan rating i;\n∑ 𝑃𝑖\n5\ni=1\n: total penjumlahan pernyataan kuesioner yang memperoleh rating i.",
+      "responsible": "Pusat Kesehatan Yustisial",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "70%",
+        "80%",
+        "90%",
+        "95%",
+        "100%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 158,
+      "parent_code": "10.9",
+      "parent_name": "Meningkatnya kualitas penyelenggaraan kegiatan kesehatan yustisial.",
+      "indicator_code": "10.9.4",
+      "source_indicator_code": "10.9.4",
+      "indicator_name": "Persentase pemenuhan Hospital Safety Index di Rumah Sakit Adhyaksa",
+      "targets_kepja": [
+        "25%",
+        "35%",
+        "45%",
+        "55%",
+        "65%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Persentase pemenuhan Hospital Safety Index di Rumah Sakit Adhyaksa sebagai\nberikut.\nHIS =\nA\nSK\nx 100%\nHIS : Persentase pemenuhan Hospital Safety Index di Rumah Sakit Adhyaksa\nA : Jumlah Rumah Sakit Adhyaksa yang memenuhi kategori A dari Hospital\nSafety Index\nSK : Total Rumah Sakit Adhyaksa",
+      "responsible": "Pusat Kesehatan Yustisial",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "25%",
+        "35%",
+        "45%",
+        "55%",
+        "65%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 159,
+      "parent_code": "10.9",
+      "parent_name": "Meningkatnya kualitas penyelenggaraan kegiatan kesehatan yustisial.",
+      "indicator_code": "10.9.5",
+      "source_indicator_code": "10.9.5",
+      "indicator_name": "Jumlah kegiatan pelayanan kesehatan yustisial pada Rumah Sakit Adhyaksa, Klinik Adhyaksa, dan Fasilitas Kesehatan Yustisial lainnya",
+      "targets_kepja": [
+        "100",
+        "150",
+        "200",
+        "250",
+        "660"
+      ],
+      "unit": "Kegiatan",
+      "formula": "Perhitungan nilai Jumlah kegiatan pelayanan kesehatan yustisial pada Rumah Sakit Adhyaksa,\nKlinik Adhyaksa, dan Fasilitas Kesehatan Yustisial lainnya sebagai berikut.\nKLK = ∑ LKj\nn\nj=1\nKL\nK\n: Jumlah kegiatan pelayanan kesehatan yustisial pada Rumah Sakit Adhyaksa, Klinik\nAdhyaksa, dan Fasilitas Kesehatan Yustisial lainnya\nLKj : Jumlah layanan kesehatan yustisial di-j pada tahun berjalan\nn : Tempat layanan kesehatan yustisial",
+      "responsible": "Pusat Kesehatan Yustisial",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "100",
+        "150",
+        "200",
+        "250",
+        "660"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 160,
+      "parent_code": "11.1",
+      "parent_name": "Meningkatnya kualitas pengelolaan dan pengembangan SDM Kejaksaan RI yang efektif",
+      "indicator_code": "11.1.1",
+      "source_indicator_code": "11.1.1",
+      "indicator_name": "Tingkat Pengembangan Kapasitas personil Jaksa",
+      "targets_kepja": [
+        "50%",
+        "70%",
+        "80%",
+        "80%",
+        "90%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Tingkat Pengembangan Kapasitas personil Jaksa sebagai berikut.\nPKJ =\n∑ JPK\n∑ TPK\nx 100%\nPKJ : Tingkat Pengembangan Kapasitas personil Jaksa\nJPK : Jumlah personil jaksa yang menerima diklat dasar + lanjutan\nTPK : Jumlah personil jaksa yang membutuhkan dan memenuhi persyaratan sesuai\ndengan tingkat kepangkatan",
+      "responsible": "Badan Pendidikan dan Pelatihan",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [],
+      "renstra_match": "not-in-renstra-matrix",
+      "target_status": "Tidak tercantum eksplisit di matriks Renstra"
+    },
+    {
+      "level": "IKK",
+      "page": 161,
+      "parent_code": "11.1",
+      "parent_name": "Meningkatnya kualitas pengelolaan dan pengembangan SDM Kejaksaan RI yang efektif",
+      "indicator_code": "11.1.2",
+      "source_indicator_code": "11.1.2",
+      "indicator_name": "Persentase SDM Kejaksaan RI yang telah memiliki sertifikat sesuai standar kompetensi",
+      "targets_kepja": [
+        "30%",
+        "40%",
+        "50%",
+        "75%",
+        "85%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Persentase SDM Kejaksaan RI yang telah memiliki sertifikat sesuai standar\nkompetensi sebagai berikut.\nSJSK =\nJSK\nTJK\nx 100%\nSJSK : Persentase SDM Kejaksaan RI yang telah memiliki sertifikat sesuai standar\nkompetensi\nJSK : Jumlah SDM Kejaksaan RI yang telah memiliki sertifikat sesuai standar kompetensi\nTJK : Total Seluruh SDM Kejaksaan RI",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Kepegawaian)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [],
+      "renstra_match": "not-in-renstra-matrix",
+      "target_status": "Tidak tercantum eksplisit di matriks Renstra"
+    },
+    {
+      "level": "IKK",
+      "page": 163,
+      "parent_code": "13.1",
+      "parent_name": "Meningkatnya kualitas layanan harmonitasi regulasi dan hubungan luar negeri Kejaksaan RI",
+      "indicator_code": "13.1.1",
+      "source_indicator_code": "13.1.1",
+      "indicator_name": "Persentase regulasi yang berhasil ditetapkan/ disahkan",
+      "targets_kepja": [
+        "50%",
+        "52%",
+        "54%",
+        "56%",
+        "58%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Persentase regulasi yang berhasil ditetapkan/ disahkan adalah sebagai berikut.\nRS =\nS\nT\n𝑥 100%\nRS : Presentase regulasi yang berhasil ditetapkan/ disahkan\nS : Jumlah regulasi yang berhasil ditetapkan/ disahkan\nT : jumlah total regulasi yang diusulkan/direncanakan dalam 1 tahun",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro hukum dan Hubungan\nLuar Negeri)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "50%",
+        "52%",
+        "54%",
+        "56%",
+        "58%"
+      ],
+      "renstra_match": "partial-5",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 164,
+      "parent_code": "13.2",
+      "parent_name": "Meningkatnya kualitas layanan harmonitasi regulasi dan hubungan luar negeri Kejaksaan RI",
+      "indicator_code": "13.2.1",
+      "source_indicator_code": "132.2",
+      "indicator_name": "Persentase keberhasilan terjalinnya kerjasama internasional dan antar lembaga",
+      "targets_kepja": [
+        "80%",
+        "81%",
+        "82%",
+        "83%",
+        "84%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Persentase keberhasilan terjalinnya kerjasama internasional dan antar lembaga\nadalah sebagai berikut.\nKS =\nS\nT\n𝑥 100%\nR\nS\n: Presentase keberhasilan terjalinnya kerjasama internasional dan antar\nlembaga\nS : Jumlah jumlah kerja sama yang berhasil terjalin\nT : jumlah total kerja sama yang direncanakan/diusulkan dalam 1 tahun",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro hukum dan Hubungan\nLuar Negeri)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "80%",
+        "81%",
+        "82%",
+        "83%",
+        "84%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 171,
+      "parent_code": "15.1",
+      "parent_name": "Meningkatnya kegiatan pengelolaan data, statistik kriminal serta penerapan dan pengembangan teknologi informasi",
+      "indicator_code": "15.1.1",
+      "source_indicator_code": "15.1.1",
+      "indicator_name": "Persentase layanan pengelolaan data dan statistik kriminal",
+      "targets_kepja": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Persentase layanan pengelolaan data dan statistik kriminal sebagai berikut.\nDSK =\nS\nT\nx 100%\nDSK : Persentase layanan pengolahan data dan statistik kriminal\nS : Jumlah layanan pengolahan data dan statistik kriminal yang\ndiselesaikan/ditindaklanjuti\nT : Total permintaan layanan pengolahan data dan statistik kriminal dalam 1 tahun",
+      "responsible": "Pusat Data Statistik Kriminal dan Teknologi Informasi",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 172,
+      "parent_code": "15.1",
+      "parent_name": "Meningkatnya kegiatan pengelolaan data, statistik kriminal serta penerapan dan pengembangan teknologi informasi",
+      "indicator_code": "15.1.2",
+      "source_indicator_code": "15.1.2",
+      "indicator_name": "Persentase layanan penerapan dan pengembangan teknologi informasi sesuai SLA (Service Level Agreement)",
+      "targets_kepja": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Persentase layanan penerapan dan pengembangan teknologi informasi sesuai SLA\n(Service Level Agreement) sebagai berikut.\nPPTI =\nS\nT\nx 100%\nPPTI : Persentase layanan penerapan dan pengembangan teknologi informasi sesuai SLA\n(Service Level Agreement)\nS : Jumlah layanan penerapan dan pengembangan teknologi informasi yang diselesaikan\nsesuai SLA (Service Level Agreement)\nT : Total permintaan layanan penerapan dan pengembangan teknologi informasi dalam 1\ntahun",
+      "responsible": "Pusat Data Statistik Kriminal dan Teknologi Informasi",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 173,
+      "parent_code": "15.1",
+      "parent_name": "Meningkatnya kegiatan pengelolaan data, statistik kriminal serta penerapan dan pengembangan teknologi informasi",
+      "indicator_code": "15.1.3",
+      "source_indicator_code": "15.1.3",
+      "indicator_name": "Persentase layanan perkantoran sesuai SLA (Service Level Agreement)",
+      "targets_kepja": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Persentase layanan perkantoran sesuai SLA (Service Level Agreement)\nsebagai berikut.\nLP =\nS\nT\nx 100%\nLP : Persentase layanan perkantoran sesuai SLA (Service Level Agreement) di\nlingkungan Pusdaskrimti\nS : Jumlah layanan perkantoran yang diselesaikan sesuai SLA (Service Level\nAgreement)\nT : Total layanan perkantoran dalam 1 tahun",
+      "responsible": "Pusat Data Statistik Kriminal dan Teknologi Informasi",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 174,
+      "parent_code": "15.2",
+      "parent_name": "Meningkatnya pengembangan dan pemanfaatan Sistem Teknologi Informasi Kejaksaan RI",
+      "indicator_code": "15.2.1",
+      "source_indicator_code": "15.2.1",
+      "indicator_name": "Persentase Satuan Kerja yang Menggunakan CMS dalam rangka Impementasi SPPT-TI",
+      "targets_kepja": [
+        "80%",
+        "85%",
+        "90%",
+        "95%",
+        "100%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Persentase digitalisasi proses bisnis inti Kejaksa Persentase Satuan Kerja yang\nMenggunakan CMS dalam rangka Impementasi SPPT-TI sebagai berikut.\nP − CMS =\nCMS\nN\nx 100%\nP –\nCMS\n: Persentase Satuan Kerja yang Menggunakan CMS dalam rangka Impementasi\nSPPT-TI\nCMS : Jumlah satuan kerja yang telah mengimplementasikan CMS\nN : Total Satuan Kerja Kejaksaan RI yang menangani perkara",
+      "responsible": "Pusat Data Statistik Kriminal dan Teknologi Informasi",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "80%",
+        "85%",
+        "90%",
+        "95%",
+        "100%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 175,
+      "parent_code": "15.2",
+      "parent_name": "Meningkatnya pengembangan dan pemanfaatan Sistem Teknologi Informasi Kejaksaan RI",
+      "indicator_code": "15.2.3",
+      "source_indicator_code": "15.2.3",
+      "indicator_name": "Indeks Pemerintah Digital",
+      "targets_kepja": [
+        "4,15",
+        "4,17",
+        "4,19",
+        "4,21",
+        "4,23"
+      ],
+      "unit": "Indeks",
+      "formula": "Jika pengukuran indikator dilakukan secara mandiri, maka perhitungan nilai Indeks Pemerintah\nDigital sebagai berikut.\nIPD = X1 + X2 + X3 + X4 + X5 + X6 + X7 + X8 + X9\nX 1−9 =\nNX1−9\nTk1−9\nx Bobot\nIPD : Indeks Pemerintah Digital\nNX1-9 : Nilai Realisasi pada aspek 1 sampai dengan 9\nTk1-9 : Total komponen penilaian pada komponen 1 sampai dengan 9",
+      "responsible": "Pusat Data Statistik Kriminal dan Teknologi Informasi",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "-",
+        "1,4",
+        "1,6",
+        "1,8",
+        "2,0"
+      ],
+      "renstra_match": "manual-verified",
+      "target_status": "Berbeda substansi"
+    },
+    {
+      "level": "IKK",
+      "page": 176,
+      "parent_code": "15.3",
+      "parent_name": "Meningkatnya kualitas data Statistik Kriminal Kejaksaan RI",
+      "indicator_code": "15.3.1",
+      "source_indicator_code": "15.3.1",
+      "indicator_name": "Indeks kualitas data Kejaksaan RI",
+      "targets_kepja": [
+        "3,2",
+        "3,4",
+        "3,6",
+        "3,8",
+        "4,0"
+      ],
+      "unit": "Indeks",
+      "formula": "Perhitungan nilai Indeks kualitas data Kejaksaan RI sebagai berikut.\nIKD = ∑ 𝑊𝑘\n𝐾\n𝑘=1\n𝑥 𝑁𝑘\nIKD : Indeks kualitas data Kejaksaan RI\nK : aspek penilaian\n𝑊𝑘 : Nilai Bobot aspek ke- k\n𝑁𝑘 : Nilai Indeks aspek ke-k",
+      "responsible": "Pusat Data Statistik Kriminal dan Teknologi Informasi",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "3,2",
+        "3,4",
+        "3,6",
+        "3,8",
+        "4,0"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 177,
+      "parent_code": "15.3",
+      "parent_name": "Meningkatnya kualitas data Statistik Kriminal Kejaksaan RI",
+      "indicator_code": "15.3.2",
+      "source_indicator_code": "15.3.2",
+      "indicator_name": "Indeks penyelenggaraan statistik sektoral",
+      "targets_kepja": [
+        "2,6",
+        "2,8",
+        "3,0",
+        "3,2",
+        "3,4"
+      ],
+      "unit": "Indeks",
+      "formula": "Perhitungan nilai Indeks penyelenggaraan statistik sektoral sebagai berikut.\nIPSS = ∑ 𝑊𝑘\n𝐾\n𝑘=1\n𝑥 𝑁𝑘\nIPSS : Indeks penyelenggaraan statistik sektoral\nK : Banyaknya domain penilaian\n𝑊𝑘 : Nilai Bobot domain ke- k\n𝑁𝑘 : Nilai Indeks domain ke-k",
+      "responsible": "Pusat Data Statistik Kriminal dan Teknologi Informasi",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "2,6",
+        "2,8",
+        "3,0",
+        "3,2",
+        "3,4"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 178,
+      "parent_code": "15.3",
+      "parent_name": "Meningkatnya kualitas data Statistik Kriminal Kejaksaan RI",
+      "indicator_code": "15.3.3",
+      "source_indicator_code": "15.3.3",
+      "indicator_name": "Persentase satuan kerja yang telah menerapkan SPPT- TI dengan dengan kualitas data yang berhasil dipertukarkan dengan Lembaga Penegak Hukum (LPH) lainnya terhadap data shahih sebesar minimal 70%",
+      "targets_kepja": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Persentase satuan kerja yang telah menerapkan SPPT-TI dengan dengan kualitas\ndata yang berhasil dipertukarkan dengan Lembaga Penegak Hukum (LPH) lainnya terhadap data\nshahih sebesar minimal 70% sebagai berikut.\nSPPTI =\nXS\nN\nx 100%\nSPPT\nI\n: Persentase satuan kerja yang telah menerapkan SPPT-TI dengan dengan kualitas\ndata yang berhasil dipertukarkan dengan Lembaga Penegak Hukum (LPH) lainnya\nterhadap data shahih sebesar minimal 70%\nXS : Jumlah satuan kerja yang telah menerapkan SPPT-TI dengan dengan kualitas data\nyang berhasil dipertukarkan dengan Lembaga Penegak Hukum (LPH) lainnya\nterhadap data shahih sebesar minimal 70%\nN : Total Satuan Kerja Kejaksaan RI",
+      "responsible": "Pusat Data Statistik Kriminal dan Teknologi Informasi",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 179,
+      "parent_code": "15.3",
+      "parent_name": "Meningkatnya kualitas data Statistik Kriminal Kejaksaan RI",
+      "indicator_code": "15.3.4",
+      "source_indicator_code": "15.3.4",
+      "indicator_name": "Tingkat keberhasilan penyelenggaraan tata kelola sistem Satu Data Kejaksaan",
+      "targets_kepja": [
+        "75%",
+        "80%",
+        "85%",
+        "90%",
+        "95%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Tingkat keberhasilan penyelenggaraan tata kelola sistem Satu Data Kejaksaan\nsebagai berikut.\nTSD =\nSI\nTSI\nx 100%\nTSD : Tingkat keberhasilan penyelenggaraan tata kelola sistem Satu Data Kejaksaan\nSI : Jumlah sistem teknologi informasi Kejaksaan RI yang telah terintegrasi dan\ndikelola oleh Pusdaskrimti\nTSI : Total seluruh sistem teknologi informasi Kejaksaan RI yang terintegrasi",
+      "responsible": "Pusat Data Statistik Kriminal dan Teknologi Informasi",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "80%",
+        "85%",
+        "90%",
+        "95%",
+        "100%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Berbeda substansi"
+    },
+    {
+      "level": "IKK",
+      "page": 180,
+      "parent_code": "15.4",
+      "parent_name": "Meningkatnya keamanan Sistem Teknologi Informasi Kejaksaan RI",
+      "indicator_code": "15.4.1",
+      "source_indicator_code": "15.4.1",
+      "indicator_name": "Indeks Kematangan Keamanan Siber Kejaksaan RI",
+      "targets_kepja": [
+        "2,7",
+        "2,8",
+        "3,0",
+        "3,1",
+        "3,2"
+      ],
+      "unit": "Indeks",
+      "formula": "Perhitungan nilai Indeks Kematangan Keamanan Siber Kejaksaan RI sebagai berikut.\nIKKS = ∑ 𝑊𝑘\n𝐾\n𝑘=1\n𝑥 𝑁𝑘\nIKKS : Indeks kematangan keamanan siber Kejaksaan RI\nK : Banyaknya domain penilaian\n𝑊𝑘 : Nilai Bobot domain ke- k\n𝑁𝑘 : Nilai Indeks domain ke-k",
+      "responsible": "Pusat Data Statistik Kriminal dan Teknologi Informasi",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "2,7",
+        "2,8",
+        "3,0",
+        "3,1",
+        "3,2"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 181,
+      "parent_code": "15.5",
+      "parent_name": "Meningkatnya kualitas tata kelola administrasi penanganan perkara berbasis teknologi informasi",
+      "indicator_code": "15.5.1",
+      "source_indicator_code": "15.5.1",
+      "indicator_name": "Indeks kepuasan pengguna internal terhadap sistem administrasi perkara berbasis TI",
+      "targets_kepja": [
+        "3,6",
+        "3,7",
+        "3,8",
+        "3,9",
+        "4,0"
+      ],
+      "unit": "Indeks",
+      "formula": "Perhitungan nilai Indeks kepuasan pengguna internal terhadap sistem administrasi perkara\nberbasis TI sebagai berikut.\nIKSAP = (\n∑ Ri × Pi\n5\ni=1\n∑ Pi\n5\ni=1\n)\nIKSAP : Indeks kepuasan pengguna internal terhadap sistem administrasi perkara\nberbasis TI\nRi : rating i yang diberikan pada suatu pernyataan kuesioner yang menggunakan\nskala Likert 1-5;\nPi : jumlah pernyataan kuesioner yang memperoleh rating I;\n∑ 𝑅𝑖 × 𝑃𝑖\n5\ni=1\n: total penjumlahan dari perkalian rating i dengan jumlah pernyataan yang\nmemberikan rating i;\n∑ 𝑃𝑖\n5\ni=1\n: total penjumlahan pernyataan kuesioner yang memperoleh rating i.",
+      "responsible": "Pusat Data Statistik Kriminal dan Teknologi Informasi",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "3,6",
+        "3,7",
+        "3,8",
+        "3,9",
+        "4,0"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 182,
+      "parent_code": "16.1",
+      "parent_name": "Meningkatnya jumlah gedung kantor, rumah negara, kendaraan jabatan, operasional, dan fungsional, perangkat pengolah data dan komunikasi, perlengkapan dan fasilitas perkantoran yang memadai",
+      "indicator_code": "16.1.1",
+      "source_indicator_code": "16.1.1",
+      "indicator_name": "Persentase gedung kantor yang direhabilitasi",
+      "targets_kepja": [
+        "50%",
+        "60%",
+        "70%",
+        "80%",
+        "90%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Persentase gedung kantor yang direhabilitasi adalah sebagai berikut.\nGKR =\nS\nT\n𝑥 100%\nGKR : Persentase gedung kantor yang direhabilitasi\nS : Jumlah gedung kantor Kejaksaan RI yang telah direhabilitasi (akumulatif)\nT : Jumlah total gedung kantor yang direncanakan setiap tahun (akumulatif)",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Perlengkapan)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "50%",
+        "60%",
+        "70%",
+        "80%",
+        "90%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 183,
+      "parent_code": "16.1",
+      "parent_name": "Meningkatnya jumlah gedung kantor, rumah negara, kendaraan jabatan, operasional, dan fungsional, perangkat pengolah data dan komunikasi, perlengkapan dan fasilitas perkantoran yang memadai",
+      "indicator_code": "16.1.2",
+      "source_indicator_code": "16.1.2",
+      "indicator_name": "Persentase rumah negara yang direhabilitasi",
+      "targets_kepja": [
+        "50%",
+        "60%",
+        "70%",
+        "80%",
+        "90%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Persentase rumah negara yang direhabilitasi adalah sebagai berikut.\nRNR =\nS\nT\n𝑥 100%\nRNR : Persentase rumah negara yang direhabilitasi\nS : Jumlah rumah negara di lingkungan Kejaksaan RI yang telah direhabilitasi\n(akumulatif)\nT : Jumlah total rumah negara yang direncanakan setiap tahun (akumulatif)",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Perlengkapan)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "50%",
+        "60%",
+        "70%",
+        "80%",
+        "90%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 184,
+      "parent_code": "16.1",
+      "parent_name": "Meningkatnya jumlah gedung kantor, rumah negara, kendaraan jabatan, operasional, dan fungsional, perangkat pengolah data dan komunikasi, perlengkapan dan fasilitas perkantoran yang memadai",
+      "indicator_code": "16.1.3",
+      "source_indicator_code": "16.1.3",
+      "indicator_name": "Persentase pembangunan gedung kantor satuan kerja yang baru",
+      "targets_kepja": [
+        "20%",
+        "40%",
+        "60%",
+        "80%",
+        "100%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Persentase pembangunan gedung kantor satuan kerja yang baru adalah sebagai\nberikut.\nPGK =\nS\nT\n𝑥 100%\nPGK : Persentase pembangunan gedung kantor satuan kerja yang baru\nS : Jumlah gedung baru yang selesai dibangun (akumulatif)\nT : Jumlah gedung baru yang direncanakan dibangun setiap tahun (akumulatif)",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Perlengkapan)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "20%",
+        "40%",
+        "60%",
+        "80%",
+        "100%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 185,
+      "parent_code": "16.1",
+      "parent_name": "Meningkatnya jumlah gedung kantor, rumah negara, kendaraan jabatan, operasional, dan fungsional, perangkat pengolah data dan komunikasi, perlengkapan dan fasilitas perkantoran yang memadai",
+      "indicator_code": "16.1.4",
+      "source_indicator_code": "16.1.4",
+      "indicator_name": "Persentase pembangunan rumah negara baru",
+      "targets_kepja": [
+        "5%",
+        "10%",
+        "15%",
+        "20%",
+        "25%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Persentase pembangunan rumah negara baru adalah sebagai berikut.\nRNB =\nS\nT\n𝑥 100%\nRNB : Persentase pembangunan rumah negara baru\nS : Jumlah rumah negara baru yang selesai dibangun (akumulatif)\nT : Jumlah rumah negara baru yang direncanakan dibangun setiap tahun (akumulatif)",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Perlengkapan)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "5%",
+        "10%",
+        "15%",
+        "20%",
+        "25%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 186,
+      "parent_code": "16.1",
+      "parent_name": "Meningkatnya jumlah gedung kantor, rumah negara, kendaraan jabatan, operasional, dan fungsional, perangkat pengolah data dan komunikasi, perlengkapan dan fasilitas perkantoran yang memadai",
+      "indicator_code": "16.1.5",
+      "source_indicator_code": "16.1.5",
+      "indicator_name": "Persentase pengadaan mobil jabatan dan operasional",
+      "targets_kepja": [
+        "50%",
+        "60%",
+        "70%",
+        "80%",
+        "90%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Persentase pengadaan mobil jabatan dan operasional adalah sebagai berikut.\nMJO =\nS\nT\n𝑥 100%\nMJO : Persentase pengadaan mobil jabatan dan operasional\nS : Jumlah mobil yang telah direalisasikan (akumulatif)\nT : Jumlah mobil yang direncanakan setiap tahun (akumulatif)",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Perlengkapan)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "50%",
+        "60%",
+        "70%",
+        "80%",
+        "90%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 187,
+      "parent_code": "16.1",
+      "parent_name": "Meningkatnya jumlah gedung kantor, rumah negara, kendaraan jabatan, operasional, dan fungsional, perangkat pengolah data dan komunikasi, perlengkapan dan fasilitas perkantoran yang memadai",
+      "indicator_code": "16.1.6",
+      "source_indicator_code": "16.1.6",
+      "indicator_name": "Persentase pengadaan mobil tahanan dan mobil fungsional lainnya",
+      "targets_kepja": [
+        "50%",
+        "60%",
+        "70%",
+        "80%",
+        "90%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Persentase pengadaan mobil tahanan dan mobil fungsional lainnya adalah\nsebagai berikut.\nMTF =\nS\nT\n𝑥 100%\nMTF : Persentase pengadaan mobil tahanan dan mobil fungsional lainnya\nS : Jumlah mobil yang telah direalisasikan (akumulatif)\nT : Jumlah mobil yang direncanakan setiap tahun (akumulatif)",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Perlengkapan)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "50%",
+        "60%",
+        "70%",
+        "80%",
+        "90%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 188,
+      "parent_code": "16.1",
+      "parent_name": "Meningkatnya jumlah gedung kantor, rumah negara, kendaraan jabatan, operasional, dan fungsional, perangkat pengolah data dan komunikasi, perlengkapan dan fasilitas perkantoran yang memadai",
+      "indicator_code": "16.1.7",
+      "source_indicator_code": "16.1.7",
+      "indicator_name": "Persentase pengadaan sepeda motor dinas",
+      "targets_kepja": [
+        "50%",
+        "60%",
+        "70%",
+        "80%",
+        "90%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Persentase pengadaan sepeda motor dinas adalah sebagai berikut.\nSM =\nS\nT\n𝑥 100%\nSM : Persentase pengadaan sepeda motor dinas\nS : Jumlah sepeda motor yang telah direalisasikan (akumulatif)\nT : Jumlah sepeda motor yang direncanakan setiap tahun(akumulatif)",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Perlengkapan)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "50%",
+        "60%",
+        "70%",
+        "80%",
+        "90%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 189,
+      "parent_code": "16.1",
+      "parent_name": "Meningkatnya jumlah gedung kantor, rumah negara, kendaraan jabatan, operasional, dan fungsional, perangkat pengolah data dan komunikasi, perlengkapan dan fasilitas perkantoran yang memadai",
+      "indicator_code": "16.1.8",
+      "source_indicator_code": "16.1.8",
+      "indicator_name": "Persentase pengadaan perangkat pengolah data dan komunikasi",
+      "targets_kepja": [
+        "50%",
+        "60%",
+        "70%",
+        "80%",
+        "90%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Persentase pengadaan perangkat pengolah data dan komunikasi adalah sebagai\nberikut.\nPDK =\nS\nT\n𝑥 100%\nPDK : Persentase pengadaan perangkat pengolah data dan komunikasi\nS : Jumlah perangkat pengolah data dan komunikasi yang berhasil diadakan\n(akumulatif)\nT : Jumlah perangkat pengolah data dan komunikasi yang direncanakan setiap tahun\n(akumulatif)",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Perlengkapan)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "50%",
+        "60%",
+        "70%",
+        "80%",
+        "90%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 190,
+      "parent_code": "16.1",
+      "parent_name": "Meningkatnya jumlah gedung kantor, rumah negara, kendaraan jabatan, operasional, dan fungsional, perangkat pengolah data dan komunikasi, perlengkapan dan fasilitas perkantoran yang memadai",
+      "indicator_code": "16.1.9",
+      "source_indicator_code": "16.1.9",
+      "indicator_name": "Persentase pengadaan perlengkapan dan fasilitas perkantoran",
+      "targets_kepja": [
+        "70%",
+        "75%",
+        "80%",
+        "85%",
+        "90%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Persentase pengadaan perlengkapan dan fasilitas perkantoran adalah sebagai\nberikut.\nPFP =\nS\nT\n𝑥 100%\nPFP : Persentase pengadaan perlengkapan dan fasilitas perkantoran\nS : Jumlah item perlengkapan dan fasilitas perkantoran yang berhasil diadakan\n(akumulatif)\nT : Jumlah item perlengkapan dan fasilitas perkantoran yang direncanakan setiap tahun\n(akumulatif)",
+      "responsible": "• Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Perlengkapan)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "70%",
+        "75%",
+        "80%",
+        "85%",
+        "90%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 191,
+      "parent_code": "16.1",
+      "parent_name": "Meningkatnya jumlah gedung kantor, rumah negara, kendaraan jabatan, operasional, dan fungsional, perangkat pengolah data dan komunikasi, perlengkapan dan fasilitas perkantoran yang memadai",
+      "indicator_code": "16.1.10",
+      "source_indicator_code": "16.1.1",
+      "indicator_name": "Persentase terpenuhi sarana/prasarana intelijen dan penegakan hukum",
+      "targets_kepja": [
+        "70%",
+        "75%",
+        "80%",
+        "85%",
+        "90%"
+      ],
+      "unit": "Persentase",
+      "formula": "Perhitungan nilai Persentase terpenuhi sarana/prasarana intelijen dan penegakan hukum adalah\nsebagai berikut.\nIPK =\nS\nT\n𝑥 100%\nIPK : Persentase terpenuhi sarana/prasarana intelijen dan penegakan hukum\nS : Jumlah item sarana/prasarana intelijen dan penegakan hukum yang berhasil diadakan\n(akumulatif)\nT : Jumlah item sarana/prasarana intelijen dan penegakan hukum yang direncanakan\nsetiap tahun (akumulatif)",
+      "responsible": "Jaksa Agung Muda Bidang Pembinaan (Cq. Biro Perlengkapan)",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "70%",
+        "75%",
+        "80%",
+        "85%",
+        "90%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 294,
+      "parent_code": "18.1",
+      "parent_name": "Meningkatnya jumlah Sarana dan Prasarana yang mendukung penegakan dan pelayanan hukum di Kejaksaan RI",
+      "indicator_code": "18.1.1",
+      "source_indicator_code": "18.1.1",
+      "indicator_name": "Persentase Terpenuhinya Peralatan Pengolah Data dan Komunikasi Penegakan dan Pelayanan Hukum di Kejaksaan RI",
+      "targets_kepja": [
+        "35",
+        "60",
+        "70",
+        "80",
+        "90"
+      ],
+      "unit": "Persentase (%)",
+      "formula": "P =\n𝐿\n𝑇\n× 100%\nP : Persentase terpenuhinya peralatan pengolah data dan komunikasi penegakan dan\npelayanan hukum di Kejaksaan RI\nL : Jumlah kebutuhan peralatan pengolah data dan komunikasi penegakan dan pelayanan\nhukum yang telah dipenuhi;\nT : Total kebutuhan peralatan pengolah data dan komunikasi penegakan dan pelayanan\nhukum",
+      "responsible": "Kejaksaan Agung (Badan Pemulihan Aset), Jaksa Agung Muda Bidang\nTindak Pidana Khusus, Jaksa Agung Muda Bidang Tindak Pidana\nUmum, Jaksa Agung Muda Bidang Perdata dan Tata Usaha Negara,\nJaksa Agung Muda Bidang Intelijen, Jaksa Agung Muda Bidang\nPembinaan, Kejaksaan Tinggi, Kejaksaan Negeri, dan Cabang Kejaksaan\nNegeri",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "35%",
+        "60%",
+        "70%",
+        "80%",
+        "90%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 296,
+      "parent_code": "18.1",
+      "parent_name": "Meningkatnya jumlah Sarana dan Prasarana yang mendukung penegakan dan pelayanan hukum di Kejaksaan RI",
+      "indicator_code": "18.1.3",
+      "source_indicator_code": "18.1.3",
+      "indicator_name": "Persentase Terpenuhinya Kendaraan Fungsional Penegakan dan Pelayanan Hukum di Kejaksaan RI",
+      "targets_kepja": [
+        "20",
+        "40",
+        "60",
+        "80",
+        "90"
+      ],
+      "unit": "Persentase (%)",
+      "formula": "P =\n𝐿\n𝑇\n× 100%\nP : Persentase Terpenuhinya Kendaraan Fungsional Penegakan dan Pelayanan Hukum di\nKejaksaan RI;\nL : Jumlah kebutuhan kendaraan fungsional penegakan dan pelayanan Hukum\nyang telah dipenuhi;\nT : Total kebutuhan kendaraan fungsional penegakan dan pelayanan hukum.",
+      "responsible": "Kejaksaan Agung (Badan Pemulihan Aset), Jaksa Agung Muda Bidang\nPidana Khusus, Jaksa Agung Muda Bidang Pidana Umum, Jaksa Agung\nMuda Bidang Perdata dan Tata Usaha Negara, Jaksa Agung Muda\nBidang Intelijen, Jaksa Agung Muda Bidang Pembinaan, Kejaksaan\nTinggi, Kejaksaan Negeri, dan Cabang Kejaksaan Negeri",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "20%",
+        "40%",
+        "60%",
+        "80%",
+        "90%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 298,
+      "parent_code": "18.1",
+      "parent_name": "Meningkatnya jumlah Sarana dan Prasarana yang mendukung penegakan dan pelayanan hukum di Kejaksaan RI",
+      "indicator_code": "18.1.5",
+      "source_indicator_code": "18.1.5",
+      "indicator_name": "Persentase Terpenuhinya Peralatan Perkantoran Penegakan dan Pelayanan Hukum di Kejaksaan RI",
+      "targets_kepja": [
+        "35",
+        "60",
+        "70",
+        "80",
+        "90"
+      ],
+      "unit": "Persentase (%)",
+      "formula": "P =\n𝐿\n𝑇\n× 100%\nP : Persentase Terpenuhinya Peralatan Perkantoran Penegakan dan Pelayanan Hukum di\nKejaksaan RI\nL : Jumlah peralatan perkantoran yang telah tersedia dan sesuai kebutuhan ;\nT : Total permintaan layanan penegakan hukum.\nKeterangan Formula:\n• Jumlah peralatan perkantoran yang telah tersedia dan sesuai kebutuhan: jumlah\nperalatan penunjang kerja (kursi, meja kerja, lemari arsip, rak dokumen, alat tulis kantor,\nprinter, scanner, AC ruangan, dsb.) yang telah dimiliki satuan kerja dan berfungsi dengan\nbaik serta sesuai standar kerja.\n• Total permintaan layanan penegakan hukum: Jumlah peralatan perkantoran yang\ndiperlukan berdasarkan jumlah pegawai, ruang kerja, dan fungsi layanan yang dijalankan\nunit tersebut.",
+      "responsible": "Kejaksaan Agung (Badan Pemulihan Aset), Jaksa Agung Muda Bidang\nPidana Khusus, Jaksa Agung Muda Bidang Pidana Umum, Jaksa Agung\nMuda Bidang Perdata dan Tata Usaha Negara, Jaksa Agung Muda\nBidang Intelijen, Jaksa Agung Muda Bidang Pembinaan, Kejaksaan\nTinggi, Kejaksaan Negeri, dan Cabang Kejaksaan Negeri",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "35%",
+        "60%",
+        "70%",
+        "80%",
+        "90%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    },
+    {
+      "level": "IKK",
+      "page": 299,
+      "parent_code": "18.1",
+      "parent_name": "Meningkatnya jumlah Sarana dan Prasarana yang mendukung penegakan dan pelayanan hukum di Kejaksaan RI",
+      "indicator_code": "18.1.6",
+      "source_indicator_code": "18.1.6",
+      "indicator_name": "Persentase terpenuhinya Pembangunan Rupbasan di Kejaksaan RI",
+      "targets_kepja": [
+        "15",
+        "30",
+        "50",
+        "60",
+        "70"
+      ],
+      "unit": "Persentase (%)",
+      "formula": "P =\n𝐿\n𝑇\n× 100%\nP : Persentase terpenuhinya Pembangunan Rupbasan di Kejaksaan RI;\nL : Jumlah kebutuhan pembangunan Rupbasan yang telah dipenuhi ;\nT : Total kebutuhajn pembangunan Rupbasan.\nKeterangan Formula:\n• Jumlah kebutuhan pembangunan Rupbasan yang telah dipenuhi: jumlah unit Rupbasan\nbaru yang telah dibangun (secara mandiri, melalui sinergi antarlembaga, atau melalui\npengusulan ke instansi teknis), sesuai dengan kebutuhan satuan kerja Kejaksaan.\n• Total kebutuhajn pembangunan Rupbasan: jumlah satuan kerja Kejaksaan yang belum\nmemiliki akses memadai terhadap Rupbasan atau yang membutuhkan tambahan fasilitas\nkarena kondisi geografis, volume perkara, atau kapasitas penyimpanan.",
+      "responsible": "Kejaksaan Agung (Badan Pemulihan Aset), Jaksa Agung Muda Bidang\nPidana Khusus, Jaksa Agung Muda Bidang Pidana Umum, Jaksa Agung\nMuda Bidang Perdata dan Tata Usaha Negara, Jaksa Agung Muda\nBidang Intelijen, Jaksa Agung Muda Bidang Pembinaan, Kejaksaan\nTinggi, Kejaksaan Negeri, dan Cabang Kejaksaan Negeri",
+      "source": "Kepja Nomor 1184 Tahun 2025",
+      "targets_renstra": [
+        "15%",
+        "30%",
+        "50%",
+        "60%",
+        "70%"
+      ],
+      "renstra_match": "exact",
+      "target_status": "Sama"
+    }
+  ]
+}

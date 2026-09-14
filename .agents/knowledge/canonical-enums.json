@@ -1,0 +1,33 @@
+{
+  "version": "3.0",
+  "node_types": [
+    "MANDIRI",
+    "AGREGATIF"
+  ],
+  "relation_types": [
+    "STRUCTURAL",
+    "CASCADING",
+    "FORMULA_COMPONENT",
+    "CONTRIBUTION",
+    "SAME_INDICATOR",
+    "ORG_AGGREGATION",
+    "REFERENCE"
+  ],
+  "formula_keys": [
+    "DIRECT_VALUE",
+    "EXTERNAL_SCORE",
+    "RATIO_PERCENTAGE",
+    "INDEX_SCORE",
+    "UNFAVORABLE_PERCENTAGE",
+    "WEIGHTED_SUM",
+    "AVERAGE_COMPONENTS",
+    "AVERAGE_OF_RATIOS",
+    "SURVEY_INDEX",
+    "AGGREGATE_AVG"
+  ],
+  "status_rules": {
+    "achievement_gte_100": "TERCAPAI",
+    "achievement_lt_100_q1_q3": "BELUM_TERCAPAI",
+    "achievement_lt_100_q4": "TIDAK_TERCAPAI"
+  }
+}
