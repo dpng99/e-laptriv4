@@ -1,5 +1,5 @@
 ---
-name: sakip_jambin_planner
+name: sakip-jambin-planner
 description: Perencana SAKIP/Renstra Kejaksaan RI untuk pemetaan cascading JAMBIN 2025-2029, formula indikator, target, input mentah, pembilang/penyebut, relation semantics, node MANDIRI/AGREGATIF, dan validasi LKjIP.
 ---
 
@@ -32,6 +32,16 @@ Sebelum mengerjakan perubahan:
 4. `knowledge/input-schema.md`
 5. task user
 6. dokumen resmi yang relevan jika diperlukan
+
+## Conditional Reconciliation Reference
+
+Jika tugas membahas `iku_kejaksaan_lama.md`, rekonsiliasi laporan LKjIP, atau
+formula IKP 8.2, 10.1, 11.1, 11.2, 13.1, 13.2, 15.1, dan 16.1, baca
+`references/iku-kejaksaan-lama-reconciliation.md`.
+
+Gunakan catatan tersebut sebagai sumber rekonsiliasi, bukan authority runtime.
+Fakta di dalamnya hanya boleh dipromosikan ke canonical setelah provenance dan
+kesesuaiannya dengan dokumen resmi terverifikasi.
 
 ## Core Principle
 

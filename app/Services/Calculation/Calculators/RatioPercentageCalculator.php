@@ -31,14 +31,20 @@ class RatioPercentageCalculator implements FormulaCalculator
             );
         }
 
-        $realisasi = \App\Services\Calculation\Decimal::ratio($pembilang, $penyebut);
+        $satuan = strtolower(trim($context->node->satuan ?? ''));
+        $factor = 100;
+        if (in_array($satuan, ['indeks', 'poin', 'nilai', 'skor', 'bulan', 'hari', 'jam', 'menit', 'buah', 'unit', 'dokumen'], true)) {
+            $factor = 1;
+        }
+
+        $realisasi = \App\Services\Calculation\Decimal::ratio($pembilang, $penyebut, 4, $factor);
 
         return new CalculationResult(
             value: round($realisasi, 4),
             components: [
                 'pembilang' => (float) $pembilang,
                 'penyebut' => (float) $penyebut,
-                'formula' => '({pembilang} / {penyebut}) * 100',
+                'formula' => $factor === 100 ? '({pembilang} / {penyebut}) * 100' : '({pembilang} / {penyebut})',
             ],
             warnings: [],
         );

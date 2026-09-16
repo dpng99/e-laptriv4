@@ -489,7 +489,7 @@ return [
             'display_code' => 'IKP 11.1',
             'display_name' => 'Indeks Kesesuaian Kompetensi (Competency Fit Index)',
             'tipe_node' => 'MANDIRI',
-            'formula_key' => 'RATIO_PERCENTAGE',
+            'formula_key' => 'DIRECT_VALUE',
             'formula_status' => 'RESOLVED',
             'formula_version' => '3.1',
             'unit' => 'INDEKS',
@@ -498,12 +498,6 @@ return [
             'measurement_scope' => 'UNIT',
             'aggregation_method' => 'AVERAGE',
             'input_enabled' => true,
-            'input_schema' => [
-                'fields' => [
-                    ['key' => 'skor_kompetensi_aktual', 'label' => 'Total skor kompetensi aktual aparatur', 'type' => 'decimal', 'required' => true, 'min' => 0],
-                    ['key' => 'skor_kompetensi_ideal', 'label' => 'Total skor kompetensi ideal/standar', 'type' => 'decimal', 'required' => true, 'min' => 1],
-                ],
-            ],
             'formula_children' => [],
             'contribution_children' => ['SK:11.1'],
             'relation_semantics' => 'CONTRIBUTION',

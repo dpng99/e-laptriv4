@@ -1,6 +1,6 @@
 ---
 name: sicana_jambin_cascading
-description: Entry-point skill untuk e-LKjIP Pembinaan/JAMBIN V3. Mengarahkan pekerjaan substansi SAKIP ke sakip_jambin_planner dan pekerjaan Laravel/React ke elkjip_laravel_react_programmer, dengan canonical architecture sebagai source of truth.
+description: Entry-point skill untuk e-LKjIP Pembinaan/JAMBIN V3. Mengarahkan pekerjaan substansi SAKIP ke sakip-jambin-planner dan pekerjaan Laravel/React ke elkjip_laravel_react_programmer, dengan canonical architecture sebagai source of truth.
 ---
 
 # SICANA JAMBIN Cascading — Dispatcher Skill

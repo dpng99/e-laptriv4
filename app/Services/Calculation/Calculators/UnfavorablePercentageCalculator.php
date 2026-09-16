@@ -22,14 +22,20 @@ class UnfavorablePercentageCalculator implements FormulaCalculator
             return new CalculationResult(null, [], ['Penyebut harus lebih besar dari 0.']);
         }
 
-        $realisasi = (1 - ((float) $pembilang / (float) $penyebut)) * 100;
+        $satuan = strtolower(trim($context->node->satuan ?? ''));
+        $factor = 100;
+        if (in_array($satuan, ['indeks', 'poin', 'nilai', 'skor', 'bulan', 'hari', 'jam', 'menit', 'buah', 'unit', 'dokumen'], true)) {
+            $factor = 1;
+        }
+
+        $realisasi = (1 - ((float) $pembilang / (float) $penyebut)) * $factor;
 
         return new CalculationResult(
             value: round($realisasi, 4),
             components: [
                 'pembilang' => (float) $pembilang,
                 'penyebut' => (float) $penyebut,
-                'formula' => '(1 - ({pembilang} / {penyebut})) * 100',
+                'formula' => $factor === 100 ? '(1 - ({pembilang} / {penyebut})) * 100' : '(1 - ({pembilang} / {penyebut}))',
             ],
             warnings: [],
         );

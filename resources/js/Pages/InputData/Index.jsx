@@ -442,12 +442,13 @@ export default function InputData({
 
     const initialIkkData = useMemo(() => ikks.reduce((acc, ikk) => {
         const measurement = pengukuranIkk[ikk.node_id] || {};
+        const inputsObj = measurementInputs(measurement);
         acc[ikk.kode_ikk] = {
             kode_ikk: ikk.kode_ikk,
-            pembilang: formatCleanNumber(measurement.pembilang),
-            penyebut: formatCleanNumber(measurement.penyebut),
-            realisasi: formatCleanNumber(measurement.realisasi),
-            inputs: measurementInputs(measurement),
+            pembilang: formatCleanNumber(measurement.pembilang) || inputsObj.pembilang || '',
+            penyebut: formatCleanNumber(measurement.penyebut) || inputsObj.penyebut || '',
+            realisasi: formatCleanNumber(measurement.realisasi) || inputsObj.realisasi || inputsObj.direct_value || inputsObj.nilai || '',
+            inputs: inputsObj,
             analisis_capaian: measurement.analisis_capaian ?? '',
             kendala: measurement.kendala ?? '',
             upaya: measurement.upaya ?? '',
@@ -457,12 +458,13 @@ export default function InputData({
 
     const initialIkpData = useMemo(() => effectiveIkpInputs.reduce((acc, ikp) => {
         const measurement = pengukuranIkp[ikp.node_id] || {};
+        const inputsObj = measurementInputs(measurement);
         acc[ikp.kode_ikp] = {
             kode_ikp: ikp.kode_ikp,
-            pembilang: formatCleanNumber(measurement.pembilang),
-            penyebut: formatCleanNumber(measurement.penyebut),
-            realisasi: formatCleanNumber(measurement.realisasi),
-            inputs: measurementInputs(measurement),
+            pembilang: formatCleanNumber(measurement.pembilang) || inputsObj.pembilang || '',
+            penyebut: formatCleanNumber(measurement.penyebut) || inputsObj.penyebut || '',
+            realisasi: formatCleanNumber(measurement.realisasi) || inputsObj.realisasi || inputsObj.direct_value || inputsObj.nilai || '',
+            inputs: inputsObj,
             analisis_capaian: measurement.analisis_capaian ?? '',
             kendala: measurement.kendala ?? '',
             upaya: measurement.upaya ?? '',
