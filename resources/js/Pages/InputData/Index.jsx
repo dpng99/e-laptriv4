@@ -336,19 +336,19 @@ function FormulaFields({ entity, value, onChange }) {
         );
     }
 
-    const directDesc = `Nilai realisasi ${node.nama || 'indikator'}${node.satuan ? ` (${node.satuan})` : ''}`;
+    const directDesc = `Nilai hasil kinerja (realisasi) ${node.nama || 'indikator'}${node.satuan ? ` (${node.satuan})` : ''}`;
 
     return (
         <Paper variant="outlined" sx={{ p: 2.5, borderRadius: 2.5, bgcolor: '#ffffff', mb: 2.5, border: '1px solid #e2e8f0' }}>
             <Typography variant="caption" sx={{ color: '#475569', fontWeight: 700, textTransform: 'uppercase', letterSpacing: 0.5, mb: 1.5, display: 'block' }}>
-                Nilai Realisasi Aktual
+                Hasil Kinerja (Realisasi)
             </Typography>
             <TextField
                 fullWidth
                 size="small"
                 type="text"
                 inputMode="decimal"
-                label="Realisasi Aktual"
+                label="Hasil Kinerja"
                 placeholder={directDesc}
                 value={value.realisasi ?? ''}
                 onChange={handleDecimalChange((val) => onChange('realisasi', val))}
@@ -357,7 +357,7 @@ function FormulaFields({ entity, value, onChange }) {
             <Box sx={{ mt: 1, p: 1.2, bgcolor: '#f8fafc', borderRadius: 2, border: '1px solid #e2e8f0', display: 'flex', alignItems: 'flex-start', gap: 1 }}>
                 <InfoIcon sx={{ fontSize: 16, color: '#64748b', mt: 0.2, flexShrink: 0 }} />
                 <Typography variant="caption" sx={{ color: '#334155', fontWeight: 600, lineHeight: 1.45 }}>
-                    <strong>Realisasi: </strong>{directDesc}
+                    <strong>Hasil Kinerja: </strong>{directDesc}
                 </Typography>
             </Box>
         </Paper>
@@ -1518,4 +1518,3 @@ export default function InputData({
         </AppLayout>
     );
 }
-

@@ -5,6 +5,10 @@ return [
         'version' => '3.1',
         'effective_period' => '2025-2029',
         'runtime_authority' => true,
+        'reported_measurement_policy' => [
+            'status' => 'REPORTED',
+            'description' => 'Nilai laporan historis yang belum memiliki operand formula lengkap disimpan sebagai referensi dan tidak dihitung ulang otomatis.',
+        ],
         'source_documents' => [
             'KEPJA 1184_Indikator Kinerja Utama IKU 2025-2029.pdf',
             'A.1.3. Renstra Kejaksaan 2025-2029-Final.pdf',

@@ -68,8 +68,8 @@ class AdminDashboardController extends Controller
                 'nama' => $nama,
                 'tipe' => $tipe,
                 'unit' => $pengukuran->unit?->nama ?? '-',
-                'realisasi' => $pengukuran->realisasi,
-                'capaian' => (float) ($capaian ?? 0),
+                'hasil_kinerja' => $pengukuran->realisasi,
+                'capaian_terhadap_target' => (float) ($capaian ?? 0),
                 'status' => $status,
             ];
         });

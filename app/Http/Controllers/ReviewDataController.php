@@ -77,8 +77,7 @@ class ReviewDataController extends Controller
                 'nama_kinerja' => $nama,
                 'unit_pengampu' => $unitName,
                 'target' => $targetVal,
-                'realisasi' => $realisasi,
-                'capaian_persen' => $capaian,
+                'hasil_kinerja' => $realisasi,
                 'capaian_terhadap_target' => $capaianTerhadapTarget,
                 'analisis_capaian' => $pengukuran?->analisis_capaian,
                 'kendala' => $pengukuran?->kendala,
@@ -93,14 +92,14 @@ class ReviewDataController extends Controller
         $spRows = $data->where('tipe_indikator', 'SP');
         $ikpRows = $data->where('tipe_indikator', 'IKP');
 
-        $spFilled = $spRows->whereNotNull('capaian_persen');
-        $ikpFilled = $ikpRows->whereNotNull('capaian_persen');
+        $spFilled = $spRows->whereNotNull('capaian_terhadap_target');
+        $ikpFilled = $ikpRows->whereNotNull('capaian_terhadap_target');
 
         $summary = [
             'totalSp' => $spRows->count(),
             'totalIkp' => $ikpRows->count(),
-            'avgCapaianSp' => $spFilled->isNotEmpty() ? round($spFilled->avg('capaian_persen'), 2) : 0,
-            'avgCapaianIkp' => $ikpFilled->isNotEmpty() ? round($ikpFilled->avg('capaian_persen'), 2) : 0,
+            'avgCapaianSp' => $spFilled->isNotEmpty() ? round($spFilled->avg('capaian_terhadap_target'), 2) : 0,
+            'avgCapaianIkp' => $ikpFilled->isNotEmpty() ? round($ikpFilled->avg('capaian_terhadap_target'), 2) : 0,
         ];
 
         return Inertia::render('ReviewData/Index', [
@@ -160,8 +159,7 @@ class ReviewDataController extends Controller
                     'tahun' => $p->tahun,
                     'triwulan' => $p->triwulan,
                     'target' => $targetVal,
-                    'realisasi_aktual' => $realisasi,
-                    'capaian_persen' => $capaian,
+                    'hasil_kinerja' => $realisasi,
                     'capaian_terhadap_target' => $capaianVsTarget,
                     'status' => $p->status_capaian ?? ($capaian >= 100 ? 'TERCAPAI' : ($p->triwulan < 4 ? 'BELUM_TERCAPAI' : 'TIDAK_TERCAPAI')),
                     'analisis_capaian' => $p->analisis_capaian,

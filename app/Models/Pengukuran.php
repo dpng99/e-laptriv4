@@ -46,6 +46,16 @@ class Pengukuran extends Model
             || in_array(strtoupper((string) $this->status), ['FINAL', 'APPROVED', 'LOCKED'], true);
     }
 
+    /**
+     * Historical report imports hold values published by their source when the
+     * underlying formula operands are unavailable. They must not be replaced by
+     * a later automatic recalculation.
+     */
+    public function isReported(): bool
+    {
+        return strtoupper((string) $this->status) === 'REPORTED';
+    }
+
     public function node(): BelongsTo { return $this->belongsTo(KinerjaNode::class, 'node_id'); }
     public function target(): BelongsTo { return $this->belongsTo(Target::class); }
     public function unit(): BelongsTo { return $this->belongsTo(UnitKerja::class, 'unit_kerja_id'); }

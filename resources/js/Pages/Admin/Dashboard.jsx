@@ -45,8 +45,8 @@ export default function AdminDashboard({ currentTahun, currentTriwulan, statusLi
         if (!unitPerformance[item.unit]) {
             unitPerformance[item.unit] = { unit: item.unit, capaianRataRata: 0, total: 0 };
         }
-        if (item.capaian !== null && item.capaian !== undefined) {
-            unitPerformance[item.unit].capaianRataRata += Number(item.capaian);
+        if (item.capaian_terhadap_target !== null && item.capaian_terhadap_target !== undefined) {
+            unitPerformance[item.unit].capaianRataRata += Number(item.capaian_terhadap_target);
             unitPerformance[item.unit].total += 1;
         }
     });
@@ -116,9 +116,9 @@ export default function AdminDashboard({ currentTahun, currentTriwulan, statusLi
             )
         },
         { 
-            field: 'realisasi', 
-            headerName: 'Realisasi', 
-            width: 110, 
+            field: 'hasil_kinerja', 
+            headerName: 'Hasil Kinerja', 
+            width: 135, 
             renderCell: (params) => (
                 <Typography variant="body2" sx={{ fontWeight: 700, color: '#0f172a' }}>
                     {params.value != null ? params.value : '-'}
@@ -126,9 +126,9 @@ export default function AdminDashboard({ currentTahun, currentTriwulan, statusLi
             )
         },
         { 
-            field: 'capaian', 
-            headerName: 'Capaian (%)', 
-            width: 140, 
+            field: 'capaian_terhadap_target', 
+            headerName: 'Capaian terhadap Target (%)', 
+            width: 175, 
             type: 'number', 
             renderCell: (params) => {
                 const val = params.value;
@@ -454,4 +454,3 @@ export default function AdminDashboard({ currentTahun, currentTriwulan, statusLi
         </AppLayout>
     );
 }
-

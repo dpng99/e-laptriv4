@@ -22,13 +22,13 @@ class PengukuranService
             $measurement = Pengukuran::firstOrNew([
                 'node_id' => $node->id, 'unit_kerja_id' => $unitId, 'tahun' => $tahun, 'triwulan' => $triwulan,
             ]);
-            if ($measurement->isFinal()) {
-                throw ValidationException::withMessages(['data' => 'Pengukuran final atau terkunci tidak dapat diubah.']);
+            if ($measurement->isFinal() || $measurement->isReported()) {
+                throw ValidationException::withMessages(['data' => 'Pengukuran final, terkunci, atau nilai laporan belum direkonsiliasi tidak dapat diubah dari form input.']);
             }
             $inputs = app(MeasurementInputValidator::class)->validate($node, $row);
             $measurement->created_by ??= $username;
             $measurement->updated_by = $username;
-            foreach (['analisis_capaian', 'kendala', 'upaya'] as $key) {
+            foreach (['analisis_capaian', 'kendala', 'upaya', 'source_reference', 'evidence_reference'] as $key) {
                 if (array_key_exists($key, $row)) $measurement->$key = $row[$key];
             }
             if (array_key_exists('hambatan_kendala', $row)) $measurement->kendala = $row['kendala'] ?? $row['hambatan_kendala'];

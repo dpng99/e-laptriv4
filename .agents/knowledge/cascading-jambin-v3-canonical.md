@@ -245,6 +245,26 @@ capaian < 100 dan TW 4
 → TIDAK_TERCAPAI
 ```
 
+## 5.6 Nilai Laporan yang Belum Direkonsiliasi
+
+Jika laporan kinerja yang ditetapkan sebagai sumber hanya menyediakan nilai
+realisasi dan/atau capaian, sedangkan operand formula canonical tidak tersedia,
+aplikasi boleh menyimpannya sebagai pengukuran berstatus `REPORTED` dengan
+`source_reference`, `evidence_reference`, dan `calculation_trace` yang jelas.
+
+`REPORTED` bukan `RAW INPUT`, bukan hasil baru calculation engine, dan bukan
+pengganti formula canonical. Nilai tersebut:
+
+- tidak boleh mengisi tabel target;
+- tidak boleh dibuatkan pembilang, penyebut, atau komponen secara tebakan;
+- tidak boleh ditimpa oleh `calculateNode`/`calculateAll`;
+- tidak boleh diajukan, diverifikasi, atau disetujui sampai direkonsiliasi ke
+  dokumen sumber dan operand formula yang lengkap tersedia.
+
+Setelah operand resmi tersedia, reviewer membuat atau memulihkan pengukuran
+berbasis raw input sesuai formula canonical; jangan menganggap nilai
+`REPORTED` sebagai bukti bahwa formula sudah tervalidasi.
+
 ---
 
 # 6. Scope Program JAMBIN Canonical

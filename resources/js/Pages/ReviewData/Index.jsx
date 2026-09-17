@@ -106,9 +106,9 @@ export default function ReviewData({ data = [], summary = {}, currentTahun, curr
             )
         },
         { 
-            field: 'realisasi', 
-            headerName: 'Realisasi', 
-            width: 100,
+            field: 'hasil_kinerja', 
+            headerName: 'Hasil Kinerja (Realisasi)', 
+            width: 180,
             renderCell: (params) => (
                 <Typography variant="body2" sx={{ fontWeight: 700, color: '#0f172a' }}>
                     {params.value != null ? params.value : '-'}
@@ -116,27 +116,9 @@ export default function ReviewData({ data = [], summary = {}, currentTahun, curr
             )
         },
         {
-            field: 'capaian_persen',
-            headerName: 'Capaian (%)',
-            width: 120,
-            renderCell: (params) => {
-                const val = params.value;
-                if (val == null) return <Typography variant="caption" color="text.secondary">-</Typography>;
-                const color = val >= 100 ? '#059669' : (val >= 80 ? '#d97706' : '#dc2626');
-                const bg = val >= 100 ? '#f0fdf4' : (val >= 80 ? '#fffbeb' : '#fef2f2');
-                return (
-                    <Chip
-                        label={`${val}%`}
-                        size="small"
-                        sx={{ fontWeight: 800, color, bgcolor: bg, border: `1px solid ${color}40` }}
-                    />
-                );
-            }
-        },
-        {
             field: 'capaian_terhadap_target',
-            headerName: 'Capaian vs Target (%)',
-            width: 160,
+            headerName: 'Capaian terhadap Target (%)',
+            width: 210,
             renderCell: (params) => {
                 const val = params.value;
                 if (val == null) return <Typography variant="caption" color="text.secondary">-</Typography>;
@@ -382,4 +364,3 @@ export default function ReviewData({ data = [], summary = {}, currentTahun, curr
         </AppLayout>
     );
 }
-

@@ -70,9 +70,8 @@ export default function ReviewDataShow({ indikator, pengukurans = [] }) {
                             <TableCell sx={{ fontWeight: 800, color: '#0f172a' }}>Tahun</TableCell>
                             <TableCell sx={{ fontWeight: 800, color: '#0f172a' }}>Triwulan</TableCell>
                             <TableCell sx={{ fontWeight: 800, color: '#0f172a' }}>Target</TableCell>
-                            <TableCell sx={{ fontWeight: 800, color: '#0f172a' }}>Realisasi</TableCell>
-                            <TableCell sx={{ fontWeight: 800, color: '#0f172a' }}>Capaian (%)</TableCell>
-                            <TableCell sx={{ fontWeight: 800, color: '#0f172a' }}>Capaian vs Target (%)</TableCell>
+                            <TableCell sx={{ fontWeight: 800, color: '#0f172a' }}>Hasil Kinerja (Realisasi)</TableCell>
+                            <TableCell sx={{ fontWeight: 800, color: '#0f172a' }}>Capaian terhadap Target (%)</TableCell>
                             <TableCell sx={{ fontWeight: 800, color: '#0f172a' }}>Analisis Capaian</TableCell>
                             <TableCell sx={{ fontWeight: 800, color: '#0f172a' }}>Kendala</TableCell>
                             <TableCell sx={{ fontWeight: 800, color: '#0f172a' }}>Upaya Tindak Lanjut</TableCell>
@@ -81,14 +80,14 @@ export default function ReviewDataShow({ indikator, pengukurans = [] }) {
                     <TableBody>
                         {pengukurans.length === 0 ? (
                             <TableRow>
-                                <TableCell colSpan={9} align="center" sx={{ py: 5, color: '#94a3b8' }}>
+                                <TableCell colSpan={8} align="center" sx={{ py: 5, color: '#94a3b8' }}>
                                     Belum ada data pengukuran untuk indikator ini pada periode terpilih.
                                 </TableCell>
                             </TableRow>
                         ) : (
                             pengukurans.map((p) => {
-                                const isTercapai = p.capaian_persen >= 100;
-                                const isWarning = p.capaian_persen >= 80 && p.capaian_persen < 100;
+                                const isTercapai = p.capaian_terhadap_target >= 100;
+                                const isWarning = p.capaian_terhadap_target >= 80 && p.capaian_terhadap_target < 100;
                                 const color = isTercapai ? '#059669' : (isWarning ? '#d97706' : '#dc2626');
                                 const bg = isTercapai ? '#f0fdf4' : (isWarning ? '#fffbeb' : '#fef2f2');
 
@@ -97,21 +96,14 @@ export default function ReviewDataShow({ indikator, pengukurans = [] }) {
                                         <TableCell sx={{ fontWeight: 700 }}>{p.tahun}</TableCell>
                                         <TableCell sx={{ fontWeight: 700 }}>TW {p.triwulan}</TableCell>
                                         <TableCell sx={{ fontWeight: 600 }}>{p.target ?? '-'}</TableCell>
-                                        <TableCell sx={{ fontWeight: 700 }}>{p.realisasi_aktual ?? '-'}</TableCell>
+                                        <TableCell sx={{ fontWeight: 700 }}>{p.hasil_kinerja ?? '-'}</TableCell>
                                         <TableCell>
-                                            {p.capaian_persen != null ? (
+                                            {p.capaian_terhadap_target != null ? (
                                                 <Chip 
-                                                    label={`${p.capaian_persen}%`} 
+                                                    label={`${p.capaian_terhadap_target}%`} 
                                                     size="small" 
                                                     sx={{ fontWeight: 800, color, bgcolor: bg, border: `1px solid ${color}40` }} 
                                                 />
-                                            ) : '-'}
-                                        </TableCell>
-                                        <TableCell>
-                                            {p.capaian_terhadap_target != null ? (
-                                                <Typography fontWeight={800} sx={{ color }}>
-                                                    {p.capaian_terhadap_target}%
-                                                </Typography>
                                             ) : '-'}
                                         </TableCell>
                                         <TableCell sx={{ maxWidth: 200 }}>
@@ -135,4 +127,3 @@ export default function ReviewDataShow({ indikator, pengukurans = [] }) {
         </AppLayout>
     );
 }
-

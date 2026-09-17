@@ -32,7 +32,7 @@ class CalculationEngine
             $node = KinerjaNode::whereKey($node->id)->lockForUpdate()->firstOrFail();
             $measurement = Pengukuran::where('node_id', $node->id)->where('unit_kerja_id', $unitKerjaId)
                 ->where('tahun', $tahun)->where('triwulan', $triwulan)->lockForUpdate()->first();
-            if ($measurement?->isFinal()) {
+            if ($measurement?->isFinal() || $measurement?->isReported()) {
                 return $measurement;
             }
 
