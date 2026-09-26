@@ -1,0 +1,1 @@
+import{j as o}from"./app-CvNLW4P0.js";import{c}from"./Paper-Cl672vd7.js";const a=c(o.jsx("path",{d:"M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8zm2 16H8v-2h8zm0-4H8v-2h8zm-3-5V3.5L18.5 9z"})),m=c(o.jsx("path",{d:"M5 20h14v-2H5zM19 9h-4V3H9v6H5l7 7z"}));export{m as D,a};
