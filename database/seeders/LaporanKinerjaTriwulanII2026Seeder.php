@@ -90,10 +90,20 @@ class LaporanKinerjaTriwulanII2026Seeder extends Seeder
         $targets = app(TargetResolver::class);
         $statusResolver = app(StatusResolver::class);
 
-        DB::transaction(function () use ($calculatedRows, $reportedRows, $reportedNarratives, $service, $targets, $statusResolver): void {
+        $allCodes = array_merge(array_keys($calculatedRows), array_column($reportedRows, 'code'));
+        $allUnits = array_unique(array_merge(array_column($calculatedRows, 'unit'), array_column($reportedRows, 'unit')));
+
+        $nodes = KinerjaNode::with('formulas')->whereIn('kode', $allCodes)->get()->keyBy('kode');
+        $units = UnitKerja::whereIn('kode', $allUnits)->get()->keyBy('kode');
+
+        DB::transaction(function () use ($calculatedRows, $reportedRows, $reportedNarratives, $service, $targets, $statusResolver, $nodes, $units): void {
             foreach ($calculatedRows as $code => $row) {
-                $node = KinerjaNode::query()->where('kode', $code)->firstOrFail();
-                $unit = UnitKerja::query()->where('kode', $row['unit'])->firstOrFail();
+                $node = $nodes->get($code);
+                $unit = $units->get($row['unit']);
+
+                if (!$node || !$unit) {
+                    continue;
+                }
 
                 $service->storeMeasurement($node, $unit->id, 2026, 2, [
                     'inputs' => $row['inputs'],
@@ -107,8 +117,13 @@ class LaporanKinerjaTriwulanII2026Seeder extends Seeder
 
             foreach ($reportedRows as $row) {
                 $row = array_merge($reportedNarratives[$row['code']], $row);
-                $node = KinerjaNode::query()->where('kode', $row['code'])->with('formulas')->firstOrFail();
-                $unit = UnitKerja::query()->where('kode', $row['unit'])->firstOrFail();
+                $node = $nodes->get($row['code']);
+                $unit = $units->get($row['unit']);
+
+                if (!$node || !$unit) {
+                    continue;
+                }
+
                 $target = $targets->resolve($node->id, 2026, 2);
                 $formula = $node->formulas->where('is_active', true)->sortByDesc('versi')->first();
 

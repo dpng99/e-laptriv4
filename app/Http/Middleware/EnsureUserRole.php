@@ -12,6 +12,14 @@ class EnsureUserRole
     {
         $user = $request->user();
 
+        if ($user && ! $user->isActive()) {
+            auth()->logout();
+            $request->session()->invalidate();
+            $request->session()->regenerateToken();
+
+            abort(Response::HTTP_FORBIDDEN, 'Akun Anda telah dinonaktifkan.');
+        }
+
         $allowed = match ($role) {
             'admin' => $user?->isAdmin(),
             'operator' => $user?->isOperator(),

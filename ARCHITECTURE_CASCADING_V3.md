@@ -46,7 +46,7 @@ Ketiga angka tersebut tidak boleh disamakan atau ditimpa satu sama lain.
 
 Program Dukungan Manajemen yang masuk scope JAMBIN pada dataset canonical: SP 1, 4, 5, 6, 7, 8, 10, 11, 13, 15, dan 16.
 
-`database/data/jambin_architecture.php` menjadi konfigurasi eksplisit untuk:
+`database/data/jambin_architecture_v3.php` menjadi konfigurasi eksplisit untuk:
 
 1. `calculation_type` per IKP;
 2. `formula_key`;

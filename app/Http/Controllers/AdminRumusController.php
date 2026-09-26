@@ -7,8 +7,9 @@ use App\Models\RumusIndikator;
 use App\Services\Formula\FormulaVersionService;
 use App\Enums\FormulaType;
 use App\Enums\IndicatorDirection;
-use Illuminate\Validation\Rule;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Validation\Rule;
 use Inertia\Inertia;
 
 class AdminRumusController extends Controller
@@ -107,7 +108,15 @@ class AdminRumusController extends Controller
             'komponen.*.penjelasan' => 'nullable|string',
         ]);
 
-        app(FormulaVersionService::class)->save($validated);
+        $savedFormula = app(FormulaVersionService::class)->save($validated);
+
+        Log::info('Data Mutation: Rumus indikator created', [
+            'username' => $request->user()?->username,
+            'node_id' => $validated['node_id'],
+            'tipe_formula' => $validated['tipe_formula'],
+            'formula_id' => $savedFormula?->id,
+            'ip' => $request->ip(),
+        ]);
 
         return redirect()->route('admin.rumus.index')->with('success', 'Rumus berhasil ditambahkan');
     }
@@ -176,7 +185,15 @@ class AdminRumusController extends Controller
             'komponen.*.penjelasan' => 'nullable|string',
         ]);
 
-        app(FormulaVersionService::class)->save($validated, $formula);
+        $savedFormula = app(FormulaVersionService::class)->save($validated, $formula);
+
+        Log::info('Data Mutation: Rumus indikator updated', [
+            'username' => $request->user()?->username,
+            'formula_id' => $formula->id,
+            'node_id' => $validated['node_id'],
+            'new_formula_id' => $savedFormula?->id,
+            'ip' => $request->ip(),
+        ]);
 
         return redirect()->route('admin.rumus.index')->with('success', 'Rumus berhasil diperbarui');
     }
@@ -185,6 +202,14 @@ class AdminRumusController extends Controller
     {
         $formula = RumusIndikator::findOrFail($id);
         app(FormulaVersionService::class)->archive($formula);
+
+        Log::info('Data Mutation: Rumus indikator archived', [
+            'username' => request()->user()?->username,
+            'formula_id' => $formula->id,
+            'node_id' => $formula->node_id,
+            'ip' => request()->ip(),
+        ]);
+
         return redirect()->route('admin.rumus.index')->with('success', 'Rumus berhasil dihapus');
     }
 }

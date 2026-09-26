@@ -88,9 +88,9 @@ export default function AdminDashboard({ currentTahun, currentTriwulan, statusLi
             field: 'nama', 
             headerName: 'Nama Sasaran / Indikator', 
             flex: 1, 
-            minWidth: 320,
+            minWidth: 280,
             renderCell: (params) => (
-                <Typography variant="body2" fontWeight={600} sx={{ color: '#0f172a' }}>
+                <Typography variant="body2" fontWeight={600} sx={{ color: '#0f172a', whiteSpace: 'normal', wordBreak: 'break-word', lineHeight: 1.4 }}>
                     {params.value}
                 </Typography>
             )
@@ -352,20 +352,20 @@ export default function AdminDashboard({ currentTahun, currentTriwulan, statusLi
                             Proporsi indikator SP & SK pada triwulan aktif
                         </Typography>
                         <Divider sx={{ mb: 3 }} />
-                        <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: 260 }}>
+                        <Box sx={{ width: '100%', maxWidth: '100%', overflow: 'hidden', display: 'flex', justifyContent: 'center', alignItems: 'center', height: 260 }}>
                             {pieData.length > 0 ? (
                                 <PieChart
                                     series={[{ 
                                         data: pieData,
                                         highlightScope: { faded: 'global', highlighted: 'item' },
-                                        faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
-                                        innerRadius: 50,
-                                        outerRadius: 105,
+                                        faded: { innerRadius: 25, additionalRadius: -25, color: 'gray' },
+                                        innerRadius: 45,
+                                        outerRadius: 85,
                                         paddingAngle: 3,
                                         cornerRadius: 6,
                                     }]}
-                                    width={380}
-                                    height={240}
+                                    width={300}
+                                    height={220}
                                 />
                             ) : (
                                 <Typography color="text.secondary">Tidak ada data untuk ditampilkan</Typography>
@@ -417,6 +417,7 @@ export default function AdminDashboard({ currentTahun, currentTriwulan, statusLi
                     <DataGrid
                         rows={statusList}
                         columns={columns}
+                        getRowHeight={() => 'auto'}
                         initialState={{
                             pagination: {
                                 paginationModel: { pageSize: 10 },
@@ -435,6 +436,9 @@ export default function AdminDashboard({ currentTahun, currentTriwulan, statusLi
                             border: 'none',
                             '& .MuiDataGrid-cell': {
                                 borderBottom: '1px solid #f1f5f9',
+                                py: 1.5,
+                                whiteSpace: 'normal',
+                                wordBreak: 'break-word',
                             },
                             '& .MuiDataGrid-columnHeaders': {
                                 backgroundColor: '#f8fafc',

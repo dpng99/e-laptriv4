@@ -12,6 +12,7 @@ use App\Services\TargetResolver;
 use Illuminate\Support\Facades\DB;
 use App\Services\PengukuranService;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use Inertia\Inertia;
 
 class InputDataController extends Controller
@@ -26,8 +27,13 @@ class InputDataController extends Controller
         $unit = $request->user()->assignedUnit();
         abort_if($unit === null, 403, 'Bidang akun belum terhubung dengan unit kerja.');
 
-        $tahun = (int) $request->input('tahun', date('Y'));
-        $triwulan = (int) $request->input('triwulan', 1);
+        $validated = $request->validate([
+            'tahun' => 'nullable|integer|between:2020,2099',
+            'triwulan' => 'nullable|integer|between:1,4',
+        ]);
+
+        $tahun = (int) ($validated['tahun'] ?? date('Y'));
+        $triwulan = (int) ($validated['triwulan'] ?? 1);
 
         $ikks = Ikk::whereHas('node.units', fn ($query) => $query->whereKey($unit->id))
             ->with([
@@ -198,6 +204,16 @@ class InputDataController extends Controller
             // Recalculate derived/parent nodes
             $this->pengukuranService->recalculateAll($validated['tahun'], $validated['triwulan'], $unit->id);
         });
+
+        Log::info('Data Mutation: Input data submitted and recalculated', [
+            'username' => $username,
+            'unit_id' => $unit->id,
+            'unit_kode' => $unit->kode,
+            'tahun' => $validated['tahun'],
+            'triwulan' => $validated['triwulan'],
+            'ikk_count' => count($validated['data'] ?? []),
+            'ikp_count' => count($validated['ikp_data'] ?? []),
+        ]);
 
         $totalCount = count($validated['data'] ?? []) + count($validated['ikp_data'] ?? []);
         $message = $totalCount === 1

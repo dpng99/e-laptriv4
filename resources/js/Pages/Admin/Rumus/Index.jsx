@@ -38,7 +38,7 @@ export default function RumusIndex({ formulas = [] }) {
                         size="small" 
                         sx={{ fontWeight: 800, bgcolor: '#0f172a', color: '#ffffff', mb: 0.5 }} 
                     />
-                    <Typography variant="body2" fontWeight={700} sx={{ color: '#0f172a', lineHeight: 1.3 }}>
+                    <Typography variant="body2" fontWeight={700} sx={{ color: '#0f172a', lineHeight: 1.3, whiteSpace: 'normal', wordBreak: 'break-word' }}>
                         {params.row.nama_indikator}
                     </Typography>
                 </Box>

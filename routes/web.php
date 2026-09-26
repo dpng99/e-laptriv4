@@ -28,7 +28,10 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/review-data/{id}', [ReviewDataController::class, 'show'])->name('review-data.show');
 
         Route::get('/export', [ExportController::class, 'index'])->name('export.index');
-        Route::get('/export/word/{tahun}/{triwulan}', [ExportController::class, 'exportWord'])->name('export.word');
+        Route::get('/export/word/{tahun}/{triwulan}', [ExportController::class, 'exportWord'])
+            ->name('export.word')
+            ->where(['tahun' => '[0-9]{4}', 'triwulan' => '[1-4]'])
+            ->middleware('throttle:export');
 
         // Pengaturan & Builder Template LKjIP (Word)
         Route::get('/admin/template', [\App\Http\Controllers\AdminTemplateController::class, 'index'])->name('admin.template.index');

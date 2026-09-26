@@ -66,7 +66,7 @@ export default function ReviewData({ data = [], summary = {}, currentTahun, curr
             flex: 1, 
             minWidth: 280,
             renderCell: (params) => (
-                <Typography variant="body2" fontWeight={600} sx={{ color: '#0f172a' }}>
+                <Typography variant="body2" fontWeight={600} sx={{ color: '#0f172a', whiteSpace: 'normal', wordBreak: 'break-word', lineHeight: 1.4 }}>
                     {params.value}
                 </Typography>
             )
@@ -336,6 +336,7 @@ export default function ReviewData({ data = [], summary = {}, currentTahun, curr
                 <DataGrid
                     rows={data}
                     columns={columns}
+                    getRowHeight={() => 'auto'}
                     pageSizeOptions={[10, 25, 50, 100]}
                     initialState={{ pagination: { paginationModel: { pageSize: 25 } } }}
                     slots={{ toolbar: GridToolbar }}
@@ -345,6 +346,9 @@ export default function ReviewData({ data = [], summary = {}, currentTahun, curr
                         border: 'none',
                         '& .MuiDataGrid-cell': {
                             borderBottom: '1px solid #f1f5f9',
+                            py: 1.5,
+                            whiteSpace: 'normal',
+                            wordBreak: 'break-word',
                         },
                         '& .MuiDataGrid-columnHeaders': {
                             backgroundColor: '#f8fafc',

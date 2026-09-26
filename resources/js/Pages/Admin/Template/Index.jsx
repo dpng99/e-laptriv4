@@ -392,11 +392,11 @@ export default function TemplateIndex({ templates = [], activeTemplate = null, p
                                             <TableBody>
                                                 {group.items.map((item, iIdx) => (
                                                     <TableRow key={iIdx} hover>
-                                                        <TableCell sx={{ width: '38%', py: 1 }}>
+                                                        <TableCell sx={{ width: { xs: '50%', sm: '42%' }, py: 1 }}>
                                                             <Chip
                                                                 label={item.tag}
                                                                 size="small"
-                                                                sx={{ fontFamily: 'monospace', fontWeight: 700, bgcolor: '#eff6ff', color: '#1d4ed8' }}
+                                                                sx={{ fontFamily: 'monospace', fontWeight: 700, bgcolor: '#eff6ff', color: '#1d4ed8', maxWidth: '100%', height: 'auto', py: 0.25, '& .MuiChip-label': { whiteSpace: 'normal', wordBreak: 'break-all' } }}
                                                             />
                                                         </TableCell>
                                                         <TableCell sx={{ py: 1, color: '#475569', fontSize: '0.8125rem' }}>

@@ -115,6 +115,11 @@ class User extends Authenticatable
         return $this->isAdmin() ? 'admin.dashboard' : 'dashboard';
     }
 
+    public function isActive(): bool
+    {
+        return (bool) ($this->is_active ?? true) && (bool) ($this->kinerja_is_active ?? true);
+    }
+
     /**
      * Laravel Auth uses this to know the login credential column name.
      */

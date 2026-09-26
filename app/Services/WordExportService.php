@@ -68,11 +68,7 @@ class WordExportService
 
         $objWriter = IOFactory::createWriter($phpWord, 'Word2007');
         $fileName = "Laporan_Kinerja_TW_{$twRomawi}_Tahun_{$tahun}_JAMBIN.docx";
-        $tempPath = storage_path("app/public/{$fileName}");
-        
-        if (!file_exists(storage_path('app/public'))) {
-            mkdir(storage_path('app/public'), 0755, true);
-        }
+        $tempPath = $this->getExportTempPath($fileName);
 
         $objWriter->save($tempPath);
 
@@ -1111,11 +1107,7 @@ class WordExportService
         $processor->setValue('bab4_penutup', $this->getBab4Text($tahun, $twRomawi));
 
         $fileName = "Laporan_Kinerja_TW_{$twRomawi}_Tahun_{$tahun}_JAMBIN.docx";
-        $tempPath = storage_path("app/public/{$fileName}");
-
-        if (!file_exists(storage_path('app/public'))) {
-            mkdir(storage_path('app/public'), 0755, true);
-        }
+        $tempPath = $this->getExportTempPath($fileName);
 
         $processor->saveAs($tempPath);
 
@@ -1199,11 +1191,7 @@ class WordExportService
 
         $objWriter = IOFactory::createWriter($phpWord, 'Word2007');
         $fileName = "Template_Master_LKjIP_JAMBIN.docx";
-        $tempPath = storage_path("app/public/{$fileName}");
-
-        if (!file_exists(storage_path('app/public'))) {
-            mkdir(storage_path('app/public'), 0755, true);
-        }
+        $tempPath = $this->getExportTempPath($fileName);
 
         $objWriter->save($tempPath);
 
@@ -1252,5 +1240,15 @@ class WordExportService
     public function getBab4Text(int $tahun, string $twRomawi): string
     {
         return "Pencapaian kinerja Jaksa Agung Muda Bidang Pembinaan pada Triwulan {$twRomawi} Tahun {$tahun} telah berjalan secara optimal dan terarah. Evaluasi berkala terus dilakukan untuk memastikan seluruh target Perjanjian Kinerja dapat tercapai secara maksimal pada akhir tahun anggaran.";
+    }
+
+    private function getExportTempPath(string $fileName): string
+    {
+        $dir = storage_path('app/private/exports');
+        if (!file_exists($dir)) {
+            mkdir($dir, 0750, true);
+        }
+
+        return "{$dir}/{$fileName}";
     }
 }

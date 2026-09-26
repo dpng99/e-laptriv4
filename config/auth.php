@@ -112,4 +112,17 @@ return [
 
     'password_timeout' => env('AUTH_PASSWORD_TIMEOUT', 10800),
 
+    /*
+    |--------------------------------------------------------------------------
+    | User Registration
+    |--------------------------------------------------------------------------
+    |
+    | When set to false, the public user registration route (/register) will
+    | be disabled, returning a 404 response. In production environments, this
+    | should remain false to prevent unauthorized user registration.
+    |
+    */
+
+    'registration_enabled' => (bool) env('AUTH_REGISTRATION_ENABLED', false),
+
 ];

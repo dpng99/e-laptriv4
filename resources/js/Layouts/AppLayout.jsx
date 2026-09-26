@@ -107,11 +107,13 @@ export default function AppLayout({ children, title }) {
                     bgcolor: 'rgba(30, 41, 59, 0.7)', 
                     border: '1px solid rgba(51, 65, 85, 0.8)' 
                 }}>
-                    <Stack direction="row" spacing={1} alignItems="center">
-                        <BusinessIcon sx={{ fontSize: 16, color: '#38bdf8' }} />
-                        <Typography variant="caption" sx={{ color: '#cbd5e1', fontWeight: 600, flex: 1 }} noWrap>
-                            {currentUnitName}
-                        </Typography>
+                    <Stack direction="row" spacing={1} alignItems="center" sx={{ minWidth: 0 }}>
+                        <BusinessIcon sx={{ fontSize: 16, color: '#38bdf8', flexShrink: 0 }} />
+                        <Tooltip title={currentUnitName} arrow placement="top">
+                            <Typography variant="caption" sx={{ color: '#cbd5e1', fontWeight: 600, flex: 1, minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                                {currentUnitName}
+                            </Typography>
+                        </Tooltip>
                         <Chip 
                             label={isAdmin ? 'ADMIN' : 'OPERATOR'} 
                             size="small" 
@@ -119,6 +121,7 @@ export default function AppLayout({ children, title }) {
                                 height: 18, 
                                 fontSize: '0.62rem', 
                                 fontWeight: 700, 
+                                flexShrink: 0,
                                 bgcolor: isAdmin ? 'rgba(168, 85, 247, 0.2)' : 'rgba(16, 185, 129, 0.2)', 
                                 color: isAdmin ? '#c084fc' : '#34d399' 
                             }} 
@@ -238,22 +241,25 @@ export default function AppLayout({ children, title }) {
                     sx={{
                         display: 'flex',
                         alignItems: 'center',
+                        gap: 1.25,
                         p: 1.25,
-                        borderRadius: 2,
+                        px: 1.5,
+                        borderRadius: 2.5,
                         cursor: 'pointer',
                         bgcolor: 'rgba(30, 41, 59, 0.6)',
                         border: '1px solid rgba(51, 65, 85, 0.6)',
-                        transition: 'all 0.2s',
+                        transition: 'all 0.2s cubic-bezier(0.4, 0, 0.2, 1)',
                         '&:hover': {
                             bgcolor: 'rgba(30, 41, 59, 0.95)',
-                            borderColor: '#38bdf8',
+                            borderColor: '#10b981',
+                            boxShadow: '0 4px 14px rgba(0, 0, 0, 0.3)',
                         }
                     }}
                 >
                     <Avatar sx={{ 
                         width: 34, 
                         height: 34, 
-                        mr: 1.25, 
+                        flexShrink: 0,
                         bgcolor: '#059669', 
                         fontSize: '0.875rem', 
                         fontWeight: 700,
@@ -261,15 +267,39 @@ export default function AppLayout({ children, title }) {
                     }}>
                         {(user.username || 'U').charAt(0).toUpperCase()}
                     </Avatar>
-                    <Box sx={{ flex: 1, minWidth: 0 }}>
-                        <Typography variant="body2" sx={{ fontWeight: 700, color: '#ffffff', lineHeight: 1.2 }} noWrap>
+                    <Box sx={{ flex: 1, minWidth: 0, overflow: 'hidden' }}>
+                        <Typography 
+                            variant="body2" 
+                            sx={{ 
+                                fontWeight: 700, 
+                                color: '#ffffff', 
+                                lineHeight: 1.25, 
+                                overflow: 'hidden', 
+                                textOverflow: 'ellipsis', 
+                                whiteSpace: 'nowrap',
+                                display: 'block'
+                            }}
+                        >
                             {user.username}
                         </Typography>
-                        <Typography variant="caption" sx={{ color: '#94a3b8', fontSize: '0.7rem' }} noWrap display="block">
-                            {user.nama_satker || user.bidang_id || 'User'}
-                        </Typography>
+                        <Tooltip title={user.nama_satker || user.bidang_id || 'User'} arrow placement="top">
+                            <Typography 
+                                variant="caption" 
+                                sx={{ 
+                                    color: '#94a3b8', 
+                                    fontSize: '0.7rem', 
+                                    overflow: 'hidden', 
+                                    textOverflow: 'ellipsis', 
+                                    whiteSpace: 'nowrap',
+                                    display: 'block',
+                                    mt: 0.25
+                                }}
+                            >
+                                {user.nama_satker || user.bidang_id || 'User'}
+                            </Typography>
+                        </Tooltip>
                     </Box>
-                    <ArrowDownIcon sx={{ fontSize: 18, color: '#94a3b8' }} />
+                    <ArrowDownIcon sx={{ fontSize: 18, color: '#94a3b8', flexShrink: 0 }} />
                 </Box>
             </Box>
         </Box>
@@ -301,8 +331,8 @@ export default function AppLayout({ children, title }) {
                         >
                             <MenuIcon />
                         </IconButton>
-                        <Box>
-                            <Typography variant="h6" noWrap sx={{ fontWeight: 800, color: '#0f172a', fontSize: { xs: '1rem', sm: '1.15rem' } }}>
+                        <Box sx={{ minWidth: 0 }}>
+                            <Typography variant="h6" noWrap sx={{ fontWeight: 800, color: '#0f172a', fontSize: { xs: '0.95rem', sm: '1.15rem' }, overflow: 'hidden', textOverflow: 'ellipsis' }}>
                                 {title}
                             </Typography>
                         </Box>
@@ -428,13 +458,16 @@ export default function AppLayout({ children, title }) {
                 </Drawer>
             </Box>
             
-            {/* Main Canvas */}
+            {/* Main Canvas with strict flex containment */}
             <Box
                 component="main"
                 sx={{ 
                     flexGrow: 1, 
                     p: { xs: 2, sm: 3.5 }, 
                     width: { sm: `calc(100% - ${drawerWidth}px)` }, 
+                    minWidth: 0,
+                    maxWidth: '100%',
+                    overflowX: 'hidden',
                     mt: { xs: 7, sm: 8 },
                     minHeight: 'calc(100vh - 64px)',
                     bgcolor: '#f8fafc'

@@ -14,8 +14,13 @@ class DashboardController extends Controller
         $unit = $request->user()->assignedUnit();
         abort_if($unit === null, 403, 'Bidang akun belum terhubung dengan unit kerja.');
 
-        $tahun = (int) $request->input('tahun', date('Y'));
-        $triwulan = (int) $request->input('triwulan', 1);
+        $validated = $request->validate([
+            'tahun' => 'nullable|integer|between:2020,2099',
+            'triwulan' => 'nullable|integer|between:1,4',
+        ]);
+
+        $tahun = (int) ($validated['tahun'] ?? date('Y'));
+        $triwulan = (int) ($validated['triwulan'] ?? 1);
 
         $ikks = Ikk::query()
             ->whereHas('node.units', fn ($query) => $query->whereKey($unit->id))

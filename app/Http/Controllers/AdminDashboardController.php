@@ -10,8 +10,13 @@ class AdminDashboardController extends Controller
 {
     public function index(Request $request)
     {
-        $tahun = (int) $request->input('tahun', date('Y'));
-        $triwulan = (int) $request->input('triwulan', 1);
+        $validated = $request->validate([
+            'tahun' => 'nullable|integer|between:2020,2099',
+            'triwulan' => 'nullable|integer|between:1,4',
+        ]);
+
+        $tahun = (int) ($validated['tahun'] ?? date('Y'));
+        $triwulan = (int) ($validated['triwulan'] ?? 1);
 
         // Ambil pengukuran untuk seluruh tingkatan kinerja
         $pengukurans = Pengukuran::with(['node.sp', 'node.ikp', 'node.sk', 'node.ikk', 'unit'])

@@ -41,6 +41,17 @@ class BidangAccessTest extends TestCase
         $this->actingAs($operator)->get('/export')->assertForbidden();
     }
 
+    public function test_inactive_users_are_forbidden_and_logged_out(): void
+    {
+        $this->createUnit('RO-REN', 'Biro Perencanaan');
+        $operator = $this->createOperator('REN');
+        $operator->update(['is_active' => false]);
+
+        $response = $this->actingAs($operator)->get('/dashboard');
+        $response->assertForbidden();
+        $this->assertGuest();
+    }
+
     public function test_dashboard_and_input_only_return_indicators_for_the_logged_in_bidang(): void
     {
         $renUnit = $this->createUnit('RO-REN', 'Biro Perencanaan');

@@ -37,6 +37,11 @@ class ProfileController extends Controller
 
         $request->user()->save();
 
+        \Illuminate\Support\Facades\Log::info('Data Mutation: Profile updated', [
+            'username' => $request->user()->username,
+            'ip' => $request->ip(),
+        ]);
+
         return Redirect::route('profile.edit');
     }
 
@@ -50,10 +55,16 @@ class ProfileController extends Controller
         ]);
 
         $user = $request->user();
+        $username = $user->username;
 
         Auth::logout();
 
         $user->delete();
+
+        \Illuminate\Support\Facades\Log::info('Data Mutation: User account deleted', [
+            'username' => $username,
+            'ip' => $request->ip(),
+        ]);
 
         $request->session()->invalidate();
         $request->session()->regenerateToken();

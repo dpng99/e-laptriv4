@@ -68,27 +68,26 @@ export default function Login({ status, canResetPassword }) {
                     </Typography>
                 </Box>
 
-                {/* Login Form Card */}
+                {/* Login Form Card - Light & High Contrast */}
                 <Card sx={{
                     borderRadius: 3.5,
-                    bgcolor: 'rgba(30, 41, 59, 0.85)',
-                    backdropFilter: 'blur(16px)',
-                    border: '1px solid rgba(51, 65, 85, 0.8)',
-                    boxShadow: '0 20px 45px -10px rgba(0, 0, 0, 0.6), 0 0 25px rgba(5, 150, 105, 0.1)',
+                    bgcolor: '#ffffff',
+                    border: '1px solid #e2e8f0',
+                    boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.35), 0 0 35px rgba(5, 150, 105, 0.15)',
                     p: { xs: 2.5, sm: 3.5 }
                 }}>
                     <CardContent sx={{ p: '0 !important' }}>
                         <Box sx={{ mb: 3 }}>
-                            <Typography variant="h6" sx={{ fontWeight: 700, color: '#f8fafc', mb: 0.5 }}>
+                            <Typography variant="h6" sx={{ fontWeight: 800, color: '#0f172a', mb: 0.5, letterSpacing: '-0.01em' }}>
                                 Masuk ke Sistem
                             </Typography>
-                            <Typography variant="body2" sx={{ color: '#94a3b8', fontSize: '0.85rem' }}>
-                                Silakan masukkan kredensial akun Anda.
+                            <Typography variant="body2" sx={{ color: '#64748b', fontSize: '0.85rem' }}>
+                                Silakan masukkan kredensial akun Anda untuk mengakses portal.
                             </Typography>
                         </Box>
 
                         {status && (
-                            <Alert severity="success" sx={{ mb: 2.5, borderRadius: 2, bgcolor: 'rgba(5, 150, 105, 0.15)', color: '#34d399', border: '1px solid rgba(5, 150, 105, 0.4)' }}>
+                            <Alert severity="success" sx={{ mb: 2.5, borderRadius: 2, bgcolor: '#ecfdf5', color: '#065f46', border: '1px solid #a7f3d0', fontWeight: 600 }}>
                                 {status}
                             </Alert>
                         )}
@@ -96,7 +95,7 @@ export default function Login({ status, canResetPassword }) {
                         <form onSubmit={submit}>
                             <Stack spacing={2.5}>
                                 <Box>
-                                    <Typography variant="caption" sx={{ color: '#cbd5e1', fontWeight: 700, mb: 0.75, display: 'block' }}>
+                                    <Typography variant="caption" sx={{ color: '#334155', fontWeight: 700, mb: 0.75, display: 'block' }}>
                                         Username / NIP
                                     </Typography>
                                     <TextField
@@ -117,16 +116,22 @@ export default function Login({ status, canResetPassword }) {
                                                 </InputAdornment>
                                             ),
                                             sx: {
-                                                bgcolor: 'rgba(15, 23, 42, 0.6)',
-                                                color: '#f8fafc',
+                                                bgcolor: '#f8fafc',
+                                                color: '#0f172a',
                                                 borderRadius: 2,
-                                                border: '1px solid rgba(51, 65, 85, 0.8)',
-                                                '&:hover': {
-                                                    borderColor: 'rgba(100, 116, 139, 1)'
+                                                fontWeight: 600,
+                                                '& fieldset': {
+                                                    borderColor: '#cbd5e1'
+                                                },
+                                                '&:hover fieldset': {
+                                                    borderColor: '#94a3b8'
+                                                },
+                                                '&.Mui-focused fieldset': {
+                                                    borderColor: '#059669',
+                                                    borderWidth: 2
                                                 },
                                                 '&.Mui-focused': {
-                                                    borderColor: '#10b981',
-                                                    boxShadow: '0 0 0 2px rgba(16, 185, 129, 0.25)'
+                                                    boxShadow: '0 0 0 3px rgba(5, 150, 105, 0.15)'
                                                 }
                                             }
                                         }}
@@ -134,7 +139,7 @@ export default function Login({ status, canResetPassword }) {
                                 </Box>
 
                                 <Box>
-                                    <Typography variant="caption" sx={{ color: '#cbd5e1', fontWeight: 700, mb: 0.75, display: 'block' }}>
+                                    <Typography variant="caption" sx={{ color: '#334155', fontWeight: 700, mb: 0.75, display: 'block' }}>
                                         Kata Sandi
                                     </Typography>
                                     <TextField
@@ -159,7 +164,7 @@ export default function Login({ status, canResetPassword }) {
                                                     <IconButton
                                                         onClick={() => setShowPassword(!showPassword)}
                                                         edge="end"
-                                                        sx={{ color: '#94a3b8' }}
+                                                        sx={{ color: '#64748b', '&:hover': { color: '#0f172a' } }}
                                                         aria-label="toggle password visibility"
                                                     >
                                                         {showPassword ? <VisibilityOffIcon fontSize="small" /> : <VisibilityIcon fontSize="small" />}
@@ -167,16 +172,22 @@ export default function Login({ status, canResetPassword }) {
                                                 </InputAdornment>
                                             ),
                                             sx: {
-                                                bgcolor: 'rgba(15, 23, 42, 0.6)',
-                                                color: '#f8fafc',
+                                                bgcolor: '#f8fafc',
+                                                color: '#0f172a',
                                                 borderRadius: 2,
-                                                border: '1px solid rgba(51, 65, 85, 0.8)',
-                                                '&:hover': {
-                                                    borderColor: 'rgba(100, 116, 139, 1)'
+                                                fontWeight: 600,
+                                                '& fieldset': {
+                                                    borderColor: '#cbd5e1'
+                                                },
+                                                '&:hover fieldset': {
+                                                    borderColor: '#94a3b8'
+                                                },
+                                                '&.Mui-focused fieldset': {
+                                                    borderColor: '#059669',
+                                                    borderWidth: 2
                                                 },
                                                 '&.Mui-focused': {
-                                                    borderColor: '#10b981',
-                                                    boxShadow: '0 0 0 2px rgba(16, 185, 129, 0.25)'
+                                                    boxShadow: '0 0 0 3px rgba(5, 150, 105, 0.15)'
                                                 }
                                             }
                                         }}
@@ -191,12 +202,12 @@ export default function Login({ status, canResetPassword }) {
                                                 checked={data.remember}
                                                 onChange={(e) => setData('remember', e.target.checked)}
                                                 sx={{
-                                                    color: '#64748b',
-                                                    '&.Mui-checked': { color: '#10b981' }
+                                                    color: '#94a3b8',
+                                                    '&.Mui-checked': { color: '#059669' }
                                                 }}
                                             />
                                         }
-                                        label={<Typography variant="body2" sx={{ color: '#94a3b8', fontSize: '0.85rem' }}>Ingat sesi saya</Typography>}
+                                        label={<Typography variant="body2" sx={{ color: '#475569', fontSize: '0.85rem', fontWeight: 500 }}>Ingat sesi saya</Typography>}
                                     />
                                 </Box>
 

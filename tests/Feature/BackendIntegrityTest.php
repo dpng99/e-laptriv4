@@ -115,6 +115,10 @@ class BackendIntegrityTest extends TestCase
 
     public function test_unresolved_scale_keeps_raw_data_without_publishing_a_false_result(): void
     {
+        $unresolved = config('formula_review.unresolved', []);
+        $unresolved['IKP:5.1'] = 'Skala komponen IPA 0-100 belum selaras dengan skala target indeks.';
+        config(['formula_review.unresolved' => $unresolved]);
+
         $node = $this->node('IKP:5.1');
         $result = $this->store($node, array_fill_keys(['X1','X2','X3','X4','X5','X6','X7','X8'], 80));
         $this->assertSame(8, $result->inputs()->count());

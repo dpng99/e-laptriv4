@@ -6,6 +6,7 @@ use App\Models\ReportTemplate;
 use App\Services\WordExportService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
 use Inertia\Inertia;
 
@@ -96,7 +97,7 @@ class AdminTemplateController extends Controller
         // Deactivate other templates
         ReportTemplate::query()->update(['is_active' => false]);
 
-        ReportTemplate::create([
+        $template = ReportTemplate::create([
             'name' => $request->name,
             'file_path' => $path,
             'file_name' => $originalName,
@@ -104,6 +105,14 @@ class AdminTemplateController extends Controller
             'is_active' => true,
             'description' => $request->description,
             'uploaded_by' => Auth::user()?->username,
+        ]);
+
+        Log::info('Data Mutation: Report template uploaded', [
+            'username' => Auth::user()?->username,
+            'template_id' => $template->id,
+            'template_name' => $template->name,
+            'file_name' => $originalName,
+            'file_size' => $fileSize,
         ]);
 
         return redirect()->route('admin.template.index')->with('success', 'Template Word (.docx) berhasil diunggah dan diaktifkan.');
@@ -116,6 +125,12 @@ class AdminTemplateController extends Controller
         ReportTemplate::query()->update(['is_active' => false]);
         $template->update(['is_active' => true]);
 
+        Log::info('Data Mutation: Report template activated', [
+            'username' => Auth::user()?->username,
+            'template_id' => $template->id,
+            'template_name' => $template->name,
+        ]);
+
         return redirect()->route('admin.template.index')->with('success', "Template '{$template->name}' berhasil diaktifkan sebagai template default ekspor.");
     }
 
@@ -127,14 +142,26 @@ class AdminTemplateController extends Controller
             Storage::disk('local')->delete($template->file_path);
         }
 
+        $templateName = $template->name;
+        $templateId = $template->id;
         $template->delete();
 
-        return redirect()->route('admin.template.index')->with('success', "Template '{$template->name}' berhasil dihapus.");
+        Log::info('Data Mutation: Report template deleted', [
+            'username' => Auth::user()?->username,
+            'template_id' => $templateId,
+            'template_name' => $templateName,
+        ]);
+
+        return redirect()->route('admin.template.index')->with('success', "Template '{$templateName}' berhasil dihapus.");
     }
 
     public function resetDefault()
     {
         ReportTemplate::query()->update(['is_active' => false]);
+
+        Log::info('Data Mutation: Report templates reset to system default', [
+            'username' => Auth::user()?->username,
+        ]);
 
         return redirect()->route('admin.template.index')->with('success', 'Sistem berhasil direset ke generator template bawaan resmi LKjIP JAMBIN.');
     }
