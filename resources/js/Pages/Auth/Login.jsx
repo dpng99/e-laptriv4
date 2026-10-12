@@ -40,7 +40,7 @@ export default function Login({ status, canResetPassword }) {
             py: 4,
             px: 2
         }}>
-            <Head title="Masuk — e-LKjIP Pembinaan" />
+            <Head title="Masuk — E-Laptri Pembinaan" />
             
             <Container maxWidth="xs" sx={{ mx: 'auto' }}>
                 {/* Header Brand */}
@@ -61,7 +61,7 @@ export default function Login({ status, canResetPassword }) {
                         <ShieldIcon sx={{ fontSize: 32 }} />
                     </Box>
                     <Typography variant="h5" sx={{ fontWeight: 800, color: '#f8fafc', letterSpacing: '-0.02em', mb: 0.5 }}>
-                        e-LKjIP Pembinaan
+                        E-Laptri Pembinaan
                     </Typography>
                     <Typography variant="body2" sx={{ color: '#94a3b8', fontWeight: 500 }}>
                         Kejaksaan Agung Republik Indonesia

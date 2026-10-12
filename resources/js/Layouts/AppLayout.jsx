@@ -78,7 +78,7 @@ export default function AppLayout({ children, title }) {
                     <Box>
                         <Stack direction="row" spacing={0.75} alignItems="center">
                             <Typography variant="subtitle1" sx={{ fontWeight: 800, color: '#ffffff', letterSpacing: '-0.02em', lineHeight: 1.2 }}>
-                                e-LKjIP
+                                E-Laptri
                             </Typography>
                             <Chip 
                                 label="JAMBIN" 
@@ -202,7 +202,7 @@ export default function AppLayout({ children, title }) {
                                 <ListItemIcon sx={{ color: route().current('review-data.*') ? '#34d399' : '#64748b', minWidth: 38 }}>
                                     <TableChartIcon fontSize="small" />
                                 </ListItemIcon>
-                                <ListItemText primary="Review & Validasi LKjIP" primaryTypographyProps={{ fontSize: '0.875rem', fontWeight: route().current('review-data.*') ? 700 : 500 }} />
+                                <ListItemText primary="Review & Validasi E-Laptri" primaryTypographyProps={{ fontSize: '0.875rem', fontWeight: route().current('review-data.*') ? 700 : 500 }} />
                             </ListItemButton>
                         </ListItem>
                         <ListItem disablePadding>
@@ -218,7 +218,7 @@ export default function AppLayout({ children, title }) {
                                 <ListItemIcon sx={{ color: route().current('admin.template.*') ? '#34d399' : '#64748b', minWidth: 38 }}>
                                     <TemplateIcon fontSize="small" />
                                 </ListItemIcon>
-                                <ListItemText primary="Template Laporan LKjIP" primaryTypographyProps={{ fontSize: '0.875rem', fontWeight: route().current('admin.template.*') ? 700 : 500 }} />
+                                <ListItemText primary="Template Laporan E-Laptri" primaryTypographyProps={{ fontSize: '0.875rem', fontWeight: route().current('admin.template.*') ? 700 : 500 }} />
                             </ListItemButton>
                         </ListItem>
                         <ListItem disablePadding>

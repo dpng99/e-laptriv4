@@ -33,7 +33,7 @@ export default function Welcome({ auth }) {
 
     return (
         <Box sx={{ minHeight: '100vh', bgcolor: '#0f172a', color: '#ffffff', overflow: 'hidden' }}>
-            <Head title="Sistem e-LKjIP JAMBIN — Kejaksaan RI" />
+            <Head title="Sistem E-Laptri Pembinaan — Kejaksaan RI" />
 
             {/* Background Decorative Gradient Blobs */}
             <Box sx={{
@@ -78,7 +78,7 @@ export default function Welcome({ auth }) {
                         <Box>
                             <Stack direction="row" spacing={1} alignItems="center">
                                 <Typography variant="h6" fontWeight={800} sx={{ letterSpacing: '-0.02em', color: '#ffffff' }}>
-                                    e-LKjIP
+                                    E-Laptri
                                 </Typography>
                                 <Chip label="JAMBIN" size="small" sx={{ height: 20, fontWeight: 800, bgcolor: 'rgba(245, 158, 11, 0.2)', color: '#f59e0b', border: '1px solid rgba(245, 158, 11, 0.4)' }} />
                             </Stack>
@@ -148,7 +148,7 @@ export default function Welcome({ auth }) {
                     </Typography>
 
                     <Typography variant="body1" sx={{ color: '#94a3b8', fontSize: { xs: '1rem', md: '1.15rem' }, lineHeight: 1.7, mb: 4.5, maxWidth: 700, mx: 'auto' }}>
-                        Portal resmi sistem e-LKjIP Jaksa Agung Muda Bidang Pembinaan. Mengimplementasikan kalkulasi cascading canonical, validasi formula indikator, dan pelaporan akuntabilitas kinerja instansi pemerintah.
+                        Portal resmi sistem E-Laptri Jaksa Agung Muda Bidang Pembinaan. Mengimplementasikan kalkulasi cascading canonical, validasi formula indikator, dan pelaporan akuntabilitas kinerja instansi pemerintah.
                     </Typography>
 
                     <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2} justifyContent="center">
@@ -241,10 +241,10 @@ export default function Welcome({ auth }) {
                                 <ExportIcon sx={{ color: '#f59e0b', fontSize: 28 }} />
                             </Box>
                             <Typography variant="h6" fontWeight={700} sx={{ color: '#ffffff', mb: 1 }}>
-                                Ekspor Laporan LKjIP
+                                Ekspor Laporan E-Laptri
                             </Typography>
                             <Typography variant="body2" sx={{ color: '#94a3b8', lineHeight: 1.6 }}>
-                                Penjanaan dokumen laporan LKjIP resmi format Microsoft Word (DOCX) sesuai standar pelaporan Renstra Kejaksaan RI.
+                                Penjanaan dokumen laporan E-Laptri resmi format Microsoft Word (DOCX) sesuai standar pelaporan Renstra Kejaksaan RI.
                             </Typography>
                         </Paper>
                     </Grid>
@@ -297,7 +297,7 @@ export default function Welcome({ auth }) {
                             &copy; 2026 Jaksa Agung Muda Bidang Pembinaan (JAMBIN) — Kejaksaan Republik Indonesia
                         </Typography>
                         <Typography variant="caption" sx={{ color: '#64748b' }}>
-                            Sistem Akuntabilitas Kinerja Instansi Pemerintah (SAKIP / e-LKjIP)
+                            Sistem Akuntabilitas Kinerja Instansi Pemerintah (SAKIP / E-Laptri)
                         </Typography>
                     </Stack>
                 </Container>

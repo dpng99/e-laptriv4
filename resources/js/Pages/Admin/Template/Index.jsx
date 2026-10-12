@@ -88,8 +88,8 @@ export default function TemplateIndex({ templates = [], activeTemplate = null, p
     };
 
     return (
-        <AppLayout title="Pengaturan & Builder Template LKjIP">
-            <Head title="Pengaturan Template LKjIP" />
+        <AppLayout title="Pengaturan & Builder Template E-Laptri">
+            <Head title="Pengaturan Template E-Laptri" />
 
             {/* Top Hero Banner */}
             <Paper
@@ -118,7 +118,7 @@ export default function TemplateIndex({ templates = [], activeTemplate = null, p
                     />
                 </Stack>
                 <Typography variant="h4" fontWeight={800} sx={{ letterSpacing: -0.5 }}>
-                    Pengaturan & Builder Template Dokumen LKjIP
+                    Pengaturan & Builder Template Dokumen E-Laptri
                 </Typography>
                 <Typography variant="body2" sx={{ color: '#94a3b8', mt: 0.5, maxWidth: 800 }}>
                     Rancang dan sesuaikan template laporan Word (.docx) langsung menggunakan Microsoft Word (mengatur logo, header, ukuran font, alinea, nomor halaman, dan nomor tabel/gambar), lalu unggah ke sistem untuk mengotomatiskan pengisian data.
@@ -190,7 +190,7 @@ export default function TemplateIndex({ templates = [], activeTemplate = null, p
                             <Box>
                                 <Stack direction="row" spacing={1} alignItems="center">
                                     <Typography variant="h6" fontWeight={800} sx={{ color: '#0f172a' }}>
-                                        {activeTemplate ? activeTemplate.name : 'Generator Bawaan Resmi LKjIP JAMBIN'}
+                                        {activeTemplate ? activeTemplate.name : 'Generator Bawaan Resmi E-Laptri JAMBIN'}
                                     </Typography>
                                     <Chip
                                         label={activeTemplate ? 'Template Custom Aktif' : 'Default Sistem Aktif'}
@@ -256,7 +256,7 @@ export default function TemplateIndex({ templates = [], activeTemplate = null, p
                                         <TextField
                                             fullWidth
                                             size="small"
-                                            placeholder="Contoh: Template Master LKjIP JAMBIN 2026"
+                                            placeholder="Contoh: Template Master E-Laptri JAMBIN 2026"
                                             value={data.name}
                                             onChange={(e) => setData('name', e.target.value)}
                                             error={!!errors.name}

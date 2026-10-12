@@ -70,7 +70,7 @@ export default function Dashboard({
     }));
 
     return (
-        <AppLayout title="Dashboard LKjIP Unit Kerja">
+        <AppLayout title="Dashboard E-Laptri Unit Kerja">
             <Head title={`Dashboard — ${unitName || 'Unit Kerja'}`} />
 
             {/* Top Hero Banner */}

@@ -33,7 +33,7 @@ export default function Edit({ mustVerifyEmail, status }) {
                     Pengaturan Profil & Keamanan
                 </Typography>
                 <Typography variant="body2" sx={{ color: '#94a3b8', mt: 0.5, maxWidth: 650 }}>
-                    Perbarui identitas pengguna, kata sandi, dan kredensial akses sistem pelaporan e-LKjIP Pembinaan.
+                    Perbarui identitas pengguna, kata sandi, dan kredensial akses sistem pelaporan E-Laptri Pembinaan.
                 </Typography>
             </Paper>
 

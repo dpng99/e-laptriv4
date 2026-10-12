@@ -163,7 +163,7 @@ class AdminTemplateController extends Controller
             'username' => Auth::user()?->username,
         ]);
 
-        return redirect()->route('admin.template.index')->with('success', 'Sistem berhasil direset ke generator template bawaan resmi LKjIP JAMBIN.');
+        return redirect()->route('admin.template.index')->with('success', 'Sistem berhasil direset ke generator template bawaan resmi E-Laptri JAMBIN.');
     }
 
     public function download($id)

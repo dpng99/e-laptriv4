@@ -49,7 +49,7 @@ export default function DeleteUserForm() {
                 Hapus Akun Pengguna
             </Typography>
             <Typography variant="body2" sx={{ color: '#7f1d1d', mb: 3 }}>
-                Setelah akun Anda dihapus, seluruh data dan akses Anda pada sistem e-LKjIP Pembinaan akan dicabut secara permanen.
+                Setelah akun Anda dihapus, seluruh data dan akses Anda pada sistem E-Laptri Pembinaan akan dicabut secara permanen.
             </Typography>
 
             <Button

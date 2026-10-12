@@ -12,7 +12,7 @@ export default function AuthenticatedLayout({ header, children }) {
     const navigation = isAdmin
         ? [
             { label: 'Review Data', routeName: 'review-data.index', active: 'review-data.*' },
-            { label: 'Template LKjIP', routeName: 'admin.template.index', active: 'admin.template.*' },
+            { label: 'Template E-Laptri', routeName: 'admin.template.index', active: 'admin.template.*' },
             { label: 'Export Laporan', routeName: 'export.index', active: 'export.*' },
         ]
         : [

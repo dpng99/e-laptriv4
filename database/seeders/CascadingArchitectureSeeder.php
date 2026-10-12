@@ -79,12 +79,10 @@ class CascadingArchitectureSeeder extends Seeder
                 'measurement_scope' => $meta['measurement_scope'] ?? 'UNIT',
             ]);
 
-            $alreadyNormalized = $node->formulas()->where('status_formula', 'like', '%formula_key=%')->exists();
-            if ($alreadyNormalized) continue;
-
             RumusIndikator::query()
                 ->where('node_id', $node->id)
                 ->where('is_active', true)
+                ->where('versi', 1)
                 ->update([
                     'tipe_formula' => $calcType,
                     'status_formula' => ($meta['formula_status'] ?? 'RESOLVED') . '; formula_key=' . ($meta['formula_key'] ?? ''),

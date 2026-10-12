@@ -43,6 +43,23 @@ class SumCalculator implements FormulaCalculator
             );
         }
 
+        if ($context->node->source_key === 'IKP:7.2' || $context->node->kode === 'IKP 7.2') {
+            $nilaiAwal = (float) \App\Services\Calculation\Decimal::sum($componentValues);
+            $nilaiApresiasi = $nilaiAwal < 100.0 ? round((100.0 - $nilaiAwal) * 0.80, 4) : 0.0;
+            $nilaiAkhir = min(100.0, round($nilaiAwal + $nilaiApresiasi, 4));
+
+            return new CalculationResult(
+                value: $nilaiAkhir,
+                components: array_merge($componentValues, [
+                    'nilai_awal' => $nilaiAwal,
+                    'nilai_apresiasi' => $nilaiApresiasi,
+                    'nilai_akhir' => $nilaiAkhir,
+                    'formula_apresiasi' => 'X0 + (100 - X0) * 80%',
+                ]),
+                warnings: [],
+            );
+        }
+
         return new CalculationResult(
             value: \App\Services\Calculation\Decimal::sum($componentValues),
             components: $componentValues,

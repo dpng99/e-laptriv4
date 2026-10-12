@@ -26,7 +26,7 @@ export default function ExportIndex({ currentTahun, currentTriwulan }) {
     };
 
     return (
-        <AppLayout title="Export Laporan Kinerja (LKjIP)">
+        <AppLayout title="Export Laporan Kinerja (E-Laptri)">
             <Head title="Export Laporan Kinerja" />
 
             {/* Top Hero Banner */}
@@ -44,11 +44,11 @@ export default function ExportIndex({ currentTahun, currentTriwulan }) {
                 }}
             >
                 <Stack direction="row" spacing={1} alignItems="center" sx={{ mb: 1 }}>
-                    <Chip label="LKjIP Official Generator" size="small" sx={{ bgcolor: 'rgba(16, 185, 129, 0.2)', color: '#34d399', fontWeight: 700, border: '1px solid rgba(16, 185, 129, 0.4)' }} />
+                    <Chip label="E-Laptri Official Generator" size="small" sx={{ bgcolor: 'rgba(16, 185, 129, 0.2)', color: '#34d399', fontWeight: 700, border: '1px solid rgba(16, 185, 129, 0.4)' }} />
                     <Chip label="Kepja 1184/2025" size="small" sx={{ bgcolor: 'rgba(255,255,255,0.1)', color: '#e2e8f0', fontWeight: 600 }} />
                 </Stack>
                 <Typography variant="h4" fontWeight={800} sx={{ letterSpacing: -0.5 }}>
-                    Generate Laporan Akuntabilitas Kinerja (LKjIP)
+                    Generate Laporan Akuntabilitas Kinerja (E-Laptri)
                 </Typography>
                 <Typography variant="body2" sx={{ color: '#94a3b8', mt: 0.5, maxWidth: 650 }}>
                     Unduh dokumen laporan kinerja resmi dalam format Microsoft Word (.docx) lengkap dengan tabel capaian, evaluasi formula, kendala, dan strategi tindak lanjut.
@@ -120,7 +120,7 @@ export default function ExportIndex({ currentTahun, currentTriwulan }) {
                             {/* Report Specification Details */}
                             <Paper variant="outlined" sx={{ p: 2.5, mb: 4, borderRadius: 2.5, bgcolor: '#f8fafc', borderColor: '#e2e8f0' }}>
                                 <Typography variant="caption" sx={{ color: '#64748b', fontWeight: 700, textTransform: 'uppercase', letterSpacing: 0.5, mb: 1.5, display: 'block' }}>
-                                    Kandungan Dokumen LKjIP Tergenerate
+                                    Kandungan Dokumen E-Laptri Tergenerate
                                 </Typography>
                                 <Stack spacing={1}>
                                     <Stack direction="row" spacing={1} alignItems="center">
@@ -166,7 +166,7 @@ export default function ExportIndex({ currentTahun, currentTriwulan }) {
                                     }
                                 }}
                             >
-                                {downloading ? 'Menyiapkan Dokumen...' : `Download LKjIP Tahun ${tahun} (TW ${triwulan}) .DOCX`}
+                                {downloading ? 'Menyiapkan Dokumen...' : `Download E-Laptri Tahun ${tahun} (TW ${triwulan}) .DOCX`}
                             </Button>
                         </CardContent>
                     </Card>

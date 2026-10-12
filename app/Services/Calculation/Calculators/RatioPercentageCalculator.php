@@ -32,8 +32,9 @@ class RatioPercentageCalculator implements FormulaCalculator
         }
 
         $satuan = strtolower(trim($context->node->satuan ?? ''));
+        $formulaKey = strtoupper(trim((string) ($context->node->formula_key ?? '')));
         $factor = 100;
-        if (in_array($satuan, ['indeks', 'poin', 'nilai', 'skor', 'bulan', 'hari', 'jam', 'menit', 'buah', 'unit', 'dokumen'], true)) {
+        if ($formulaKey !== 'RATIO_PERCENTAGE' && in_array($satuan, ['indeks', 'poin', 'nilai', 'skor', 'bulan', 'hari', 'jam', 'menit', 'buah', 'unit', 'dokumen'], true)) {
             $factor = 1;
         }
 
@@ -53,8 +54,10 @@ class RatioPercentageCalculator implements FormulaCalculator
     private function resolveNumerator(array $inputs): mixed
     {
         $keys = [
-            'jumlah_satker_patuh',
             'skor_kompetensi_aktual',
+            'pegawai_bersertifikat',
+            'jumlah_pegawai_bersertifikat',
+            'jumlah_satker_patuh',
             'proses_bisnis_terdigitalisasi',
             'sarpras_dimanfaatkan',
             'pembilang',
@@ -75,8 +78,10 @@ class RatioPercentageCalculator implements FormulaCalculator
     private function resolveDenominator(array $inputs): mixed
     {
         $keys = [
-            'jumlah_satker_dinilai',
             'skor_kompetensi_ideal',
+            'total_pegawai',
+            'total_pns',
+            'jumlah_satker_dinilai',
             'total_proses_bisnis_inti',
             'total_sarpras',
             'penyebut',

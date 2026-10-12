@@ -308,7 +308,7 @@ export default function InputData({
     };
 
     return (
-        <AppLayout title="Pengukuran Kinerja LKjIP">
+        <AppLayout title="Pengukuran Kinerja E-Laptri">
             <Head title={`Input Data Kinerja — ${selectedBiro || 'Unit'}`} />
 
             <Snackbar open={toast.open} autoHideDuration={6000} onClose={() => setToast((prev) => ({ ...prev, open: false }))}>

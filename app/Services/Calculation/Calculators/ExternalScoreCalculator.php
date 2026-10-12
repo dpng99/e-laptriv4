@@ -11,10 +11,13 @@ class ExternalScoreCalculator implements FormulaCalculator
     public function calculate(FormulaContext $context): CalculationResult
     {
         $raw = $context->rawInputs['nilai_sakip_resmi']
+            ?? $context->rawInputs['nilai_irh_resmi']
+            ?? $context->rawInputs['nilai_ikk_resmi']
+            ?? $context->rawInputs['nilai_sistem_merit_resmi']
             ?? $context->rawInputs['external_score']
             ?? $context->rawInputs['nilai']
             ?? $context->rawInputs['realisasi']
-            ?? null;
+            ?? (count($context->rawInputs) === 1 ? reset($context->rawInputs) : null);
 
         if ($raw === null || $raw === '') {
             return new CalculationResult(null, [], ['Nilai evaluasi eksternal resmi belum diisi.']);
