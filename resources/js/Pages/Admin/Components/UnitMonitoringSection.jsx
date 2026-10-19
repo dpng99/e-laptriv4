@@ -84,6 +84,10 @@ export default function UnitMonitoringSection({
         );
     }, [selectedUnit, searchRincian]);
 
+    const selectedStatusCfg = selectedUnit
+        ? (STATUS_PENGISIAN_CONFIG[selectedUnit.status_pengisian] || STATUS_PENGISIAN_CONFIG['Belum Mengisi'])
+        : null;
+
     return (
         <Paper
             elevation={0}
@@ -318,15 +322,20 @@ export default function UnitMonitoringSection({
                                         size="small"
                                         sx={{ bgcolor: '#0f172a', color: '#ffffff', fontWeight: 800, fontSize: '0.72rem' }}
                                     />
-                                    <Chip
-                                        label={selectedUnit.status_pengisian}
-                                        size="small"
-                                        sx={{
-                                            fontWeight: 800,
-                                            fontSize: '0.72rem',
-                                            ...STATUS_PENGISIAN_CONFIG[selectedUnit.status_pengisian]
-                                        }}
-                                    />
+                                    {selectedStatusCfg && (
+                                        <Chip
+                                            icon={selectedStatusCfg.icon}
+                                            label={selectedUnit.status_pengisian}
+                                            size="small"
+                                            sx={{
+                                                fontWeight: 800,
+                                                fontSize: '0.72rem',
+                                                color: selectedStatusCfg.color,
+                                                bgcolor: selectedStatusCfg.bgcolor,
+                                                border: selectedStatusCfg.border
+                                            }}
+                                        />
+                                    )}
                                 </Stack>
                                 <Typography variant="caption" sx={{ color: '#64748b', mt: 0.5, display: 'block' }}>
                                     Rincian Seluruh Indikator (IKK & IKP) &middot; TW {currentTriwulan} {currentTahun} &middot; Terisi {selectedUnit.terisi_count} dari {selectedUnit.total_indikator} Indikator ({selectedUnit.persentase_terisi}%)
@@ -400,7 +409,7 @@ export default function UnitMonitoringSection({
                                             }
 
                                             return (
-                                                <TableRow key={item.id} hover sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
+                                                <TableRow key={`${item.id}-${item.kode}`} hover sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
                                                     <TableCell>
                                                         <Chip
                                                             label={item.kode}
