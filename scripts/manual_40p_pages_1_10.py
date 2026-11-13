@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 """
 Modul Penyusun Halaman 1 sampai 10
-Buku Manual Operasional e-LAPTRI v4 (e-LKjIP Pembinaan)
+Buku Manual Operasional e-LAPTRI (e-LKjIP Pembinaan)
 Jaksa Agung Muda Bidang Pembinaan Kejaksaan Agung RI: Dr. Hendro Dewanto, S.H., M.Hum.
+Inisiator Program: Dr. Mochammad Priandhika Abadi Noer, S.H., M.H.
 """
 
 def get_pages_1_to_10(assets):
@@ -26,7 +27,7 @@ def get_pages_1_to_10(assets):
                     DOKUMEN RESMI PANDUAN TEKNIS OPERASIONAL SISTEM INFORMASI
                 </div>
                 <h1 style="font-size: 34pt; font-weight: 900; line-height: 1.1; margin: 0 0 12px 0; color: #ffffff; letter-spacing: -0.5px;">
-                    BUKU MANUAL<br><span style="color: #38bdf8;">E-LAPTRI v4</span>
+                    BUKU MANUAL<br><span style="color: #38bdf8;">E-LAPTRI</span>
                 </h1>
                 <h2 style="font-size: 14pt; font-weight: 600; color: #94a3b8; line-height: 1.4; margin: 0 0 20px 0;">
                     Buku Panduan Operasional Sistem Pelaporan Kinerja Triwulanan &amp; Evaluasi Akuntabilitas Kinerja Instansi Pemerintah (e-LKjIP)
@@ -75,22 +76,22 @@ def get_pages_1_to_10(assets):
     <div class="page" id="page-2">
         <div class="header">
             <span>KEJAKSAAN AGUNG REPUBLIK INDONESIA</span>
-            <span>BUKU MANUAL E-LAPTRI v4 | EDISI RESMI 2026</span>
+            <span>BUKU MANUAL E-LAPTRI | EDISI RESMI 2026</span>
         </div>
         <div class="content">
             <h2 class="title-primary" style="margin-top: 4px;">LEMBAR IDENTITAS DOKUMEN &amp; TIM PENGARAH</h2>
             <p class="paragraph">
-                Buku Manual ini disusun sebagai pedoman teknis operasional baku bagi seluruh Unit Kerja Eselon II di lingkungan Jaksa Agung Muda Bidang Pembinaan (JAMBIN) dalam merekam, menghitung, memvalidasi, dan melaporkan capaian kinerja triwulanan secara digital melalui sistem informasi e-LAPTRI v4.
+                Buku Manual ini disusun sebagai pedoman teknis operasional baku bagi seluruh Unit Kerja Eselon II di lingkungan Jaksa Agung Muda Bidang Pembinaan (JAMBIN) dalam merekam, menghitung, memvalidasi, dan melaporkan capaian kinerja triwulanan secara digital melalui sistem informasi e-LAPTRI.
             </p>
 
-            <table class="table-styled" style="margin-top: 8px;">
+            <table class="table-styled" style="margin-top: 6px;">
                 <tr>
                     <th style="width: 32%;">Parameter Dokumen</th>
                     <th>Keterangan Resmi Kedinasan</th>
                 </tr>
                 <tr>
                     <td><strong>Judul Publikasi</strong></td>
-                    <td>Buku Manual Operasional e-LAPTRI v4 (e-LKjIP Pembinaan JAMBIN)</td>
+                    <td>Buku Manual Operasional e-LAPTRI (e-LKjIP Pembinaan JAMBIN)</td>
                 </tr>
                 <tr>
                     <td><strong>Nomor Dokumen</strong></td>
@@ -98,7 +99,7 @@ def get_pages_1_to_10(assets):
                 </tr>
                 <tr>
                     <td><strong>Versi Sistem</strong></td>
-                    <td>e-LAPTRI v4.0.2 (Arsitektur Canonical Cascading DAG)</td>
+                    <td>e-LAPTRI (Arsitektur Canonical Cascading DAG)</td>
                 </tr>
                 <tr>
                     <td><strong>Tanggal Berlaku</strong></td>
@@ -106,7 +107,11 @@ def get_pages_1_to_10(assets):
                 </tr>
                 <tr>
                     <td><strong>Unit Penerbit</strong></td>
-                    <td>Sekretariat Jaksa Agung Muda Bidang Pembinaan cq. Bagian Reformasi Birokrasi &amp; Biro Perencanaan Kejaksaan Agung RI</td>
+                    <td>Sekretariat Jaksa Agung Muda Bidang Pembinaan cq. Bagian Penyusunan Program, Laporan dan Penilaian</td>
+                </tr>
+                <tr>
+                    <td><strong>Tim Penyusun Resmi</strong></td>
+                    <td><strong style="color: #064e3b;">Tim Efektif</strong> (Inisiasi e-LAPTRI JAMBIN Kejaksaan Agung RI)</td>
                 </tr>
                 <tr>
                     <td><strong>Klasifikasi Akses</strong></td>
@@ -114,7 +119,7 @@ def get_pages_1_to_10(assets):
                 </tr>
             </table>
 
-            <h3 class="subtitle-primary" style="margin-top: 14px;">SUSUNAN TIM PENGARAH &amp; PENYUSUN SISTEM</h3>
+            <h3 class="subtitle-primary" style="margin-top: 8px;">SUSUNAN TIM PENGARAH &amp; TIM PENYUSUN SISTEM</h3>
             <table class="table-styled">
                 <tr>
                     <th style="width: 32%;">Jabatan Kedinasan</th>
@@ -122,7 +127,7 @@ def get_pages_1_to_10(assets):
                 </tr>
                 <tr>
                     <td><strong>Pengarah Utama</strong></td>
-                    <td><strong style="color: #064e3b;">Dr. Hendro Dewanto, S.H., M.Hum.</strong><br><span style="font-size: 7.2pt; color: #64748b;">Jaksa Agung Muda Bidang Pembinaan Kejaksaan Agung RI</span></td>
+                    <td><strong style="color: #064e3b;">Dr. Hendro Dewanto, S.H., M.Hum.</strong><br><span style="font-size: 7pt; color: #64748b;">Jaksa Agung Muda Bidang Pembinaan Kejaksaan Agung RI</span></td>
                 </tr>
                 <tr>
                     <td><strong>Penanggung Jawab</strong></td>
@@ -133,20 +138,28 @@ def get_pages_1_to_10(assets):
                     <td><strong>Kepala Biro Perencanaan Kejaksaan Agung RI</strong></td>
                 </tr>
                 <tr>
-                    <td><strong>Tim Teknis &amp; IT</strong></td>
+                    <td><strong>Inisiator &amp; Konseptor Program</strong></td>
+                    <td><strong style="color: #0369a1;">Dr. Mochammad Priandhika Abadi Noer, S.H., M.H.</strong><br><span style="font-size: 7pt; color: #64748b;">Kepala Subbagian Penyusunan Program dan Laporan pada Bagian Penyusunan Program, Laporan dan Penilaian Sekretariat JAMBIN</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Tim Penyusun</strong></td>
+                    <td><strong style="color: #064e3b;">Tim Efektif</strong><br><span style="font-size: 7pt; color: #64748b;">Tim Kerja Efektif Proyek Perubahan &amp; Penyusun Sistem Informasi e-LAPTRI</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Dukungan Teknis &amp; IT</strong></td>
                     <td>Pusat Data Statistik Kriminal dan Teknologi Informasi (Pusdaskrimti) Kejaksaan Agung RI</td>
                 </tr>
                 <tr>
-                    <td><strong>Tim Regulasi &amp; Substansi</strong></td>
+                    <td><strong>Dukungan Regulasi &amp; Substansi</strong></td>
                     <td>Pusat Strategi Kebijakan Penegakan Hukum (Pustrajakgakum) &amp; Tim SAKIP Biro Perencanaan</td>
                 </tr>
                 <tr>
                     <td><strong>Koordinator Pelaporan Satker</strong></td>
-                    <td>Para Pejabat Penghubung / PIC Kinerja Eselon II (Biro Umum, Biro Kepegawaian, Biro Keuangan, Biro Perlengkapan, Biro Hukum &amp; HLN, dan Pusat Kesehatan Yustisial)</td>
+                    <td>Para Pejabat Penghubung / PIC Kinerja 10 Unit Kerja Eselon II JAMBIN</td>
                 </tr>
             </table>
 
-            <div class="callout callout-warning" style="margin-top: 12px;">
+            <div class="callout callout-warning" style="margin-top: 8px;">
                 <strong>HAK CIPTA &amp; KETENTUAN PENGGUNAAN INTERNAL:</strong><br>
                 Seluruh arsitektur graph cascading, formulasi matematis indikator, format template Word LKjIP, dan tangkapan layar dalam buku panduan ini merupakan hak kekayaan intelektual kedinasan Kejaksaan Republik Indonesia. Dilarang menggandakan atau menyebarluaskan dokumen ini di luar kepentingan dinas tanpa izin tertulis dari Sekretariat Jaksa Agung Muda Bidang Pembinaan.
             </div>
@@ -166,7 +179,7 @@ def get_pages_1_to_10(assets):
     <div class="page" id="page-3">
         <div class="header">
             <span>KATA PENGANTAR RESMI</span>
-            <span>BUKU MANUAL E-LAPTRI v4</span>
+            <span>BUKU MANUAL E-LAPTRI</span>
         </div>
         <div class="content">
             <div style="text-align: center; margin-bottom: 12px;">
@@ -176,13 +189,13 @@ def get_pages_1_to_10(assets):
             </div>
 
             <p class="paragraph">
-                Puji dan syukur senantiasa kita panjatkan ke hadirat Tuhan Yang Maha Esa, karena atas rahmat dan perkenan-Nya, implementasi aplikasi <strong>e-LAPTRI Versi 4 (e-LKjIP Pembinaan)</strong> yang berbasis <em>Canonical Cascading Architecture</em> serta penerbitan <strong>Buku Manual Operasional 40 Halaman</strong> ini dapat terwujud secara komprehensif, terstruktur, dan akuntabel.
+                Puji dan syukur senantiasa kita panjatkan ke hadirat Tuhan Yang Maha Esa, karena atas rahmat dan perkenan-Nya, implementasi aplikasi <strong>e-LAPTRI (e-LKjIP Pembinaan)</strong> yang berbasis <em>Canonical Cascading Architecture</em> serta penerbitan <strong>Buku Manual Operasional 40 Halaman</strong> ini dapat terwujud secara komprehensif, terstruktur, dan akuntabel.
             </p>
             <p class="paragraph">
                 Akuntabilitas kinerja merupakan salah satu pilar fundamental dalam Reformasi Birokrasi Tematik Kejaksaan RI. Sejalan dengan Rencana Strategis (Renstra) Kejaksaan RI Tahun 2025-2029 dan Keputusan Jaksa Agung RI Nomor 1184 Tahun 2025 tentang Indikator Kinerja Utama (IKU), pengukuran capaian kinerja di lingkungan Jaksa Agung Muda Bidang Pembinaan harus bergerak dari sekadar formalitas pelaporan administratif menjadi instrumen kendali strategis yang objektif, transparan, dan berbasis bukti nyata <em>(evidence-based governance)</em>.
             </p>
             <p class="paragraph">
-                Aplikasi <strong>e-LAPTRI v4</strong> menghadirkan pembaruan sistem yang sangat mendasar:
+                Aplikasi <strong>e-LAPTRI</strong> menghadirkan pembaruan sistem yang sangat mendasar:
             </p>
 
             <div style="display: grid; grid-template-columns: 1fr; gap: 6px; margin: 8px 0;">
@@ -207,7 +220,7 @@ def get_pages_1_to_10(assets):
             </div>
 
             <p class="paragraph">
-                Saya menyampaikan apresiasi yang tinggi kepada Biro Perencanaan, Pusdaskrimti, Pustrajakgakum, serta seluruh Pejabat Pembuat Komitmen dan Operator Kinerja di lingkungan JAMBIN. Jadikan buku panduan ini sebagai rujukan utama dalam menjalankan pelaporan kinerja yang tertib, cepat, dan presisi.
+                Saya menyampaikan apresiasi yang tinggi kepada inisiator program, <strong>Tim Efektif</strong> selaku tim penyusun sistem, Biro Perencanaan, Pusdaskrimti, Pustrajakgakum, serta seluruh Pejabat Penghubung dan Operator Kinerja di lingkungan JAMBIN. Jadikan buku panduan ini sebagai rujukan utama dalam menjalankan pelaporan kinerja yang tertib, cepat, dan presisi.
             </p>
 
             <div style="margin-top: 16px; float: right; width: 230px; text-align: center;">
@@ -229,13 +242,86 @@ def get_pages_1_to_10(assets):
     """)
 
     # ==========================================
-    # HALAMAN 4: DAFTAR ISI & GLOSARIUM
+    # HALAMAN 4: KATA PENGANTAR INISIATOR PROGRAM
     # ==========================================
     pages.append(f"""
     <div class="page" id="page-4">
         <div class="header">
+            <span>KATA PENGANTAR INISIATOR PROGRAM</span>
+            <span>BUKU MANUAL E-LAPTRI</span>
+        </div>
+        <div class="content">
+            <div style="text-align: center; margin-bottom: 8px;">
+                <h2 style="font-size: 13pt; font-weight: 800; color: #0f172a; margin: 0; text-transform: uppercase;">KATA PENGANTAR</h2>
+                <h3 style="font-size: 9pt; font-weight: 700; color: #064e3b; margin: 2px 0 0 0; line-height: 1.3;">
+                    KEPALA SUBBAGIAN PENYUSUNAN PROGRAM DAN LAPORAN<br>
+                    PADA BAGIAN PENYUSUNAN PROGRAM, LAPORAN DAN PENILAIAN<br>
+                    SEKRETARIAT JAKSA AGUNG MUDA BIDANG PEMBINAAN
+                </h3>
+                <div style="font-size: 7.8pt; font-weight: 700; color: #d97706; margin-top: 2px;">(SELAKU INISIATOR PROGRAM E-LAPTRI)</div>
+                <div style="width: 70px; height: 3px; background: #d97706; margin: 6px auto;"></div>
+            </div>
+
+            <p class="paragraph">
+                Puji dan syukur senantiasa kita panjatkan ke hadirat Allah SWT, Tuhan Yang Maha Esa, atas limpahan rahmat dan karunia-Nya, inovasi sistem informasi <strong>e-LAPTRI (e-LKjIP Pembinaan)</strong> beserta penerbitan Buku Manual Operasional ini dapat diselesaikan dan diimplementasikan secara optimal sebagai instrumen transformasi digital akuntabilitas kinerja di lingkungan Jaksa Agung Muda Bidang Pembinaan Kejaksaan Agung RI.
+            </p>
+            <p class="paragraph">
+                Inisiasi pengembangan e-LAPTRI dilatarbelakangi oleh tantangan nyata dalam tata kelola pelaporan triwulanan konvensional. Selama ini, perekaman capaian kinerja dari 10 Unit Kerja Eselon II di lingkungan JAMBIN kerap terkendala oleh proses rekapitulasi manual, minimnya pembuktian numerik atas persentase akhir yang dilaporkan, serta belum tersedianya pohon kinerja berjenjang <em>(canonical cascading)</em> yang selaras dengan Rencana Strategis (Renstra) Kejaksaan RI 2025-2029 dan Keputusan Jaksa Agung Nomor 1184 Tahun 2025.
+            </p>
+            <p class="paragraph">
+                Melalui proyek inisiasi ini, e-LAPTRI dihadirkan untuk mewujudkan tiga transformasi mendasar:
+            </p>
+
+            <div style="display: grid; grid-template-columns: 1fr; gap: 5px; margin: 6px 0;">
+                <div style="background: #f8fafc; border-left: 3.5px solid #0284c7; padding: 5px 9px; border-radius: 4px;">
+                    <strong style="color: #0369a1; font-size: 7.6pt;">1. Validitas &amp; Akurasi Variabel Mentah ($X_1$ &amp; $X_2$):</strong>
+                    <div style="font-size: 7pt; color: #334155;">Setiap persentase realisasi wajib dibuktikan dengan input pembilang dan penyebut riil yang didukung berkas fisik (*evidence*) sah, menjamin data dapat dipertanggungjawabkan saat audit KemenPAN-RB dan BPKP.</div>
+                </div>
+                <div style="background: #f8fafc; border-left: 3.5px solid #059669; padding: 5px 9px; border-radius: 4px;">
+                    <strong style="color: #064e3b; font-size: 7.6pt;">2. Keandalan Mesin Hitung (Canonical DAG Engine):</strong>
+                    <div style="font-size: 7pt; color: #334155;">Pohon kinerja dibangun menggunakan struktur graf bebas siklus dengan 9 tipe formula baku, melarang perataan nilai secara acak (*no generic average*), sehingga angka capaian murni merefleksikan kinerja nyata.</div>
+                </div>
+                <div style="background: #f8fafc; border-left: 3.5px solid #d97706; padding: 5px 9px; border-radius: 4px;">
+                    <strong style="color: #92400e; font-size: 7.6pt;">3. Efisiensi Pelaporan Melalui Otomasi Dokumen LKjIP:</strong>
+                    <div style="font-size: 7pt; color: #334155;">Penyusunan naskah Laporan Kinerja (LKjIP) triwulanan yang sebelumnya membutuhkan waktu berminggu-minggu, kini dapat di-generate otomatis ke format Word (.docx) berstandar kedinasan secara instan.</div>
+                </div>
+            </div>
+
+            <p class="paragraph">
+                Keberhasilan perancangan dan implementasi aplikasi ini tentu tidak lepas dari dukungan pimpinan dan kerja keras bersama. Kami menghaturkan rasa hormat dan terima kasih yang tak terhingga kepada <strong>Jaksa Agung Muda Bidang Pembinaan, Bapak Dr. Hendro Dewanto, S.H., M.Hum.</strong>, serta <strong>Sekretaris JAMBIN</strong> atas bimbingan, arahan strategis, dan kepercayaan yang diberikan. Terima kasih dan apresiasi setinggi-tingginya secara khusus kami sampaikan kepada rekan-rekan <strong>Tim Efektif</strong> selaku tim penyusun dan pengembang, Kepala Biro Perencanaan, Tim Pusdaskrimti, Pustrajakgakum, serta seluruh Pejabat Penghubung dan Operator Kinerja Eselon II di lingkungan JAMBIN atas dedikasi dan kerja sama yang luar biasa.
+            </p>
+
+            <div style="margin-top: 10px; float: right; width: 280px; text-align: center;">
+                <div style="font-size: 7.5pt; color: #64748b;">Jakarta, Maret 2026</div>
+                <div style="font-size: 8pt; font-weight: 700; color: #0f172a; margin-top: 1px; line-height: 1.25;">
+                    Kepala Subbagian Penyusunan Program dan Laporan<br>
+                    pada Bagian Penyusunan Program, Laporan dan Penilaian<br>
+                    Sekretariat Jaksa Agung Muda Bidang Pembinaan
+                </div>
+                <div style="font-size: 7.2pt; color: #064e3b; font-weight: bold; margin-top: 1px;">(Selaku Inisiator Program)</div>
+                <div style="height: 34px; display: flex; align-items: center; justify-content: center;">
+                    <span style="font-size: 7pt; color: #94a3b8; font-style: italic;">[ Tanda Tangan Kedinasan ]</span>
+                </div>
+                <div style="font-size: 8.8pt; font-weight: 800; color: #0f172a; text-decoration: underline;">Dr. MOCHAMMAD PRIANDHIKA ABADI NOER, S.H., M.H.</div>
+                <div style="font-size: 7.5pt; color: #475569;">Jaksa Madya / Pembina</div>
+            </div>
+        </div>
+        <div class="footer">
+            <span>JAKSA AGUNG MUDA BIDANG PEMBINAAN</span>
+            <span>RENSTRA 2025-2029 &amp; KEPJA 1184/2025</span>
+            <span>Halaman 4 dari 40</span>
+        </div>
+    </div>
+    """)
+
+    # ==========================================
+    # HALAMAN 5: DAFTAR ISI & GLOSARIUM
+    # ==========================================
+    pages.append(f"""
+    <div class="page" id="page-5">
+        <div class="header">
             <span>DAFTAR ISI &amp; GLOSARIUM</span>
-            <span>BUKU MANUAL E-LAPTRI v4</span>
+            <span>BUKU MANUAL E-LAPTRI</span>
         </div>
         <div class="content">
             <h2 class="title-primary" style="margin-top: 4px; margin-bottom: 8px;">DAFTAR ISI &amp; GLOSARIUM SISTEM</h2>
@@ -248,13 +334,13 @@ def get_pages_1_to_10(assets):
                     </div>
                     <div class="toc-line"><span>Lembar Identitas &amp; Pengesahan Dokumen</span><span>2</span></div>
                     <div class="toc-line"><span>Kata Pengantar JAMBIN: Dr. Hendro Dewanto, S.H., M.Hum.</span><span>3</span></div>
-                    <div class="toc-line"><span>Daftar Isi Lengkap &amp; Glosarium SAKIP</span><span>4</span></div>
+                    <div class="toc-line"><span>Kata Pengantar Inisiator: Dr. M. Priandhika Abadi Noer, S.H., M.H.</span><span>4</span></div>
+                    <div class="toc-line"><span>Daftar Isi Lengkap &amp; Glosarium SAKIP</span><span>5</span></div>
                     
-                    <div class="toc-head">BAB I: PENDAHULUAN &amp; ARSITEKTUR e-LAPTRI v4</div>
-                    <div class="toc-item"><span>1.1 Latar Belakang &amp; Transformasi Digital</span><span>5</span></div>
-                    <div class="toc-item"><span>1.2 Dasar Hukum &amp; Regulasi SAKIP Kejaksaan RI</span><span>6</span></div>
-                    <div class="toc-item"><span>1.3 Topologi Arsitektur Teknologi &amp; Keamanan</span><span>7</span></div>
-                    <div class="toc-item"><span>1.4 Peta Distribusi 10 Satker Eselon II JAMBIN</span><span>8</span></div>
+                    <div class="toc-head">BAB I: PENDAHULUAN &amp; ARSITEKTUR e-LAPTRI</div>
+                    <div class="toc-item"><span>1.1 Latar Belakang, Transformasi Digital &amp; Regulasi</span><span>6</span></div>
+                    <div class="toc-item"><span>1.2 Topologi Arsitektur Teknologi &amp; Keamanan</span><span>7</span></div>
+                    <div class="toc-item"><span>1.3 Peta Distribusi 10 Satker Eselon II JAMBIN</span><span>8</span></div>
 
                     <div class="toc-head">BAB II: KERANGKA CASCADING JAMBIN 2025-2029</div>
                     <div class="toc-item"><span>2.1 Pohon Kinerja Bebas Siklus (Canonical DAG)</span><span>9</span></div>
@@ -327,152 +413,90 @@ def get_pages_1_to_10(assets):
         <div class="footer">
             <span>JAKSA AGUNG MUDA BIDANG PEMBINAAN</span>
             <span>RENSTRA 2025-2029 &amp; KEPJA 1184/2025</span>
-            <span>Halaman 4 dari 40</span>
-        </div>
-    </div>
-    """)
-
-    # ==========================================
-    # HALAMAN 5: BAB I - 1.1 LATAR BELAKANG & TRANSFORMASI
-    # ==========================================
-    pages.append(f"""
-    <div class="page" id="page-5">
-        <div class="header">
-            <span>BAB I: PENDAHULUAN &amp; ARSITEKTUR</span>
-            <span>1.1 LATAR BELAKANG &amp; TRANSFORMASI DIGITAL</span>
-        </div>
-        <div class="content">
-            <div class="chapter-badge">BAB I: PENDAHULUAN &amp; ARSITEKTUR SISTEM</div>
-            <h2 class="title-primary">1.1 LATAR BELAKANG &amp; TRANSFORMASI DIGITAL e-LAPTRI v4</h2>
-
-            <p class="paragraph">
-                Penyelenggaraan Sistem Akuntabilitas Kinerja Instansi Pemerintah (SAKIP) di lingkungan Jaksa Agung Muda Bidang Pembinaan (JAMBIN) Kejaksaan Agung RI menuntut adanya sistem informasi yang tidak sekadar mencatat data secara pasif, tetapi mampu mengawal validitas formula, mencegah distorsi angka capaian, dan menyajikan laporan kinerja secara otomatis dan transparan.
-            </p>
-
-            <!-- Visual Infografis Perbandingan -->
-            <div style="margin: 8px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-                <div style="background: #fef2f2; border: 1.5px solid #fecaca; border-radius: 6px; padding: 8px;">
-                    <div style="font-weight: 800; font-size: 8pt; color: #991b1b; display: flex; align-items: center; margin-bottom: 4px;">
-                        <span style="background: #ef4444; color: #fff; border-radius: 50%; width: 15px; height: 15px; display: inline-flex; justify-content: center; align-items: center; margin-right: 5px; font-size: 6.5pt;">✕</span>
-                        PARADIGMA LAMA (SEBELUM v4)
-                    </div>
-                    <ul style="margin: 0; padding-left: 14px; font-size: 7.2pt; color: #7f1d1d; line-height: 1.4;">
-                        <li>Pelaporan manual berbasis lembar sebar Excel terpisah per satker.</li>
-                        <li>Rumus rata-rata linier otomatis (generic averaging) yang meratakan nilai tanpa memperhatikan bobot dan tipe indikator.</li>
-                        <li>Hanya menginput persentase akhir (%) tanpa pembuktian angka mentah pembilang dan penyebut.</li>
-                        <li>Penyusunan dokumen LKjIP triwulanan memakan waktu berminggu-minggu secara manual di Microsoft Word.</li>
-                    </ul>
-                </div>
-
-                <div style="background: #f0fdf4; border: 1.5px solid #bbf7d0; border-radius: 6px; padding: 8px;">
-                    <div style="font-weight: 800; font-size: 8pt; color: #166534; display: flex; align-items: center; margin-bottom: 4px;">
-                        <span style="background: #22c55e; color: #fff; border-radius: 50%; width: 15px; height: 15px; display: inline-flex; justify-content: center; align-items: center; margin-right: 5px; font-size: 6.5pt;">✓</span>
-                        PARADIGMA BARU e-LAPTRI v4
-                    </div>
-                    <ul style="margin: 0; padding-left: 14px; font-size: 7.2pt; color: #14532d; line-height: 1.4;">
-                        <li>Arsitektur Canonical Directed Acyclic Graph (DAG) berbasis web terpusat.</li>
-                        <li>Aturan kalkulasi ketat dengan 9 Tipe Formula resmi (DIRECT_VALUE, RATIO, WEIGHTED_SUM, dll.).</li>
-                        <li>Wajib merekam variabel mentah $X_1$ (pembilang) dan $X_2$ (penyebut) dengan bukti dukung dokumen (evidence).</li>
-                        <li>Generator Dokumen Word LKjIP instan dengan templating cerdas sekali klik.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <h3 class="subtitle-primary">3 TUJUAN STRATEGIS TRANSFORMASI e-LAPTRI v4</h3>
-            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 6px;">
-                <div class="feature-box" style="border-top: 3px solid #0284c7;">
-                    <div style="font-size: 7.8pt; font-weight: 800; color: #0369a1;">1. INTEGRITAS DATA</div>
-                    <p style="font-size: 7.1pt; color: #475569; margin: 3px 0 0 0; line-height: 1.35;">
-                        Setiap capaian kinerja dapat diaudit kembali hingga ke lembar bukti dukung terkecil pada tingkat satuan kerja pelaksana teknis.
-                    </p>
-                </div>
-                <div class="feature-box" style="border-top: 3px solid #059669;">
-                    <div style="font-size: 7.8pt; font-weight: 800; color: #064e3b;">2. EFISIENSI WAKTU</div>
-                    <p style="font-size: 7.1pt; color: #475569; margin: 3px 0 0 0; line-height: 1.35;">
-                        Mengeliminasi redundansi kompilasi manual antar-biro sehingga pimpinan memperoleh laporan konsolidasi tepat waktu.
-                    </p>
-                </div>
-                <div class="feature-box" style="border-top: 3px solid #d97706;">
-                    <div style="font-size: 7.8pt; font-weight: 800; color: #92400e;">3. KENDALI STRATEGIS</div>
-                    <p style="font-size: 7.1pt; color: #475569; margin: 3px 0 0 0; line-height: 1.35;">
-                        Menyajikan visualisasi tren dan early warning jika terdapat indikator program yang mengalami kendala realisasi.
-                    </p>
-                </div>
-            </div>
-
-            <div class="callout callout-info" style="margin-top: 10px;">
-                <strong>ARAHAN JAKSA AGUNG MUDA BIDANG PEMBINAAN:</strong><br>
-                Sistem e-LAPTRI v4 diposisikan sebagai instrumen utama dalam rapat evaluasi pimpinan JAMBIN setiap akhir triwulan, guna membedah realisasi anggaran yang berkorelasi langsung dengan output kinerja riil instansi.
-            </div>
-        </div>
-        <div class="footer">
-            <span>JAKSA AGUNG MUDA BIDANG PEMBINAAN</span>
-            <span>RENSTRA 2025-2029 &amp; KEPJA 1184/2025</span>
             <span>Halaman 5 dari 40</span>
         </div>
     </div>
     """)
 
     # ==========================================
-    # HALAMAN 6: BAB I - 1.2 DASAR HUKUM & REGULASI
+    # HALAMAN 6: BAB I - 1.1 LATAR BELAKANG, TRANSFORMASI & REGULASI
     # ==========================================
     pages.append(f"""
     <div class="page" id="page-6">
         <div class="header">
             <span>BAB I: PENDAHULUAN &amp; ARSITEKTUR</span>
-            <span>1.2 DASAR HUKUM &amp; REGULASI ACUAN</span>
+            <span>1.1 LATAR BELAKANG, TRANSFORMASI &amp; REGULASI</span>
         </div>
         <div class="content">
             <div class="chapter-badge">BAB I: PENDAHULUAN &amp; ARSITEKTUR SISTEM</div>
-            <h2 class="title-primary">1.2 LANDASAN HUKUM &amp; STANDAR REGULASI KINERJA</h2>
+            <h2 class="title-primary">1.1 LATAR BELAKANG, TRANSFORMASI DIGITAL &amp; REGULASI ACUAN</h2>
 
             <p class="paragraph">
-                Penyusunan arsitektur data, formula indikator, serta siklus pelaporan e-LAPTRI v4 dibangun di atas landasan hukum nasional dan peraturan internal Kejaksaan Republik Indonesia yang mengikat:
+                Penyelenggaraan Sistem Akuntabilitas Kinerja Instansi Pemerintah (SAKIP) di lingkungan Jaksa Agung Muda Bidang Pembinaan (JAMBIN) Kejaksaan Agung RI menuntut adanya sistem informasi yang mampu mengawal validitas formula, mencegah distorsi angka capaian, dan menyajikan laporan kinerja secara otomatis dan transparan.
             </p>
 
-            <div style="display: grid; grid-template-columns: 1fr; gap: 6px; margin: 8px 0;">
-                <div class="card-regulasi" style="border-left-color: #064e3b;">
-                    <div class="regulasi-title">1. Undang-Undang Nomor 11 Tahun 2021 tentang Kejaksaan Republik Indonesia</div>
-                    <div class="regulasi-desc">Perubahan atas UU No. 16 Tahun 2004 yang menegaskan kemandirian kejaksaan dalam tata kelola administrasi aparatur, organisasi, dan pengelolaan keuangan negara berbasis akuntabilitas kinerja.</div>
+            <!-- Visual Infografis Perbandingan -->
+            <div style="margin: 6px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+                <div style="background: #fef2f2; border: 1.5px solid #fecaca; border-radius: 6px; padding: 6px 8px;">
+                    <div style="font-weight: 800; font-size: 7.5pt; color: #991b1b; display: flex; align-items: center; margin-bottom: 2px;">
+                        <span style="background: #ef4444; color: #fff; border-radius: 50%; width: 14px; height: 14px; display: inline-flex; justify-content: center; align-items: center; margin-right: 5px; font-size: 6pt;">✕</span>
+                        PARADIGMA SEBELUMNYA
+                    </div>
+                    <ul style="margin: 0; padding-left: 12px; font-size: 6.8pt; color: #7f1d1d; line-height: 1.3;">
+                        <li>Pelaporan manual berbasis lembar sebar Excel terpisah per satker.</li>
+                        <li>Rumus rata-rata linier otomatis (generic averaging) yang meratakan nilai tanpa memperhatikan bobot.</li>
+                        <li>Hanya menginput persentase akhir (%) tanpa pembuktian angka mentah pembilang &amp; penyebut.</li>
+                    </ul>
                 </div>
 
-                <div class="card-regulasi" style="border-left-color: #0284c7;">
-                    <div class="regulasi-title">2. Peraturan Presiden Nomor 29 Tahun 2014 tentang SAKIP</div>
-                    <div class="regulasi-desc">Mengatur kewajiban setiap instansi pemerintah untuk menyelenggarakan perencanaan, penetapan target, pengukuran capaian, evaluasi internal, dan pelaporan kinerja berkala.</div>
-                </div>
-
-                <div class="card-regulasi" style="border-left-color: #d97706;">
-                    <div class="regulasi-title">3. Peraturan MenPAN-RB Nomor 88 Tahun 2021 tentang Evaluasi Kinerja</div>
-                    <div class="regulasi-desc">Pedoman teknis evaluasi akuntabilitas kinerja instansi pemerintah dengan fokus pada kebermanfaatan hasil <em>(outcome)</em>, pencegahan formalitas semu, dan konsistensi berjenjang (cascading).</div>
-                </div>
-
-                <div class="card-regulasi" style="border-left-color: #7c3aed;">
-                    <div class="regulasi-title">4. Keputusan Jaksa Agung RI Nomor 1184 Tahun 2025 tentang IKU Kejaksaan RI</div>
-                    <div class="regulasi-desc"><strong>Sumber Resmi Nomenklatur &amp; Target Utama:</strong> Menetapkan kode indikator, teks definisi operasional, formula matematis, target tahunan 2025-2029, dan unit penanggung jawab utama.</div>
-                </div>
-
-                <div class="card-regulasi" style="border-left-color: #e11d48;">
-                    <div class="regulasi-title">5. Rencana Strategis (Renstra) Kejaksaan RI Tahun 2025-2029</div>
-                    <div class="regulasi-desc">Dokumen induk rencana pembangunan jangka menengah Kejaksaan RI yang memuat visi misi Jaksa Agung, Sasaran Strategis (SS), Sasaran Program (SP), dan Sasaran Kegiatan (SK) bidang Pembinaan.</div>
+                <div style="background: #f0fdf4; border: 1.5px solid #bbf7d0; border-radius: 6px; padding: 6px 8px;">
+                    <div style="font-weight: 800; font-size: 7.5pt; color: #166534; display: flex; align-items: center; margin-bottom: 2px;">
+                        <span style="background: #22c55e; color: #fff; border-radius: 50%; width: 14px; height: 14px; display: inline-flex; justify-content: center; align-items: center; margin-right: 5px; font-size: 6pt;">✓</span>
+                        PARADIGMA BARU e-LAPTRI
+                    </div>
+                    <ul style="margin: 0; padding-left: 12px; font-size: 6.8pt; color: #14532d; line-height: 1.3;">
+                        <li>Arsitektur Canonical Directed Acyclic Graph (DAG) berbasis web terpusat.</li>
+                        <li>Wajib merekam variabel mentah $X_1$ (pembilang) dan $X_2$ (penyebut) dengan berkas bukti dukung.</li>
+                        <li>Generator Dokumen Word LKjIP instan dengan templating cerdas sekali klik.</li>
+                    </ul>
                 </div>
             </div>
 
-            <!-- Kepatuhan Audit Table -->
-            <table class="table-styled" style="margin-top: 6px;">
+            <h3 class="subtitle-primary" style="margin-top: 6px;">5 LANDASAN HUKUM &amp; REGULASI ACUAN RESMI</h3>
+            <div style="display: grid; grid-template-columns: 1fr; gap: 4px; margin: 4px 0;">
+                <div class="card-regulasi" style="border-left-color: #064e3b; padding: 3px 6px;">
+                    <div class="regulasi-title" style="font-size: 7.4pt;">1. UU No. 11/2021 tentang Perubahan atas UU Kejaksaan RI: <span style="font-weight: normal; color: #475569;">Kemandirian tata kelola administrasi &amp; keuangan aparatur.</span></div>
+                </div>
+                <div class="card-regulasi" style="border-left-color: #0284c7; padding: 3px 6px;">
+                    <div class="regulasi-title" style="font-size: 7.4pt;">2. Perpres No. 29/2014 tentang SAKIP: <span style="font-weight: normal; color: #475569;">Kewajiban penyelenggaraan perencanaan, pengukuran kinerja, dan pelaporan berkala.</span></div>
+                </div>
+                <div class="card-regulasi" style="border-left-color: #d97706; padding: 3px 6px;">
+                    <div class="regulasi-title" style="font-size: 7.4pt;">3. PermenPAN-RB No. 88/2021 tentang Evaluasi Akuntabilitas Kinerja: <span style="font-weight: normal; color: #475569;">Standar mutu cascading dan validitas bukti dukung.</span></div>
+                </div>
+                <div class="card-regulasi" style="border-left-color: #7c3aed; padding: 3px 6px;">
+                    <div class="regulasi-title" style="font-size: 7.4pt;">4. Keputusan Jaksa Agung RI No. 1184/2025 tentang IKU: <span style="font-weight: normal; color: #475569;">Rujukan resmi nomenklatur, formula, dan target 2025-2029.</span></div>
+                </div>
+                <div class="card-regulasi" style="border-left-color: #e11d48; padding: 3px 6px;">
+                    <div class="regulasi-title" style="font-size: 7.4pt;">5. Renstra Kejaksaan RI 2025-2029: <span style="font-weight: normal; color: #475569;">Dokumen induk pembangunan jangka menengah SS, SP, dan SK bidang Pembinaan.</span></div>
+                </div>
+            </div>
+
+            <!-- Standar Kepatuhan Audit Table -->
+            <table class="table-styled" style="font-size: 7pt; margin-top: 4px;">
                 <tr>
-                    <th style="width: 25%;">Lembaga Penilai</th>
-                    <th style="width: 35%;">Aspek yang Dinilai</th>
-                    <th>Standar Kepatuhan pada e-LAPTRI v4</th>
+                    <th style="width: 24%;">Lembaga Penilai</th>
+                    <th style="width: 38%;">Fokus Evaluasi / Reviu</th>
+                    <th>Standar Kepatuhan pada e-LAPTRI</th>
                 </tr>
                 <tr>
                     <td><strong>KemenPAN-RB</strong></td>
                     <td>Evaluasi Nilai SAKIP (A / BB / B)</td>
-                    <td>Pohon kinerja terstruktur vertikal bebas siklus (DAG), formula rasio eksplisit.</td>
+                    <td>Pohon kinerja vertikal bebas siklus (DAG), formula rasio eksplisit.</td>
                 </tr>
                 <tr>
                     <td><strong>BPKP</strong></td>
                     <td>Audit Akuntabilitas Keuangan &amp; Kinerja</td>
-                    <td>Bukti dukung <em>(evidence)</em> terunggah langsung pada setiap komponen pembilang &amp; penyebut.</td>
+                    <td>Bukti dukung <em>(evidence)</em> terunggah langsung pada setiap komponen $X_1/X_2$.</td>
                 </tr>
                 <tr>
                     <td><strong>Inspektorat Kejagung</strong></td>
@@ -490,26 +514,26 @@ def get_pages_1_to_10(assets):
     """)
 
     # ==========================================
-    # HALAMAN 7: BAB I - 1.3 ARSITEKTUR TEKNOLOGI
+    # HALAMAN 7: BAB I - 1.2 ARSITEKTUR TEKNOLOGI
     # ==========================================
     pages.append(f"""
     <div class="page" id="page-7">
         <div class="header">
             <span>BAB I: PENDAHULUAN &amp; ARSITEKTUR</span>
-            <span>1.3 ARSITEKTUR TEKNOLOGI &amp; KEAMANAN DATA</span>
+            <span>1.2 ARSITEKTUR TEKNOLOGI &amp; KEAMANAN DATA</span>
         </div>
         <div class="content">
             <div class="chapter-badge">BAB I: PENDAHULUAN &amp; ARSITEKTUR SISTEM</div>
-            <h2 class="title-primary">1.3 TOPOLOGI ARSITEKTUR TEKNOLOGI &amp; KEAMANAN DATA</h2>
+            <h2 class="title-primary">1.2 TOPOLOGI ARSITEKTUR TEKNOLOGI &amp; KEAMANAN DATA</h2>
 
             <p class="paragraph">
-                Aplikasi e-LAPTRI v4 dibangun dengan pendekatan arsitektur <em>Modular-Monolith Modern</em> menggunakan kerangka kerja Laravel 12 pada sisi backend yang dipadukan secara reaktif dengan React SPA melalui protokol Inertia.js.
+                Aplikasi e-LAPTRI dibangun dengan pendekatan arsitektur <em>Modular-Monolith Modern</em> menggunakan kerangka kerja Laravel 12 pada sisi backend yang dipadukan secara reaktif dengan React SPA melalui protokol Inertia.js.
             </p>
 
             <!-- Diagram Topologi Visual -->
             <div style="background: #0f172a; border-radius: 8px; padding: 10px; color: #ffffff; margin: 8px 0;">
                 <div style="font-size: 7.8pt; font-weight: 800; color: #38bdf8; text-transform: uppercase; margin-bottom: 6px; text-align: center;">
-                    DIAGRAM ALIR LAYER SISTEM e-LAPTRI v4
+                    DIAGRAM ALIR LAYER SISTEM e-LAPTRI
                 </div>
                 <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; text-align: center;">
                     <div style="background: #1e293b; border: 1px solid #334155; border-radius: 6px; padding: 6px;">
@@ -530,7 +554,7 @@ def get_pages_1_to_10(assets):
                 </div>
             </div>
 
-            <h3 class="subtitle-primary">4 FITUR UTAMA TEKNOLOGI e-LAPTRI v4</h3>
+            <h3 class="subtitle-primary">4 FITUR UTAMA TEKNOLOGI e-LAPTRI</h3>
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 6px;">
                 <div style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 6px; padding: 6px 9px;">
                     <strong style="color: #0369a1; font-size: 7.8pt;">A. Zero-Latency Page Navigation (SPA)</strong>
@@ -572,20 +596,20 @@ def get_pages_1_to_10(assets):
     """)
 
     # ==========================================
-    # HALAMAN 8: BAB I - 1.4 DISTRIBUSI 10 SATKER ESELON II
+    # HALAMAN 8: BAB I - 1.3 DISTRIBUSI 10 SATKER ESELON II
     # ==========================================
     pages.append(f"""
     <div class="page" id="page-8">
         <div class="header">
             <span>BAB I: PENDAHULUAN &amp; ARSITEKTUR</span>
-            <span>1.4 DISTRIBUSI 10 SATKER ESELON II JAMBIN</span>
+            <span>1.3 DISTRIBUSI 10 SATKER ESELON II JAMBIN</span>
         </div>
         <div class="content">
             <div class="chapter-badge">BAB I: PENDAHULUAN &amp; ARSITEKTUR SISTEM</div>
-            <h2 class="title-primary">1.4 PETA DISTRIBUSI 10 SATKER ESELON II DI LINGKUNGAN JAMBIN</h2>
+            <h2 class="title-primary">1.3 PETA DISTRIBUSI 10 SATKER ESELON II DI LINGKUNGAN JAMBIN</h2>
 
             <p class="paragraph">
-                Ruang lingkup pelaporan e-LAPTRI v4 mencakup 10 Unit Kerja Eselon II di lingkungan Jaksa Agung Muda Bidang Pembinaan. Masing-masing unit memiliki kewenangan operasional atas Sasaran Kegiatan (SK) dan Indikator Kinerja Kegiatan (IKK) yang telah ditetapkan:
+                Ruang lingkup pelaporan e-LAPTRI mencakup 10 Unit Kerja Eselon II di lingkungan Jaksa Agung Muda Bidang Pembinaan. Masing-masing unit memiliki kewenangan operasional atas Sasaran Kegiatan (SK) dan Indikator Kinerja Kegiatan (IKK) yang telah ditetapkan:
             </p>
 
             <table class="table-styled" style="font-size: 7.4pt; margin-top: 6px;">
@@ -695,7 +719,7 @@ def get_pages_1_to_10(assets):
             <h2 class="title-primary">2.1 POHON KINERJA &amp; HIERARKI CASCADING CANONICAL (DAG)</h2>
 
             <p class="paragraph">
-                Salah satu lompatan terbesar dalam sistem e-LAPTRI v4 adalah penggunaan struktur data <strong>Directed Acyclic Graph (DAG)</strong> menggantikan pohon hirarki linier kaku (tree tunggal). Pendekatan ini memungkinkan simpul indikator memiliki relasi multi-parent tanpa menciptakan siklus loop perhitungan.
+                Salah satu lompatan terbesar dalam sistem e-LAPTRI adalah penggunaan struktur data <strong>Directed Acyclic Graph (DAG)</strong> menggantikan pohon hirarki linier kaku (tree tunggal). Pendekatan ini memungkinkan simpul indikator memiliki relasi multi-parent tanpa menciptakan siklus loop perhitungan.
             </p>
 
             <!-- Diagram Alir Cascading Hierarki -->
@@ -771,7 +795,7 @@ def get_pages_1_to_10(assets):
                 <tr>
                     <th style="width: 22%;">Tipe Semantik Relasi</th>
                     <th style="width: 28%;">Makna Konseptual</th>
-                    <th>Perilaku Kalkulasi pada Engine e-LAPTRI v4</th>
+                    <th>Perilaku Kalkulasi pada Engine e-LAPTRI</th>
                 </tr>
                 <tr>
                     <td><strong style="color: #064e3b;">STRUCTURAL</strong></td>

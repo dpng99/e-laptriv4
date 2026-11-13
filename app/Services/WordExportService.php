@@ -730,7 +730,15 @@ class WordExportService
             $nodeType = $child->jenis_node?->value ?? (string) $child->jenis_node;
             $relationType = strtoupper((string) $child->pivot?->jenis_relasi);
 
-            return $nodeType === $type && in_array($relationType, ['STRUCTURAL', 'CASCADING', 'CONTRIBUTION'], true);
+            if ($nodeType !== $type || !in_array($relationType, ['STRUCTURAL', 'CASCADING', 'CONTRIBUTION'], true)) {
+                return false;
+            }
+
+            if (in_array($type, ['SK', 'IKK'], true) && !$child->is_active) {
+                return false;
+            }
+
+            return true;
         }) ?? collect();
     }
 

@@ -23,6 +23,7 @@ class DashboardController extends Controller
         $triwulan = (int) ($validated['triwulan'] ?? 1);
 
         $ikks = Ikk::query()
+            ->visibleOperational()
             ->whereHas('node.units', fn ($query) => $query->whereKey($unit->id))
             ->with([
                 'node.parents.sk',

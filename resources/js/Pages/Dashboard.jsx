@@ -37,6 +37,12 @@ export default function Dashboard({
         }
     };
 
+    const handleTahunChange = (newYear) => {
+        if (newYear !== null && newYear !== currentTahun) {
+            router.get(route('dashboard'), { tahun: newYear, triwulan: currentTriwulan }, { preserveState: true });
+        }
+    };
+
     // Data for Status Kinerja Donut Chart
     const statusPieData = [
         { id: 0, value: actualStats.tercapai, label: 'Tercapai', color: '#10b981' },
@@ -80,6 +86,7 @@ export default function Dashboard({
                     currentTahun={currentTahun}
                     currentTriwulan={currentTriwulan}
                     onTriwulanChange={handleTriwulanChange}
+                    onTahunChange={handleTahunChange}
                 />
             </ErrorBoundary>
 

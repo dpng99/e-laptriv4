@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-Laptri Pembinaan — Official Brand Identity &amp; Fusion Logo Showcase</title>
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-dark: #070d19;
+      --bg-card: #0f172a;
+      --bg-card-hover: #152039;
+      --border: rgba(148, 163, 184, 0.16);
+      --gold-light: #fef08a;
+      --gold-main: #f5b815;
+      --gold-deep: #d97706;
+      --emerald-light: #34d399;
+      --emerald-main: #10b981;
+      --emerald-deep: #047857;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif;
+      background: radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.14), transparent 45%),
+                  radial-gradient(circle at 85% 15%, rgba(245, 184, 21, 0.10), transparent 40%),
+                  var(--bg-dark);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding-bottom: 5rem;
+    }
+    .container { max-width: 1220px; margin: 0 auto; padding: 0 1.5rem; }
+    header {
+      padding: 4rem 0 3rem;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 1rem;
+      border-radius: 999px;
+      background: rgba(245, 184, 21, 0.12);
+      border: 1px solid rgba(245, 184, 21, 0.35);
+      color: #fbbf24;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+    }
+    h1 {
+      font-size: clamp(2rem, 4vw, 3.1rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.75rem;
+    }
+    h1 .gold {
+      background: linear-gradient(135deg, #fde047 0%, #f59e0b 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    h1 .emerald { color: #34d399; }
+    .lead {
+      max-width: 780px;
+      margin: 0 auto;
+      color: var(--text-muted);
+      font-size: 1.05rem;
+    }
+    section { margin-top: 3.5rem; }
+    .section-title {
+      font-size: 1.45rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.4rem;
+    }
+    .section-desc {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+    }
+    .fusion-grid {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr auto 1.25fr;
+      gap: 1.25rem;
+      align-items: center;
+    }
+    @media (max-width: 960px) {
+      .fusion-grid { grid-template-columns: 1fr; }
+      .op-symbol { transform: rotate(90deg); }
+    }
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 2rem;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .card:hover {
+      border-color: rgba(52, 211, 153, 0.35);
+    }
+    .card-light {
+      background: #ffffff;
+      color: #0f172a;
+      border: 1px solid #e2e8f0;
+    }
+    .card-light .card-caption { color: #475569; }
+    .preview-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 240px;
+      margin-bottom: 1.25rem;
+    }
+    .op-symbol {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #fbbf24;
+      text-align: center;
+      padding: 0.5rem;
+    }
+    .card-label {
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #34d399;
+      margin-bottom: 0.35rem;
+    }
+    .card-light .card-label { color: #059669; }
+    .card-heading {
+      font-size: 1.1rem;
+      font-weight: 800;
+      margin-bottom: 0.35rem;
+    }
+    .card-caption {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+      gap: 1.5rem;
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.25rem;
+    }
+    @media (max-width: 520px) {
+      .grid-2 { grid-template-columns: 1fr; }
+    }
+    .lockup-img {
+      width: 100%;
+      max-width: 540px;
+      height: auto;
+      display: block;
+    }
+    .scale-strip {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      justify-content: space-around;
+      gap: 2rem;
+      padding: 2rem;
+    }
+    .scale-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .scale-tag {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      background: rgba(148, 163, 184, 0.1);
+      padding: 0.2rem 0.6rem;
+      border-radius: 6px;
+    }
+    .swatches {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 1rem;
+    }
+    .swatch {
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+    }
+    .swatch-color { height: 76px; }
+    .swatch-meta { padding: 0.9rem 1rem; }
+    .swatch-name { font-size: 0.9rem; font-weight: 800; }
+    .swatch-hex { font-size: 0.8rem; color: var(--text-muted); font-family: ui-monospace, Consolas, monospace; }
+    .dl-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 1rem;
+    }
+    .btn-dl {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.45rem 0.85rem;
+      border-radius: 8px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-decoration: none;
+      color: #f8fafc;
+      background: rgba(16, 185, 129, 0.16);
+      border: 1px solid rgba(16, 185, 129, 0.38);
+      transition: all 0.18s ease;
+    }
+    .btn-dl:hover {
+      background: rgba(16, 185, 129, 0.30);
+    }
+    .card-light .btn-dl {
+      color: #065f46;
+      background: #ecfdf5;
+      border-color: #6ee7b7;
+    }
+    .anatomy-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin-top: 1.25rem;
+    }
+    .anatomy-item {
+      background: rgba(15, 23, 42, 0.75);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.25rem;
+    }
+    .anatomy-num {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: #fbbf24;
+      background: rgba(245, 184, 21, 0.14);
+      padding: 0.15rem 0.55rem;
+      border-radius: 6px;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="pill">Official Brand Identity System • JAMBIN Kejaksaan RI</div>
+      <h1><span class="emerald">E-Laptri</span> <span class="gold">Pembinaan</span></h1>
+      <p class="lead">
+        Fusi organik antara <strong>Lambang Resmi Pembinaan Kejaksaan RI</strong> (3 Bintang Segitiga Tri Krama Adhyaksa,
+        Sayap Kanopi Berbevel Masuk, &amp; 9 Pilar Simetris) dengan <strong>Gelombang Kinerja Triwulanan Naik (TW I–IV)</strong>
+        beraliran halus tanpa kotak luar yang kaku.
+      </p>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- 1. FUSION STORY -->
+    <section>
+      <h2 class="section-title">1. Transformasi &amp; Filosofi Fusi Lambang</h2>
+      <p class="section-desc">Menjaga siluet wibawa resmi Pembinaan secara utuh sekaligus menghadirkan dinamika pelaporan kinerja triwulanan SAKIP.</p>
+
+      <div class="fusion-grid">
+        <div class="card">
+          <div class="preview-box">
+            <img src="./images/logo/logo-pembinaan-original.svg" alt="Logo Resmi Pembinaan" width="185" height="185" />
+          </div>
+          <div class="card-label">Sumber Heraldik Resmi</div>
+          <div class="card-heading">Logo Pembinaan (JAMBIN)</div>
+          <p class="card-caption">3 Bintang Segitiga Tri Krama Adhyaksa (rasio 0.312), Sayap Kanopi Berbevel Masuk, &amp; 9 Pilar Vertikal berujung perisai V.</p>
+        </div>
+
+        <div class="op-symbol">+</div>
+
+        <div class="card">
+          <div class="preview-box">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" width="185" height="145">
+              <defs>
+                <linearGradient id="demoWave" gradientUnits="userSpaceOnUse" x1="20" y1="150" x2="220" y2="35">
+                  <stop offset="0%" stop-color="#047857" />
+                  <stop offset="55%" stop-color="#10B981" />
+                  <stop offset="100%" stop-color="#F59E0B" />
+                </linearGradient>
+              </defs>
+              <rect x="34" y="108" width="18" height="44" rx="6" fill="#047857" opacity="0.85" />
+              <rect x="78" y="90" width="18" height="62" rx="6" fill="#059669" opacity="0.9" />
+              <rect x="122" y="68" width="18" height="84" rx="6" fill="#10B981" opacity="0.95" />
+              <rect x="166" y="46" width="18" height="106" rx="6" fill="#34D399" />
+              <path d="M 22,98 C 88,94 148,40 218,44 Q 223,46 218,49 C 148,47 88,101 22,103 Z" fill="url(#demoWave)" />
+            </svg>
+          </div>
+          <div class="card-label">Esensi Aplikasi SAKIP</div>
+          <div class="card-heading">E-Laptri (TW I → TW IV)</div>
+          <p class="card-caption">Aliran kurva S-Wave organik &amp; pertumbuhan capaian kinerja triwulanan berkelanjutan dalam palet Hijau Kejaksaan.</p>
+        </div>
+
+        <div class="op-symbol">=</div>
+
+        <div class="card" style="border-color: rgba(245, 184, 21, 0.4); box-shadow: 0 20px 45px rgba(0,0,0,0.35);">
+          <div class="preview-box">
+            <img src="./images/logo/elaptri-pembinaan-mark.svg" alt="Logo Fusi E-Laptri Pembinaan" width="220" height="220" />
+          </div>
+          <div class="card-label" style="color: #fbbf24;">Master Fusion Emblem</div>
+          <div class="card-heading">Logo E-Laptri Pembinaan</div>
+          <p class="card-caption">Terbuka (tanpa kotak pembungkus), 3 bintang segitiga tajam, sayap melengkung halus, pita S-Wave mengalir, &amp; 9 pilar kinerja.</p>
+        </div>
+      </div>
+
+      <div class="anatomy-list">
+        <div class="anatomy-item">
+          <span class="anatomy-num">ELEMEN 01</span>
+          <div class="card-heading">3 Bintang Segitiga Tri Krama</div>
+          <p class="card-caption">Merepresentasikan Satya, Adhi, Wicaksana dengan geometri bintang segitiga 6-titik autentik Pembinaan (bukan kotak/segitiga gembung).</p>
+        </div>
+        <div class="anatomy-item">
+          <span class="anatomy-num">ELEMEN 02</span>
+          <div class="card-heading">Mahkota Sayap Kanopi Halus</div>
+          <p class="card-caption">Sayap pengayoman Pembinaan berbevel masuk secara akurat dengan lengkung bahu aerodinamis yang menaungi seluruh satker.</p>
+        </div>
+        <div class="anatomy-item">
+          <span class="anatomy-num">ELEMEN 03</span>
+          <div class="card-heading">Pita S-Wave Triwulanan</div>
+          <p class="card-caption">Kurva Bezier kubik murni yang mengalir lembut dari Hijau Kejaksaan ke Emas Pembinaan tanpa panah kaku yang menusuk pilar.</p>
+        </div>
+        <div class="anatomy-item">
+          <span class="anatomy-num">ELEMEN 04</span>
+          <div class="card-heading">9 Pilar Kinerja Berujung Perisai</div>
+          <p class="card-caption">9 pilar vertikal utuh khas Pembinaan yang memadukan fondasi akuntabilitas hijau zamrud di bawah dan puncak emas di atas.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. PRIMARY MARKS DARK & LIGHT -->
+    <section>
+      <h2 class="section-title">2. Master Emblem Terbuka (Tanpa Latar Kotak)</h2>
+      <p class="section-desc">Varian transparan murni yang siap ditempatkan di atas permukaan gelap (portal/dashboard) maupun permukaan terang (kertas laporan LKjIP, Word, &amp; PDF).</p>
+
+      <div class="grid-3">
+        <div class="card">
+          <div class="preview-box">
+            <img src="./images/logo/elaptri-pembinaan-mark.svg" alt="Master Mark Dark" width="190" height="190" />
+          </div>
+          <div class="card-label">Dark Surface Primary</div>
+          <div class="card-heading">Master Emblem (Dark UI)</div>
+          <p class="card-caption">Digunakan pada Sidebar Aplikasi, Halaman Login, &amp; Landing Portal E-Laptri.</p>
+          <div class="dl-actions">
+            <a class="btn-dl" href="./images/logo/elaptri-pembinaan-mark.svg" download>Unduh SVG</a>
+            <a class="btn-dl" href="./images/logo/elaptri-pembinaan-mark-1024.png" download>PNG 1024px</a>
+            <a class="btn-dl" href="./images/logo/elaptri-pembinaan-mark-512.png" download>PNG 512px</a>
+          </div>
+        </div>
+
+        <div class="card card-light">
+          <div class="preview-box">
+            <img src="./images/logo/elaptri-pembinaan-mark-light.svg" alt="Master Mark Light" width="190" height="190" />
+          </div>
+          <div class="card-label">Light Surface / Print</div>
+          <div class="card-heading">Master Emblem (Light / Kertas)</div>
+          <p class="card-caption">Kontras emas &amp; zamrud dipertegas khusus untuk latar putih dokumen resmi LKjIP.</p>
+          <div class="dl-actions">
+            <a class="btn-dl" href="./images/logo/elaptri-pembinaan-mark-light.svg" download>Unduh SVG</a>
+            <a class="btn-dl" href="./images/logo/elaptri-pembinaan-mark-light-512.png" download>PNG 512px</a>
+            <a class="btn-dl" href="./images/logo/elaptri-pembinaan-mark-flat.svg" download>Flat Spot SVG</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="preview-box">
+            <img src="./images/logo/elaptri-pembinaan-app-icon.svg" alt="App Launcher Tile" width="190" height="190" />
+          </div>
+          <div class="card-label">Optional OS / PWA Tile</div>
+          <div class="card-heading">App Launcher Icon</div>
+          <p class="card-caption">Khusus untuk shortcut homescreen perangkat mobile / PWA yang membutuhkan tile squircle.</p>
+          <div class="dl-actions">
+            <a class="btn-dl" href="./images/logo/elaptri-pembinaan-app-icon.svg" download>Unduh SVG</a>
+            <a class="btn-dl" href="./images/logo/elaptri-pembinaan-app-icon-512.png" download>PNG 512px</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. HORIZONTAL & VERTICAL LOCKUPS -->
+    <section>
+      <h2 class="section-title">3. Official Wordmark Lockups (Horizontal &amp; Vertikal)</h2>
+      <p class="section-desc">Susunan resmi lambang bersama tipografi institusional <strong>E-LAPTRI PEMBINAAN</strong> untuk kop dokumen, slide paparan, dan sampul Laporan Kinerja.</p>
+
+      <div class="grid-2">
+        <div class="card">
+          <div class="preview-box" style="min-height: 170px;">
+            <img class="lockup-img" src="./images/logo/elaptri-pembinaan-logo-horizontal.svg" alt="Horizontal Lockup Dark" />
+          </div>
+          <div class="card-label">Horizontal Lockup • Dark</div>
+          <div class="card-heading">Header Portal &amp; Paparan Gelap</div>
+          <div class="dl-actions">
+            <a class="btn-dl" href="./images/logo/elaptri-pembinaan-logo-horizontal.svg" download>Unduh SVG</a>
+            <a class="btn-dl" href="./images/logo/elaptri-pembinaan-logo-horizontal.png" download>PNG Transparan (1680px)</a>
+          </div>
+        </div>
+
+        <div class="card card-light">
+          <div class="preview-box" style="min-height: 170px;">
+            <img class="lockup-img" src="./images/logo/elaptri-pembinaan-logo-horizontal-light.svg" alt="Horizontal Lockup Light" />
+          </div>
+          <div class="card-label">Horizontal Lockup • Light</div>
+          <div class="card-heading">Kop Dokumen Word / PDF / Slide Putih</div>
+          <div class="dl-actions">
+            <a class="btn-dl" href="./images/logo/elaptri-pembinaan-logo-horizontal-light.svg" download>Unduh SVG</a>
+            <a class="btn-dl" href="./images/logo/elaptri-pembinaan-logo-horizontal-light.png" download>PNG Transparan (1680px)</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="preview-box" style="min-height: 310px;">
+            <img src="./images/logo/elaptri-pembinaan-logo-vertical.svg" alt="Vertical Lockup Dark" width="290" height="290" />
+          </div>
+          <div class="card-label">Ceremonial Vertical • Dark</div>
+          <div class="card-heading">Sampul Presentasi Eksekutif JAMBIN</div>
+          <div class="dl-actions">
+            <a class="btn-dl" href="./images/logo/elaptri-pembinaan-logo-vertical.svg" download>Unduh SVG</a>
+          </div>
+        </div>
+
+        <div class="card card-light">
+          <div class="preview-box" style="min-height: 310px;">
+            <img src="./images/logo/elaptri-pembinaan-logo-vertical-light.svg" alt="Vertical Lockup Light" width="290" height="290" />
+          </div>
+          <div class="card-label">Ceremonial Vertical • Light</div>
+          <div class="card-heading">Sampul Resmi Buku LKjIP &amp; Laporan Triwulanan</div>
+          <div class="dl-actions">
+            <a class="btn-dl" href="./images/logo/elaptri-pembinaan-logo-vertical-light.svg" download>Unduh SVG</a>
+            <a class="btn-dl" href="./images/logo/elaptri-pembinaan-logo-vertical-light.png" download>PNG Sampul (1075px)</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. MULTI-SIZE SCALABILITY & FAVICON -->
+    <section>
+      <h2 class="section-title">4. Uji Keterbacaan Multi-Ukuran &amp; Favicon</h2>
+      <p class="section-desc">Dirender dengan 4x–8x supersampling antialiasing sehingga 3 bintang segitiga dan siluet perisai tetap tajam hingga ukuran tab browser 16×16 piksel.</p>
+
+      <div class="card scale-strip">
+        <div class="scale-item">
+          <img src="./images/logo/elaptri-pembinaan-mark.svg" alt="256px" width="180" height="180" />
+          <span class="scale-tag">Hero / Cover (180px+)</span>
+        </div>
+        <div class="scale-item">
+          <img src="./images/logo/elaptri-pembinaan-mark.svg" alt="96px" width="96" height="96" />
+          <span class="scale-tag">Login Brand (96px)</span>
+        </div>
+        <div class="scale-item">
+          <img src="./images/logo/elaptri-pembinaan-mark.svg" alt="44px" width="44" height="44" />
+          <span class="scale-tag">Navbar / Sidebar (44px)</span>
+        </div>
+        <div class="scale-item">
+          <img src="./favicon.svg" alt="32px" width="32" height="32" />
+          <span class="scale-tag">Retina Tab (32px)</span>
+        </div>
+        <div class="scale-item">
+          <img src="./favicon.svg" alt="16px" width="16" height="16" />
+          <span class="scale-tag">Favicon (16px)</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. OFFICIAL COLOR PALETTE -->
+    <section>
+      <h2 class="section-title">5. Sistem Palet Warna Resmi</h2>
+      <p class="section-desc">Perpaduan harmonis Emas Pembinaan (kemuliaan Tri Krama Adhyaksa) dengan Hijau Zamrud Kejaksaan (pertumbuhan kinerja akuntabel).</p>
+
+      <div class="swatches">
+        <div class="swatch">
+          <div class="swatch-color" style="background: linear-gradient(135deg, #FEF08A, #F5B815);"></div>
+          <div class="swatch-meta">
+            <div class="swatch-name">Pembinaan Sovereign Gold</div>
+            <div class="swatch-hex">#F5B815 • RGB(245, 184, 21)</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: #D97706;"></div>
+          <div class="swatch-meta">
+            <div class="swatch-name">Adhyaksa Deep Amber</div>
+            <div class="swatch-hex">#D97706 • RGB(217, 119, 6)</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: linear-gradient(135deg, #34D399, #10B981);"></div>
+          <div class="swatch-meta">
+            <div class="swatch-name">E-Laptri Growth Emerald</div>
+            <div class="swatch-hex">#10B981 • RGB(16, 185, 129)</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: #047857;"></div>
+          <div class="swatch-meta">
+            <div class="swatch-name">Kejaksaan Institutional Green</div>
+            <div class="swatch-hex">#047857 • RGB(4, 120, 87)</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: #0F172A;"></div>
+          <div class="swatch-meta">
+            <div class="swatch-name">Executive Slate Navy</div>
+            <div class="swatch-hex">#0F172A • RGB(15, 23, 42)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

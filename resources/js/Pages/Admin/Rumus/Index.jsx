@@ -33,11 +33,22 @@ export default function RumusIndex({ formulas = [] }) {
             minWidth: 360, 
             renderCell: (params) => (
                 <Box sx={{ py: 1.5 }}>
-                    <Chip 
-                        label={params.row.kode_indikator} 
-                        size="small" 
-                        sx={{ fontWeight: 800, bgcolor: '#0f172a', color: '#ffffff', mb: 0.5 }} 
-                    />
+                    <Stack direction="row" spacing={0.8} alignItems="center" sx={{ mb: 0.5 }}>
+                        <Chip 
+                            label={params.row.kode_indikator} 
+                            size="small" 
+                            sx={{ fontWeight: 800, bgcolor: '#0f172a', color: '#ffffff' }} 
+                        />
+                        {params.row.level && (
+                            <Chip 
+                                label={params.row.level} 
+                                size="small" 
+                                variant="outlined"
+                                color={params.row.level === 'IKP' ? 'info' : 'default'} 
+                                sx={{ fontWeight: 700 }} 
+                            />
+                        )}
+                    </Stack>
                     <Typography variant="body2" fontWeight={700} sx={{ color: '#0f172a', lineHeight: 1.3, whiteSpace: 'normal', wordBreak: 'break-word' }}>
                         {params.row.nama_indikator}
                     </Typography>

@@ -2,7 +2,7 @@ import { Paper, Typography, Grid, TextField, Box } from '@mui/material';
 import { InfoOutlined as InfoIcon } from '@mui/icons-material';
 import { formulaFor, componentsFor, isValidDecimalInput } from '../Utils/inputHelpers';
 
-export default function FormulaFields({ entity, value = {}, onChange }) {
+export default function FormulaFields({ entity, value = {}, onChange, disabled = false }) {
     const node = entity?.node || {};
     const schema = entity?.input_schema;
     const inputs = value.inputs || {};
@@ -94,6 +94,7 @@ export default function FormulaFields({ entity, value = {}, onChange }) {
                                     value={fieldVal}
                                     onChange={fieldChange}
                                     required={field.required}
+                                    disabled={disabled}
                                     InputProps={{
                                         sx: { bgcolor: '#f8fafc', borderRadius: 2 }
                                     }}
@@ -147,6 +148,7 @@ export default function FormulaFields({ entity, value = {}, onChange }) {
                             placeholder={pembilangDesc}
                             value={value.pembilang ?? ''}
                             onChange={handleDecimalChange((val) => onChange('pembilang', val))}
+                            disabled={disabled}
                             InputProps={{ sx: { bgcolor: '#f8fafc', borderRadius: 2 } }}
                         />
                         <Box sx={{ mt: 1, p: 1.2, bgcolor: '#f0fdf4', borderRadius: 2, border: '1px solid #bbf7d0', display: 'flex', alignItems: 'flex-start', gap: 1 }}>
@@ -166,6 +168,7 @@ export default function FormulaFields({ entity, value = {}, onChange }) {
                             placeholder={penyebutDesc}
                             value={value.penyebut ?? ''}
                             onChange={handleDecimalChange((val) => onChange('penyebut', val))}
+                            disabled={disabled}
                             InputProps={{ sx: { bgcolor: '#f8fafc', borderRadius: 2 } }}
                         />
                         <Box sx={{ mt: 1, p: 1.2, bgcolor: '#eff6ff', borderRadius: 2, border: '1px solid #bfdbfe', display: 'flex', alignItems: 'flex-start', gap: 1 }}>
@@ -198,6 +201,7 @@ export default function FormulaFields({ entity, value = {}, onChange }) {
                                 placeholder={component.penjelasan || `Contoh: Masukkan nilai ${component.nama_komponen.toLowerCase()}...`}
                                 value={inputs[component.input_key || component.kode_komponen] ?? ''}
                                 onChange={handleDecimalChange((val) => updateInput(component.input_key || component.kode_komponen, val))}
+                                disabled={disabled}
                                 InputProps={{ sx: { bgcolor: '#f8fafc', borderRadius: 2 } }}
                             />
                             <Box sx={{ mt: 1, p: 1.2, bgcolor: '#f8fafc', borderRadius: 2, border: '1px solid #e2e8f0', display: 'flex', alignItems: 'flex-start', gap: 1 }}>
@@ -230,6 +234,7 @@ export default function FormulaFields({ entity, value = {}, onChange }) {
                 placeholder={directDesc}
                 value={value.realisasi ?? ''}
                 onChange={handleDecimalChange((val) => onChange('realisasi', val))}
+                disabled={disabled}
                 InputProps={{ sx: { bgcolor: '#f8fafc', borderRadius: 2 } }}
             />
             <Box sx={{ mt: 1, p: 1.2, bgcolor: '#f8fafc', borderRadius: 2, border: '1px solid #e2e8f0', display: 'flex', alignItems: 'flex-start', gap: 1 }}>

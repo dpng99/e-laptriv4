@@ -203,6 +203,32 @@ export default function InputData({
         setCollapsedSks(sks);
     };
 
+    const ikkMeasurementByCode = useMemo(() => {
+        const map = {};
+        ikks.forEach((ikk) => {
+            if (pengukuranIkk[ikk.node_id]) {
+                map[ikk.kode_ikk] = pengukuranIkk[ikk.node_id];
+            }
+        });
+        return map;
+    }, [ikks, pengukuranIkk]);
+
+    const ikpMeasurementByCode = useMemo(() => {
+        const map = {};
+        effectiveIkpInputs.forEach((ikp) => {
+            if (pengukuranIkp[ikp.node_id]) {
+                map[ikp.kode_ikp] = pengukuranIkp[ikp.node_id];
+            }
+        });
+        return map;
+    }, [effectiveIkpInputs, pengukuranIkp]);
+
+    const isMeasurementLocked = (m) => {
+        if (!m) return false;
+        const status = (m.status || '').toUpperCase();
+        return status === 'REPORTED' || status === 'FINAL' || status === 'APPROVED' || status === 'LOCKED' || m.locked_at != null;
+    };
+
     const hasPayload = (row) => {
         const inputValues = Object.values(row.inputs || {});
         return row.pembilang !== ''
@@ -215,6 +241,16 @@ export default function InputData({
     };
 
     const handleSaveSingle = (type, code) => {
+        const measurement = type === 'IKK' ? ikkMeasurementByCode[code] : ikpMeasurementByCode[code];
+        if (isMeasurementLocked(measurement)) {
+            setToast({
+                open: true,
+                message: `Indikator ${code} berstatus terkunci dan tidak dapat diubah.`,
+                severity: 'warning',
+            });
+            return;
+        }
+
         setSavingCode(code);
 
         const sourceData = type === 'IKK' ? formData[code] : ikpFormData[code];
@@ -261,7 +297,13 @@ export default function InputData({
         event.preventDefault();
         setLoading(true);
 
-        const normalizeData = (list) => Object.values(list).filter(hasPayload).map((row) => {
+        const normalizeData = (list, measurementsByCode) => Object.values(list).filter((row) => {
+            const code = row.kode_ikk || row.kode_ikp;
+            if (isMeasurementLocked(measurementsByCode[code])) {
+                return false;
+            }
+            return hasPayload(row);
+        }).map((row) => {
             const normalizedInputs = {};
             Object.entries(row.inputs || {}).forEach(([k, v]) => {
                 normalizedInputs[k] = typeof v === 'string' ? v.replace(',', '.') : v;
@@ -278,8 +320,8 @@ export default function InputData({
         router.post(route('input-data.store'), {
             tahun,
             triwulan,
-            data: normalizeData(formData),
-            ikp_data: normalizeData(ikpFormData),
+            data: normalizeData(formData, ikkMeasurementByCode),
+            ikp_data: normalizeData(ikpFormData, ikpMeasurementByCode),
         }, {
             preserveScroll: true,
             onFinish: () => setLoading(false),

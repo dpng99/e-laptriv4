@@ -24,7 +24,9 @@ class DatabaseSeeder extends Seeder
             RumusIndikatorSeeder::class,
             TargetSeeder::class,
             CascadingArchitectureSeeder::class,
-            //Pengukuran2025Seeder::class,
+            Pengukuran2025Seeder::class,
+            LaporanKinerjaTriwulanI2026Seeder::class,
+            LaporanKinerjaTriwulanII2026Seeder::class,
         ]);
     }
 }

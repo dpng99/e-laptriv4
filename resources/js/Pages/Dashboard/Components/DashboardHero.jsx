@@ -1,12 +1,13 @@
 import { Link } from '@inertiajs/react';
-import { Paper, Grid, Stack, Chip, Typography, ToggleButtonGroup, ToggleButton, Button } from '@mui/material';
+import { Paper, Grid, Stack, Chip, Typography, ToggleButtonGroup, ToggleButton, Button, FormControl, Select, MenuItem } from '@mui/material';
 import { EditNote as EditNoteIcon } from '@mui/icons-material';
 
 export default function DashboardHero({
     unitName,
     currentTahun,
     currentTriwulan,
-    onTriwulanChange
+    onTriwulanChange,
+    onTahunChange
 }) {
     return (
         <Paper 
@@ -52,6 +53,30 @@ export default function DashboardHero({
 
                 <Grid item xs={12} md={5} sx={{ textAlign: { xs: 'left', md: 'right' } }}>
                     <Stack direction={{ xs: 'column', sm: 'row' }} spacing={1.5} justifyContent={{ md: 'flex-end' }} alignItems="center">
+                        {/* Year Selector */}
+                        <FormControl size="small" sx={{ minWidth: 110 }}>
+                            <Select
+                                value={currentTahun}
+                                onChange={(e) => onTahunChange?.(Number(e.target.value))}
+                                sx={{
+                                    bgcolor: 'rgba(255, 255, 255, 0.1)',
+                                    color: '#ffffff',
+                                    borderRadius: 2.5,
+                                    fontWeight: 700,
+                                    fontSize: '0.85rem',
+                                    '& .MuiSvgIcon-root': { color: '#ffffff' },
+                                    '& .MuiOutlinedInput-notchedOutline': { borderColor: 'rgba(255, 255, 255, 0.15)' },
+                                    '&:hover .MuiOutlinedInput-notchedOutline': { borderColor: 'rgba(255, 255, 255, 0.35)' },
+                                }}
+                            >
+                                {[2025, 2026, 2027, 2028, 2029].map((yr) => (
+                                    <MenuItem key={yr} value={yr} sx={{ fontWeight: 600, fontSize: '0.85rem' }}>
+                                        Tahun {yr}
+                                    </MenuItem>
+                                ))}
+                            </Select>
+                        </FormControl>
+
                         {/* Quarter Selector */}
                         <ToggleButtonGroup
                             value={currentTriwulan}

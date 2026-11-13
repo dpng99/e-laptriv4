@@ -77,3 +77,8 @@ Minimal uji:
 - SAME_INDICATOR tidak menjadi average;
 - weighted formula memakai bobot komponen;
 - capaian dihitung setelah realisasi dan target tersedia.
+
+## 9. Reconciliation of REPORTED Indicators
+- Ketika mengimpor pengukuran resmi dari Laporan Kinerja (status `REPORTED`), seeder HARUS memecah/merekonsiliasi nilai publikasi ke dalam tabel anak `kinerja_pengukuran_inputs` sesuai komponen formula canonical simpul (`X1`..`Xn`, `pembilang`, `penyebut`, `skor_aktual`, dll.).
+- DILARANG membiarkan tabel `kinerja_pengukuran_inputs` kosong untuk simpul yang memiliki komponen formula, karena akan menyebabkan kolom isian formula pada antarmuka `/input-data` tampil kosong (blank) meskipun narasi analisis, kendala, dan upaya telah terisi.
+- Indikator berstatus `REPORTED` dan `LOCKED` pada form input harus menampilkan nilai komponen tersebut secara terisi (read-only/disabled) dengan penanda resmi bahwa data telah terkunci dari laporan resmi JAMBIN.

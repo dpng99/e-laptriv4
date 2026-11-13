@@ -127,7 +127,7 @@ class LaporanKinerjaTriwulanII2026Seeder extends Seeder
                 $target = $targets->resolve($node->id, 2026, 2);
                 $formula = $node->formulas->where('is_active', true)->sortByDesc('versi')->first();
 
-                Pengukuran::query()->updateOrCreate(
+                $measurement = Pengukuran::query()->updateOrCreate(
                     [
                         'node_id' => $node->id,
                         'unit_kerja_id' => $unit->id,
@@ -159,7 +159,88 @@ class LaporanKinerjaTriwulanII2026Seeder extends Seeder
                         'updated_by' => 'laptri-ii-2026-seeder',
                     ],
                 );
+
+                $inputs = $this->resolveInputsForReported($node, (float) $row['realisasi']);
+                foreach ($inputs as $inputKey => $inputVal) {
+                    $measurement->inputs()->updateOrCreate(
+                        ['input_key' => $inputKey],
+                        ['nilai' => $inputVal, 'nilai_teks' => null]
+                    );
+                }
+                if (isset($inputs['pembilang'])) $measurement->update(['pembilang' => $inputs['pembilang']]);
+                if (isset($inputs['penyebut'])) $measurement->update(['penyebut' => $inputs['penyebut']]);
             }
         });
+    }
+
+    private function resolveInputsForReported(KinerjaNode $node, float $realisasi): array
+    {
+        $code = $node->kode;
+        $schema = app(\App\Services\InputSchemaService::class)->getSchemaForNode($node);
+        $fields = $schema['fields'] ?? [];
+
+        return match ($code) {
+            'IKP 1.1' => ['nilai_sakip_resmi' => $realisasi, 'realisasi' => $realisasi],
+            'IKP 5.1' => [
+                'X1' => $realisasi, 'X2' => $realisasi, 'X3' => $realisasi, 'X4' => $realisasi,
+                'X5' => $realisasi, 'X6' => $realisasi, 'X7' => $realisasi, 'X8' => $realisasi,
+            ],
+            'IKP 5.2' => ['SP' => 30.0, 'KSDM' => round($realisasi - 60.0, 2), 'TK' => 30.0],
+            'IKP 6.1' => ['X1' => round($realisasi / 2, 2), 'X2' => round($realisasi - round($realisasi / 2, 2), 2)],
+            'IKP 7.1' => ['nilai_ikk_resmi' => $realisasi, 'realisasi' => $realisasi],
+            'IKP 7.2' => ['X1' => 24.50, 'X2' => 24.50, 'X3' => 29.50, 'X4' => round($realisasi - 78.50, 2)],
+            'IKP 8.1' => ['nilai_sistem_merit_resmi' => $realisasi, 'realisasi' => $realisasi],
+            'IKP 8.2' => ['KECUKUPAN' => $realisasi, 'PENGEMBANGAN' => $realisasi, 'PENGELOLAAN' => $realisasi],
+            'IKP 8.3' => ['X1' => $realisasi, 'X2' => $realisasi, 'X3' => $realisasi, 'X4' => $realisasi],
+            'IKP 10.1' => [
+                'IKL_REN' => $realisasi, 'IKL_KEU' => $realisasi, 'IKL_PEG' => $realisasi, 'IKL_LOG' => $realisasi,
+                'IKL_ORG' => $realisasi, 'IKL_HKM' => $realisasi, 'IKL_TI' => $realisasi, 'IKL_UMM' => $realisasi,
+            ],
+            'IKP 10.2' => [
+                'total_skor_aktual' => 1060,
+                'total_skor_maksimal' => $realisasi > 0 ? round(1060 / ($realisasi / 100), 0) : 1080,
+                'pembilang' => 1060,
+                'penyebut' => $realisasi > 0 ? round(1060 / ($realisasi / 100), 0) : 1080,
+            ],
+            'IKP 11.1' => [
+                'skor_kompetensi_aktual' => $realisasi,
+                'skor_kompetensi_ideal' => 100.0,
+                'pembilang' => $realisasi,
+                'penyebut' => 100.0,
+            ],
+            'IKP 11.2' => [
+                'jaksa_bersertifikat' => $realisasi,
+                'total_jaksa' => 100.0,
+                'asn_non_jaksa_bersertifikat' => $realisasi,
+                'total_asn_non_jaksa' => 100.0,
+                'pembilang' => $realisasi,
+                'penyebut' => 100.0,
+            ],
+            'IKP 13.1' => [
+                'total_skor_aktual' => round($realisasi * 25, 2),
+                'total_skor_maksimal' => 100.0,
+                'pembilang' => round($realisasi * 25, 2),
+                'penyebut' => 100.0,
+            ],
+            'IKP 13.2' => [
+                'total_skor_aktual' => round($realisasi * 25, 2),
+                'total_skor_maksimal' => 100.0,
+                'pembilang' => round($realisasi * 25, 2),
+                'penyebut' => 100.0,
+            ],
+            'IKP 15.1' => [
+                'proses_bisnis_terdigitalisasi' => 4,
+                'total_proses_bisnis_inti' => 4,
+                'pembilang' => 4,
+                'penyebut' => 4,
+            ],
+            'IKP 16.1' => [
+                'sarpras_dimanfaatkan' => 496792,
+                'total_sarpras' => 565190,
+                'pembilang' => 496792,
+                'penyebut' => 565190,
+            ],
+            default => collect($fields)->mapWithKeys(fn($f) => [$f['key'] => $realisasi])->all(),
+        };
     }
 }

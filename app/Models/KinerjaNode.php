@@ -3,12 +3,14 @@
 namespace App\Models;
 
 use App\Enums\NodeType;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Facades\DB;
 
 class KinerjaNode extends Model
 {
@@ -70,5 +72,58 @@ class KinerjaNode extends Model
         return $this->belongsToMany(UnitKerja::class, 'kinerja_unit_nodes', 'node_id', 'unit_kerja_id')
             ->withPivot(['peran', 'bobot'])
             ->withTimestamps();
+    }
+
+    /**
+     * Filter only operationally visible nodes:
+     * - The node itself must have is_active = true
+     * - If the node is an IKK, none of its parent SK nodes may be inactive (is_active = false)
+     */
+    public function scopeVisibleOperational(Builder $query): Builder
+    {
+        $table = $query->getModel()->getTable();
+
+        return $query->where("{$table}.is_active", true)
+            ->where(function (Builder $q) use ($table) {
+                $q->where("{$table}.jenis_node", '!=', 'IKK')
+                    ->orWhereNotExists(function ($sub) use ($table) {
+                        $sub->selectRaw('1')
+                            ->from('kinerja_relasi as kr_vis')
+                            ->join('kinerja_nodes as parent_sk_node', 'parent_sk_node.id', '=', 'kr_vis.parent_node_id')
+                            ->whereColumn('kr_vis.child_node_id', "{$table}.id")
+                            ->where('parent_sk_node.jenis_node', 'SK')
+                            ->whereNull('parent_sk_node.deleted_at')
+                            ->where('parent_sk_node.is_active', false);
+                    });
+            });
+    }
+
+    public function isEffectivelyVisible(): bool
+    {
+        if (!$this->is_active) {
+            return false;
+        }
+
+        $type = $this->jenis_node instanceof NodeType ? $this->jenis_node->value : (string) $this->jenis_node;
+        if ($type === 'IKK') {
+            if ($this->relationLoaded('parents')) {
+                $inactiveParentSk = $this->parents->first(function ($parent) {
+                    $pType = $parent->jenis_node instanceof NodeType ? $parent->jenis_node->value : (string) $parent->jenis_node;
+                    return $pType === 'SK' && !$parent->is_active;
+                });
+
+                return $inactiveParentSk === null;
+            }
+
+            return !DB::table('kinerja_relasi as kr_vis')
+                ->join('kinerja_nodes as parent_sk_node', 'parent_sk_node.id', '=', 'kr_vis.parent_node_id')
+                ->where('kr_vis.child_node_id', $this->id)
+                ->where('parent_sk_node.jenis_node', 'SK')
+                ->whereNull('parent_sk_node.deleted_at')
+                ->where('parent_sk_node.is_active', false)
+                ->exists();
+        }
+
+        return true;
     }
 }

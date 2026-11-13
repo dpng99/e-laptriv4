@@ -83,7 +83,7 @@ class AdminDashboardController extends Controller
 
         // 2. Monitoring Pengisian Biro & Pusat
         $bureauUnits = UnitKerja::where('is_active', true)
-            ->whereNotIn('kode', ['SET-JAMBIN'])
+            ->whereNotIn('kode', ['JAMBIN', 'SET-JAMBIN'])
             ->orderBy('id')
             ->get();
 
@@ -91,6 +91,7 @@ class AdminDashboardController extends Controller
         foreach ($bureauUnits as $unit) {
             $assignedNodes = $unit->nodes()
                 ->whereIn('jenis_node', ['IKK', 'IKP'])
+                ->visibleOperational()
                 ->with([
                     'ikk', 'ikp',
                     'targets' => fn ($q) => $q->where('tahun', $tahun),
@@ -185,8 +186,9 @@ class AdminDashboardController extends Controller
             ];
         }
 
-        // 3. Seluruh Node (SP, IKP, SK, IKK) untuk DataGrid komprehensif di bawah
+        // 3. Seluruh Node (SP, IKP, SK, IKK) yang aktif/tampil untuk DataGrid komprehensif di bawah
         $allNodes = KinerjaNode::whereIn('jenis_node', ['SP', 'IKP', 'SK', 'IKK'])
+            ->visibleOperational()
             ->with([
                 'sp', 'ikp', 'sk', 'ikk', 'units',
                 'targets' => fn ($q) => $q->where('tahun', $tahun),

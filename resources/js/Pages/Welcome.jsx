@@ -15,6 +15,7 @@ import {
     Business as BusinessIcon
 } from '@mui/icons-material';
 import { motion } from 'framer-motion';
+import ElaptriLogo from '@/Components/ElaptriLogo';
 
 const biroList = [
     { code: 'RO-REN', name: 'Biro Perencanaan', desc: 'Pengampu IKP SAKIP, NKA, IPA & Cascading Kinerja' },
@@ -63,22 +64,11 @@ export default function Welcome({ auth }) {
             <Container maxWidth="lg">
                 <Box sx={{ py: 3, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                     <Stack direction="row" spacing={1.5} alignItems="center">
-                        <Box sx={{
-                            width: 44,
-                            height: 44,
-                            borderRadius: '12px',
-                            background: 'linear-gradient(135deg, #059669 0%, #10b981 100%)',
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            boxShadow: '0 4px 16px rgba(5, 150, 105, 0.4)'
-                        }}>
-                            <ShieldIcon sx={{ fontSize: 26, color: 'white' }} />
-                        </Box>
+                        <ElaptriLogo variant="mark" theme="dark" size={44} />
                         <Box>
                             <Stack direction="row" spacing={1} alignItems="center">
                                 <Typography variant="h6" fontWeight={800} sx={{ letterSpacing: '-0.02em', color: '#ffffff' }}>
-                                    E-Laptri
+                                    E-Laptri Pembinaan
                                 </Typography>
                                 <Chip label="JAMBIN" size="small" sx={{ height: 20, fontWeight: 800, bgcolor: 'rgba(245, 158, 11, 0.2)', color: '#f59e0b', border: '1px solid rgba(245, 158, 11, 0.4)' }} />
                             </Stack>

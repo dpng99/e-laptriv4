@@ -22,6 +22,7 @@ import {
     DesignServices as TemplateIcon
 } from '@mui/icons-material';
 import { Link, usePage, router } from '@inertiajs/react';
+import ElaptriLogo from '@/Components/ElaptriLogo';
 
 const drawerWidth = 270;
 
@@ -62,23 +63,11 @@ export default function AppLayout({ children, title }) {
             {/* Header Brand */}
             <Box sx={{ p: 2.5, pb: 2 }}>
                 <Stack direction="row" spacing={1.5} alignItems="center">
-                    <Box sx={{
-                        width: 42,
-                        height: 42,
-                        borderRadius: '10px',
-                        background: 'linear-gradient(135deg, #059669 0%, #10b981 100%)',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        boxShadow: '0 4px 14px rgba(5, 150, 105, 0.4)',
-                        color: 'white'
-                    }}>
-                        <ShieldIcon sx={{ fontSize: 24 }} />
-                    </Box>
+                    <ElaptriLogo variant="mark" theme="dark" size={42} />
                     <Box>
                         <Stack direction="row" spacing={0.75} alignItems="center">
                             <Typography variant="subtitle1" sx={{ fontWeight: 800, color: '#ffffff', letterSpacing: '-0.02em', lineHeight: 1.2 }}>
-                                E-Laptri
+                                E-Laptri Pembinaan
                             </Typography>
                             <Chip 
                                 label="JAMBIN" 
@@ -227,6 +216,14 @@ export default function AppLayout({ children, title }) {
                                     <PdfIcon fontSize="small" />
                                 </ListItemIcon>
                                 <ListItemText primary="Ekspor Laporan Word" primaryTypographyProps={{ fontSize: '0.875rem', fontWeight: route().current('export.*') ? 700 : 500 }} />
+                            </ListItemButton>
+                        </ListItem>
+                        <ListItem disablePadding>
+                            <ListItemButton component={Link} href={route('admin.serenata.index')} selected={route().current('admin.serenata.*')}>
+                                <ListItemIcon sx={{ color: route().current('admin.serenata.*') ? '#34d399' : '#64748b', minWidth: 38 }}>
+                                    <ShieldIcon fontSize="small" />
+                                </ListItemIcon>
+                                <ListItemText primary="Integrasi SERENATA PANEV" primaryTypographyProps={{ fontSize: '0.875rem', fontWeight: route().current('admin.serenata.*') ? 700 : 500 }} />
                             </ListItemButton>
                         </ListItem>
                     </>

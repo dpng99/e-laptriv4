@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Enums\IndicatorDirection;
 use App\Enums\MeasurementMode;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -34,6 +35,11 @@ class Ikk extends Model
     public function node(): BelongsTo
     {
         return $this->belongsTo(KinerjaNode::class, 'node_id');
+    }
+
+    public function scopeVisibleOperational(Builder $query): Builder
+    {
+        return $query->whereHas('node', fn (Builder $q) => $q->visibleOperational());
     }
 
     public function formulas()

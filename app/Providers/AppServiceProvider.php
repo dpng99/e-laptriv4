@@ -35,6 +35,20 @@ class AppServiceProvider extends ServiceProvider
             return Limit::perMinute(10)->by($request->user()?->username ?: $request->ip());
         });
 
+        // Rate limiter for SERENATA PANEV API (dynamic per-minute limit per IP)
+        RateLimiter::for('serenata-api', function (Request $request) {
+            $perMinute = 30;
+            try {
+                if (\Illuminate\Support\Facades\Schema::hasTable('serenata_configs')) {
+                    $perMinute = (int) (\App\Models\SerenataConfig::current()->rate_limit_per_minute ?? 30);
+                }
+            } catch (\Throwable) {
+                $perMinute = 30;
+            }
+
+            return Limit::perMinute(max(5, $perMinute))->by('serenata:' . $request->ip());
+        });
+
         // Application logging: Authentication events
         Event::listen(Login::class, function (Login $event) {
             Log::info('Auth Event: User logged in', [

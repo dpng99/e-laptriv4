@@ -6,6 +6,7 @@ use App\Models\KinerjaNode;
 use App\Models\Target;
 use App\Models\UnitKerja;
 use App\Services\CalculationEngine;
+use App\Services\Formula\FormulaResolver;
 use App\Services\InputSchemaService;
 use App\Services\PengukuranService;
 use Illuminate\Database\Seeder;
@@ -16,7 +17,7 @@ class Pengukuran2025Seeder extends Seeder
     {
         $pengukuranService = app(PengukuranService::class);
         $inputSchemaService = app(InputSchemaService::class);
-        $calculationEngine = app(CalculationEngine::class);
+        $formulaResolver = app(FormulaResolver::class);
 
         $tahun = 2025;
         $units = UnitKerja::with(['nodes' => function ($q) {
@@ -25,13 +26,21 @@ class Pengukuran2025Seeder extends Seeder
 
         foreach ($units as $unit) {
             foreach ($unit->nodes as $node) {
+                if (!$node->is_active || !$node->input_enabled) {
+                    continue;
+                }
+
                 $target = Target::where('node_id', $node->id)->where('tahun', $tahun)->first();
                 $targetVal = $target && is_numeric($target->nilai_target) ? (float) $target->nilai_target : 100.0;
                 $schema = $inputSchemaService->getSchemaForNode($node);
-                $formulaKey = $node->formula_key ?: ($schema['formula_key'] ?? $node->calculation_type ?? 'DIRECT_VALUE');
+                $definition = $formulaResolver->definition($node);
+                $canonicalFields = collect($definition['input_schema']['fields'] ?? [])->keyBy('key');
+                $fields = $schema['fields'] ?? [];
 
                 for ($tw = 1; $tw <= 4; $tw++) {
                     $progressFactor = 0.75 + ($tw * 0.07); // TW1: 0.82, TW2: 0.89, TW3: 0.96, TW4: 1.03
+                    $expectedRealisasi = round($targetVal * $progressFactor, 2);
+
                     $row = [
                         'inputs' => [],
                         'analisis_capaian' => "Capaian kinerja Triwulan {$tw} Tahun {$tahun} pada indikator {$node->nama} terealisasi sesuai target tahapan dengan capaian yang baik.",
@@ -39,74 +48,80 @@ class Pengukuran2025Seeder extends Seeder
                         'upaya' => "Peningkatan monitoring berkala dan penguatan koordinasi antar unit pelaksana secara berkelanjutan.",
                     ];
 
-                    if ($formulaKey === 'SAKIP_EXTERNAL_SCORE' || $formulaKey === 'EXTERNAL_SCORE') {
-                        $score = round($targetVal * (0.95 + ($tw * 0.015)), 2);
-                        $row['inputs']['external_score'] = $score;
-                        $row['realisasi'] = $score;
-                    } elseif ($formulaKey === 'IPA_WEIGHTED_SUM') {
-                        $components = ['X1_KAP', 'X2_PND', 'X3_TRJ', 'X4_ORG', 'X5_LKS', 'X6_SDM', 'X7_AKN', 'X8_WAS'];
-                        foreach ($components as $idx => $comp) {
-                            $row['inputs'][$comp] = round(80 + ($tw * 3.5) + (($idx % 3) * 1.5), 2);
-                        }
-                    } elseif ($formulaKey === 'AVERAGE_COMPONENTS') {
-                        $components = ['X1_SOP_DASKRIMTI', 'X2_SOP_TRAJAK', 'X3_SOP_PKY'];
-                        foreach ($components as $idx => $comp) {
-                            $row['inputs'][$comp] = round(85 + ($tw * 3) + ($idx * 1.2), 2);
-                        }
-                    } elseif ($formulaKey === 'AVERAGE_OF_RATIOS') {
-                        $row['inputs']['X1_PB1'] = 40 + ($tw * 2);
-                        $row['inputs']['X2_PY1'] = 50;
-                        $row['inputs']['X3_PB2'] = 85 + ($tw * 3);
-                        $row['inputs']['X4_PY2'] = 100;
-                    } elseif ($formulaKey === 'SURVEY_INDEX') {
-                        if ($targetVal <= 5.0) {
-                            $score = round(3.2 + ($tw * 0.18), 2);
-                        } else {
-                            $score = round(80 + ($tw * 4.5), 2);
-                        }
-                        $row['inputs']['skor_survei'] = $score;
-                        $row['realisasi'] = $score;
-                    } elseif (!empty($schema['fields'])) {
+                    if (!empty($fields)) {
                         $hasPembilang = false;
                         $hasPenyebut = false;
-                        foreach ($schema['fields'] as $field) {
-                            $k = $field['key'];
+                        foreach ($fields as $f) {
+                            $k = $f['key'];
+                            $kLower = strtolower($k);
+                            $canon = $canonicalFields->get($k, []);
+                            $max = $canon['max'] ?? ($f['max'] ?? null);
+
                             if ($k === 'pembilang') {
                                 $hasPembilang = true;
                             } elseif ($k === 'penyebut') {
                                 $hasPenyebut = true;
-                            } elseif ($k === 'realisasi') {
-                                $val = round($targetVal * $progressFactor, 2);
+                            } elseif (in_array($k, ['nilai_sakip_resmi', 'nilai_ikk_resmi', 'nilai_sistem_merit_resmi', 'realisasi', 'external_score'], true)) {
+                                $val = $expectedRealisasi;
+                                if ($max !== null) $val = min($max, $val);
+                                $row['inputs'][$k] = $val;
                                 $row['realisasi'] = $val;
-                                $row['inputs']['realisasi'] = $val;
+                            } elseif (str_starts_with($kLower, 'total_') || str_ends_with($kLower, '_ideal') || str_ends_with($kLower, '_maksimal')) {
+                                $row['inputs'][$k] = 100.0;
+                            } elseif (str_starts_with($kLower, 'skor_') || str_starts_with($kLower, 'jumlah_') || str_contains($kLower, 'terdigitalisasi') || str_contains($kLower, 'dimanfaatkan') || str_contains($kLower, 'bersertifikat')) {
+                                $val = min(100.0, round($expectedRealisasi, 1));
+                                if ($max !== null) $val = min($max, $val);
+                                $row['inputs'][$k] = $val;
+                            } elseif (in_array($k, ['SP', 'KSDM', 'TK'], true)) {
+                                $val = round($expectedRealisasi / 3, 2);
+                                if ($max !== null) $val = min($max, $val);
+                                $row['inputs'][$k] = $val;
+                            } elseif (in_array($k, ['KECUKUPAN', 'PENGEMBANGAN', 'PENGELOLAAN'], true)) {
+                                $val = round($expectedRealisasi, 2);
+                                if ($max !== null) $val = min($max, $val);
+                                $row['inputs'][$k] = $val;
+                            } elseif (str_starts_with($k, 'IKL_')) {
+                                $val = round($expectedRealisasi, 2);
+                                if ($max !== null) $val = min($max, $val);
+                                $row['inputs'][$k] = $val;
+                            } elseif (preg_match('/^X\d+$/', $k)) {
+                                $numComps = count($fields);
+                                if (($schema['formula_key'] ?? '') === 'SUM') {
+                                    if ($max !== null) {
+                                        $val = min($max, round($expectedRealisasi * ($max / 100), 2));
+                                    } else {
+                                        $val = round($expectedRealisasi / $numComps, 2);
+                                    }
+                                } else {
+                                    $val = round($expectedRealisasi, 2);
+                                    if ($max !== null) $val = min($max, $val);
+                                }
+                                $row['inputs'][$k] = $val;
                             } else {
-                                $row['inputs'][$k] = round(80 + ($tw * 4), 2);
+                                $val = round($expectedRealisasi, 2);
+                                if ($max !== null) $val = min($max, $val);
+                                $row['inputs'][$k] = $val;
                             }
                         }
+
                         if ($hasPembilang && $hasPenyebut) {
-                            $py = 100;
-                            $pb = min(100, round($targetVal * $progressFactor, 1));
+                            $py = 100.0;
+                            $pb = min(100.0, round($expectedRealisasi, 1));
                             $row['pembilang'] = $pb;
                             $row['penyebut'] = $py;
                             $row['inputs']['pembilang'] = $pb;
                             $row['inputs']['penyebut'] = $py;
                         }
                     } else {
-                        if ($node->satuan === '%' || $node->calculation_type === 'RATIO') {
-                            $py = 100;
-                            $pb = min(100, round($targetVal * $progressFactor, 1));
-                            $row['pembilang'] = $pb;
-                            $row['penyebut'] = $py;
-                            $row['inputs']['pembilang'] = $pb;
-                            $row['inputs']['penyebut'] = $py;
-                        } else {
-                            $val = round($targetVal * $progressFactor, 2);
-                            $row['realisasi'] = $val;
-                            $row['inputs']['realisasi'] = $val;
-                        }
+                        $py = 100.0;
+                        $pb = min(100.0, round($expectedRealisasi, 1));
+                        $row['pembilang'] = $pb;
+                        $row['penyebut'] = $py;
+                        $row['inputs']['pembilang'] = $pb;
+                        $row['inputs']['penyebut'] = $py;
                     }
 
-                    $pengukuranService->storeMeasurement($node, $unit->id, $tahun, $tw, $row, 'seeder');
+                    $pengukuranService->storeMeasurement($node, $unit->id, $tahun, $tw, $row, 'seeder-2025');
                 }
             }
         }

@@ -1,9 +1,10 @@
 import { useState } from 'react';
-import { Head, router, Link } from '@inertiajs/react';
+import { Head, router, usePage } from '@inertiajs/react';
 import AppLayout from '@/Layouts/AppLayout';
 import { 
-    Box, Paper, FormControl, InputLabel, Select, MenuItem, Chip, 
-    Typography, Grid, Card, CardContent, Stack, Tooltip, Button, IconButton 
+    Box, Paper, FormControl, Select, MenuItem, Chip, 
+    Typography, Grid, Card, CardContent, Stack, Tooltip, Button, Switch,
+    FormControlLabel, Alert, Divider
 } from '@mui/material';
 import { DataGrid, GridToolbar } from '@mui/x-data-grid';
 import {
@@ -15,9 +16,10 @@ import {
     Warning as WarningIcon,
     Error as ErrorIcon,
     Visibility as VisibilityIcon,
+    VisibilityOff as VisibilityOffIcon,
+    LockOutlined as LockIcon,
     Tune as TuneIcon
 } from '@mui/icons-material';
-import { motion } from 'framer-motion';
 
 const LEVEL_COLOR = {
     SP:  'primary',
@@ -33,19 +35,70 @@ const STATUS_CHIP = {
     'Belum Diisi':    { color: 'default', icon: <HelpIcon fontSize="small" /> },
 };
 
-export default function ReviewData({ data = [], summary = {}, currentTahun, currentTriwulan }) {
-    const [tahun, setTahun]       = useState(currentTahun);
+export default function ReviewData({ 
+    data = [], 
+    allData = null,
+    summary = {}, 
+    visibilitySummary = {},
+    units = [],
+    showHidden = false,
+    currentTahun, 
+    currentTriwulan 
+}) {
+    const { flash } = usePage().props;
+    const [tahun, setTahun] = useState(currentTahun);
     const [triwulan, setTriwulan] = useState(currentTriwulan);
+    const [displayHidden, setDisplayHidden] = useState(Boolean(showHidden));
+    const [selectedUnitId, setSelectedUnitId] = useState('');
+    const [processingVisibility, setProcessingVisibility] = useState(false);
 
     const handleFilterChange = (field, val) => {
-        if (field === 'tahun') {
-            setTahun(val);
-            router.get(route('review-data.index'), { tahun: val, triwulan });
-        } else {
-            setTriwulan(val);
-            router.get(route('review-data.index'), { tahun, triwulan: val });
-        }
+        const nextTahun = field === 'tahun' ? val : tahun;
+        const nextTriwulan = field === 'triwulan' ? val : triwulan;
+        if (field === 'tahun') setTahun(val);
+        if (field === 'triwulan') setTriwulan(val);
+
+        router.get(
+            route('review-data.index'),
+            { tahun: nextTahun, triwulan: nextTriwulan, show_hidden: displayHidden ? 1 : 0 },
+            { preserveState: true, preserveScroll: true }
+        );
     };
+
+    const handleToggleNodeVisibility = (row) => {
+        if (!row.can_toggle_visibility || processingVisibility) return;
+        setProcessingVisibility(true);
+        router.patch(
+            route('admin.visibility.toggle', row.id),
+            { is_active: !row.is_active },
+            {
+                preserveScroll: true,
+                onFinish: () => setProcessingVisibility(false),
+            }
+        );
+    };
+
+    const handleBulkVisibility = (targetLevel, isActive) => {
+        if (processingVisibility) return;
+        setProcessingVisibility(true);
+        router.post(
+            route('admin.visibility.bulk'),
+            {
+                target_level: targetLevel,
+                is_active: isActive,
+                unit_kerja_id: selectedUnitId !== '' ? Number(selectedUnitId) : null,
+            },
+            {
+                preserveScroll: true,
+                onFinish: () => setProcessingVisibility(false),
+            }
+        );
+    };
+
+    const sourceRows = Array.isArray(allData) ? allData : data;
+    const displayedRows = displayHidden
+        ? sourceRows
+        : sourceRows.filter((row) => row.effective_visible !== false);
 
     const columns = [
         { 
@@ -64,9 +117,19 @@ export default function ReviewData({ data = [], summary = {}, currentTahun, curr
             field: 'nama_kinerja', 
             headerName: 'Nama Indikator / Sasaran', 
             flex: 1, 
-            minWidth: 280,
+            minWidth: 260,
             renderCell: (params) => (
-                <Typography variant="body2" fontWeight={600} sx={{ color: '#0f172a', whiteSpace: 'normal', wordBreak: 'break-word', lineHeight: 1.4 }}>
+                <Typography 
+                    variant="body2" 
+                    fontWeight={600} 
+                    sx={{ 
+                        color: params.row.effective_visible === false ? '#94a3b8' : '#0f172a', 
+                        textDecoration: params.row.effective_visible === false ? 'line-through' : 'none',
+                        whiteSpace: 'normal', 
+                        wordBreak: 'break-word', 
+                        lineHeight: 1.4 
+                    }}
+                >
                     {params.value}
                 </Typography>
             )
@@ -74,7 +137,7 @@ export default function ReviewData({ data = [], summary = {}, currentTahun, curr
         {
             field: 'tipe_indikator',
             headerName: 'Level',
-            width: 90,
+            width: 85,
             renderCell: (params) => (
                 <Chip 
                     label={params.value} 
@@ -88,7 +151,7 @@ export default function ReviewData({ data = [], summary = {}, currentTahun, curr
         { 
             field: 'unit_pengampu', 
             headerName: 'Unit Pengampu', 
-            width: 190,
+            width: 180,
             renderCell: (params) => (
                 <Typography variant="caption" sx={{ fontWeight: 600, color: '#64748b' }}>
                     {params.value || '-'}
@@ -98,7 +161,7 @@ export default function ReviewData({ data = [], summary = {}, currentTahun, curr
         { 
             field: 'target', 
             headerName: 'Target', 
-            width: 100,
+            width: 95,
             renderCell: (params) => (
                 <Typography variant="body2" sx={{ fontWeight: 600, color: '#334155' }}>
                     {params.value != null ? params.value : '-'}
@@ -108,7 +171,7 @@ export default function ReviewData({ data = [], summary = {}, currentTahun, curr
         { 
             field: 'hasil_kinerja', 
             headerName: 'Hasil Kinerja (Realisasi)', 
-            width: 180,
+            width: 165,
             renderCell: (params) => (
                 <Typography variant="body2" sx={{ fontWeight: 700, color: '#0f172a' }}>
                     {params.value != null ? params.value : '-'}
@@ -117,8 +180,8 @@ export default function ReviewData({ data = [], summary = {}, currentTahun, curr
         },
         {
             field: 'capaian_terhadap_target',
-            headerName: 'Capaian terhadap Target (%)',
-            width: 210,
+            headerName: 'Capaian vs Target (%)',
+            width: 185,
             renderCell: (params) => {
                 const val = params.value;
                 if (val == null) return <Typography variant="caption" color="text.secondary">-</Typography>;
@@ -133,11 +196,11 @@ export default function ReviewData({ data = [], summary = {}, currentTahun, curr
         {
             field: 'kendala',
             headerName: 'Kendala',
-            width: 160,
+            width: 150,
             renderCell: (params) => (
                 params.value ? (
                     <Tooltip title={params.value} arrow placement="top">
-                        <Typography variant="caption" noWrap sx={{ color: '#b91c1c', fontStyle: 'italic', display: 'block', maxWidth: 140 }}>
+                        <Typography variant="caption" noWrap sx={{ color: '#b91c1c', fontStyle: 'italic', display: 'block', maxWidth: 135 }}>
                             {params.value}
                         </Typography>
                     </Tooltip>
@@ -147,11 +210,11 @@ export default function ReviewData({ data = [], summary = {}, currentTahun, curr
         {
             field: 'upaya',
             headerName: 'Upaya',
-            width: 160,
+            width: 150,
             renderCell: (params) => (
                 params.value ? (
                     <Tooltip title={params.value} arrow placement="top">
-                        <Typography variant="caption" noWrap sx={{ color: '#059669', fontStyle: 'italic', display: 'block', maxWidth: 140 }}>
+                        <Typography variant="caption" noWrap sx={{ color: '#059669', fontStyle: 'italic', display: 'block', maxWidth: 135 }}>
                             {params.value}
                         </Typography>
                     </Tooltip>
@@ -161,7 +224,7 @@ export default function ReviewData({ data = [], summary = {}, currentTahun, curr
         {
             field: 'status',
             headerName: 'Status',
-            width: 150,
+            width: 145,
             renderCell: (params) => {
                 const statusCfg = STATUS_CHIP[params.value] || STATUS_CHIP['Belum Diisi'];
                 return (
@@ -175,18 +238,78 @@ export default function ReviewData({ data = [], summary = {}, currentTahun, curr
                 );
             }
         },
+        {
+            field: 'effective_visible',
+            headerName: 'Visibilitas SK/IKK',
+            width: 185,
+            sortable: false,
+            renderCell: (params) => {
+                const row = params.row;
+                if (!row.can_toggle_visibility) {
+                    return (
+                        <Chip
+                            icon={<LockIcon sx={{ fontSize: '14px !important' }} />}
+                            label="Utama (PK)"
+                            size="small"
+                            variant="outlined"
+                            sx={{ fontWeight: 700, fontSize: '0.7rem', color: '#475569', borderColor: '#cbd5e1' }}
+                        />
+                    );
+                }
+
+                if (row.tipe_indikator === 'IKK' && row.parent_sk_active === false) {
+                    return (
+                        <Tooltip title={`IKK ini otomatis tersembunyi karena induk ${row.parent_sk_kode || 'SK'} sedang disembunyikan.`} arrow>
+                            <Chip
+                                icon={<VisibilityOffIcon sx={{ fontSize: '14px !important' }} />}
+                                label={`Induk ${row.parent_sk_kode || 'SK'} Off`}
+                                size="small"
+                                color="warning"
+                                variant="outlined"
+                                sx={{ fontWeight: 700, fontSize: '0.7rem' }}
+                            />
+                        </Tooltip>
+                    );
+                }
+
+                return (
+                    <Stack direction="row" spacing={0.5} alignItems="center">
+                        <Switch
+                            size="small"
+                            color="success"
+                            checked={Boolean(row.is_active)}
+                            disabled={processingVisibility}
+                            onChange={() => handleToggleNodeVisibility(row)}
+                        />
+                        <Chip
+                            label={row.is_active ? 'Tampil' : 'Tersembunyi'}
+                            size="small"
+                            color={row.is_active ? 'success' : 'default'}
+                            variant={row.is_active ? 'filled' : 'outlined'}
+                            sx={{ fontWeight: 700, fontSize: '0.68rem', height: 22 }}
+                        />
+                    </Stack>
+                );
+            }
+        },
     ];
 
     return (
         <AppLayout title="Review Data Kinerja SAKIP">
             <Head title="Review Data Kinerja" />
 
+            {flash?.success && (
+                <Alert severity="success" sx={{ mb: 2.5, borderRadius: 2.5, fontWeight: 600 }}>
+                    {flash.success}
+                </Alert>
+            )}
+
             {/* HEADER HERO & SUMMARY METRICS */}
             <Paper 
                 elevation={0}
                 sx={{
                     p: { xs: 3, md: 3.5 },
-                    mb: 3.5,
+                    mb: 3,
                     borderRadius: 3.5,
                     background: 'linear-gradient(135deg, #0f172a 0%, #1e1b4b 60%, #064e3b 100%)',
                     color: '#ffffff',
@@ -205,7 +328,7 @@ export default function ReviewData({ data = [], summary = {}, currentTahun, curr
                             Monitoring & Review Data Kinerja
                         </Typography>
                         <Typography variant="body2" sx={{ color: '#94a3b8', mt: 0.5, maxWidth: 650 }}>
-                            Evaluasi komprehensif ketercapaian SP, IKP, SK, IKK, target tahunan, serta isian kendala & upaya tindak lanjut.
+                            Evaluasi komprehensif ketercapaian SP, IKP, SK, IKK, target tahunan, kendala & upaya, serta kontrol kemunculan (Show/Hide) SK dan IKK.
                         </Typography>
                     </Box>
 
@@ -331,10 +454,129 @@ export default function ReviewData({ data = [], summary = {}, currentTahun, curr
                 </Grid>
             </Paper>
 
+            {/* PANEL KONTROL VISIBILITAS (SHOW / HIDE) SK & IKK */}
+            <Paper
+                elevation={0}
+                sx={{
+                    p: 2.5,
+                    mb: 3,
+                    borderRadius: 3,
+                    border: '1px solid #e2e8f0',
+                    bgcolor: '#ffffff',
+                    boxShadow: '0 4px 16px -4px rgba(15, 23, 42, 0.04)'
+                }}
+            >
+                <Stack
+                    direction={{ xs: 'column', lg: 'row' }}
+                    spacing={2}
+                    justifyContent="space-between"
+                    alignItems={{ lg: 'center' }}
+                >
+                    <Box>
+                        <Stack direction="row" spacing={1} alignItems="center" flexWrap="wrap" useFlexGap>
+                            <TuneIcon sx={{ color: '#059669', fontSize: 20 }} />
+                            <Typography variant="subtitle1" fontWeight={800} sx={{ color: '#0f172a' }}>
+                                Kontrol Kemunculan (Show / Hide) SK & IKK
+                            </Typography>
+                            <Chip
+                                label={`SK Tampil: ${visibilitySummary.active_sk ?? 0}/${visibilitySummary.total_sk ?? 0}`}
+                                size="small"
+                                color={(visibilitySummary.hidden_sk ?? 0) === 0 ? 'success' : 'warning'}
+                                sx={{ fontWeight: 700, fontSize: '0.73rem' }}
+                            />
+                            <Chip
+                                label={`IKK Tampil: ${visibilitySummary.visible_ikk ?? 0}/${visibilitySummary.total_ikk ?? 0}`}
+                                size="small"
+                                color={(visibilitySummary.hidden_ikk ?? 0) === 0 ? 'success' : 'warning'}
+                                sx={{ fontWeight: 700, fontSize: '0.73rem' }}
+                            />
+                        </Stack>
+                        <Typography variant="caption" sx={{ color: '#64748b', display: 'block', mt: 0.5 }}>
+                            Menyembunyikan SK atau IKK akan menghilangkannya dari Dashboard Operator, Form Input Operator, Dashboard Admin, Tabel Review, dan Ekspor Word. Jika SK disembunyikan, seluruh IKK di bawahnya otomatis ikut tersembunyi.
+                        </Typography>
+                    </Box>
+
+                    <Stack direction={{ xs: 'column', sm: 'row' }} spacing={1.25} alignItems={{ sm: 'center' }} flexWrap="wrap" useFlexGap>
+                        <FormControl size="small" sx={{ minWidth: 190 }}>
+                            <Select
+                                displayEmpty
+                                value={selectedUnitId}
+                                onChange={(e) => setSelectedUnitId(e.target.value)}
+                                sx={{ fontSize: '0.8rem', fontWeight: 600, borderRadius: 2 }}
+                            >
+                                <MenuItem value="">Semua Biro & Pusat</MenuItem>
+                                {units.map((u) => (
+                                    <MenuItem key={u.id} value={u.id}>
+                                        {u.nama}
+                                    </MenuItem>
+                                ))}
+                            </Select>
+                        </FormControl>
+
+                        <Button
+                            variant="contained"
+                            color="success"
+                            size="small"
+                            startIcon={<VisibilityIcon />}
+                            disabled={processingVisibility}
+                            onClick={() => handleBulkVisibility('ALL_SK_IKK', true)}
+                            sx={{ fontWeight: 700, textTransform: 'none', borderRadius: 2 }}
+                        >
+                            Munculkan Semua SK & IKK
+                        </Button>
+
+                        <Button
+                            variant="outlined"
+                            color="error"
+                            size="small"
+                            startIcon={<VisibilityOffIcon />}
+                            disabled={processingVisibility}
+                            onClick={() => handleBulkVisibility('ALL_SK_IKK', false)}
+                            sx={{ fontWeight: 700, textTransform: 'none', borderRadius: 2 }}
+                        >
+                            Sembunyikan Semua SK & IKK
+                        </Button>
+
+                        <Button
+                            variant="outlined"
+                            color="warning"
+                            size="small"
+                            disabled={processingVisibility}
+                            onClick={() => handleBulkVisibility('IKK', false)}
+                            sx={{ fontWeight: 700, textTransform: 'none', borderRadius: 2 }}
+                        >
+                            Sembunyikan Hanya IKK
+                        </Button>
+                    </Stack>
+                </Stack>
+
+                <Divider sx={{ my: 1.5 }} />
+
+                <Stack direction="row" justifyContent="space-between" alignItems="center" flexWrap="wrap">
+                    <FormControlLabel
+                        control={
+                            <Switch
+                                size="small"
+                                checked={displayHidden}
+                                onChange={(e) => setDisplayHidden(e.target.checked)}
+                            />
+                        }
+                        label={
+                            <Typography variant="body2" fontWeight={700} sx={{ color: '#334155' }}>
+                                Tampilkan baris SK & IKK yang sedang disembunyikan pada tabel di bawah (untuk mengatur switch satu per satu)
+                            </Typography>
+                        }
+                    />
+                    <Typography variant="caption" sx={{ color: '#64748b', fontWeight: 600 }}>
+                        Menampilkan {displayedRows.length} dari {sourceRows.length} baris kinerja
+                    </Typography>
+                </Stack>
+            </Paper>
+
             {/* DATAGRID TABEL REVIEW DATA */}
             <Paper sx={{ height: 650, width: '100%', mb: 4, borderRadius: 3, overflow: 'hidden', border: '1px solid #e2e8f0', boxShadow: '0 4px 20px -2px rgba(15, 23, 42, 0.05)' }}>
                 <DataGrid
-                    rows={data}
+                    rows={displayedRows}
                     columns={columns}
                     getRowHeight={() => 'auto'}
                     pageSizeOptions={[10, 25, 50, 100]}

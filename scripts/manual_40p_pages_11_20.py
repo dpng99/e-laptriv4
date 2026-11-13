@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Modul Penyusun Halaman 11 sampai 20
-Buku Manual Operasional e-LAPTRI v4 (e-LKjIP Pembinaan)
+Buku Manual Operasional e-LAPTRI (e-LKjIP Pembinaan)
 Jaksa Agung Muda Bidang Pembinaan Kejaksaan Agung RI: Dr. Hendro Dewanto, S.H., M.Hum.
 """
 
@@ -62,7 +62,7 @@ def get_pages_11_to_20(assets):
                 <div class="feature-box">
                     <strong style="color: #0369a1; font-size: 7.8pt;">1. Evaluasi Independen Eksternal</strong>
                     <p style="font-size: 7.1pt; color: #475569; margin: 2px 0 0 0; line-height: 1.35;">
-                        Kedua nilai IKSS diperoleh dari hasil evaluasi resmi Kementerian PAN-RB yang diterbitkan setiap tahun. Angka ini dimasukkan ke sistem e-LAPTRI v4 dengan tipe formula <code>EXTERNAL_SCORE</code>.
+                        Kedua nilai IKSS diperoleh dari hasil evaluasi resmi Kementerian PAN-RB yang diterbitkan setiap tahun. Angka ini dimasukkan ke sistem e-LAPTRI dengan tipe formula <code>EXTERNAL_SCORE</code>.
                     </p>
                 </div>
                 <div class="feature-box">
@@ -75,7 +75,7 @@ def get_pages_11_to_20(assets):
 
             <div class="callout callout-info" style="margin-top: 10px;">
                 <strong>CATATAN TARGET GANDA:</strong><br>
-                Sistem e-LAPTRI v4 menyimpan target versi KEPJA 1184/2025 dan target Renstra 2025-2029 secara terpisah pada tabel <code>kinerja_targets</code>. Default operasional mengacu pada KEPJA 1184/2025 (<code>is_selected = true</code>).
+                Sistem e-LAPTRI menyimpan target versi KEPJA 1184/2025 dan target Renstra 2025-2029 secara terpisah pada tabel <code>kinerja_targets</code>. Default operasional mengacu pada KEPJA 1184/2025 (<code>is_selected = true</code>).
             </div>
         </div>
         <div class="footer">
@@ -306,7 +306,7 @@ def get_pages_11_to_20(assets):
 
             <div class="callout callout-info" style="margin-top: 6px;">
                 <strong>KODE NORMALISASI VS KODE CETAK SUMBER:</strong><br>
-                Sistem e-LAPTRI v4 menormalkan kode IKK menjadi format hierarki terstruktur (misal <code>IKK 18.1.1</code>), namun tetap menyimpan kode cetak sumber asli dari lampiran KEPJA 1184/2025 pada kolom <code>kinerja_ikk.kode_sumber</code> guna menjaga konsistensi saat audit.
+                Sistem e-LAPTRI menormalkan kode IKK menjadi format hierarki terstruktur (misal <code>IKK 18.1.1</code>), namun tetap menyimpan kode cetak sumber asli dari lampiran KEPJA 1184/2025 pada kolom <code>kinerja_ikk.kode_sumber</code> guna menjaga konsistensi saat audit.
             </div>
         </div>
         <div class="footer">
@@ -331,7 +331,7 @@ def get_pages_11_to_20(assets):
             <h2 class="title-primary">3.1 MANAJEMEN PERAN PENGGUNA &amp; MATRIKS KEWENANGAN (RBAC)</h2>
 
             <p class="paragraph">
-                Sistem e-LAPTRI v4 menerapkan kontrol akses berbasis peran <em>(Role-Based Access Control / RBAC)</em> yang memisahkan secara ketat batas kewenangan antara unit pelaksana operasional dengan unit pengawas dan verifikator di tingkat pusat:
+                Sistem e-LAPTRI menerapkan kontrol akses berbasis peran <em>(Role-Based Access Control / RBAC)</em> yang memisahkan secara ketat batas kewenangan antara unit pelaksana operasional dengan unit pengawas dan verifikator di tingkat pusat:
             </p>
 
             <table class="table-styled" style="font-size: 7.2pt; margin-top: 6px;">
@@ -418,13 +418,13 @@ def get_pages_11_to_20(assets):
             <h2 class="title-primary">3.2 PANDUAN AUTENTIKASI &amp; PROSEDUR LOGIN KE SISTEM</h2>
 
             <p class="paragraph">
-                Akses ke dalam portal e-LAPTRI v4 dilakukan melalui peramban web modern (Google Chrome atau Microsoft Edge) dengan membuka tautan resmi intranet Kejaksaan RI. Tampilan antarmuka login dirancang bersih, aman, dan responsif:
+                Akses ke dalam portal e-LAPTRI dilakukan melalui peramban web modern (Google Chrome atau Microsoft Edge) dengan membuka tautan resmi intranet Kejaksaan RI. Tampilan antarmuka login dirancang bersih, aman, dan responsif:
             </p>
 
             <!-- Screenshot Card -->
             <div class="screenshot-card">
-                <img src="{assets.get('img_login')}" class="screenshot-img" alt="Halaman Login e-LAPTRI v4">
-                <div class="screenshot-caption">Gambar 3.1: Antarmuka Halaman Login Resmi e-LAPTRI v4 (e-LKjIP Pembinaan)</div>
+                <img src="{assets.get('img_login')}" class="screenshot-img" alt="Halaman Login e-LAPTRI">
+                <div class="screenshot-caption">Gambar 3.1: Antarmuka Halaman Login Resmi e-LAPTRI (e-LKjIP Pembinaan)</div>
             </div>
 
             <h3 class="subtitle-primary">ANATOMI ELEMEN ANTARMUKA HALAMAN LOGIN:</h3>
@@ -479,7 +479,7 @@ def get_pages_11_to_20(assets):
 
             <!-- Screenshot Card -->
             <div class="screenshot-card">
-                <img src="{assets.get('img_profile')}" class="screenshot-img" alt="Halaman Profil Pengguna e-LAPTRI v4">
+                <img src="{assets.get('img_profile')}" class="screenshot-img" alt="Halaman Profil Pengguna e-LAPTRI">
                 <div class="screenshot-caption">Gambar 3.2: Formulir Pengaturan Profil &amp; Pembaruan Kata Sandi Akun</div>
             </div>
 
@@ -644,7 +644,7 @@ def get_pages_11_to_20(assets):
             <h2 class="title-primary">4.3 MANAJEMEN SIKLUS PELAPORAN TRIWULAN &amp; LIFECYCLE DATA</h2>
 
             <p class="paragraph">
-                Pelaporan kinerja triwulanan e-LAPTRI v4 dilaksanakan secara periodik 4 kali dalam setahun anggaran. Setiap periode memiliki jadwal pengisian yang ketat agar laporan kompilasi nasional dapat diserahkan ke Jaksa Agung dan KemenPAN-RB tepat waktu:
+                Pelaporan kinerja triwulanan e-LAPTRI dilaksanakan secara periodik 4 kali dalam setahun anggaran. Setiap periode memiliki jadwal pengisian yang ketat agar laporan kompilasi nasional dapat diserahkan ke Jaksa Agung dan KemenPAN-RB tepat waktu:
             </p>
 
             <table class="table-styled" style="font-size: 7.2pt; margin-top: 4px;">
@@ -736,7 +736,7 @@ def get_pages_11_to_20(assets):
             <h2 class="title-primary">5.1 STRUKTUR FORM INPUT DINAMIS &amp; TAB NAVIGASI LEVEL</h2>
 
             <p class="paragraph">
-                Modul <strong>Input Data</strong> merupakan jantung operasional aplikasi e-LAPTRI v4. Formulir ini dirancang dinamis: antarmuka hanya akan memunculkan ruas input komponen sesuai dengan formula aktif yang terdaftar di sistem:
+                Modul <strong>Input Data</strong> merupakan jantung operasional aplikasi e-LAPTRI. Formulir ini dirancang dinamis: antarmuka hanya akan memunculkan ruas input komponen sesuai dengan formula aktif yang terdaftar di sistem:
             </p>
 
             <!-- Screenshot Card -->
@@ -767,7 +767,7 @@ def get_pages_11_to_20(assets):
 
             <div class="callout callout-info" style="margin-top: 8px;">
                 <strong>SISTEM INPUT BERBASIS ATRIBUT NODE:</strong><br>
-                Sesuai aturan arsitektur, formulir e-LAPTRI v4 memeriksa nilai <code>node.input_enabled</code>. Hanya indikator yang ditandai aktif untuk satker Anda yang akan memunculkan kotak input variabel, mencegah kekeliruan salah input pada indikator biro lain.
+                Sesuai aturan arsitektur, formulir e-LAPTRI memeriksa nilai <code>node.input_enabled</code>. Hanya indikator yang ditandai aktif untuk satker Anda yang akan memunculkan kotak input variabel, mencegah kekeliruan salah input pada indikator biro lain.
             </div>
         </div>
         <div class="footer">

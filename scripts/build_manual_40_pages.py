@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Script Generator Buku Manual Operasional E-LAPTRI v4 (40 Halaman)
+Script Generator Buku Manual Operasional E-LAPTRI (40 Halaman)
 Jaksa Agung Muda Bidang Pembinaan Kejaksaan Agung RI: Dr. Hendro Dewanto, S.H., M.Hum.
 """
 
@@ -37,7 +37,7 @@ def get_base64_image(filename):
 
 def main():
     print("=================================================================")
-    print("  GENERATOR BUKU MANUAL OPERASIONAL E-LAPTRI v4 (40 HALAMAN)    ")
+    print("  GENERATOR BUKU MANUAL OPERASIONAL E-LAPTRI (40 HALAMAN)    ")
     print("  Jaksa Agung Muda Bidang Pembinaan: Dr. Hendro Dewanto, S.H., M.Hum.")
     print("=================================================================")
 
@@ -77,7 +77,7 @@ def main():
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Buku Manual E-LAPTRI v4 - 40 Halaman Lengkap</title>
+    <title>Buku Manual E-LAPTRI - 40 Halaman Lengkap</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <style>
@@ -374,7 +374,7 @@ def main():
         sys.exit(1)
 
     print("=================================================================")
-    print("  PROSES SELESAI: 40 HALAMAN BUKU MANUAL E-LAPTRI v4 TERCIPTA!   ")
+    print("  PROSES SELESAI: 40 HALAMAN BUKU MANUAL E-LAPTRI TERCIPTA!   ")
     print("=================================================================")
 
 if __name__ == "__main__":

@@ -1,5 +1,5 @@
-import { Card, CardContent, Stack, Box, Chip, Typography, Divider, Button, CircularProgress } from '@mui/material';
-import { Save as SaveIcon } from '@mui/icons-material';
+import { Card, CardContent, Stack, Box, Chip, Typography, Divider, Button, CircularProgress, Alert } from '@mui/material';
+import { Save as SaveIcon, Lock as LockIcon } from '@mui/icons-material';
 import InputHelp from './InputHelp';
 import FormulaFields from './FormulaFields';
 import AnalysisFields from './AnalysisFields';
@@ -17,6 +17,8 @@ export default function IkpCard({
 }) {
     const node = ikp?.node || {};
     const isTercapai = measurement?.status_capaian === 'TERCAPAI';
+    const isReported = measurement?.status === 'REPORTED';
+    const isLocked = isReported || ['FINAL', 'APPROVED', 'LOCKED'].includes((measurement?.status || '').toUpperCase()) || measurement?.locked_at != null;
 
     return (
         <Card
@@ -25,7 +27,7 @@ export default function IkpCard({
                 borderRadius: 3,
                 border: '1px solid #e2e8f0',
                 boxShadow: '0 2px 10px -2px rgba(15, 23, 42, 0.04)',
-                borderLeft: `5px solid ${isTercapai ? '#059669' : '#3b82f6'}`
+                borderLeft: `5px solid ${isLocked ? '#f59e0b' : (isTercapai ? '#059669' : '#3b82f6')}`
             }}
         >
             <CardContent sx={{ p: { xs: 2.5, md: 3 } }}>
@@ -42,6 +44,21 @@ export default function IkpCard({
                     </Box>
 
                     <Stack direction="row" flexWrap="wrap" gap={1} alignItems="center" sx={{ flexShrink: 0, mt: { xs: 1, lg: 0 } }}>
+                        {isReported ? (
+                            <Chip
+                                size="small"
+                                icon={<LockIcon sx={{ fontSize: '14px !important', color: '#b45309' }} />}
+                                label="Nilai Resmi Laporan (Terkunci)"
+                                sx={{ fontWeight: 800, bgcolor: '#fef3c7', color: '#92400e', border: '1px solid #fde68a' }}
+                            />
+                        ) : isLocked ? (
+                            <Chip
+                                size="small"
+                                icon={<LockIcon sx={{ fontSize: '14px !important', color: '#475569' }} />}
+                                label="Pengukuran Terkunci"
+                                sx={{ fontWeight: 800, bgcolor: '#f1f5f9', color: '#475569', border: '1px solid #cbd5e1' }}
+                            />
+                        ) : null}
                         {target && (
                             <Chip
                                 size="small"
@@ -86,52 +103,63 @@ export default function IkpCard({
 
                 <Divider sx={{ mb: 2.5 }} />
                 <InputHelp entity={ikp} />
-                <FormulaFields entity={ikp} value={value} onChange={onChange} />
-                <AnalysisFields value={value} onChange={onChange} />
+                <FormulaFields entity={ikp} value={value} onChange={onChange} disabled={isLocked} />
+                <AnalysisFields value={value} onChange={onChange} disabled={isLocked} />
 
                 {/* Single IKP Save & Calculate Action */}
-                <Box
-                    sx={{
-                        mt: 3,
-                        pt: 2,
-                        borderTop: '1px solid #e2e8f0',
-                        display: 'flex',
-                        flexDirection: { xs: 'column', sm: 'row' },
-                        justifyContent: 'space-between',
-                        alignItems: { xs: 'stretch', sm: 'center' },
-                        gap: 1.5,
-                    }}
-                >
-                    <Typography variant="caption" sx={{ color: '#64748b', fontWeight: 600 }}>
-                        Simpan data untuk indikator <strong>{ikp.kode_ikp}</strong> secara mandiri tanpa harus submit bulk.
-                    </Typography>
-                    <Button
-                        type="button"
-                        variant="contained"
-                        size="small"
-                        onClick={() => onSaveSingle('IKP', ikp.kode_ikp)}
-                        disabled={isSaving || loading}
-                        startIcon={isSaving ? <CircularProgress size={16} color="inherit" /> : <SaveIcon />}
-                        sx={{
-                            bgcolor: '#0284c7',
-                            color: '#ffffff',
-                            background: 'linear-gradient(135deg, #0284c7 0%, #0369a1 100%)',
-                            fontWeight: 700,
-                            borderRadius: 2,
-                            px: 2.5,
-                            py: 0.8,
-                            boxShadow: '0 2px 8px rgba(2, 132, 199, 0.25)',
-                            textTransform: 'none',
-                            fontSize: '0.875rem',
-                            whiteSpace: 'nowrap',
-                            '&:hover': {
-                                background: 'linear-gradient(135deg, #0369a1 0%, #075985 100%)',
+                {isLocked ? (
+                    <Box sx={{ mt: 3, pt: 2, borderTop: '1px solid #e2e8f0' }}>
+                        <Alert severity="info" sx={{ borderRadius: 2 }}>
+                            {isReported
+                                ? 'Indikator ini merupakan nilai resmi Laporan Kinerja JAMBIN yang telah terkunci sehingga tidak dapat diubah dari form input manual.'
+                                : 'Indikator ini telah diverifikasi/disetujui dan berstatus terkunci.'
                             }
+                        </Alert>
+                    </Box>
+                ) : (
+                    <Box
+                        sx={{
+                            mt: 3,
+                            pt: 2,
+                            borderTop: '1px solid #e2e8f0',
+                            display: 'flex',
+                            flexDirection: { xs: 'column', sm: 'row' },
+                            justifyContent: 'space-between',
+                            alignItems: { xs: 'stretch', sm: 'center' },
+                            gap: 1.5,
                         }}
                     >
-                        {isSaving ? 'Menyimpan & Menghitung...' : 'Simpan & Hitung Kinerja'}
-                    </Button>
-                </Box>
+                        <Typography variant="caption" sx={{ color: '#64748b', fontWeight: 600 }}>
+                            Simpan data untuk indikator <strong>{ikp.kode_ikp}</strong> secara mandiri tanpa harus submit bulk.
+                        </Typography>
+                        <Button
+                            type="button"
+                            variant="contained"
+                            size="small"
+                            onClick={() => onSaveSingle('IKP', ikp.kode_ikp)}
+                            disabled={isSaving || loading}
+                            startIcon={isSaving ? <CircularProgress size={16} color="inherit" /> : <SaveIcon />}
+                            sx={{
+                                bgcolor: '#0284c7',
+                                color: '#ffffff',
+                                background: 'linear-gradient(135deg, #0284c7 0%, #0369a1 100%)',
+                                fontWeight: 700,
+                                borderRadius: 2,
+                                px: 2.5,
+                                py: 0.8,
+                                boxShadow: '0 2px 8px rgba(2, 132, 199, 0.25)',
+                                textTransform: 'none',
+                                fontSize: '0.875rem',
+                                whiteSpace: 'nowrap',
+                                '&:hover': {
+                                    background: 'linear-gradient(135deg, #0369a1 0%, #075985 100%)',
+                                }
+                            }}
+                        >
+                            {isSaving ? 'Menyimpan & Menghitung...' : 'Simpan & Hitung Kinerja'}
+                        </Button>
+                    </Box>
+                )}
             </CardContent>
         </Card>
     );

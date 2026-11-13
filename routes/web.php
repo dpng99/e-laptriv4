@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\AdminDashboardController;
+use App\Http\Controllers\AdminNodeVisibilityController;
+use App\Http\Controllers\AdminSerenataController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ExportController;
 use App\Http\Controllers\InputDataController;
@@ -26,6 +28,17 @@ Route::middleware(['auth'])->group(function () {
 
         Route::get('/review-data', [ReviewDataController::class, 'index'])->name('review-data.index');
         Route::get('/review-data/{id}', [ReviewDataController::class, 'show'])->name('review-data.show');
+
+        // Manajemen Visibilitas (Show/Hide) SK dan IKK
+        Route::patch('/admin/visibility/node/{node}', [AdminNodeVisibilityController::class, 'toggle'])->name('admin.visibility.toggle');
+        Route::post('/admin/visibility/bulk', [AdminNodeVisibilityController::class, 'bulk'])->name('admin.visibility.bulk');
+
+        // Integrasi API Aman SERENATA PANEV (Modul Nilai IKP & Modul Narasi IKP)
+        Route::get('/admin/serenata', [AdminSerenataController::class, 'index'])->name('admin.serenata.index');
+        Route::put('/admin/serenata/config', [AdminSerenataController::class, 'updateConfig'])->name('admin.serenata.config.update');
+        Route::post('/admin/serenata/rotate-credentials', [AdminSerenataController::class, 'rotateCredentials'])->name('admin.serenata.rotate');
+        Route::post('/admin/serenata/push/nilai', [AdminSerenataController::class, 'pushNilai'])->name('admin.serenata.push.nilai');
+        Route::post('/admin/serenata/push/narasi', [AdminSerenataController::class, 'pushNarasi'])->name('admin.serenata.push.narasi');
 
         Route::get('/export', [ExportController::class, 'index'])->name('export.index');
         Route::get('/export/word/{tahun}/{triwulan}', [ExportController::class, 'exportWord'])

@@ -14,6 +14,7 @@ export default function AuthenticatedLayout({ header, children }) {
             { label: 'Review Data', routeName: 'review-data.index', active: 'review-data.*' },
             { label: 'Template E-Laptri', routeName: 'admin.template.index', active: 'admin.template.*' },
             { label: 'Export Laporan', routeName: 'export.index', active: 'export.*' },
+            { label: 'SERENATA PANEV', routeName: 'admin.serenata.index', active: 'admin.serenata.*' },
         ]
         : [
             { label: 'Dashboard', routeName: 'dashboard', active: 'dashboard' },

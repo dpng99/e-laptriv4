@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Modul Penyusun Halaman 31 sampai 40
-Buku Manual Operasional e-LAPTRI v4 (e-LKjIP Pembinaan)
+Buku Manual Operasional e-LAPTRI (e-LKjIP Pembinaan)
 Jaksa Agung Muda Bidang Pembinaan Kejaksaan Agung RI: Dr. Hendro Dewanto, S.H., M.Hum.
 """
 
@@ -121,7 +121,7 @@ def get_pages_31_to_40(assets):
 
             <div class="callout callout-info" style="margin-top: 8px;">
                 <strong>LARANGAN EKSEKUSI STRING RUMUS SECARA DINAMIS:</strong><br>
-                Sistem e-LAPTRI v4 secara ketat melarang eksekusi teks rumus menggunakan <code>eval()</code>. Semua kalkulasi dieksekusi melalui *Calculation Strategy Class* khusus yang telah teruji unit test secara ketat.
+                Sistem e-LAPTRI secara ketat melarang eksekusi teks rumus menggunakan <code>eval()</code>. Semua kalkulasi dieksekusi melalui *Calculation Strategy Class* khusus yang telah teruji unit test secara ketat.
             </div>
         </div>
         <div class="footer">
@@ -173,7 +173,7 @@ def get_pages_31_to_40(assets):
                 </tr>
                 <tr>
                     <td><strong>RATIO</strong></td>
-                    <td>Persentase dari pembagian pembilang dan penyebut $(X_1 / X_2) \times 100\%$.</td>
+                    <td>Persentase dari pembagian pembilang dan penyebut $(X_1 / X_2) \times 100\\%$.</td>
                     <td>IKK 14.1.1 (Persentase RKA-K/L Sesuai Standar).</td>
                 </tr>
                 <tr>
@@ -230,7 +230,7 @@ def get_pages_31_to_40(assets):
             <h2 class="title-primary">7.3 VERSIONING FORMULA, AUDIT TRAIL &amp; INTEGRITAS GRAPH</h2>
 
             <p class="paragraph">
-                Perubahan formula indikator di tengah berjalannya periode Renstra berpotensi merusak validitas data historis triwulan sebelumnya. Oleh sebab itu, e-LAPTRI v4 menerapkan mekanisme <strong>Formula Versioning</strong> dan <strong>Graph Integrity Validator</strong>:
+                Perubahan formula indikator di tengah berjalannya periode Renstra berpotensi merusak validitas data historis triwulan sebelumnya. Oleh sebab itu, e-LAPTRI menerapkan mekanisme <strong>Formula Versioning</strong> dan <strong>Graph Integrity Validator</strong>:
             </p>
 
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 8px 0;">
@@ -308,7 +308,7 @@ def get_pages_31_to_40(assets):
             <h2 class="title-primary">8.1 MANAJEMEN TEMPLATE DOKUMEN WORD LKjIP SAKIP</h2>
 
             <p class="paragraph">
-                Penyusunan Laporan Kinerja (LKjIP) di e-LAPTRI v4 tidak lagi menggunakan cara manual salin-tempel ke Microsoft Word. Modul <strong>Template Builder LKjIP</strong> memisahkan desain dokumen dinas dari data transaksi kinerja secara elegan:
+                Penyusunan Laporan Kinerja (LKjIP) di e-LAPTRI tidak lagi menggunakan cara manual salin-tempel ke Microsoft Word. Modul <strong>Template Builder LKjIP</strong> memisahkan desain dokumen dinas dari data transaksi kinerja secara elegan:
             </p>
 
             <!-- Screenshot Card -->
@@ -364,7 +364,7 @@ def get_pages_31_to_40(assets):
             <h2 class="title-primary">8.2 STANDARDISASI PLACEHOLDER &amp; TAGGING DINAMIS PHPWORD</h2>
 
             <p class="paragraph">
-                Generator dokumen e-LAPTRI v4 bekerja dengan membaca token penanda <em>(placeholder tags)</em> di dalam berkas Microsoft Word (.docx). Saat proses ekspor dijalankan, engine PHPWord mengganti setiap token dengan data kinerja riil:
+                Generator dokumen e-LAPTRI bekerja dengan membaca token penanda <em>(placeholder tags)</em> di dalam berkas Microsoft Word (.docx). Saat proses ekspor dijalankan, engine PHPWord mengganti setiap token dengan data kinerja riil:
             </p>
 
             <table class="table-styled" style="font-size: 7.2pt; margin-top: 4px;">
@@ -464,7 +464,7 @@ def get_pages_31_to_40(assets):
                 <div style="background: #f8fafc; border-left: 3.5px solid #0284c7; padding: 6px 10px; border-radius: 4px;">
                     <strong style="color: #0369a1; font-size: 8pt;">Langkah 1: Unduh Master Template Rujukan</strong>
                     <div style="font-size: 7.2pt; color: #334155; margin-top: 2px;">
-                        Klik tombol <strong>Download Default Template</strong> pada modul template e-LAPTRI v4. Berkas <code>template_lkjip_jambin_master.docx</code> akan terunduh ke komputer Anda sebagai basis acuan desain.
+                        Klik tombol <strong>Download Default Template</strong> pada modul template e-LAPTRI. Berkas <code>template_lkjip_jambin_master.docx</code> akan terunduh ke komputer Anda sebagai basis acuan desain.
                     </div>
                 </div>
 
@@ -670,7 +670,7 @@ def get_pages_31_to_40(assets):
                 <div style="width: 50%;">
                     <div style="font-size: 7.5pt; color: #64748b; font-weight: 700;">DITERBITKAN SECARA RESMI DI JAKARTA:</div>
                     <div style="font-size: 7.2pt; color: #334155; margin-top: 2px; line-height: 1.35;">
-                        Buku Manual Operasional e-LAPTRI v4 ini dinyatakan sah dan berlaku mengikat sebagai Standar Operasional Prosedur bagi seluruh jajaran di lingkungan Jaksa Agung Muda Bidang Pembinaan sejak tanggal ditetapkan.
+                        Buku Manual Operasional e-LAPTRI ini dinyatakan sah dan berlaku mengikat sebagai Standar Operasional Prosedur bagi seluruh jajaran di lingkungan Jaksa Agung Muda Bidang Pembinaan sejak tanggal ditetapkan.
                     </div>
                 </div>
 

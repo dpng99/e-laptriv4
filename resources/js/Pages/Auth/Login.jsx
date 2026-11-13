@@ -12,6 +12,7 @@ import {
     VisibilityOff as VisibilityOffIcon,
     Shield as ShieldIcon
 } from '@mui/icons-material';
+import ElaptriLogo from '@/Components/ElaptriLogo';
 
 export default function Login({ status, canResetPassword }) {
     const [showPassword, setShowPassword] = useState(false);
@@ -45,20 +46,8 @@ export default function Login({ status, canResetPassword }) {
             <Container maxWidth="xs" sx={{ mx: 'auto' }}>
                 {/* Header Brand */}
                 <Box sx={{ textAlign: 'center', mb: 3 }}>
-                    <Box sx={{
-                        width: 56,
-                        height: 56,
-                        borderRadius: '16px',
-                        background: 'linear-gradient(135deg, #059669 0%, #10b981 100%)',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        mx: 'auto',
-                        mb: 2,
-                        boxShadow: '0 8px 24px rgba(5, 150, 105, 0.35)',
-                        color: '#ffffff'
-                    }}>
-                        <ShieldIcon sx={{ fontSize: 32 }} />
+                    <Box sx={{ mb: 2, display: 'flex', justifyContent: 'center' }}>
+                        <ElaptriLogo variant="mark" theme="dark" size={64} />
                     </Box>
                     <Typography variant="h5" sx={{ fontWeight: 800, color: '#f8fafc', letterSpacing: '-0.02em', mb: 0.5 }}>
                         E-Laptri Pembinaan

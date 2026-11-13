@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Modul Penyusun Halaman 21 sampai 30
-Buku Manual Operasional e-LAPTRI v4 (e-LKjIP Pembinaan)
+Buku Manual Operasional e-LAPTRI (e-LKjIP Pembinaan)
 Jaksa Agung Muda Bidang Pembinaan Kejaksaan Agung RI: Dr. Hendro Dewanto, S.H., M.Hum.
 """
 
@@ -43,7 +43,7 @@ def get_pages_21_to_30(assets):
                 </div>
                 <div style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 4px; padding: 5px 8px;">
                     <strong style="color: #064e3b;">[3] Live Preview Realisasi Terkalkulasi:</strong><br>
-                    Sistem secara instan menghitung: $(450 / 500) \times 100\% = 90.00\%$. Operator dapat langsung memvalidasi kebenaran angka sebelum disimpan.
+                    Sistem secara instan menghitung: $(450 / 500) \times 100\\% = 90.00\\%$. Operator dapat langsung memvalidasi kebenaran angka sebelum disimpan.
                 </div>
                 <div style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 4px; padding: 5px 8px;">
                     <strong style="color: #d97706;">[4] Informasi Petunjuk Rumus Resmi:</strong><br>
@@ -78,7 +78,7 @@ def get_pages_21_to_30(assets):
             <h2 class="title-primary">5.3 PERBEDAAN INDIKATOR MANDIRI VS AGREGATIF / ROLL-UP</h2>
 
             <p class="paragraph">
-                Dalam arsitektur e-LAPTRI v4, setiap indikator kinerja diklasifikasikan ke dalam dua mekanisme pengisian yang sangat berbeda. Pemahaman atas klasifikasi ini penting agar operator tidak menunggu data yang seharusnya diinput mandiri:
+                Dalam arsitektur e-LAPTRI, setiap indikator kinerja diklasifikasikan ke dalam dua mekanisme pengisian yang sangat berbeda. Pemahaman atas klasifikasi ini penting agar operator tidak menunggu data yang seharusnya diinput mandiri:
             </p>
 
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 8px 0;">
@@ -142,7 +142,7 @@ def get_pages_21_to_30(assets):
 
             <div class="callout callout-info" style="margin-top: 8px;">
                 <strong>PRINSIP FORMULA COMPONENT:</strong><br>
-                Engine e-LAPTRI v4 hanya melakukan roll-up jika edge relasi bertipe <code>FORMULA_COMPONENT</code>. Relasi bertipe <code>CONTRIBUTION</code> tidak akan pernah dijumlahkan secara otomatis, melindungi integritas skor agregat.
+                Engine e-LAPTRI hanya melakukan roll-up jika edge relasi bertipe <code>FORMULA_COMPONENT</code>. Relasi bertipe <code>CONTRIBUTION</code> tidak akan pernah dijumlahkan secara otomatis, melindungi integritas skor agregat.
             </div>
         </div>
         <div class="footer">
@@ -167,19 +167,19 @@ def get_pages_21_to_30(assets):
             <h2 class="title-primary">5.4 MEKANISME KALKULASI REALISASI &amp; CAPAIAN TARGET</h2>
 
             <p class="paragraph">
-                Sistem e-LAPTRI v4 membedakan secara tegas antara konsep <strong>Realisasi</strong> (output fisik dalam satuan indikator) dan <strong>Capaian terhadap Target</strong> (persentase keberhasilan terhadap standar yang ditetapkan):
+                Sistem e-LAPTRI membedakan secara tegas antara konsep <strong>Realisasi</strong> (output fisik dalam satuan indikator) dan <strong>Capaian terhadap Target</strong> (persentase keberhasilan terhadap standar yang ditetapkan):
             </p>
 
             <div style="background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; padding: 10px; margin: 8px 0;">
                 <div style="font-size: 7.8pt; font-weight: 800; color: #064e3b; text-transform: uppercase; margin-bottom: 6px; text-align: center;">
-                    FORMULASI MATEMATIKA BAKU SAKIP PADA e-LAPTRI v4
+                    FORMULASI MATEMATIKA BAKU SAKIP PADA e-LAPTRI
                 </div>
                 
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
                     <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 6px; padding: 8px; text-align: center;">
                         <div style="font-size: 7.2pt; color: #64748b; font-weight: 700;">1. RUMUS REALISASI (OUTPUT)</div>
                         <div style="font-size: 11pt; font-weight: 800; color: #0284c7; margin: 4px 0;">
-                            $$\text{{Realisasi}} = \frac{{X_1}}{{X_2}} \times 100\%$$
+                            $$\text{{Realisasi}} = \frac{{X_1}}{{X_2}} \times 100\\%$$
                         </div>
                         <div style="font-size: 6.8pt; color: #475569;">Di mana $X_1$ adalah pembilang dan $X_2$ adalah penyebut.</div>
                     </div>
@@ -187,7 +187,7 @@ def get_pages_21_to_30(assets):
                     <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 6px; padding: 8px; text-align: center;">
                         <div style="font-size: 7.2pt; color: #64748b; font-weight: 700;">2. RUMUS CAPAIAN TERHADAP TARGET</div>
                         <div style="font-size: 11pt; font-weight: 800; color: #059669; margin: 4px 0;">
-                            $$\text{{Capaian}} = \frac{{\text{{Realisasi}}}}{{\text{{Target}}}} \times 100\%$$
+                            $$\text{{Capaian}} = \frac{{\text{{Realisasi}}}}{{\text{{Target}}}} \times 100\\%$$
                         </div>
                         <div style="font-size: 6.8pt; color: #475569;">Untuk indikator dengan arah kinerja positif <em>(maximize)</em>.</div>
                     </div>
@@ -200,7 +200,7 @@ def get_pages_21_to_30(assets):
                     <strong style="color: #92400e; font-size: 7.6pt;">A. Arah Kinerja Negatif (Minimize)</strong>
                     <p style="font-size: 7pt; color: #475569; margin: 2px 0 0 0; line-height: 1.35;">
                         Untuk indikator di mana semakin kecil nilai realisasi semakin baik (misalnya waktu penyelesaian temuan BPK atau angka pelanggaran disiplin), formulanya adalah:
-                        $$\text{{Capaian}} = \left( 1 + \frac{{\text{{Target}} - \text{{Realisasi}}}}{{\text{{Target}}}} \right) \times 100\%$$
+                        $$\text{{Capaian}} = \left( 1 + \frac{{\text{{Target}} - \text{{Realisasi}}}}{{\text{{Target}}}} \right) \times 100\\%$$
                     </p>
                 </div>
 
@@ -239,7 +239,7 @@ def get_pages_21_to_30(assets):
             <h2 class="title-primary">5.5 PENYUSUNAN LEMBAR ANALISIS KINERJA, KENDALA &amp; SOLUSI</h2>
 
             <p class="paragraph">
-                Laporan Akuntabilitas Kinerja (LKjIP) tidak hanya menyajikan angka numerik, tetapi menuntut penjelasan naratif yang mendalam. Formulir e-LAPTRI v4 menyediakan ruas analisis yang wajib diisi oleh operator untuk setiap indikator yang mengalami deviasi target:
+                Laporan Akuntabilitas Kinerja (LKjIP) tidak hanya menyajikan angka numerik, tetapi menuntut penjelasan naratif yang mendalam. Formulir e-LAPTRI menyediakan ruas analisis yang wajib diisi oleh operator untuk setiap indikator yang mengalami deviasi target:
             </p>
 
             <!-- Screenshot Card -->
@@ -291,7 +291,7 @@ def get_pages_21_to_30(assets):
             <h2 class="title-primary">5.6 UNGGAH BUKTI DUKUNG (EVIDENCE) &amp; FITUR AUTOSAVE</h2>
 
             <p class="paragraph">
-                Dalam penilaian SAKIP oleh Kementerian PAN-RB dan BPKP, angka tanpa bukti dukung dianggap nihil. Oleh karena itu, e-LAPTRI v4 mewajibkan pelampiran berkas digital (evidence) untuk setiap komponen angka yang diinput:
+                Dalam penilaian SAKIP oleh Kementerian PAN-RB dan BPKP, angka tanpa bukti dukung dianggap nihil. Oleh karena itu, e-LAPTRI mewajibkan pelampiran berkas digital (evidence) untuk setiap komponen angka yang diinput:
             </p>
 
             <table class="table-styled" style="font-size: 7.2pt; margin-top: 4px;">
@@ -494,7 +494,7 @@ def get_pages_21_to_30(assets):
             <h2 class="title-primary">6.2 MONITORING KEPATUHAN PENGISIAN SELURUH SATKER</h2>
 
             <p class="paragraph">
-                Tepat waktu dan lengkapnya pelaporan kinerja merupakan indikator kedisiplinan organisasi. Sistem e-LAPTRI v4 menyajikan tabel pemantauan kepatuhan pengisian data dari 10 Unit Kerja Eselon II secara waktu nyata <em>(real-time)</em>:
+                Tepat waktu dan lengkapnya pelaporan kinerja merupakan indikator kedisiplinan organisasi. Sistem e-LAPTRI menyajikan tabel pemantauan kepatuhan pengisian data dari 10 Unit Kerja Eselon II secara waktu nyata <em>(real-time)</em>:
             </p>
 
             <table class="table-styled" style="font-size: 7.1pt; margin-top: 4px;">

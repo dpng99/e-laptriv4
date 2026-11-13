@@ -36,6 +36,7 @@ class InputDataController extends Controller
         $triwulan = (int) ($validated['triwulan'] ?? 1);
 
         $ikks = Ikk::whereHas('node.units', fn ($query) => $query->whereKey($unit->id))
+            ->visibleOperational()
             ->with([
                 'node.units',
                 'node.formulas.components',
@@ -148,15 +149,16 @@ class InputDataController extends Controller
 
         $username = $request->user()->username ?? 'system';
 
-        // Authorize IKK ownership
+        // Authorize IKK ownership and operational visibility
         $requestedIkkCodes = collect($validated['data'] ?? [])->pluck('kode_ikk')->filter()->unique();
         if ($requestedIkkCodes->isNotEmpty()) {
             $authorizedIkkCodes = Ikk::query()
                 ->whereIn('kode_ikk', $requestedIkkCodes)
+                ->visibleOperational()
                 ->whereHas('node.units', fn ($query) => $query->whereKey($unit->id))
                 ->pluck('kode_ikk');
 
-            abort_if($requestedIkkCodes->diff($authorizedIkkCodes)->isNotEmpty(), 403, 'Terdapat indikator IKK yang bukan milik bidang Anda.');
+            abort_if($requestedIkkCodes->diff($authorizedIkkCodes)->isNotEmpty(), 403, 'Terdapat indikator IKK yang bukan milik bidang Anda atau sedang dinonaktifkan.');
         }
 
         // Authorize IKP ownership

@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panduan Paparan & Live Demo Aplikasi E-Laptri JAMBIN (Arsitektur V3)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        mono: ['"JetBrains Mono"', 'monospace']
+                    },
+                    colors: {
+                        brand: {
+                            50: '#ecfdf5',
+                            100: '#d1fae5',
+                            500: '#10b981',
+                            600: '#059669',
+                            700: '#047857',
+                            800: '#065f46',
+                            900: '#064e3b'
+                        },
+                        navy: {
+                            800: '#1e293b',
+                            900: '#0f172a',
+                            950: '#020617'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        @media print {
+            .no-print { display: none !important; }
+            body { font-size: 11pt; color: #000; background: #fff !important; }
+            .page-break { page-break-before: always; }
+        }
+        .code-pill {
+            font-family: 'JetBrains Mono', monospace;
+            background: #f1f5f9;
+            color: #0f172a;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.85em;
+            border: 1px solid #cbd5e1;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+    <!-- Top Sticky Header -->
+    <header class="sticky top-0 z-50 bg-navy-900/95 backdrop-blur border-b border-slate-700 text-white px-4 lg:px-8 py-3.5 shadow-lg">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500 to-emerald-600 flex items-center justify-center font-extrabold text-white shadow-md shadow-brand-500/20 text-lg">
+                    ⚖️
+                </div>
+                <div>
+                    <div class="flex items-center gap-2">
+                        <span class="font-extrabold text-base tracking-tight text-white">E-Laptri JAMBIN</span>
+                        <span class="bg-amber-500/20 text-amber-400 text-xs px-2 py-0.5 rounded font-bold border border-amber-500/30">Arsitektur V3</span>
+                    </div>
+                    <p class="text-xs text-slate-400">Pegangan Pembicara: Panduan Paparan & Live Demo Khusus Operator Biro / Pusat</p>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-2 no-print">
+                <button onclick="window.print()" class="px-3.5 py-1.5 text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg border border-slate-600 transition flex items-center gap-1.5">
+                    🖨️ Cetak / PDF
+                </button>
+                <a href="#sesi-biro" class="px-3.5 py-1.5 text-xs font-bold bg-brand-600 hover:bg-brand-500 text-white rounded-lg shadow-md shadow-brand-600/30 transition flex items-center gap-1.5">
+                    📑 Lompat ke Isian Biro/Pusat
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="max-w-7xl mx-auto px-4 lg:px-8 py-8 grid grid-cols-1 lg:grid-cols-12 gap-8">
+
+        <!-- Left Navigation Sidebar (Sticky) -->
+        <aside class="lg:col-span-3 no-print">
+            <div class="sticky top-24 space-y-4">
+                <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm">
+                    <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">Daftar Menu Cepat</h3>
+                    <nav class="space-y-1 text-sm font-medium">
+                        <a href="#overview" class="block px-3 py-2 rounded-lg hover:bg-slate-100 text-slate-700 transition">📌 1. Ringkasan & Alur Demo</a>
+                        <a href="#sesi-login" class="block px-3 py-2 rounded-lg hover:bg-slate-100 text-slate-700 transition">🔑 2. Login & Pembagian Akun</a>
+                        <a href="#sesi-dashboard" class="block px-3 py-2 rounded-lg hover:bg-slate-100 text-slate-700 transition">📊 3. Fitur Dashboard Unit</a>
+                        <a href="#sesi-kalkulasi" class="block px-3 py-2 rounded-lg hover:bg-slate-100 text-slate-700 transition">⚙️ 4. Mesin Kalkulasi V3</a>
+                        <a href="#sesi-input" class="block px-3 py-2 rounded-lg hover:bg-slate-100 text-slate-700 transition">✍️ 5. Tata Cara Pengisian</a>
+                        <a href="#sesi-biro" class="block px-3 py-2 rounded-lg hover:bg-brand-50 text-brand-700 font-bold transition">🏛️ 6. Detail Isian per Biro</a>
+                        <a href="#sesi-faq" class="block px-3 py-2 rounded-lg hover:bg-slate-100 text-slate-700 transition">❓ 7. Daftar FAQ Operator</a>
+                        <a href="#sesi-penutup" class="block px-3 py-2 rounded-lg hover:bg-slate-100 text-slate-700 transition">🎯 8. Tindak Lanjut Rapat</a>
+                    </nav>
+                </div>
+
+                <!-- Credential Quick Card -->
+                <div class="bg-gradient-to-br from-slate-900 to-navy-900 rounded-2xl p-4 text-white border border-slate-700 shadow-sm">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-xs font-bold uppercase text-brand-400">Default Password</span>
+                        <span class="text-[10px] bg-brand-500/20 text-brand-300 px-2 py-0.5 rounded border border-brand-500/30">Semua Akun</span>
+                    </div>
+                    <div class="bg-black/40 rounded-lg p-2.5 flex items-center justify-between border border-white/10 font-mono text-sm text-emerald-300">
+                        <span>password</span>
+                        <button onclick="navigator.clipboard.writeText('password'); alert('Password berhasil disalin!');" class="text-xs bg-slate-700 hover:bg-slate-600 text-white px-2 py-1 rounded transition">Salin</button>
+                    </div>
+                    <p class="text-[11px] text-slate-400 mt-2 leading-relaxed">
+                        Operator wajib mengganti password setelah login perdana melalui menu Profil.
+                    </p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Canvas -->
+        <main class="lg:col-span-9 space-y-10">
+
+            <!-- Hero Intro Banner -->
+            <section id="overview" class="bg-gradient-to-br from-navy-900 via-slate-900 to-brand-950 text-white rounded-3xl p-6 lg:p-8 shadow-xl border border-slate-700 relative overflow-hidden">
+                <div class="relative z-10 space-y-4">
+                    <div class="inline-flex items-center gap-2 bg-brand-500/20 text-brand-300 px-3 py-1 rounded-full text-xs font-bold border border-brand-500/30">
+                        ⚡ Live Demo Screen Share Ready
+                    </div>
+                    <h1 class="text-2xl lg:text-3xl font-extrabold tracking-tight text-white leading-tight">
+                        Panduan Paparan & Naskah Live Demo Aplikasi E-Laptri JAMBIN
+                    </h1>
+                    <p class="text-slate-300 text-sm leading-relaxed max-w-3xl">
+                        Disusun khusus untuk memandu presentasi teknis di depan para <strong>Operator Biro & Pusat JAMBIN</strong>.
+                        Karena paparan dilakukan dengan menampilkan langsung aplikasi di layar (tanpa slide), dokumen ini berisi naskah pembuka, alur navigasi menu, bedah isian masing-masing unit kerja, serta jawaban tegas atas pertanyaan yang pasti diajukan oleh operator.
+                    </p>
+
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-4 border-t border-slate-700/80 text-xs">
+                        <div class="bg-white/5 rounded-xl p-3 border border-white/10">
+                            <span class="text-slate-400 block">Dasar Hukum:</span>
+                            <span class="font-bold text-white">Kepja 1184 / 2025</span>
+                        </div>
+                        <div class="bg-white/5 rounded-xl p-3 border border-white/10">
+                            <span class="text-slate-400 block">Renstra:</span>
+                            <span class="font-bold text-white">Kejaksaan 2025–2029</span>
+                        </div>
+                        <div class="bg-white/5 rounded-xl p-3 border border-white/10">
+                            <span class="text-slate-400 block">Peserta:</span>
+                            <span class="font-bold text-white">Operator 6 Biro & 3 Pusat</span>
+                        </div>
+                        <div class="bg-white/5 rounded-xl p-3 border border-white/10">
+                            <span class="text-slate-400 block">Estimasi Waktu:</span>
+                            <span class="font-bold text-white">45–60 Menit</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Susunan Acara Timeline -->
+            <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm space-y-4">
+                <h2 class="text-lg font-extrabold text-navy-900 flex items-center gap-2">
+                    ⏱️ Alur Skenario Demo Layar Aplikasi (45–60 Menit)
+                </h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-xs">
+                    <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
+                        <span class="font-extrabold text-brand-700 block text-sm mb-1">1. Pembukaan (5 mnt)</span>
+                        <p class="text-slate-600">Layar Login: Pengenalan E-Laptri & kenapa beralih ke V3 otomatis.</p>
+                    </div>
+                    <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
+                        <span class="font-extrabold text-brand-700 block text-sm mb-1">2. Login & Akun (10 mnt)</span>
+                        <p class="text-slate-600">Demo login salah satu Biro, isolasi data, dan pembagian akun.</p>
+                    </div>
+                    <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
+                        <span class="font-extrabold text-brand-700 block text-sm mb-1">3. Mesin Hitung (5 mnt)</span>
+                        <p class="text-slate-600">Pembedaan Raw Input, Realisasi, Target resmi, & Capaian %.</p>
+                    </div>
+                    <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
+                        <span class="font-extrabold text-brand-700 block text-sm mb-1">4. Form Input (15 mnt)</span>
+                        <p class="text-slate-600">Tab IKP vs IKK, pola input angka, 3 narasi kualitatif, & simpan.</p>
+                    </div>
+                    <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
+                        <span class="font-extrabold text-brand-700 block text-sm mb-1">5. Bedah Biro (15 mnt)</span>
+                        <p class="text-slate-600">Menyisir daftar indikator tiap Biro/Pusat & kolom isian spesifik.</p>
+                    </div>
+                    <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
+                        <span class="font-extrabold text-brand-700 block text-sm mb-1">6. FAQ & QnA (10 mnt)</span>
+                        <p class="text-slate-600">Menjawab keraguan teknis & instruksi pengisian bertahap.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sesi 1 & 2: Pembukaan, Akun & Dashboard -->
+            <section id="sesi-login" class="bg-white rounded-2xl p-6 lg:p-8 border border-slate-200 shadow-sm space-y-6">
+                <div>
+                    <span class="text-xs font-bold text-brand-600 uppercase tracking-wider">Sesi 1 & 2</span>
+                    <h2 class="text-xl font-extrabold text-navy-900 mt-1">Naskah Pembukaan & Daftar Akun Operator</h2>
+                    <p class="text-xs text-slate-500 mt-0.5">Kondisi Layar: Tampilkan halaman Login lalu masuk dengan salah satu akun (misal: <code>ro.ren</code> atau <code>ro.kap</code>).</p>
+                </div>
+
+                <div class="bg-brand-50 border-l-4 border-brand-500 p-4 rounded-r-xl space-y-2 text-sm text-brand-900">
+                    <p class="font-bold flex items-center gap-1.5 text-brand-800">
+                        🗣️ Yang Harus Anda Ucapkan (Talking Points):
+                    </p>
+                    <p class="italic leading-relaxed">
+                        "Selamat pagi/siang rekan-rekan Operator dari seluruh Biro dan Pusat di lingkungan JAMBIN. Hari ini kita berkumpul khusus untuk menyamakan persepsi dan mempraktikkan langsung tata cara penggunaan aplikasi <strong>E-Laptri (e-LKjIP Pembinaan) Versi Arsitektur V3</strong>.
+                        Aplikasi ini sudah disesuaikan <strong>100% dengan Renstra Kejaksaan RI 2025–2029 dan Kepja Nomor 1184 Tahun 2025 tentang IKU</strong>.
+                        Di sistem ini, rekan-rekan <strong>tidak perlu lagi menghitung rumus secara manual di Excel</strong>. Cukup masukkan variabel mentahnya dan narasi analisisnya, sistem otomatis menghitung realisasi, capaian %, hingga status ketercapaiannya."
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-sm font-bold text-slate-800 mb-3 flex items-center justify-between">
+                        <span>📋 Daftar Akun Operator Biro & Pusat:</span>
+                        <span class="text-xs text-slate-500 font-normal">Password bawaan semua akun: <code class="bg-slate-100 px-2 py-0.5 rounded border border-slate-300 font-mono text-slate-700">password</code></span>
+                    </h3>
+
+                    <div class="overflow-x-auto border border-slate-200 rounded-xl">
+                        <table class="w-full text-xs text-left">
+                            <thead class="bg-slate-100 text-slate-700 font-bold border-b border-slate-200">
+                                <tr>
+                                    <th class="p-3">Kode Unit</th>
+                                    <th class="p-3">Nama Biro / Pusat</th>
+                                    <th class="p-3">Username</th>
+                                    <th class="p-3">Bidang</th>
+                                    <th class="p-3 text-center">Aksi Cepat</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-200">
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-3 font-mono font-bold text-slate-800">RO-REN</td>
+                                    <td class="p-3 font-semibold text-slate-900">Biro Perencanaan</td>
+                                    <td class="p-3 font-mono text-brand-700 font-bold">ro.ren</td>
+                                    <td class="p-3 font-mono text-slate-500">REN</td>
+                                    <td class="p-3 text-center"><button onclick="navigator.clipboard.writeText('ro.ren'); alert('Username ro.ren disalin!');" class="px-2 py-1 bg-slate-200 hover:bg-slate-300 rounded text-[11px] font-semibold">Salin User</button></td>
+                                </tr>
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-3 font-mono font-bold text-slate-800">RO-PEG</td>
+                                    <td class="p-3 font-semibold text-slate-900">Biro Kepegawaian</td>
+                                    <td class="p-3 font-mono text-brand-700 font-bold">ro.peg</td>
+                                    <td class="p-3 font-mono text-slate-500">PEG</td>
+                                    <td class="p-3 text-center"><button onclick="navigator.clipboard.writeText('ro.peg'); alert('Username ro.peg disalin!');" class="px-2 py-1 bg-slate-200 hover:bg-slate-300 rounded text-[11px] font-semibold">Salin User</button></td>
+                                </tr>
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-3 font-mono font-bold text-slate-800">RO-KEU</td>
+                                    <td class="p-3 font-semibold text-slate-900">Biro Keuangan</td>
+                                    <td class="p-3 font-mono text-brand-700 font-bold">ro.keu</td>
+                                    <td class="p-3 font-mono text-slate-500">KEU</td>
+                                    <td class="p-3 text-center"><button onclick="navigator.clipboard.writeText('ro.keu'); alert('Username ro.keu disalin!');" class="px-2 py-1 bg-slate-200 hover:bg-slate-300 rounded text-[11px] font-semibold">Salin User</button></td>
+                                </tr>
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-3 font-mono font-bold text-slate-800">RO-KAP</td>
+                                    <td class="p-3 font-semibold text-slate-900">Biro Perlengkapan</td>
+                                    <td class="p-3 font-mono text-brand-700 font-bold">ro.kap</td>
+                                    <td class="p-3 font-mono text-slate-500">KAP</td>
+                                    <td class="p-3 text-center"><button onclick="navigator.clipboard.writeText('ro.kap'); alert('Username ro.kap disalin!');" class="px-2 py-1 bg-slate-200 hover:bg-slate-300 rounded text-[11px] font-semibold">Salin User</button></td>
+                                </tr>
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-3 font-mono font-bold text-slate-800">RO-HUK-HLN</td>
+                                    <td class="p-3 font-semibold text-slate-900">Biro Hukum dan Hubungan Luar Negeri</td>
+                                    <td class="p-3 font-mono text-brand-700 font-bold">ro.huk.hln</td>
+                                    <td class="p-3 font-mono text-slate-500">HLN</td>
+                                    <td class="p-3 text-center"><button onclick="navigator.clipboard.writeText('ro.huk.hln'); alert('Username ro.huk.hln disalin!');" class="px-2 py-1 bg-slate-200 hover:bg-slate-300 rounded text-[11px] font-semibold">Salin User</button></td>
+                                </tr>
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-3 font-mono font-bold text-slate-800">RO-UMUM</td>
+                                    <td class="p-3 font-semibold text-slate-900">Biro Umum</td>
+                                    <td class="p-3 font-mono text-brand-700 font-bold">ro.umum</td>
+                                    <td class="p-3 font-mono text-slate-500">UMUM</td>
+                                    <td class="p-3 text-center"><button onclick="navigator.clipboard.writeText('ro.umum'); alert('Username ro.umum disalin!');" class="px-2 py-1 bg-slate-200 hover:bg-slate-300 rounded text-[11px] font-semibold">Salin User</button></td>
+                                </tr>
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-3 font-mono font-bold text-slate-800">PUSDASKRIMTI</td>
+                                    <td class="p-3 font-semibold text-slate-900">Pusat Data Statistik Kriminal dan TI</td>
+                                    <td class="p-3 font-mono text-brand-700 font-bold">pusdaskrimti</td>
+                                    <td class="p-3 font-mono text-slate-500">PDTI</td>
+                                    <td class="p-3 text-center"><button onclick="navigator.clipboard.writeText('pusdaskrimti'); alert('Username pusdaskrimti disalin!');" class="px-2 py-1 bg-slate-200 hover:bg-slate-300 rounded text-[11px] font-semibold">Salin User</button></td>
+                                </tr>
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-3 font-mono font-bold text-slate-800">PUSTRAJAKGAKUM</td>
+                                    <td class="p-3 font-semibold text-slate-900">Pusat Strategi Kebijakan Penegakan Hukum</td>
+                                    <td class="p-3 font-mono text-brand-700 font-bold">pustrajakgakum</td>
+                                    <td class="p-3 font-mono text-slate-500">PSKPH</td>
+                                    <td class="p-3 text-center"><button onclick="navigator.clipboard.writeText('pustrajakgakum'); alert('Username pustrajakgakum disalin!');" class="px-2 py-1 bg-slate-200 hover:bg-slate-300 rounded text-[11px] font-semibold">Salin User</button></td>
+                                </tr>
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-3 font-mono font-bold text-slate-800">PKY</td>
+                                    <td class="p-3 font-semibold text-slate-900">Pusat Kesehatan Yustisial</td>
+                                    <td class="p-3 font-mono text-brand-700 font-bold">pky</td>
+                                    <td class="p-3 font-mono text-slate-500">PKY</td>
+                                    <td class="p-3 text-center"><button onclick="navigator.clipboard.writeText('pky'); alert('Username pky disalin!');" class="px-2 py-1 bg-slate-200 hover:bg-slate-300 rounded text-[11px] font-semibold">Salin User</button></td>
+                                </tr>
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-3 font-mono font-bold text-slate-800">SET-JAMBIN</td>
+                                    <td class="p-3 font-semibold text-slate-900">Sekretariat JAMBIN</td>
+                                    <td class="p-3 font-mono text-brand-700 font-bold">set.jambin</td>
+                                    <td class="p-3 font-mono text-slate-500">SET</td>
+                                    <td class="p-3 text-center"><button onclick="navigator.clipboard.writeText('set.jambin'); alert('Username set.jambin disalin!');" class="px-2 py-1 bg-slate-200 hover:bg-slate-300 rounded text-[11px] font-semibold">Salin User</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sesi 3: Mesin Kalkulasi V3 -->
+            <section id="sesi-kalkulasi" class="bg-white rounded-2xl p-6 lg:p-8 border border-slate-200 shadow-sm space-y-6">
+                <div>
+                    <span class="text-xs font-bold text-brand-600 uppercase tracking-wider">Sesi 3</span>
+                    <h2 class="text-xl font-extrabold text-navy-900 mt-1">Bagaimana Mesin Kalkulasi V3 Bekerja? (Wajib Ditegaskan!)</h2>
+                    <p class="text-xs text-slate-500 mt-0.5">Kondisi Layar: Klik menu <strong>Pengukuran & Input Data</strong> di Sidebar kiri, lalu tunjuk salah satu kartu indikator.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-3 text-xs text-center font-bold">
+                    <div class="bg-slate-100 p-3 rounded-xl border border-slate-300 text-slate-700">
+                        1. RAW INPUT
+                        <span class="block font-normal text-[11px] text-slate-500 mt-1">Diisi Operator (Pembilang/Penyebut atau X1..Xn)</span>
+                    </div>
+                    <div class="bg-emerald-50 p-3 rounded-xl border border-emerald-200 text-emerald-800">
+                        2. FORMULA
+                        <span class="block font-normal text-[11px] text-emerald-600 mt-1">Dihitung otomatis sesuai Kepja 1184</span>
+                    </div>
+                    <div class="bg-blue-50 p-3 rounded-xl border border-blue-200 text-blue-800">
+                        3. REALISASI
+                        <span class="block font-normal text-[11px] text-blue-600 mt-1">Nilai dalam satuan asli (%, Indeks, Nilai)</span>
+                    </div>
+                    <div class="bg-indigo-50 p-3 rounded-xl border border-indigo-200 text-indigo-800">
+                        4. CAPAIAN (%)
+                        <span class="block font-normal text-[11px] text-indigo-600 mt-1">(Realisasi / Target) × 100%</span>
+                    </div>
+                    <div class="bg-amber-50 p-3 rounded-xl border border-amber-200 text-amber-800">
+                        5. STATUS
+                        <span class="block font-normal text-[11px] text-amber-600 mt-1">Tercapai / Belum Tercapai / Tidak Tercapai</span>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 text-xs space-y-2 text-slate-700">
+                    <p class="font-bold text-slate-900 text-sm">💡 Contoh Penjelasan Kasus Nyata:</p>
+                    <p class="leading-relaxed">
+                        Jika indikator menargetkan <strong>85%</strong>, dan dari Pembilang dibagi Penyebut yang rekan-rekan masukkan menghasilkan nilai <strong>84%</strong>:
+                    </p>
+                    <ul class="list-disc list-inside space-y-1 font-mono text-slate-800 pl-2">
+                        <li><strong>Realisasi:</strong> <span class="text-blue-700 font-bold">84%</span> (hasil rumus murni)</li>
+                        <li><strong>Target Resmi:</strong> <span class="text-slate-600 font-bold">85%</span> (patokan Kepja yang dikunci)</li>
+                        <li><strong>Capaian terhadap Target:</strong> <span class="text-emerald-700 font-bold">(84 / 85) × 100% = 98,82%</span></li>
+                        <li><strong>Status TW 1–3:</strong> <span class="text-amber-600 font-bold">BELUM_TERCAPAI</span> (karena masih tahun berjalan)</li>
+                        <li><strong>Status TW 4:</strong> <span class="text-red-600 font-bold">TIDAK_TERCAPAI</span> (jika sampai akhir tahun belum 100%)</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Sesi 4: Demo Pengisian Form Input -->
+            <section id="sesi-input" class="bg-white rounded-2xl p-6 lg:p-8 border border-slate-200 shadow-sm space-y-6">
+                <div>
+                    <span class="text-xs font-bold text-brand-600 uppercase tracking-wider">Sesi 4</span>
+                    <h2 class="text-xl font-extrabold text-navy-900 mt-1">7 Langkah Mengisi Data di Layar Pengukuran</h2>
+                    <p class="text-xs text-slate-500 mt-0.5">Tunjukkan setiap elemen navigasi dan tombol aksi satu per satu di layar aplikasi.</p>
+                </div>
+
+                <div class="space-y-4 text-xs text-slate-700">
+                    <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 flex items-start gap-3">
+                        <span class="w-6 h-6 rounded-full bg-slate-900 text-white flex items-center justify-center font-bold text-xs shrink-0">1</span>
+                        <div>
+                            <strong class="text-slate-900 text-sm block">Pilih Tahun dan Triwulan (Kanan Atas)</strong>
+                            Pastikan dropdown Tahun (2025–2029) dan Triwulan (TW 1 s.d. TW 4) sudah sesuai sebelum mengisi data. Mengganti triwulan akan otomatis memuat pengukuran triwulan tersebut.
+                        </div>
+                    </div>
+
+                    <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 flex items-start gap-3">
+                        <span class="w-6 h-6 rounded-full bg-slate-900 text-white flex items-center justify-center font-bold text-xs shrink-0">2</span>
+                        <div>
+                            <strong class="text-slate-900 text-sm block">Pindah Antar Tab Level: Tab IKK vs Tab IKP</strong>
+                            Biro yang mengampu level IKP (Program) dan IKK (Kegiatan) memiliki 2 tab terpisah. Keduanya <strong>wajib diisi</strong> karena IKP tidak menghitung rata-rata IKK otomatis.
+                        </div>
+                    </div>
+
+                    <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 flex items-start gap-3">
+                        <span class="w-6 h-6 rounded-full bg-slate-900 text-white flex items-center justify-center font-bold text-xs shrink-0">3</span>
+                        <div>
+                            <strong class="text-slate-900 text-sm block">Pencarian & Expand / Collapse Sasaran (SP & SK)</strong>
+                            Gunakan kotak pencarian atau tombol <em>Tutup Semua / Buka Semua</em> agar tampilan terfokus pada sasaran yang sedang dikerjakan.
+                        </div>
+                    </div>
+
+                    <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 flex items-start gap-3">
+                        <span class="w-6 h-6 rounded-full bg-slate-900 text-white flex items-center justify-center font-bold text-xs shrink-0">4</span>
+                        <div>
+                            <strong class="text-slate-900 text-sm block">Baca Kotak Hijau Formula Perhitungan</strong>
+                            Di setiap kartu indikator, kotak hijau mengutip rumus resmi Kepja 1184 sehingga operator tidak perlu membuka dokumen PDF manual.
+                        </div>
+                    </div>
+
+                    <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 flex items-start gap-3">
+                        <span class="w-6 h-6 rounded-full bg-slate-900 text-white flex items-center justify-center font-bold text-xs shrink-0">5</span>
+                        <div>
+                            <strong class="text-slate-900 text-sm block">Isi Variabel Input Angka (Perhatikan Kotak Bantuan di Bawah Kolom)</strong>
+                            Di bawah setiap kolom input angka ada kotak warna-warni (hijau untuk Pembilang, biru untuk Penyebut, abu-abu untuk Komponen) yang menjelaskan definisi operasionalnya.
+                        </div>
+                    </div>
+
+                    <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 flex items-start gap-3">
+                        <span class="w-6 h-6 rounded-full bg-slate-900 text-white flex items-center justify-center font-bold text-xs shrink-0">6</span>
+                        <div>
+                            <strong class="text-slate-900 text-sm block">Isi 3 Kolom Analisis Kualitatif & Rekomendasi</strong>
+                            Wajib menguraikan <em>Analisis Capaian Kinerja</em> (penyebab keberhasilan), <em>Kendala / Hambatan</em> (kendala teknis/anggaran/SDM), dan <em>Upaya Tindak Lanjut</em> (solusi triwulan berikutnya).
+                        </div>
+                    </div>
+
+                    <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 flex items-start gap-3">
+                        <span class="w-6 h-6 rounded-full bg-slate-900 text-white flex items-center justify-center font-bold text-xs shrink-0">7</span>
+                        <div>
+                            <strong class="text-slate-900 text-sm block">Simpan Data: Tombol Mandiri vs Tombol Semua</strong>
+                            Gunakan tombol hijau <strong>"Simpan & Hitung Kinerja"</strong> di kartu untuk menyimpan satu indikator dan melihat hasilnya langsung, atau gunakan bar melayang <strong>"Simpan Semua Perubahan"</strong> di bawah layar jika mengisi banyak indikator sekaligus.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sesi 5: Detail Isian per Biro (Interactive Tabs) -->
+            <section id="sesi-biro" class="bg-white rounded-2xl p-6 lg:p-8 border border-slate-200 shadow-sm space-y-6">
+                <div>
+                    <span class="text-xs font-bold text-brand-600 uppercase tracking-wider">Sesi 5 — Sangat Penting</span>
+                    <h2 class="text-xl font-extrabold text-navy-900 mt-1">Bedah Isian Masing-Masing Biro / Pusat</h2>
+                    <p class="text-xs text-slate-500 mt-0.5">Pilih Biro di bawah ini untuk melihat daftar lengkap indikator IKP dan IKK beserta nama kolom input spesifiknya.</p>
+                </div>
+
+                <!-- Bureau Selector Buttons -->
+                <div class="flex flex-wrap gap-1.5 no-print">
+                    <button onclick="showBiro('ro-ren')" class="biro-tab-btn px-3 py-1.5 rounded-lg text-xs font-bold bg-navy-900 text-white transition" data-target="ro-ren">Biro Perencanaan (16)</button>
+                    <button onclick="showBiro('ro-peg')" class="biro-tab-btn px-3 py-1.5 rounded-lg text-xs font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 transition" data-target="ro-peg">Biro Kepegawaian (15)</button>
+                    <button onclick="showBiro('ro-keu')" class="biro-tab-btn px-3 py-1.5 rounded-lg text-xs font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 transition" data-target="ro-keu">Biro Keuangan (9)</button>
+                    <button onclick="showBiro('ro-kap')" class="biro-tab-btn px-3 py-1.5 rounded-lg text-xs font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 transition" data-target="ro-kap">Biro Perlengkapan (20)</button>
+                    <button onclick="showBiro('ro-huk')" class="biro-tab-btn px-3 py-1.5 rounded-lg text-xs font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 transition" data-target="ro-huk">Biro Hukum & HLN (11)</button>
+                    <button onclick="showBiro('ro-umum')" class="biro-tab-btn px-3 py-1.5 rounded-lg text-xs font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 transition" data-target="ro-umum">Biro Umum (7)</button>
+                    <button onclick="showBiro('pusdaskrimti')" class="biro-tab-btn px-3 py-1.5 rounded-lg text-xs font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 transition" data-target="pusdaskrimti">Pusdaskrimti (12)</button>
+                    <button onclick="showBiro('pustrajakgakum')" class="biro-tab-btn px-3 py-1.5 rounded-lg text-xs font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 transition" data-target="pustrajakgakum">Pustrajakgakum (8)</button>
+                    <button onclick="showBiro('pky')" class="biro-tab-btn px-3 py-1.5 rounded-lg text-xs font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 transition" data-target="pky">PKY (6)</button>
+                </div>
+
+                <!-- BIRO PANELS CONTAINER -->
+                <div id="biro-panels" class="space-y-6">
+
+                    <!-- BIRO PERENCANAAN -->
+                    <div id="panel-ro-ren" class="biro-panel space-y-4">
+                        <div class="bg-blue-50 border border-blue-200 p-4 rounded-xl flex items-center justify-between">
+                            <div>
+                                <h3 class="text-base font-extrabold text-blue-950">🏛️ Biro Perencanaan (`ro.ren`)</h3>
+                                <p class="text-xs text-blue-800">Total Tanggung Jawab: 4 IKP & 12 IKK (16 Indikator)</p>
+                            </div>
+                            <span class="bg-blue-600 text-white text-xs px-3 py-1 rounded-full font-bold">16 Indikator</span>
+                        </div>
+
+                        <div class="space-y-3">
+                            <h4 class="text-xs font-bold text-slate-500 uppercase tracking-wider">A. Tab IKP (Sasaran Program) — 4 Indikator:</h4>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-200">
+                                    <strong class="text-slate-900 block font-mono text-sm">[IKP 1.1] Nilai SAKIP Kejaksaan RI</strong>
+                                    <span class="text-slate-500">Satuan: Nilai | Target 2025: 72, 2026: 73</span>
+                                    <div class="mt-2 text-slate-700 bg-white p-2 rounded border border-slate-200">
+                                        <strong>Kolom Input:</strong> <code>nilai_sakip_resmi</code> (Nilai evaluasi resmi KemenPAN-RB).
+                                    </div>
+                                </div>
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-200">
+                                    <strong class="text-slate-900 block font-mono text-sm">[IKP 6.1] Nilai Evaluasi Kelembagaan</strong>
+                                    <span class="text-slate-500">Satuan: Nilai | Target 2025: 80, 2026: 81</span>
+                                    <div class="mt-2 text-slate-700 bg-white p-2 rounded border border-slate-200">
+                                        <strong>Kolom Input:</strong> <code>X1</code> Dimensi struktur + <code>X2</code> Dimensi proses organisasi.
+                                    </div>
+                                </div>
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-200">
+                                    <strong class="text-slate-900 block font-mono text-sm">[IKP 6.2] Kepatuhan Satker thd SOP</strong>
+                                    <span class="text-slate-500">Satuan: % | Target 2025: 80%, 2026: 85%</span>
+                                    <div class="mt-2 text-slate-700 bg-white p-2 rounded border border-slate-200">
+                                        <strong>Kolom Input:</strong> Pembilang: <code>jumlah_satker_patuh</code> | Penyebut: <code>jumlah_satker_dinilai</code>.
+                                    </div>
+                                </div>
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-200">
+                                    <strong class="text-slate-900 block font-mono text-sm">[IKP 10.1] Kepuasan Layanan Dukungan Internal</strong>
+                                    <span class="text-slate-500">Satuan: Indeks | Target 2025: 3,6, 2026: 3,7</span>
+                                    <div class="mt-2 text-slate-700 bg-white p-2 rounded border border-slate-200">
+                                        <strong>Kolom Input:</strong> 8 Kolom Indeks Layanan (Perencanaan, Keuangan, Kepegawaian, Perlengkapan, OTL, Hukum/HLN, TI, dan Umum).
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="space-y-3">
+                            <h4 class="text-xs font-bold text-slate-500 uppercase tracking-wider">B. Tab IKK (Sasaran Kegiatan) — 12 Indikator:</h4>
+                            <div class="overflow-x-auto border border-slate-200 rounded-xl text-xs">
+                                <table class="w-full text-left">
+                                    <thead class="bg-slate-100 font-bold text-slate-700 border-b border-slate-200">
+                                        <tr>
+                                            <th class="p-2.5">Kode IKK</th>
+                                            <th class="p-2.5">Nama Indikator</th>
+                                            <th class="p-2.5">Target '25 / '26</th>
+                                            <th class="p-2.5">Jenis Isian</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-slate-200">
+                                        <tr>
+                                            <td class="p-2.5 font-mono font-bold">IKK 1.2.1</td>
+                                            <td class="p-2.5">Indeks Perencanaan Pembangunan Nasional (IPPN)</td>
+                                            <td class="p-2.5">93 / 93,5</td>
+                                            <td class="p-2.5 font-semibold text-blue-700">1 Kolom Nilai Langsung</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-2.5 font-mono font-bold">IKK 1.3.1 s.d. 1.3.5</td>
+                                            <td class="p-2.5">Layanan Pengelolaan Data, Renja/Anggaran, Monev, OTL, dan RB sesuai SLA</td>
+                                            <td class="p-2.5">100% / 100%</td>
+                                            <td class="p-2.5 text-emerald-700 font-semibold">Rasio: Pembilang (Layanan Selesai SLA) & Penyebut (Total Layanan)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-2.5 font-mono font-bold">IKK 1.3.6</td>
+                                            <td class="p-2.5">Persentase satker mendapat pendampingan ZI menuju WBK/WBBM</td>
+                                            <td class="p-2.5">35% / 40%</td>
+                                            <td class="p-2.5 text-emerald-700 font-semibold">Rasio: Pembilang (Satker Didampingi) & Penyebut (Total Satker ZI)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-2.5 font-mono font-bold">IKK 6.1.1</td>
+                                            <td class="p-2.5">Persentase Penyelesaian Restrukturisasi Organisasi</td>
+                                            <td class="p-2.5">80% / 85%</td>
+                                            <td class="p-2.5 text-emerald-700 font-semibold">Rasio: Dokumen Selesai / Target Dokumen</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-2.5 font-mono font-bold">IKK 6.1.2 & 6.2.1</td>
+                                            <td class="p-2.5">Realisasi Aksi RB General & Implementasi RB Tematik UKE I</td>
+                                            <td class="p-2.5">80% / 85%</td>
+                                            <td class="p-2.5 text-emerald-700 font-semibold">Rasio: Aksi Terlaksana / Rencana Aksi</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-2.5 font-mono font-bold">IKK 10.8.1 & 10.8.2</td>
+                                            <td class="p-2.5">Satker Laksana Survei (100%) & Indeks Kepuasan Layanan Publik (3,6)</td>
+                                            <td class="p-2.5">100% / 3,6</td>
+                                            <td class="p-2.5 text-indigo-700 font-semibold">Rasio & Indeks Survei Kepuasan</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BIRO KEPEGAWAIAN -->
+                    <div id="panel-ro-peg" class="biro-panel space-y-4 hidden">
+                        <div class="bg-emerald-50 border border-emerald-200 p-4 rounded-xl flex items-center justify-between">
+                            <div>
+                                <h3 class="text-base font-extrabold text-emerald-950">👥 Biro Kepegawaian (`ro.peg`)</h3>
+                                <p class="text-xs text-emerald-800">Total Tanggung Jawab: 5 IKP & 10 IKK (15 Indikator)</p>
+                            </div>
+                            <span class="bg-emerald-600 text-white text-xs px-3 py-1 rounded-full font-bold">15 Indikator</span>
+                        </div>
+
+                        <div class="space-y-3">
+                            <h4 class="text-xs font-bold text-slate-500 uppercase tracking-wider">A. Tab IKP — 5 Indikator:</h4>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-200">
+                                    <strong class="text-slate-900 block font-mono text-sm">[IKP 8.1] Indeks Sistem Merit</strong>
+                                    <span class="text-slate-500">Satuan: Indeks | Target 2025: 0,8</span>
+                                    <div class="mt-2 text-slate-700 bg-white p-2 rounded border border-slate-200">
+                                        <strong>Kolom Input:</strong> <code>nilai_sistem_merit_resmi</code> (KASN/BKN, 0–400 / 0–1).
+                                    </div>
+                                </div>
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-200">
+                                    <strong class="text-slate-900 block font-mono text-sm">[IKP 8.2] Kecukupan & Pengembangan SDM</strong>
+                                    <span class="text-slate-500">Satuan: % | Target 2025: 60%</span>
+                                    <div class="mt-2 text-slate-700 bg-white p-2 rounded border border-slate-200">
+                                        <strong>Kolom Input:</strong> Rata-rata 3 Komponen: Kecukupan (%) + Pengembangan (%) + Pengelolaan (%).
+                                    </div>
+                                </div>
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-200">
+                                    <strong class="text-slate-900 block font-mono text-sm">[IKP 8.3] Indeks Profesionalitas SDM</strong>
+                                    <span class="text-slate-500">Satuan: Indeks | Target 2025: 3,6</span>
+                                    <div class="mt-2 text-slate-700 bg-white p-2 rounded border border-slate-200">
+                                        <strong>Kolom Input:</strong> Kualifikasi (20%) + Diklat (40%) + Kinerja (30%) + Disiplin (10%).
+                                    </div>
+                                </div>
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-200">
+                                    <strong class="text-slate-900 block font-mono text-sm">[IKP 11.1 & 11.2] CFI & Aparatur Bersertifikasi</strong>
+                                    <span class="text-slate-500">Target: CFI 70 | Sertifikasi 50%</span>
+                                    <div class="mt-2 text-slate-700 bg-white p-2 rounded border border-slate-200">
+                                        <strong>Kolom Input:</strong> CFI (Skor Aktual/Ideal) & Sertifikasi (4 Kolom: Jaksa/ASN bersertifikat & total populasi).
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="space-y-3">
+                            <h4 class="text-xs font-bold text-slate-500 uppercase tracking-wider">B. Tab IKK — 10 Indikator:</h4>
+                            <p class="text-xs text-slate-600">
+                                4 Layanan SLA Kepegawaian (Umum, Diklat, Pangkat/Mutasi, Pensiun), Kecukupan Jaksa (`IKK 8.2.1`), Kesesuaian Kompetensi Jabatan (`IKK 8.2.3`), Hukuman Disiplin (`IKK 8.3.1` target max 5%), Indeks Kepuasan Layanan ASN (`IKK 10.1.1`), dan SDM Bersertifikat (`IKK 11.1.2`).
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- BIRO KEUANGAN -->
+                    <div id="panel-ro-keu" class="biro-panel space-y-4 hidden">
+                        <div class="bg-amber-50 border border-amber-200 p-4 rounded-xl flex items-center justify-between">
+                            <div>
+                                <h3 class="text-base font-extrabold text-amber-950">💰 Biro Keuangan (`ro.keu`)</h3>
+                                <p class="text-xs text-amber-800">Total Tanggung Jawab: 1 IKP & 8 IKK (9 Indikator)</p>
+                            </div>
+                            <span class="bg-amber-600 text-white text-xs px-3 py-1 rounded-full font-bold">9 Indikator</span>
+                        </div>
+
+                        <div class="space-y-3">
+                            <h4 class="text-xs font-bold text-slate-500 uppercase tracking-wider">A. Tab IKP — 1 Indikator:</h4>
+                            <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs">
+                                <strong class="text-slate-900 block font-mono text-sm">[IKP 4.1] Nilai Kinerja Anggaran (NKA) Kejaksaan RI</strong>
+                                <span class="text-slate-500">Satuan: Nilai | Target 2025: 90 | 2026: 90,25</span>
+                                <div class="mt-2 text-slate-700 bg-white p-2.5 rounded border border-slate-200">
+                                    <strong>Kolom Input:</strong>
+                                    <code>X1</code> Nilai Perencanaan Anggaran (bobot 50%) + <code>X2</code> Nilai Pelaksanaan Anggaran SMART/DJA (bobot 50%).
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="space-y-3">
+                            <h4 class="text-xs font-bold text-slate-500 uppercase tracking-wider">B. Tab IKK — 8 Indikator:</h4>
+                            <p class="text-xs text-slate-600">
+                                Kualitas Pelaporan Keuangan UAPA (`IKK 4.1.1`), 6 Layanan SLA Keuangan (Perbendaharaan, Piutang Negara, Laporan PNBP, Akuntansi, Umum Keuangan, Perkantoran), serta Indeks Kepuasan Layanan Keuangan (`IKK 10.2.1`).
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- BIRO PERLENGKAPAN -->
+                    <div id="panel-ro-kap" class="biro-panel space-y-4 hidden">
+                        <div class="bg-purple-50 border border-purple-200 p-4 rounded-xl flex items-center justify-between">
+                            <div>
+                                <h3 class="text-base font-extrabold text-purple-950">📦 Biro Perlengkapan (`ro.kap`)</h3>
+                                <p class="text-xs text-purple-800">Total Tanggung Jawab: 3 IKP & 17 IKK (20 Indikator — Beban Indikator Terbanyak)</p>
+                            </div>
+                            <span class="bg-purple-600 text-white text-xs px-3 py-1 rounded-full font-bold">20 Indikator</span>
+                        </div>
+
+                        <div class="space-y-3">
+                            <h4 class="text-xs font-bold text-slate-500 uppercase tracking-wider">A. Tab IKP — 3 Indikator:</h4>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-200">
+                                    <strong class="text-slate-900 block font-mono text-sm">[IKP 5.1] Indeks Pengelolaan Aset</strong>
+                                    <span class="text-slate-500">Target '25: 3,5</span>
+                                    <div class="mt-2 text-slate-700 bg-white p-2 rounded border border-slate-200">
+                                        <strong>8 Kolom Input:</strong> X1 LHP BPK, X2 PNBP, X3 RKBMN, X4 Asuransi, X5 Pemanfaatan, X6 Rusak Berat, X7 Dokumen, X8 Kepatuhan.
+                                    </div>
+                                </div>
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-200">
+                                    <strong class="text-slate-900 block font-mono text-sm">[IKP 5.2] Indeks Tata Kelola Pengadaan</strong>
+                                    <span class="text-slate-500">Target '25: 89</span>
+                                    <div class="mt-2 text-slate-700 bg-white p-2 rounded border border-slate-200">
+                                        <strong>3 Kolom Input:</strong> SP (Sistem Pengadaan) + KSDM (SDM PBJ) + TK (Maturitas UKPBJ).
+                                    </div>
+                                </div>
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-200">
+                                    <strong class="text-slate-900 block font-mono text-sm">[IKP 16.1] Utilisasi Sarpras</strong>
+                                    <span class="text-slate-500">Target '25: 80%</span>
+                                    <div class="mt-2 text-slate-700 bg-white p-2 rounded border border-slate-200">
+                                        <strong>2 Kolom:</strong> Sarpras dimanfaatkan / Total sarpras tercatat.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="space-y-3">
+                            <h4 class="text-xs font-bold text-slate-500 uppercase tracking-wider">B. Tab IKK — 17 Indikator:</h4>
+                            <p class="text-xs text-slate-600">
+                                Inventarisasi BMN (`IKK 5.1.1`), 4 Layanan SLA BMN/PBJ, BMN Siap Pakai (`IKK 5.2.1`), Indeks Kepuasan Layanan BMN (`IKK 10.4.1`), dan 10 Indikator Sarpras Akumulatif pada `SK 16.1` (Rehabilitasi Gedung/Rumah, Bangun Baru Gedung/Rumah, Mobil Jabatan, Mobil Tahanan, Motor Dinas, Perangkat Komputer/TI, Perlengkapan Kantor, Sarpras Intelijen).
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- BIRO HUKUM & HLN -->
+                    <div id="panel-ro-huk" class="biro-panel space-y-4 hidden">
+                        <div class="bg-rose-50 border border-rose-200 p-4 rounded-xl flex items-center justify-between">
+                            <div>
+                                <h3 class="text-base font-extrabold text-rose-950">⚖️ Biro Hukum dan Hubungan Luar Negeri (`ro.huk.hln`)</h3>
+                                <p class="text-xs text-rose-800">Total Tanggung Jawab: 4 IKP & 7 IKK (11 Indikator)</p>
+                            </div>
+                            <span class="bg-rose-600 text-white text-xs px-3 py-1 rounded-full font-bold">11 Indikator</span>
+                        </div>
+
+                        <div class="space-y-3">
+                            <h4 class="text-xs font-bold text-slate-500 uppercase tracking-wider">A. Tab IKP — 4 Indikator:</h4>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-200">
+                                    <strong class="text-slate-900 block font-mono text-sm">[IKP 7.1] Indeks Kualitas Kebijakan</strong>
+                                    <span class="text-slate-500">Nilai resmi LAN RI (Target '25: 70)</span>
+                                </div>
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-200">
+                                    <strong class="text-slate-900 block font-mono text-sm">[IKP 7.2] Indeks Reformasi Hukum (IRH)</strong>
+                                    <span class="text-slate-500">4 Variabel Kemenkumham: Harmonisasi (25) + Legal Drafter (25) + Deregulasi (30) + JDIH (20)</span>
+                                </div>
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-200">
+                                    <strong class="text-slate-900 block font-mono text-sm">[IKP 13.1] Kepuasan Layanan Hukum</strong>
+                                    <span class="text-slate-500">Indeks Survei (Skor Aktual / Skor Maksimal)</span>
+                                </div>
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-200">
+                                    <strong class="text-slate-900 block font-mono text-sm">[IKP 13.2] Kepuasan Mitra Luar Negeri</strong>
+                                    <span class="text-slate-500">Indeks Survei Evaluasi Mitra Luar Negeri</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="space-y-3">
+                            <h4 class="text-xs font-bold text-slate-500 uppercase tracking-wider">B. Tab IKK — 7 Indikator:</h4>
+                            <p class="text-xs text-slate-600">
+                                5 Layanan SLA (Perancangan PUU, Kerjasama HLN, Perpustakaan/JDIH, Layanan Hukum Luar Negeri, Perkantoran Perwakilan Luar Negeri), Penetapan Regulasi (`IKK 13.1.1`), dan Kerjasama Internasional (`IKK 13.2.1`).
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- BIRO UMUM -->
+                    <div id="panel-ro-umum" class="biro-panel space-y-4 hidden">
+                        <div class="bg-slate-100 border border-slate-300 p-4 rounded-xl flex items-center justify-between">
+                            <div>
+                                <h3 class="text-base font-extrabold text-slate-900">🏢 Biro Umum (`ro.umum`)</h3>
+                                <p class="text-xs text-slate-600">Total Tanggung Jawab: 0 IKP & 7 IKK (Fokus pada Pelayanan Kedinasan & Rumah Tangga)</p>
+                            </div>
+                            <span class="bg-slate-700 text-white text-xs px-3 py-1 rounded-full font-bold">7 IKK</span>
+                        </div>
+                        <p class="text-xs text-slate-600">
+                            Biro Umum tidak memiliki Tab IKP. Seluruh 7 indikatornya adalah IKK berbasis rasio SLA layanan:
+                            Kepuasan Layanan Biro Umum (`IKK 10.3.1`), TU Pimpinan (`IKK 10.6.1`), Protokol & Pengamanan Pimpinan (`IKK 10.6.2`), Keamanan Dalam Kamdal (`IKK 10.6.3`), TU & Kearsipan (`IKK 10.6.4`), Sarpras & Rumah Tangga (`IKK 10.6.5`), serta Layanan Perkantoran (`IKK 10.6.6`).
+                        </p>
+                    </div>
+
+                    <!-- PUSDASKRIMTI -->
+                    <div id="panel-pusdaskrimti" class="biro-panel space-y-4 hidden">
+                        <div class="bg-cyan-50 border border-cyan-200 p-4 rounded-xl flex items-center justify-between">
+                            <div>
+                                <h3 class="text-base font-extrabold text-cyan-950">💻 Pusdaskrimti (`pusdaskrimti`)</h3>
+                                <p class="text-xs text-cyan-800">Total Tanggung Jawab: 1 IKP & 11 IKK (12 Indikator Teknologi & Data)</p>
+                            </div>
+                            <span class="bg-cyan-600 text-white text-xs px-3 py-1 rounded-full font-bold">12 Indikator</span>
+                        </div>
+
+                        <div class="space-y-2 text-xs">
+                            <div class="bg-slate-50 p-3 rounded-xl border border-slate-200">
+                                <strong class="text-slate-900 font-mono text-sm block">[IKP 15.1] Digitalisasi Proses Bisnis Inti</strong>
+                                Pembilang: Jumlah proses bisnis terdigitalisasi | Penyebut: Total proses bisnis inti (10 proses bisnis Kepja 257/2024).
+                            </div>
+                            <p class="text-slate-600 pt-2">
+                                <strong>Daftar 11 IKK Pusdaskrimti:</strong> Layanan Data & Statistik Kriminal (`IKK 15.1.1`), SLA TI (`IKK 15.1.2`), Layanan Kantor (`IKK 15.1.3`), Satker CMS SPPT-TI (`IKK 15.2.1`), Indeks Pemerintah Digital (`IKK 15.2.3`), Indeks Kualitas Data (`IKK 15.3.1`), Indeks Statistik Sektoral (`IKK 15.3.2`), Pertukaran Data SPPT-TI 70% (`IKK 15.3.3`), Satu Data Kejaksaan (`IKK 15.3.4`), Indeks Keamanan Siber (`IKK 15.4.1`), dan Kepuasan Pengguna Sistem Perkara TI (`IKK 15.5.1`).
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- PUSTRAJAKGAKUM -->
+                    <div id="panel-pustrajakgakum" class="biro-panel space-y-4 hidden">
+                        <div class="bg-indigo-50 border border-indigo-200 p-4 rounded-xl flex items-center justify-between">
+                            <div>
+                                <h3 class="text-base font-extrabold text-indigo-950">📚 Pustrajakgakum (`pustrajakgakum`)</h3>
+                                <p class="text-xs text-indigo-800">Total Tanggung Jawab: 0 IKP & 8 IKK (8 Indikator Riset, Jurnal & Kebijakan)</p>
+                            </div>
+                            <span class="bg-indigo-600 text-white text-xs px-3 py-1 rounded-full font-bold">8 IKK</span>
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Pustrajakgakum mengampu 8 IKK pada `SK 7.2` dan `SK 7.3`:
+                            SLA Program & Evaluasi (`IKK 7.2.1`), Ketepatan Rekomendasi Policy Brief/Paper (`IKK 7.2.2`), Jurnal Ilmiah The Prosecutor Law Review (`IKK 7.2.3`), Pembinaan Karya Tulis Ilmiah (`IKK 7.2.4`), Penilaian Karya Tulis Ilmiah (`IKK 7.2.5`), Monev Kebijakan Perjalanan Dinas (`IKK 7.2.6`), Survei Kepuasan Masyarakat Pelayanan Publik (`IKK 7.2.7`), dan Implementasi Policy Brief Regulasi (`IKK 7.3.1`).
+                        </p>
+                    </div>
+
+                    <!-- PKY -->
+                    <div id="panel-pky" class="biro-panel space-y-4 hidden">
+                        <div class="bg-teal-50 border border-teal-200 p-4 rounded-xl flex items-center justify-between">
+                            <div>
+                                <h3 class="text-base font-extrabold text-teal-950">🏥 Pusat Kesehatan Yustisial (`pky`)</h3>
+                                <p class="text-xs text-teal-800">Total Tanggung Jawab: 1 IKP & 5 IKK (6 Indikator Kesehatan & RS Adhyaksa)</p>
+                            </div>
+                            <span class="bg-teal-600 text-white text-xs px-3 py-1 rounded-full font-bold">6 Indikator</span>
+                        </div>
+
+                        <div class="space-y-2 text-xs">
+                            <div class="bg-slate-50 p-3 rounded-xl border border-slate-200">
+                                <strong class="text-slate-900 font-mono text-sm block">[IKP 10.2] Kepuasan Stakeholder terhadap Faskes Yustisial</strong>
+                                Indeks Survei: Skor Aktual hasil kuesioner / Skor Ideal Maksimal ($5 \times \sum P_i$).
+                            </div>
+                            <p class="text-slate-600 pt-2">
+                                <strong>Daftar 5 IKK PKY:</strong> Jumlah RS Adhyaksa Selesai Dibangun/Dikembangkan (`IKK 10.9.1`, target: 2 RS), Pemenuhan Indikator Nasional Mutu Pelayanan RS (`IKK 10.9.2`), Pemahaman Stakeholder Tugas PKY (`IKK 10.9.3`), Pemenuhan Hospital Safety Index Kategori A (`IKK 10.9.4`), dan Jumlah Kegiatan Layanan Kesehatan Yustisial (`IKK 10.9.5`, target: 100 kegiatan).
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Sesi 6: FAQ Operator -->
+            <section id="sesi-faq" class="bg-white rounded-2xl p-6 lg:p-8 border border-slate-200 shadow-sm space-y-6">
+                <div>
+                    <span class="text-xs font-bold text-brand-600 uppercase tracking-wider">Sesi 6</span>
+                    <h2 class="text-xl font-extrabold text-navy-900 mt-1">Daftar FAQ (Pertanyaan yang Pasti Ditanyakan Operator)</h2>
+                    <p class="text-xs text-slate-500 mt-0.5">Gunakan jawaban tegas dan mudah dimengerti ini saat sesi tanya jawab rapat besok.</p>
+                </div>
+
+                <div class="space-y-3 text-xs">
+                    <details class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 cursor-pointer">
+                        <summary class="font-bold text-slate-900 text-sm">1. "Kenapa IKK saya sudah 100%, tapi IKP di tab sebelahnya tidak otomatis terisi?"</summary>
+                        <p class="mt-2 text-slate-600 pl-4 border-l-2 border-brand-500 leading-relaxed">
+                            Di Arsitektur V3, IKP dan IKK memiliki rumus dan data sumber yang berbeda (MANDIRI). Keberadaan IKK adalah kontribusi pencapaian sasaran, bukan rata-rata angka ke IKP. Jadi Operator wajib menginput Tab IKK dan Tab IKP secara terpisah.
+                        </p>
+                    </details>
+
+                    <details class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 cursor-pointer">
+                        <summary class="font-bold text-slate-900 text-sm">2. "Bagaimana kalau di Triwulan 1 belum ada kegiatan/layanan sama sekali? Penyebut boleh 0?"</summary>
+                        <p class="mt-2 text-slate-600 pl-4 border-l-2 border-brand-500 leading-relaxed">
+                            Penyebut tidak boleh 0 (sistem menolak pembagian dengan nol). Jika penyebut adalah target tahunan (misal 12 laporan), isi penyebut 12 dan pembilang 0. Jika indikator baru dinilai akhir tahun (misal Nilai SAKIP), kosongkan saja kolom angkanya dan isi kolom Kendala.
+                        </p>
+                    </details>
+
+                    <details class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 cursor-pointer">
+                        <summary class="font-bold text-slate-900 text-sm">3. "Apakah saya harus mengetik simbol persen (%) atau satuan?"</summary>
+                        <p class="mt-2 text-slate-600 pl-4 border-l-2 border-brand-500 leading-relaxed">
+                            Tidak perlu. Kolom input hanya menerima angka murni. Untuk desimal bisa menggunakan titik (.) maupun koma (,) karena sistem otomatis menormalisasikannya.
+                        </p>
+                    </details>
+
+                    <details class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 cursor-pointer">
+                        <summary class="font-bold text-slate-900 text-sm">4. "Kenapa di TW 1 status saya kuning (BELUM_TERCAPAI), apakah itu artinya nilai jelek?"</summary>
+                        <p class="mt-2 text-slate-600 pl-4 border-l-2 border-brand-500 leading-relaxed">
+                            Bukan jelek. Di TW 1–3 target yang dibandingkan adalah target tahunan. Jika belum mencapai 100%, statusnya sengaja diberi warna kuning BELUM_TERCAPAI karena masih ada triwulan berikutnya. Label merah TIDAK_TERCAPAI hanya muncul di Triwulan 4.
+                        </p>
+                    </details>
+
+                    <details class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 cursor-pointer">
+                        <summary class="font-bold text-slate-900 text-sm">5. "Bisa cicil simpan 1 atau 2 indikator dulu?"</summary>
+                        <p class="mt-2 text-slate-600 pl-4 border-l-2 border-brand-500 leading-relaxed">
+                            Sangat bisa! Gunakan tombol 'Simpan & Hitung Kinerja' di masing-masing kartu indikator. Data tersimpan aman dan indikator lain yang belum ada data tidak akan terganggu.
+                        </p>
+                    </details>
+
+                    <details class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 cursor-pointer">
+                        <summary class="font-bold text-slate-900 text-sm">6. "Apakah 3 kolom Analisis Kualitatif wajib diisi?"</summary>
+                        <p class="mt-2 text-slate-600 pl-4 border-l-2 border-brand-500 leading-relaxed">
+                            Wajib diisi secara substansi pelaporan. Tiga kolom narasi ini (Analisis, Kendala, Upaya) akan ditarik langsung ke dalam dokumen laporan LKjIP/Laptri resmi format Word oleh Admin.
+                        </p>
+                    </details>
+                </div>
+            </section>
+
+            <!-- Sesi 7: Penutup & Call to Action -->
+            <section id="sesi-penutup" class="bg-slate-900 text-white rounded-2xl p-6 lg:p-8 border border-slate-700 shadow-sm space-y-4">
+                <h2 class="text-xl font-extrabold text-brand-400">🎯 3 Tindak Lanjut Setelah Rapat Selesai</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+                    <div class="bg-white/5 p-4 rounded-xl border border-white/10 space-y-1">
+                        <span class="font-bold text-white text-sm block">1. Uji Login Akun</span>
+                        <p class="text-slate-300">Setiap operator mencoba login menggunakan username Biro masing-masing dan langsung mengganti password via menu Profil.</p>
+                    </div>
+                    <div class="bg-white/5 p-4 rounded-xl border border-white/10 space-y-1">
+                        <span class="font-bold text-white text-sm block">2. Cek Daftar Indikator</span>
+                        <p class="text-slate-300">Membuka menu Pengukuran & Input Data untuk memverifikasi seluruh indikator IKK dan IKP milik Biro/Pusatnya sudah tampil lengkap.</p>
+                    </div>
+                    <div class="bg-white/5 p-4 rounded-xl border border-white/10 space-y-1">
+                        <span class="font-bold text-white text-sm block">3. Input Data Triwulan</span>
+                        <p class="text-slate-300">Memulai pengisian angka mentah dan narasi kualitatif secara berurutan per Triwulan (TW I s.d. TW IV).</p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script>
+        function showBiro(targetId) {
+            // Update buttons
+            document.querySelectorAll('.biro-tab-btn').forEach(btn => {
+                if (btn.getAttribute('data-target') === targetId) {
+                    btn.classList.remove('bg-slate-100', 'text-slate-700', 'hover:bg-slate-200');
+                    btn.classList.add('bg-navy-900', 'text-white');
+                } else {
+                    btn.classList.remove('bg-navy-900', 'text-white');
+                    btn.classList.add('bg-slate-100', 'text-slate-700', 'hover:bg-slate-200');
+                }
+            });
+
+            // Update panels
+            document.querySelectorAll('.biro-panel').forEach(panel => {
+                panel.classList.add('hidden');
+            });
+            const activePanel = document.getElementById('panel-' + targetId);
+            if (activePanel) {
+                activePanel.classList.remove('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
