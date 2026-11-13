@@ -219,7 +219,11 @@ export default function AppLayout({ children, title }) {
                             </ListItemButton>
                         </ListItem>
                         <ListItem disablePadding>
-                            <ListItemButton component={Link} href={route('admin.serenata.index')} selected={route().current('admin.serenata.*')}>
+                            <ListItemButton
+                                component={Link}
+                                href={route().has('admin.serenata.index') ? route('admin.serenata.index') : '/admin/serenata'}
+                                selected={route().current('admin.serenata.*')}
+                            >
                                 <ListItemIcon sx={{ color: route().current('admin.serenata.*') ? '#34d399' : '#64748b', minWidth: 38 }}>
                                     <ShieldIcon fontSize="small" />
                                 </ListItemIcon>
